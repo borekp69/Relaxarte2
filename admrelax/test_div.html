@@ -1,0 +1,40 @@
+<html>
+
+
+
+
+
+<script type="text/javascript" language="JavaScript">
+function HideContent(d) {
+document.getElementById(d).style.display = "none";
+}
+function ShowContent(d) {
+document.getElementById(d).style.display = "block";
+}
+function ReverseDisplay(d) {
+if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
+else { document.getElementById(d).style.display = "none"; }
+}
+
+</script>
+
+
+<a href="javascript:ReverseDisplay('uniquename')">
+Click to show/hide.
+</a>
+
+<div id="uniquename" style="display:none;">
+<p>Content goes here.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</html>

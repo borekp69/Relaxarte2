@@ -1,0 +1,10 @@
+# Presmerovani http na https
+RewriteEngine On 
+RewriteCond %{HTTPS} off 
+RewriteRule (.*) https://%{SERVER_NAME}/$1 [R=301] 
+Header set Content-Security-Policy "upgrade-insecure-requests;"
+
+# Prevence SQL útoků
+RewriteCond %{QUERY_STRING} ^.*(;|<|>|'|"|\)|%0A|%0D|%22|%27|%3C|%3E|%00).*(/\*|union|select|insert|cast|set|declare|drop|update|md5|benchmark).* [NC]
+RewriteRule .* - [F]
+
