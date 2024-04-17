@@ -1,5 +1,5 @@
 <?
-//require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+//require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";  
 $sql = "SELECT *,
 CASE
 WHEN alergie_pyl_jarni = 0 THEN 'Ne'
