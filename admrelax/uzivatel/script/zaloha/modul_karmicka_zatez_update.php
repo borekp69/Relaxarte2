@@ -33,7 +33,7 @@ $celkova_karmicka_zatez_form = addslashes(htmlspecialchars(trim("$_POST[celkova_
 $nejslabsi_oblasti_v_zivote_form = addslashes(htmlspecialchars(trim("$_POST[nejslabsi_oblasti_v_zivote]")));
 
 $karmicky_ukol_form = addslashes(htmlspecialchars(trim("$_POST[karmicky_ukol]")));
-$psychika_diagnoza_form = addslashes(htmlspecialchars(trim("$_POST[psychika_diagnoza]")));
+$psychika_diagnoza_form = addslashes(htmlspecialchars(trim("$_POST[psychika_diagnoza]")));   
   
 
 
