@@ -370,8 +370,8 @@ $skialpinismus = $radek["skialpinismus"];
 $conn->close();
 ?>
 <div class="row">
-<div class="col-sm-12">
-<label for="uzivatel">Sportovní a pohybové aktivity:</label>
+<div class="col-sm-12" style="background-color:#f6e9cd;">
+<label for="uzivatel">XXSportovní a pohybové aktivity:</label>
 <div class="checkbox">
 <? if ($bezky == 0) { ?>
 <label><input type="checkbox" name="bezky" disabled>Běžky</label>

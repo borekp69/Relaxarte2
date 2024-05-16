@@ -256,7 +256,7 @@ if ($conn->query($sql) === TRUE) {
             }
         generujBox("charakter_pasivni",$charakter_pasivni, "pasivní");
         generujBox("charakter_vahavy",$charakter_vahavy, "váhavý");
-        generujBox("charakter_mekky",$charakter_mekky, "měkky");
+        generujBox("charakter_mekky",$charakter_mekky, "měkký");
         generujBox("charakter_poddajny",$charakter_poddajny, "poddajný");
         generujBox("charakter_tichy",$charakter_tichy, "tichý");
         generujBox("charakter_zdrzenlivy",$charakter_zdrzenlivy, "zdrženlivý");
@@ -287,8 +287,8 @@ if ($conn->query($sql) === TRUE) {
         generujBox("charakter_plny_energie",$charakter_plny_energie, "plný energie");
         generujBox("charakter_pracovity",$charakter_pracovity, "pracovitý");
         generujBox("charakter_puntickarsky",$charakter_puntickarsky, "puntičkářský");
-        generujBox("charakter_zodpovedny",$charakter_zodpovedny, "zodpovedný");
-        generujBox("charakter_precizni",$charakter_precizni, "precizni");
+        generujBox("charakter_zodpovedny",$charakter_zodpovedny, "zodpovědný");
+        generujBox("charakter_precizni",$charakter_precizni, "precizní");
         generujBox("charakter_pragmaticky",$charakter_pragmaticky, "pragmatický");
     ?>
       </div>

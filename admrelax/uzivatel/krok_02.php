@@ -5,7 +5,7 @@
 <? if ($stav !== 'odeslano'){ ?>
 
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12" style="background-color:#f6e9cd;">
     <label for="uzivatel">Sportovní a pohybové aktivity:</label> 
     <? require "pripojeni_databaze.php";
     $sql = "SELECT * FROM seznam WHERE seznam_cislo = '4' ORDER BY seznam_poradi ASC"; 
@@ -14,9 +14,9 @@
         <div class="checkbox">
         <label><input type="checkbox" name="<?echo $row["seznam_name"];?>" value="1"><?echo $row["seznam_hodnota"];?></label>
         </div>
-    <?  }
-    $conn->close(); ?>    
-    </div> 
+     <?  }
+     $conn->close(); ?>    
+     </div> 
 </div> 
 
      <br><br>
@@ -25,7 +25,7 @@
     $sql = "SELECT * FROM seznam WHERE seznam_cislo = '44' ORDER BY seznam_poradi ASC"; 
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {  ?>  
-<div class="row">
+<div class="row" style="background-color:#e3fad6;">
         <div class="col-sm-3">
         <div class="checkbox">
         <label><input type="checkbox" name="<?echo $row["seznam_name"];?>" value="1" id="My_<?echo $row["seznam_name"];?>" onclick="myFunction_<?echo $row["seznam_name"];?>()"><?echo $row["seznam_hodnota"];?></label>
@@ -63,7 +63,7 @@ function myFunction_<?echo $row["seznam_name"];?>() {
     <?  }
     $conn->close(); ?>    
 <br>
-<div class="row">
+<div class="row" style="background-color:#ddf0f3;">
     <div class="col-sm-4" <?echo $chyba_joga_kurz;?>>
     <label for="uzivatel">Absolvoval jste někdy kurz ŠIVA jógy:</label>
     <select class="form-control" id="zobrazjoga" name="joga_kurz">
@@ -87,7 +87,7 @@ function myFunction_<?echo $row["seznam_name"];?>() {
                ?>
 
 <div class="row" style="display:none">
-    <div class="col-sm-12">
+    <div class="col-sm-12" style="background-color:#f6e9cd;">
     <label for="uzivatel">Sportovní a pohybové aktivity:</label> 
         <div class="checkbox">
         <? if ($bezky == 1) {?>
