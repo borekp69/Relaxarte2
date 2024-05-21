@@ -369,46 +369,127 @@ $skialpinismus = $radek["skialpinismus"];
 }
 $conn->close();
 ?>
-<div class="row">
-<div class="col-sm-12" style="background-color:#f6e9cd;">
-<label for="uzivatel">XXSportovní a pohybové aktivity:</label>
-<div class="checkbox">
-<? if ($bezky == 0) { ?>
-<label><input type="checkbox" name="bezky" disabled>Běžky</label>
-<? }else { ?>
-<label><input type="checkbox" name="bezky" disabled checked>Běžky</label>
-<?  } ?>
+<div id="SportovniAktivity">
+<form id="SportovniAktivity" name="SportovniAktivity" method="post">
+    <div class="row">
+    <div class="col-sm-12" style="background-color:#f6e9cd;">
+    <label for="uzivatel">Sportovní a pohybové aktivity:</label>
+    <div class="checkbox">
+    <? if ($bezky == 0) { ?>
+    <label><input type="checkbox" name="bezky">Běžky</label>
+    <? }else { ?>
+    <label><input type="checkbox" name="bezky" checked>Běžky</label>
+    <?  } ?>
+    </div>
+    <div class="checkbox">
+    <? if ($brusle_zimni == 0) { ?>
+    <label><input type="checkbox" name="brusle_zimni">Brusle zimní</label>
+    <? }else { ?>
+    <label><input type="checkbox" name="brusle_zimni" checked>Brusle zimní</label>
+    <?  } ?>
+    </div>
+    <div class="checkbox">
+    <? if ($prace_na_zahrade == 0) { ?>
+    <label><input type="checkbox" name="prace_na_zahrade">Práce na zahradě</label>
+    <? }else { ?>
+    <label><input type="checkbox" name="prace_na_zahrade" checked>Práce na zahradě</label>
+    <?  } ?>
+    </div>
+    <div class="checkbox">
+    <? if ($sjezd_lyze == 0) { ?>
+    <label><input type="checkbox" name="sjezd_lyze">Sjezd lyže</label>
+    <? }else { ?>
+    <label><input type="checkbox" name="sjezd_lyze" checked>Sjezd lyže</label>
+    <?  } ?>
+    </div>
+    <div class="checkbox">
+    <? if ($skialpinismus == 0) { ?>
+    <label><input type="checkbox" name="skialpinismus" >Skialpinismus</label>
+    <? }else { ?>
+    <label><input type="checkbox" name="skialpinismus" checked>Skialpinismus</label>
+    <?  } ?>
+    </div>
+    </div>
+    </div>
+    </form>
+    <br>
+    <button type="submit" class="btn btn-success btn-sm"  onclick="loadSportoviAktivityUpdate()">&nbsp;&nbsp;Uložit Sportovní a pohybové aktivity&nbsp;&nbsp;</button>
+    <br>
 </div>
-<div class="checkbox">
-<? if ($brusle_zimni == 0) { ?>
-<label><input type="checkbox" name="brusle_zimni" disabled>Brusle zimní</label>
-<? }else { ?>
-<label><input type="checkbox" name="brusle_zimni" disabled checked>Brusle zimní</label>
-<?  } ?>
-</div>
-<div class="checkbox">
-<? if ($prace_na_zahrade == 0) { ?>
-<label><input type="checkbox" name="prace_na_zahrade" disabled>Práce na zahradě</label>
-<? }else { ?>
-<label><input type="checkbox" name="prace_na_zahrade" disabled checked>Práce na zahradě</label>
-<?  } ?>
-</div>
-<div class="checkbox">
-<? if ($sjezd_lyze == 0) { ?>
-<label><input type="checkbox" name="sjezd_lyze" disabled>Sjezd lyže</label>
-<? }else { ?>
-<label><input type="checkbox" name="sjezd_lyze" disabled checked>Sjezd lyže</label>
-<?  } ?>
-</div>
-<div class="checkbox">
-<? if ($skialpinismus == 0) { ?>
-<label><input type="checkbox" name="skialpinismus" disabled>Skialpinismus</label>
-<? }else { ?>
-<label><input type="checkbox" name="skialpinismus" disabled checked>Skialpinismus</label>
-<?  } ?>
-</div>
-</div>
-</div>
+
+
+<script>
+function loadSportoviAktivityUpdate() {
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("SportovniAktivity").innerHTML = this.responseText;
+    }
+  };
+  
+
+bezky = document.SportovniAktivity.bezky;
+           if(bezky.checked) {
+    bezky = 1;
+            }else{
+    bezky = 0;
+            } 
+
+brusle_zimni = document.SportovniAktivity.brusle_zimni;
+           if(brusle_zimni.checked) {
+    brusle_zimni = 1;
+            }else{
+    brusle_zimni = 0;
+            }  
+
+prace_na_zahrade = document.SportovniAktivity.prace_na_zahrade;
+           if(prace_na_zahrade.checked) {
+    prace_na_zahrade = 1;
+            }else{
+    prace_na_zahrade = 0;
+            } 
+
+sjezd_lyze = document.SportovniAktivity.sjezd_lyze;
+           if(sjezd_lyze.checked) {
+    sjezd_lyze = 1;
+            }else{
+    sjezd_lyze = 0;
+            } 
+
+skialpinismus = document.SportovniAktivity.skialpinismus;
+           if(skialpinismus.checked) {
+    skialpinismus = 1;
+            }else{
+    skialpinismus = 0;
+            }
+
+
+  let dataSportovniAktivity = "uzivatel_id=10";
+  dataSportovniAktivity = dataSportovniAktivity + "&bezky="+bezky;
+  dataSportovniAktivity = dataSportovniAktivity + "&brusle_zimni="+brusle_zimni;
+  dataSportovniAktivity = dataSportovniAktivity + "&prace_na_zahrade="+prace_na_zahrade;
+  dataSportovniAktivity = dataSportovniAktivity + "&sjezd_lyze="+sjezd_lyze;
+  dataSportovniAktivity = dataSportovniAktivity + "&skialpinismus="+skialpinismus;
+
+  xhttp.open("POST", "./script/form_sportovni_aktivity_update.php", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send(dataSportovniAktivity);
+  alert("Uložení:\nZáznam Sportovní a pohybové aktivity byl uložen.");
+     }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <br>
