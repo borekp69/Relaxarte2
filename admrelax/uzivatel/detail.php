@@ -688,27 +688,62 @@ $lektor = encrypt_decrypt('decrypt', $radek["lektor"]);
 }
 $conn->close();
 ?>
-<? if ($joga == 0) { ?>
-<div class="row">
-<div class="col-sm-4">
-<b>Absolvoval jste někdy kurz ŠIVA jógy:</b>&nbsp;Ne
-</div>
-</div>
-<? }else { ?>
-<div class="row">
-<div class="col-sm-4">
-<b>Absolvoval jste někdy kurz ŠIVA jógy:</b>&nbsp;Ano
-</div>
-</div>
-<div class="row">
-<div class="col-sm-6">
-<b>Lektor:</b>&nbsp;<?echo $lektor;?>
-</div>
-</div>
-<?  } ?>
+
+<div class="row" style="background-color:#ddf0f3;">
+    <div class="col-sm-4" <?echo $chyba_joga_kurz;?>>
+    <label for="uzivatel">Absolvoval jste někdy kurz ŠIVA jógy:</label>
+    <select class="form-control" id="zobrazjoga" name="joga_kurz">
+    <? 
+    if ($joga == 0) { 
+        $lektor = "";
+    ?>
+    <option value="0" selected>Ne</option> 
+    <option value="1">Ano</option>
+    </select>
+    <? 
+    }else { 
+      $lektor = $lektor;  
+    ?>
+    <option value="0">Ne</option> 
+    <option value="1" selected>Ano</option>
+    </select>
+    <?  } ?>
+  
+    <br>
+    </div>
+  
+    
+    <div class="col-sm-5" <?echo $chyba_lektor;?>>
+    <div class="form-group" id="jogaFieldGroupDiv">
+    <label for="uzivatel">Pokud ano, uveďte prosím jméno lektora:</label>
+    <input type="text" class="form-control form-control-sm" name="lektor" maxlength="50" value = "<?echo $lektor;?>" placeholder="Pokud nechcete uvést jméno lektora napište důvěrné">
+   
+
+    </div> 
+    </div>
+    <script src="./js/joga.js"></script>
+</div> 
+<br><br><br>
+
+
+
+
+
+
 <?   }  ?>
 <br><br><br>
+
+
+
+
+
+
+
 </div>
+
+
+
+
 
 
 <div id="zdravi" class="tab-pane fade">
