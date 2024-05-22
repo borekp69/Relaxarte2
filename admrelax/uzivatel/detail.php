@@ -708,7 +708,6 @@ $conn->close();
     <option value="1" selected>Ano</option>
     </select>
     <?  } ?>
-  
     <br>
     </div>
   
@@ -717,9 +716,7 @@ $conn->close();
     <div class="form-group" id="jogaFieldGroupDiv">
     <label for="uzivatel">Pokud ano, uveďte prosím jméno lektora:</label>
     <input type="text" class="form-control form-control-sm" name="lektor" maxlength="50" value = "<?echo $lektor;?>" placeholder="Pokud nechcete uvést jméno lektora napište důvěrné">
-   
-
-    </div> 
+   </div> 
     </div>
     <script src="./js/joga.js"></script>
 </div> 
