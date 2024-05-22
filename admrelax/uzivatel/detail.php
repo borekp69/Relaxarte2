@@ -413,7 +413,7 @@ $conn->close();
     </div>
     </form>
     <br>
-    <button type="submit" class="btn btn-success btn-sm"  onclick="loadSportoviAktivityUpdate()">&nbsp;&nbsp;Uložit Sportovní a pohybové aktivity&nbsp;&nbsp;</button>
+    <button type="submit" class="btn btn-success btn-sm"  onclick="loadSportoviAktivityUpdate()">&nbsp;&nbsp;Uložit sportovní a pohybové aktivity&nbsp;&nbsp;</button>
     <br>
 </div>
 
