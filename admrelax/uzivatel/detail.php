@@ -465,7 +465,7 @@ skialpinismus = document.SportovniAktivity.skialpinismus;
             }
 
 
-  let dataSportovniAktivity = "uzivatel_id=10";
+ let dataSportovniAktivity = "uzivatel_id=<? echo $uzivatel_id;?>";
   dataSportovniAktivity = dataSportovniAktivity + "&bezky="+bezky;
   dataSportovniAktivity = dataSportovniAktivity + "&brusle_zimni="+brusle_zimni;
   dataSportovniAktivity = dataSportovniAktivity + "&prace_na_zahrade="+prace_na_zahrade;
@@ -688,38 +688,68 @@ $lektor = encrypt_decrypt('decrypt', $radek["lektor"]);
 }
 $conn->close();
 ?>
-
-<div class="row" style="background-color:#ddf0f3;">
-    <div class="col-sm-4" <?echo $chyba_joga_kurz;?>>
-    <label for="uzivatel">Absolvoval jste někdy kurz ŠIVA jógy:</label>
-    <select class="form-control" id="zobrazjoga" name="joga_kurz">
-    <? 
-    if ($joga == 0) { 
+<div id="JogaUpdate">
+<form id="JogaForm" name="JogaForm" method="post">
+    <div class="row" style="background-color:#ddf0f3;">
+        <div class="col-sm-4" <?echo $chyba_joga_kurz;?>>
+        <label for="uzivatel">Absolvoval jste někdy kurz ŠIVA jógy:</label>
+        <select class="form-control" id="zobrazjoga" name="joga_kurz">
+        <? 
+        if ($joga == 0) { 
         $lektor = "";
-    ?>
-    <option value="0" selected>Ne</option> 
-    <option value="1">Ano</option>
-    </select>
-    <? 
-    }else { 
-      $lektor = $lektor;  
-    ?>
-    <option value="0">Ne</option> 
-    <option value="1" selected>Ano</option>
-    </select>
-    <?  } ?>
-    <br>
-    </div>
+        ?>
+        <option value="0" selected>Ne</option> 
+        <option value="1">Ano</option>
+        </select>
+        <? 
+        }else { 
+        $lektor = $lektor;  
+        ?>
+        <option value="0">Ne</option> 
+        <option value="1" selected>Ano</option>
+        </select>
+        <?  } ?>
+        <br>
+        </div>
   
     
-    <div class="col-sm-5" <?echo $chyba_lektor;?>>
-    <div class="form-group" id="jogaFieldGroupDiv">
-    <label for="uzivatel">Pokud ano, uveďte prosím jméno lektora:</label>
-    <input type="text" class="form-control form-control-sm" name="lektor" maxlength="50" value = "<?echo $lektor;?>" placeholder="Pokud nechcete uvést jméno lektora napište důvěrné">
-   </div> 
+        <div class="col-sm-5" <?echo $chyba_lektor;?>>
+            <div class="form-group" id="jogaFieldGroupDiv">
+            <label for="uzivatel">Pokud ano, uveďte prosím jméno lektora:</label>
+            <input type="text" class="form-control form-control-sm" name="lektor" maxlength="50" value = "<?echo $lektor;?>" placeholder="Pokud nechcete uvést jméno lektora napište důvěrné">
+        </div> 
     </div>
     <script src="./js/joga.js"></script>
+    </div>
+    </form>
+  <br>
+  <button type="submit" class="btn btn-success btn-sm"  onclick="loadJogaUpdate()">&nbsp;&nbsp;Uložit jogu&nbsp;&nbsp;</button>  
 </div> 
+
+
+<script>
+function loadJogaUpdate() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("JogaUpdate").innerHTML = this.responseText;
+    }
+  };
+    lektor = document.JogaForm.lektor.value;
+    joga_kurz = document.JogaForm.joga_kurz.value;
+    let dataJoga = "uzivatel_id=<? echo $uzivatel_id;?>";
+    dataJoga = dataJoga + "&lektor="+lektor;
+    dataJoga = dataJoga + "&joga_kurz="+joga_kurz;
+
+    xhttp.open("POST", "./script/form_joga_update.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send(dataJoga);
+    alert("Uložení:\nZáznam o józe byl uložen.");
+     }
+</script>
+
+
+
 <br><br><br>
 
 
