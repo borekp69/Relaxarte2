@@ -723,7 +723,7 @@ $conn->close();
     </div>
     </form>
   <br>
-  <button type="submit" class="btn btn-success btn-sm"  onclick="loadJogaUpdate()">&nbsp;&nbsp;Uložit jogu&nbsp;&nbsp;</button>  
+  <button type="submit" class="btn btn-success btn-sm"  onclick="loadJogaUpdate()">&nbsp;&nbsp;Uložit záznam o józe&nbsp;&nbsp;</button>  
 </div> 
 
 
@@ -735,17 +735,26 @@ function loadJogaUpdate() {
       document.getElementById("JogaUpdate").innerHTML = this.responseText;
     }
   };
+
+
     lektor = document.JogaForm.lektor.value;
     joga_kurz = document.JogaForm.joga_kurz.value;
+
+if (joga_kurz == 1 && !lektor){
+    alert("Chyba! \nMusíte vyplnit lektora, nebo jinou informaci.");
+}else{
+
     let dataJoga = "uzivatel_id=<? echo $uzivatel_id;?>";
     dataJoga = dataJoga + "&lektor="+lektor;
     dataJoga = dataJoga + "&joga_kurz="+joga_kurz;
+
 
     xhttp.open("POST", "./script/form_joga_update.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(dataJoga);
     alert("Uložení:\nZáznam o józe byl uložen.");
      }
+    }
 </script>
 
 
