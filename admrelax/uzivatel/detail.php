@@ -489,25 +489,6 @@ skialpinismus = document.SportovniAktivity.skialpinismus;
 
 
 
-
-
-
-<br>
-<div class="row">
-<div class="col-sm-6">
-
-<label for="uzivatel">Pravidelné sportovní a pohybové aktivity:</label>
-<table class="table table-striped">
-<thead>
-<tr class="info">
-<th>Aktivita</th>
-<th>&nbsp;</th>
-<th>Pravidelnost</th>
-</tr>
-</thead>
-<tbody>
-
-
 <?
 //require "pripojeni_databaze.php";
 require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
@@ -578,6 +559,51 @@ return $vysledek;
 
 
 ?>
+-----------------------------------------<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>-------------------------------------<br>
+
+
+
+
+<div class="row">
+<div class="col-sm-6">
+
+<label for="uzivatel">Pravidelné sportovní a pohybové aktivity:</label>
+<table class="table table-striped">
+<thead>
+<tr class="info">
+<th>Aktivita</th>
+<th>&nbsp;</th>
+<th>Pravidelnost</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>Fitness - silový trénink</td>
 <td><? echo sport($posilovani);?></td>
