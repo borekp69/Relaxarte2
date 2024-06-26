@@ -1,4 +1,9 @@
 <? require  $_SERVER['DOCUMENT_ROOT'].'/admrelax/hlavicky_session.php'; ?>
+<?
+header("Cache-control: private");
+header ("Cache-Control:no-cache, must-revalidate"); //HTTP/1.1
+header("Pragma: no-cache");
+?>
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -559,45 +564,47 @@ return $vysledek;
 
 
 ?>
------------------------------------------<br>
+
 <?
 //require "pripojeni_databaze.php";
 require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
-$sql_sport = "SELECT * FROM sport_pravidelne WHERE uzivatel_id = $uzivatel_id LIMIT 1";
-$result_sport = $conn->query($sql_sport);
-while($radek = $result_sport->fetch_assoc()) {
+$sql_sport_01 = "SELECT * FROM sport_pravidelne WHERE uzivatel_id = $uzivatel_id LIMIT 1";
+$result_sport_01 = $conn->query($sql_sport_01);
+while($radek = $result_sport_01->fetch_assoc()) {
 $posilovani_01 = $radek["posilovani"];
 $pravidelnost_posilovani_01 = $radek["pravidelnost_posilovani"];
 $florbal_01 = $radek["florbal"];
 $pravidelnost_florbal_01 = $radek["pravidelnost_florbal"];
-$bojove_sporty = $radek["bojove_sporty"];
-$pravidelnost_bojove_sporty = $radek["pravidelnost_bojove_sporty"];
-$hokej = $radek["hokej"];
-$pravidelnost_hokej = $radek["pravidelnost_hokej"];
-$fotbal = $radek["fotbal"];
-$pravidelnost_fotbal = $radek["pravidelnost_fotbal"];
-$volejbal = $radek["volejbal"];
-$pravidelnost_volejbal = $radek["pravidelnost_volejbal"];
-$aerobic = $radek["aerobic"];
-$pravidelnost_aerobic= $radek["pravidelnost_aerobic"];
-$tanec = $radek["tanec"];
-$pravidelnost_tanec = $radek["pravidelnost_tanec"];
-$plavani = $radek["plavani"];
-$pravidelnost_plavani = $radek["pravidelnost_plavani"];
-$brusle_inline = $radek["brusle_inline"];
-$pravidelnost_brusle_inline = $radek["pravidelnost_brusle_inline"];
-$kolo_spinning = $radek["kolo_spinning"];
-$pravidelnost_kolo_spinning = $radek["pravidelnost_kolo_spinning"];
-$beh = $radek["beh"];
-$pravidelnost_beh = $radek["pravidelnost_beh"];
-$pesi_turistika = $radek["pesi_turistika"];
-$pravidelnost_pesi_turistika = $radek["pravidelnost_pesi_turistika"];
-$taj_ci = $radek["taj_ci"];
-$pravidelnost_taj_ci = $radek["pravidelnost_taj_ci"];
-$cchi_kung = $radek["cchi_kung"];
-$pravidelnost_cchi_kung = $radek["pravidelnost_cchi_kung"];
-$joga = $radek["joga"];
-$pravidelnost_joga = $radek["pravidelnost_joga"];
+$bojove_sporty_01 = $radek["bojove_sporty"];
+$pravidelnost_bojove_sporty_01 = $radek["pravidelnost_bojove_sporty"];
+$hokej_01 = $radek["hokej"];
+$pravidelnost_hokej_01 = $radek["pravidelnost_hokej"];
+$fotbal_01 = $radek["fotbal"];
+$pravidelnost_fotbal_01 = $radek["pravidelnost_fotbal"];
+$volejbal_01 = $radek["volejbal"];
+$pravidelnost_volejbal_01 = $radek["pravidelnost_volejbal"];
+$aerobic_01 = $radek["aerobic"];
+$pravidelnost_aerobic_01 = $radek["pravidelnost_aerobic"];
+$tanec_01 = $radek["tanec"];
+$pravidelnost_tanec_01 = $radek["pravidelnost_tanec"];
+$plavani_01 = $radek["plavani"];
+$pravidelnost_plavani_01 = $radek["pravidelnost_plavani"];
+$brusle_inline_01 = $radek["brusle_inline"];
+$pravidelnost_brusle_inline_01 = $radek["pravidelnost_brusle_inline"];
+$kolo_spinning_01 = $radek["kolo_spinning"];
+$pravidelnost_kolo_spinning_01 = $radek["pravidelnost_kolo_spinning"];
+$beh_01 = $radek["beh"];
+$pravidelnost_beh_01 = $radek["pravidelnost_beh"];
+$pesi_turistika_01 = $radek["pesi_turistika"];
+$pravidelnost_pesi_turistika_01 = $radek["pravidelnost_pesi_turistika"];
+$taj_ci_01 = $radek["taj_ci"];
+$pravidelnost_taj_ci_01 = $radek["pravidelnost_taj_ci"];
+$cchi_kung_01 = $radek["cchi_kung"];
+$pravidelnost_cchi_kung_01 = $radek["pravidelnost_cchi_kung"];
+
+$joga_01 = $radek["joga"];
+$pravidelnost_joga_01 = $radek["pravidelnost_joga"];
+
 $kondicni_treninky = $radek["kondicni_treninky"];
 $pravidelnost_kondicni_treninky = $radek["pravidelnost_kondicni_treninky"];
 $tenis_squash_badminton = $radek["tenis_squash_badminton"];
@@ -612,7 +619,7 @@ $conn->close();
 <label for="uzivatel">Pravidelné sportovní a pohybové aktivity:</label> 
 
 <div class="row" style="background-color:#e3fad6;">
-<div class="col-sm-3">
+    <div class="col-sm-3">
 
         <div class="checkbox">
         <? if ($posilovani_01 == 1){ ?>
@@ -622,46 +629,517 @@ $conn->close();
         <?    }  ?>
         </div>
         </div> 
-
-
-
-
-
-
-
-
-        
-
-
-
+            <? if ($pravidelnost_posilovani_01 == 0){
+            $blok = 'none';
+            }else{
+            $blok = 'block';
+            } ?>
+            <div class="col-sm-4" id="text_posilovani" style="display:<? echo $blok;?>">
+            <select class="form-control" id="pravidelnost_posilovani" name="pravidelnost_posilovani"> 
+                <option value="0"> -- Vyberte pravidelnost --</option>
+                <? require "pripojeni_databaze.php";
+                $sql03 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+                $result03 = $conn->query($sql03);
+                while($row03 = $result03->fetch_assoc()) {
+                if ($pravidelnost_posilovani_01 == $row03["seznam_id"]) { 
+                echo '<option value = "' .$row03["seznam_id"]. ' " selected>' . $row03["seznam_hodnota"]."</option>\n";
+                }else{
+                echo '<option value = "' .$row03["seznam_id"]. '">' . $row03["seznam_hodnota"]. "</option>\n";   
+                } 
+              }
+              ?>
+           </select>
+    </div> 
 </div>
+<? $conn->close();?>
+
+
+<div class="row" style="background-color:#e3fad6;">
+    <div class="col-sm-3">
+
+     <div class="checkbox">
+        <? if ($florbal_01 == 1){ ?>
+        <label><input type="checkbox" name="florbal" value="1" checked  id="My_florbal" onclick="myFunction_florbal()">Florbal</label>
+        <? }else{ ?>
+        <label><input type="checkbox" name="florbal" value="1"  id="My_florbal" onclick="myFunction_florbal()">Florbal</label>
+        <?    }  ?>
+        </div>
+     </div> 
+            <? if ($pravidelnost_florbal_01 == 0){
+            $blok = 'none';
+            }else{
+            $blok = 'block';
+            } ?>
+        <div class="col-sm-4" id="text_florbal" style="display:<? echo $blok;?>">
+            <select class="form-control" id="pravidelnost_florbal" name="pravidelnost_florbal"> 
+                <option value="0"> -- Vyberte pravidelnost --</option>
+                <? require "pripojeni_databaze.php";
+                $sql03 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+                $result03 = $conn->query($sql03);
+                while($row03 = $result03->fetch_assoc()) {
+                if ($pravidelnost_florbal_01 == $row03["seznam_id"]) { 
+                echo '<option value = "' .$row03["seznam_id"]. ' " selected>' . $row03["seznam_hodnota"]."</option>\n";
+                }else{
+                echo '<option value = "' .$row03["seznam_id"]. '">' . $row03["seznam_hodnota"]. "</option>\n";   
+                } 
+              }
+              ?>
+           </select>
+        </div> 
+</div>
+<? $conn->close();?>
+
+
+<div class="row" style="background-color:#e3fad6;">
+    <div class="col-sm-3">
+
+     <div class="checkbox">
+        <? if ($bojove_sporty_01 == 1){ ?>
+        <label><input type="checkbox" name="bojove_sporty" value="1" checked  id="My_bojove_sporty" onclick="myFunction_bojove_sporty()">Bojové sporty</label>
+        <? }else{ ?>
+        <label><input type="checkbox" name="bojove_sporty" value="1"  id="My_bojove_sporty" onclick="myFunction_bojove_sporty()">Bojové sporty</label>
+        <?    }  ?>
+        </div>
+     </div> 
+            <? if ($pravidelnost_bojove_sporty_01 == 0){
+            $blok = 'none';
+            }else{
+            $blok = 'block';
+            } ?>
+        <div class="col-sm-4" id="text_bojove_sporty" style="display:<? echo $blok;?>">
+            <select class="form-control" id="pravidelnost_bojove_sporty" name="pravidelnost_bojove_sporty"> 
+                <option value="0"> -- Vyberte pravidelnost --</option>
+                <? require "pripojeni_databaze.php";
+                $sql03 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+                $result03 = $conn->query($sql03);
+                while($row03 = $result03->fetch_assoc()) {
+                if ($pravidelnost_bojove_sporty_01 == $row03["seznam_id"]) { 
+                echo '<option value = "' .$row03["seznam_id"]. ' " selected>' . $row03["seznam_hodnota"]."</option>\n";
+                }else{
+                echo '<option value = "' .$row03["seznam_id"]. '">' . $row03["seznam_hodnota"]. "</option>\n";   
+                } 
+              }
+              ?>
+           </select>
+        </div> 
+</div>
+<? $conn->close();?>
+
+<div class="row" style="background-color:#e3fad6;">
+    <div class="col-sm-3">
+
+     <div class="checkbox">
+        <? if ($hokej_01 == 1){ ?>
+        <label><input type="checkbox" name="hokej" value="1" checked  id="My_hokej" onclick="myFunction_hokej()">Hokej</label>
+        <? }else{ ?>
+        <label><input type="checkbox" name="hokej" value="1"  id="My_hokej" onclick="myFunction_hokej()">Hokej</label>
+        <?    }  ?>
+        </div>
+     </div> 
+            <? if ($pravidelnost_hokej_01 == 0){
+            $blok = 'none';
+            }else{
+            $blok = 'block';
+            } ?>
+        <div class="col-sm-4" id="text_hokej" style="display:<? echo $blok;?>">
+            <select class="form-control" id="pravidelnost_hokej" name="pravidelnost_hokej"> 
+                <option value="0"> -- Vyberte pravidelnost --</option>
+                <? require "pripojeni_databaze.php";
+                $sql03 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+                $result03 = $conn->query($sql03);
+                while($row03 = $result03->fetch_assoc()) {
+                if ($pravidelnost_hokej_01 == $row03["seznam_id"]) { 
+                echo '<option value = "' .$row03["seznam_id"]. ' " selected>' . $row03["seznam_hodnota"]."</option>\n";
+                }else{
+                echo '<option value = "' .$row03["seznam_id"]. '">' . $row03["seznam_hodnota"]. "</option>\n";   
+                } 
+              }
+              ?>
+           </select>
+        </div> 
+</div>
+<? $conn->close();?>
+
+<div class="row" style="background-color:#e3fad6;">
+    <div class="col-sm-3">
+
+     <div class="checkbox">
+        <? if ($fotbal_01 == 1){ ?>
+        <label><input type="checkbox" name="fotbal" value="1" checked  id="My_fotbal" onclick="myFunction_hokej()">Fotbal</label>
+        <? }else{ ?>
+        <label><input type="checkbox" name="fotbal" value="1"  id="My_fotbal" onclick="myFunction_fotbal()">Fotbal</label>
+        <?    }  ?>
+        </div>
+     </div> 
+            <? if ($pravidelnost_fotbal_01 == 0){
+            $blok = 'none';
+            }else{
+            $blok = 'block';
+            } ?>
+        <div class="col-sm-4" id="text_fotbal" style="display:<? echo $blok;?>">
+            <select class="form-control" id="pravidelnost_fotbal" name="pravidelnost_fotbal"> 
+                <option value="0"> -- Vyberte pravidelnost --</option>
+                <? require "pripojeni_databaze.php";
+                $sql03 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+                $result03 = $conn->query($sql03);
+                while($row03 = $result03->fetch_assoc()) {
+                if ($pravidelnost_fotbal_01 == $row03["seznam_id"]) { 
+                echo '<option value = "' .$row03["seznam_id"]. ' " selected>' . $row03["seznam_hodnota"]."</option>\n";
+                }else{
+                echo '<option value = "' .$row03["seznam_id"]. '">' . $row03["seznam_hodnota"]. "</option>\n";   
+                } 
+              }
+              ?>
+           </select>
+        </div> 
+</div>
+<? $conn->close();?>
+
+<div class="row" style="background-color:#e3fad6;">
+    <div class="col-sm-3">
+
+     <div class="checkbox">
+        <? if ($volejbal_01 == 1){ ?>
+        <label><input type="checkbox" name="volejbal" value="1" checked  id="My_volejbal" onclick="myFunction_volejbal()">Volejbal</label>
+        <? }else{ ?>
+        <label><input type="checkbox" name="volejbal" value="1"  id="My_volejbal" onclick="myFunction_volejbal()">Volejbal</label>
+        <?    }  ?>
+        </div>
+     </div> 
+            <? if ($pravidelnost_volejbal_01 == 0){
+            $blok = 'none';
+            }else{
+            $blok = 'block';
+            } ?>
+        <div class="col-sm-4" id="text_volejbal" style="display:<? echo $blok;?>">
+            <select class="form-control" id="pravidelnost_volejbal" name="pravidelnost_volejbal"> 
+                <option value="0"> -- Vyberte pravidelnost --</option>
+                <? require "pripojeni_databaze.php";
+                $sql03 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+                $result03 = $conn->query($sql03);
+                while($row03 = $result03->fetch_assoc()) {
+                if ($pravidelnost_volejbal_01 == $row03["seznam_id"]) { 
+                echo '<option value = "' .$row03["seznam_id"]. ' " selected>' . $row03["seznam_hodnota"]."</option>\n";
+                }else{
+                echo '<option value = "' .$row03["seznam_id"]. '">' . $row03["seznam_hodnota"]. "</option>\n";   
+                } 
+              }
+              ?>
+           </select>
+        </div> 
+</div>
+<? $conn->close();?>
+
+
+<div class="row" style="background-color:#e3fad6;">
+    <div class="col-sm-3">
+
+     <div class="checkbox">
+        <? if ($aerobic_01 == 1){ ?>
+        <label><input type="checkbox" name="aerobic" value="1" checked  id="My_aerobic" onclick="myFunction_aerobic()">Aerobik</label>
+        <? }else{ ?>
+        <label><input type="checkbox" name="aerobic" value="1"  id="My_aerobic" onclick="myFunction_aerobic()">Aerobik</label>
+        <?    }  ?>
+        </div>
+     </div> 
+            <? if ($pravidelnost_aerobic_01 == 0){
+            $blok = 'none';
+            }else{
+            $blok = 'block';
+            } ?>
+        <div class="col-sm-4" id="text_aerobic" style="display:<? echo $blok;?>">
+            <select class="form-control" id="pravidelnost_aerobic" name="pravidelnost_aerobic"> 
+                <option value="0"> -- Vyberte pravidelnost --</option>
+                <? require "pripojeni_databaze.php";
+                $sql03 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+                $result03 = $conn->query($sql03);
+                while($row03 = $result03->fetch_assoc()) {
+                if ($pravidelnost_aerobic_01 == $row03["seznam_id"]) { 
+                echo '<option value = "' .$row03["seznam_id"]. ' " selected>' . $row03["seznam_hodnota"]."</option>\n";
+                }else{
+                echo '<option value = "' .$row03["seznam_id"]. '">' . $row03["seznam_hodnota"]. "</option>\n";   
+                } 
+              }
+              ?>
+           </select>
+        </div> 
+</div>
+<? $conn->close();?>
+
+<div class="row" style="background-color:#e3fad6;">
+    <div class="col-sm-3">
+
+     <div class="checkbox">
+        <? if ($tanec_01 == 1){ ?>
+        <label><input type="checkbox" name="tanec" value="1" checked  id="My_tanec" onclick="myFunction_tanec()">Tanec</label>
+        <? }else{ ?>
+        <label><input type="checkbox" name="tanec" value="1"  id="My_tanec" onclick="myFunction_tanec()">Tanec</label>
+        <?    }  ?>
+        </div>
+     </div> 
+            <? if ($pravidelnost_tanec_01 == 0){
+            $blok = 'none';
+            }else{
+            $blok = 'block';
+            } ?>
+        <div class="col-sm-4" id="text_tanec" style="display:<? echo $blok;?>">
+            <select class="form-control" id="pravidelnost_tanec" name="pravidelnost_tanec"> 
+                <option value="0"> -- Vyberte pravidelnost --</option>
+                <? require "pripojeni_databaze.php";
+                $sql03 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+                $result03 = $conn->query($sql03);
+                while($row03 = $result03->fetch_assoc()) {
+                if ($pravidelnost_tanec_01 == $row03["seznam_id"]) { 
+                echo '<option value = "' .$row03["seznam_id"]. ' " selected>' . $row03["seznam_hodnota"]."</option>\n";
+                }else{
+                echo '<option value = "' .$row03["seznam_id"]. '">' . $row03["seznam_hodnota"]. "</option>\n";   
+                } 
+              }
+              ?>
+           </select>
+        </div> 
+</div>
+<? $conn->close();?>
+
+<div class="row" style="background-color:#e3fad6;">
+    <div class="col-sm-3">
+
+     <div class="checkbox">
+        <? if ($plavani_01 == 1){ ?>
+        <label><input type="checkbox" name="plavani" value="1" checked  id="My_plavani" onclick="myFunction_plavani()">Plavání</label>
+        <? }else{ ?>
+        <label><input type="checkbox" name="plavani" value="1"  id="My_plavani" onclick="myFunction_plavani()">Plavání</label>
+        <?    }  ?>
+        </div>
+     </div> 
+            <? if ($pravidelnost_plavani_01 == 0){
+            $blok = 'none';
+            }else{
+            $blok = 'block';
+            } ?>
+        <div class="col-sm-4" id="text_plavani" style="display:<? echo $blok;?>">
+            <select class="form-control" id="pravidelnost_plavani" name="pravidelnost_plavani"> 
+                <option value="0"> -- Vyberte pravidelnost --</option>
+                <? require "pripojeni_databaze.php";
+                $sql03 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+                $result03 = $conn->query($sql03);
+                while($row03 = $result03->fetch_assoc()) {
+                if ($pravidelnost_plavani_01 == $row03["seznam_id"]) { 
+                echo '<option value = "' .$row03["seznam_id"]. ' " selected>' . $row03["seznam_hodnota"]."</option>\n";
+                }else{
+                echo '<option value = "' .$row03["seznam_id"]. '">' . $row03["seznam_hodnota"]. "</option>\n";   
+                } 
+              }
+              ?>
+           </select>
+        </div> 
+</div>
+<? $conn->close();?>
+
+<div class="row" style="background-color:#e3fad6;">
+    <div class="col-sm-3">
+
+     <div class="checkbox">
+        <? if ($brusle_inline_01 == 1){ ?>
+        <label><input type="checkbox" name="brusle_inline" value="1" checked  id="My_brusle_inline" onclick="myFunction_brusle_inline()">Brusle in-line</label>
+        <? }else{ ?>
+        <label><input type="checkbox" name="brusle_inline" value="1"  id="My_brusle_inline" onclick="myFunction_brusle_inline()">Brusle in-line</label>
+        <?    }  ?>
+        </div>
+     </div> 
+            <? if ($pravidelnost_brusle_inline_01 == 0){
+            $blok = 'none';
+            }else{
+            $blok = 'block';
+            } ?>
+        <div class="col-sm-4" id="text_brusle_inline" style="display:<? echo $blok;?>">
+            <select class="form-control" id="pravidelnost_brusle_inline" name="pravidelnost_brusle_inline"> 
+                <option value="0"> -- Vyberte pravidelnost --</option>
+                <? require "pripojeni_databaze.php";
+                $sql03 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+                $result03 = $conn->query($sql03);
+                while($row03 = $result03->fetch_assoc()) {
+                if ($pravidelnost_brusle_inline_01 == $row03["seznam_id"]) { 
+                echo '<option value = "' .$row03["seznam_id"]. ' " selected>' . $row03["seznam_hodnota"]."</option>\n";
+                }else{
+                echo '<option value = "' .$row03["seznam_id"]. '">' . $row03["seznam_hodnota"]. "</option>\n";   
+                } 
+              }
+              ?>
+           </select>
+        </div> 
+</div>
+<? $conn->close();?>
+
+<div class="row" style="background-color:#e3fad6;">
+    <div class="col-sm-3">
+
+     <div class="checkbox">
+        <? if ($kolo_spinning_01 == 1){ ?>
+        <label><input type="checkbox" name="kolo_spinning" value="1" checked  id="My_kolo_spinning" onclick="myFunction_kolo_spinning()">Kolo/Spinning</label>
+        <? }else{ ?>
+        <label><input type="checkbox" name="kolo_spinning" value="1"  id="My_kolo_spinning" onclick="myFunction_kolo_spinning()">Kolo/Spinning</label>
+        <?    }  ?>
+        </div>
+     </div> 
+            <? if ($pravidelnost_kolo_spinning_01 == 0){
+            $blok = 'none';
+            }else{
+            $blok = 'block';
+            } ?>
+        <div class="col-sm-4" id="text_kolo_spinning" style="display:<? echo $blok;?>">
+            <select class="form-control" id="kolo_spinning" name="kolo_spinning"> 
+                <option value="0"> -- Vyberte pravidelnost --</option>
+                <? require "pripojeni_databaze.php";
+                $sql03 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+                $result03 = $conn->query($sql03);
+                while($row03 = $result03->fetch_assoc()) {
+                if ($pravidelnost_kolo_spinning_01 == $row03["seznam_id"]) { 
+                echo '<option value = "' .$row03["seznam_id"]. ' " selected>' . $row03["seznam_hodnota"]."</option>\n";
+                }else{
+                echo '<option value = "' .$row03["seznam_id"]. '">' . $row03["seznam_hodnota"]. "</option>\n";   
+                } 
+              }
+              ?>
+           </select>
+        </div> 
+</div>
+<? $conn->close();?>
+
+<div class="row" style="background-color:#e3fad6;">
+    <div class="col-sm-3">
+
+     <div class="checkbox">
+        <? if ($beh_01 == 1){ ?>
+        <label><input type="checkbox" name="beh" value="1" checked  id="My_beh" onclick="myFunction_beh()">Běh</label>
+        <? }else{ ?>
+        <label><input type="checkbox" name="beh" value="1"  id="My_beh" onclick="myFunction_beh()">Běh</label>
+        <?    }  ?>
+        </div>
+     </div> 
+            <? if ($pravidelnost_beh_01 == 0){
+            $blok = 'none';
+            }else{
+            $blok = 'block';
+            } ?>
+        <div class="col-sm-4" id="text_beh" style="display:<? echo $blok;?>">
+            <select class="form-control" id="beh" name="beh"> 
+                <option value="0"> -- Vyberte pravidelnost --</option>
+                <? require "pripojeni_databaze.php";
+                $sql03 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+                $result03 = $conn->query($sql03);
+                while($row03 = $result03->fetch_assoc()) {
+                if ($pravidelnost_beh_01 == $row03["seznam_id"]) { 
+                echo '<option value = "' .$row03["seznam_id"]. ' " selected>' . $row03["seznam_hodnota"]."</option>\n";
+                }else{
+                echo '<option value = "' .$row03["seznam_id"]. '">' . $row03["seznam_hodnota"]. "</option>\n";   
+                } 
+              }
+              ?>
+           </select>
+        </div> 
+</div>
+<? $conn->close();?>
+
+<div class="row" style="background-color:#e3fad6;">
+    <div class="col-sm-3">
+
+     <div class="checkbox">
+        <? if ($pesi_turistika_01 == 1){ ?>
+        <label><input type="checkbox" name="pesi_turistika" value="1" checked  id="My_pesi_turistika" onclick="myFunction_pesi_turistika()">Pěší turistika/chůze</label>
+        <? }else{ ?>
+        <label><input type="checkbox" name="pesi_turistika" value="1"  id="My_pesi_turistika" onclick="myFunction_pesi_turistika()">Pěší turistika/chůze</label>
+        <?    }  ?>
+        </div>
+     </div> 
+            <? if ($pravidelnost_pesi_turistika_01 == 0){
+            $blok = 'none';
+            }else{
+            $blok = 'block';
+            } ?>
+        <div class="col-sm-4" id="text_pesi_turistika" style="display:<? echo $blok;?>">
+            <select class="form-control" id="pesi_turistika" name="pesi_turistika"> 
+                <option value="0"> -- Vyberte pravidelnost --</option>
+                <? require "pripojeni_databaze.php";
+                $sql03 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+                $result03 = $conn->query($sql03);
+                while($row03 = $result03->fetch_assoc()) {
+                if ($pravidelnost_pesi_turistika_01 == $row03["seznam_id"]) { 
+                echo '<option value = "' .$row03["seznam_id"]. ' " selected>' . $row03["seznam_hodnota"]."</option>\n";
+                }else{
+                echo '<option value = "' .$row03["seznam_id"]. '">' . $row03["seznam_hodnota"]. "</option>\n";   
+                } 
+              }
+              ?>
+           </select>
+        </div> 
+</div>
+<? $conn->close();?>
+
+
+<div class="row" style="background-color:#e3fad6;">
+    <div class="col-sm-3">
+
+     <div class="checkbox">
+        <? if ($cchi_kung_01 == 1){ ?>
+        <label><input type="checkbox" name="cchi_kung" value="1" checked  id="My_cchi_kung" onclick="myFunction_cchi_kung()">Čchi-kung</label>
+        <? }else{ ?>
+        <label><input type="checkbox" name="cchi_kung" value="1"  id="My_cchi_kung" onclick="myFunction_cchi_kung()">Čchi-kung</label>
+        <?    }  ?>
+        </div>
+     </div> 
+            <? if ($pravidelnost_cchi_kung_01 == 0){
+            $blok = 'none';
+            }else{
+            $blok = 'block';
+            } ?>
+        <div class="col-sm-4" id="text_cchi_kung" style="display:<? echo $blok;?>">
+            <select class="form-control" id="cchi_kung" name="cchi_kung"> 
+                <option value="0"> -- Vyberte pravidelnost --</option>
+                <? require "pripojeni_databaze.php";
+                $sql03 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+                $result03 = $conn->query($sql03);
+                while($row03 = $result03->fetch_assoc()) {
+                if ($pravidelnost_cchi_kung_01 == $row03["seznam_id"]) { 
+                echo '<option value = "' .$row03["seznam_id"]. ' " selected>' . $row03["seznam_hodnota"]."</option>\n";
+                }else{
+                echo '<option value = "' .$row03["seznam_id"]. '">' . $row03["seznam_hodnota"]. "</option>\n";   
+                } 
+              }
+              ?>
+           </select>
+        </div> 
+</div>
+<? $conn->close();?>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <br>***************************************<br>
-
-
-<br><br>
-     <label for="uzivatel">Pravidelné sportovní a pohybové aktivity:</label> 
-
-
-
+ 
 
     <? require "pripojeni_databaze.php";
     $sql = "SELECT * FROM seznam WHERE seznam_cislo = '44' ORDER BY seznam_poradi ASC"; 
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {  ?> 
     
-    
-
-
 
     <? 
     require "pripojeni_databaze.php";
     $sql01 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
     $result01 = $conn->query($sql01);
     while($row01 = $result01->fetch_assoc()) {
-  //  echo '<option value = "' .$row01["seznam_id"]. '">' . $row01["seznam_hodnota"]. "</option>\n"; 
+  
        }
     ?>
 
@@ -692,29 +1170,6 @@ function myFunction_<?echo $row["seznam_name"];?>() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>-------------------------------------<br>
-
-
-
-
 <div class="row">
 <div class="col-sm-6">
 
@@ -728,71 +1183,11 @@ function myFunction_<?echo $row["seznam_name"];?>() {
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Fitness - silový trénink</td>
-<td><? echo sport($posilovani);?></td>
-<td><? echo pravidelnost($pravidelnost_posilovani);?></td>
-</tr>
-<tr>
-<td>Florbal</td>
-<td><? echo sport($florbal);?></td>
-<td><? echo pravidelnost($pravidelnost_florbal);?></td>
-</tr>
-<tr>
-<td>Bojové sporty</td>
-<td><? echo sport($bojove_sporty);?></td>
-<td><? echo pravidelnost($pravidelnost_bojove_sporty);?></td>
-</tr>
-<tr>
-<td>Hokej</td>
-<td><? echo sport($hokej);?></td>
-<td><? echo pravidelnost($pravidelnost_hokej);?></td>
-</tr>
-<tr>
-<td>Fotbal</td>
-<td><? echo sport($fotbal);?></td>
-<td><? echo pravidelnost($pravidelnost_fotbal);?></td>
-</tr>
-<tr>
-<td>Volejbal/Basketbal</td>
-<td><? echo sport($volejbal);?></td>
-<td><? echo pravidelnost($pravidelnost_volejbal);?></td>
-</tr>
-<tr>
-<td>Aerobik</td>
-<td><? echo sport($aerobic);?></td>
-<td><? echo pravidelnost($pravidelnost_aerobic);?></td>
-</tr>
-<tr>
-<td>Tanec</td>
-<td><? echo sport($tanec);?></td>
-<td><? echo pravidelnost($pravidelnost_tanec);?></td>
-</tr>
-<tr>
-<td>Plavání</td>
-<td><? echo sport($plavani);?></td>
-<td><? echo pravidelnost($pravidelnost_plavani);?></td>
-</tr>
-<tr>
-<td>Brusle in-line</td>
-<td><? echo sport($brusle_inline);?></td>
-<td><? echo pravidelnost($pravidelnost_brusle_inline);?></td>
-</tr>
-<tr>
-<td>Kolo/Spinning</td>
-<td><? echo sport($kolo_spinning);?></td>
-<td><? echo pravidelnost($pravidelnost_kolo_spinning);?></td>
-</tr>
-<tr>
-<td>Běh</td>
-<td><? echo sport($beh);?></td>
-<td><? echo pravidelnost($pravidelnost_beh);?></td>
-</tr>
-<tr>
-<td>Pěší turistika/chůze</td>
-<td><? echo sport($pesi_turistika);?></td>
-<td><? echo pravidelnost($pravidelnost_pesi_turistika);?></td>
-</tr>
+
+
+
+
+
 <tr>
 <td>Taj-či</td>
 <td><? echo sport($taj_ci);?></td>
