@@ -560,34 +560,115 @@ return $vysledek;
 
 ?>
 -----------------------------------------<br>
+<?
+//require "pripojeni_databaze.php";
+require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+$sql_sport = "SELECT * FROM sport_pravidelne WHERE uzivatel_id = $uzivatel_id LIMIT 1";
+$result_sport = $conn->query($sql_sport);
+while($radek = $result_sport->fetch_assoc()) {
+$posilovani_01 = $radek["posilovani"];
+$pravidelnost_posilovani_01 = $radek["pravidelnost_posilovani"];
+$florbal_01 = $radek["florbal"];
+$pravidelnost_florbal_01 = $radek["pravidelnost_florbal"];
+$bojove_sporty = $radek["bojove_sporty"];
+$pravidelnost_bojove_sporty = $radek["pravidelnost_bojove_sporty"];
+$hokej = $radek["hokej"];
+$pravidelnost_hokej = $radek["pravidelnost_hokej"];
+$fotbal = $radek["fotbal"];
+$pravidelnost_fotbal = $radek["pravidelnost_fotbal"];
+$volejbal = $radek["volejbal"];
+$pravidelnost_volejbal = $radek["pravidelnost_volejbal"];
+$aerobic = $radek["aerobic"];
+$pravidelnost_aerobic= $radek["pravidelnost_aerobic"];
+$tanec = $radek["tanec"];
+$pravidelnost_tanec = $radek["pravidelnost_tanec"];
+$plavani = $radek["plavani"];
+$pravidelnost_plavani = $radek["pravidelnost_plavani"];
+$brusle_inline = $radek["brusle_inline"];
+$pravidelnost_brusle_inline = $radek["pravidelnost_brusle_inline"];
+$kolo_spinning = $radek["kolo_spinning"];
+$pravidelnost_kolo_spinning = $radek["pravidelnost_kolo_spinning"];
+$beh = $radek["beh"];
+$pravidelnost_beh = $radek["pravidelnost_beh"];
+$pesi_turistika = $radek["pesi_turistika"];
+$pravidelnost_pesi_turistika = $radek["pravidelnost_pesi_turistika"];
+$taj_ci = $radek["taj_ci"];
+$pravidelnost_taj_ci = $radek["pravidelnost_taj_ci"];
+$cchi_kung = $radek["cchi_kung"];
+$pravidelnost_cchi_kung = $radek["pravidelnost_cchi_kung"];
+$joga = $radek["joga"];
+$pravidelnost_joga = $radek["pravidelnost_joga"];
+$kondicni_treninky = $radek["kondicni_treninky"];
+$pravidelnost_kondicni_treninky = $radek["pravidelnost_kondicni_treninky"];
+$tenis_squash_badminton = $radek["tenis_squash_badminton"];
+$pravidelnost_tenis_squash_badminton = $radek["pravidelnost_tenis_squash_badminton"];
+}
+$conn->close();
+?>
+
+
+
+<br>***************************************<br>
+<label for="uzivatel">Pravidelné sportovní a pohybové aktivity:</label> 
+
+<div class="row" style="background-color:#e3fad6;">
+<div class="col-sm-3">
+
+        <div class="checkbox">
+        <? if ($posilovani_01 == 1){ ?>
+        <label><input type="checkbox" name="posilovani" value="1" checked  id="My_posilovani" onclick="myFunction_posilovani()">Fitness - silový trénink</label>
+        <? }else{ ?>
+        <label><input type="checkbox" name="posilovani" value="1"  id="My_posilovani" onclick="myFunction_posilovani()">Fitness - silový trénink</label>
+        <?    }  ?>
+        </div>
+        </div> 
+
+
+
+
+
+
+
+
+        
+
+
+
+</div>
+
+
+
+<br>***************************************<br>
+
 
 <br><br>
      <label for="uzivatel">Pravidelné sportovní a pohybové aktivity:</label> 
+
+
+
+
     <? require "pripojeni_databaze.php";
     $sql = "SELECT * FROM seznam WHERE seznam_cislo = '44' ORDER BY seznam_poradi ASC"; 
     $result = $conn->query($sql);
-    while($row = $result->fetch_assoc()) {  ?>  
-<div class="row" style="background-color:#e3fad6;">
-        <div class="col-sm-3">
-        <div class="checkbox">
-        <label><input type="checkbox" name="<?echo $row["seznam_name"];?>" value="1" id="My_<?echo $row["seznam_name"];?>" onclick="myFunction_<?echo $row["seznam_name"];?>()"><?echo $row["seznam_hodnota"];?></label>
-        </div>
-        </div> 
-  
-    <div class="col-sm-4" id="text_<?echo $row["seznam_name"];?>" style="display:none">  
-    <select class="form-control" id="pravidelnost_<?echo $row["seznam_name"];?>" name="pravidelnost_<?echo $row["seznam_name"];?>">
-    <option value="0"> -- Vyberte pravidelnost --</option>
+    while($row = $result->fetch_assoc()) {  ?> 
+    
+    
+
+
+
     <? 
     require "pripojeni_databaze.php";
     $sql01 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
     $result01 = $conn->query($sql01);
     while($row01 = $result01->fetch_assoc()) {
-    echo '<option value = "' .$row01["seznam_id"]. '">' . $row01["seznam_hodnota"]. "</option>\n"; 
+  //  echo '<option value = "' .$row01["seznam_id"]. '">' . $row01["seznam_hodnota"]. "</option>\n"; 
        }
     ?>
-    </select>
-    </div> 
-</div> 
+
+
+
+
+
 
 <script>
 function myFunction_<?echo $row["seznam_name"];?>() {
