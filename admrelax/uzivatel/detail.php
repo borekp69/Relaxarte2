@@ -561,6 +561,49 @@ return $vysledek;
 ?>
 -----------------------------------------<br>
 
+<br><br>
+     <label for="uzivatel">Pravidelné sportovní a pohybové aktivity:</label> 
+    <? require "pripojeni_databaze.php";
+    $sql = "SELECT * FROM seznam WHERE seznam_cislo = '44' ORDER BY seznam_poradi ASC"; 
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()) {  ?>  
+<div class="row" style="background-color:#e3fad6;">
+        <div class="col-sm-3">
+        <div class="checkbox">
+        <label><input type="checkbox" name="<?echo $row["seznam_name"];?>" value="1" id="My_<?echo $row["seznam_name"];?>" onclick="myFunction_<?echo $row["seznam_name"];?>()"><?echo $row["seznam_hodnota"];?></label>
+        </div>
+        </div> 
+  
+    <div class="col-sm-4" id="text_<?echo $row["seznam_name"];?>" style="display:none">  
+    <select class="form-control" id="pravidelnost_<?echo $row["seznam_name"];?>" name="pravidelnost_<?echo $row["seznam_name"];?>">
+    <option value="0"> -- Vyberte pravidelnost --</option>
+    <? 
+    require "pripojeni_databaze.php";
+    $sql01 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+    $result01 = $conn->query($sql01);
+    while($row01 = $result01->fetch_assoc()) {
+    echo '<option value = "' .$row01["seznam_id"]. '">' . $row01["seznam_hodnota"]. "</option>\n"; 
+       }
+    ?>
+    </select>
+    </div> 
+</div> 
+
+<script>
+function myFunction_<?echo $row["seznam_name"];?>() {
+  var checkBox = document.getElementById("My_<?echo $row["seznam_name"];?>");
+  var text = document.getElementById("text_<?echo $row["seznam_name"];?>");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+
+
+    <?  }
+    $conn->close(); ?>    
 
 
 
