@@ -1321,10 +1321,13 @@ posilovani= 0;
 
 
 
-
-
-
-
+        
+pravidelnost_tenis_squash_badminton = document.SportPravidelnetUpdate.pravidelnost_tenis_squash_badminton.value
+pravidelnost_kondicni_treninky = document.SportPravidelnetUpdate.pravidelnost_kondicni_treninky.value
+pravidelnost_joga = document.SportPravidelnetUpdate.pravidelnost_joga.value
+pravidelnost_cchi_kung = document.SportPravidelnetUpdate.pravidelnost_cchi_kung.value
+pravidelnost_pesi_turistika = document.SportPravidelnetUpdate.pravidelnost_pesi_turistika.value
+pravidelnost_beh = document.SportPravidelnetUpdate.pravidelnost_beh.value
 
 
 
@@ -1332,7 +1335,7 @@ posilovani= 0;
                             //if (joga_kurz == 1 && !lektor){
     alert("Chyba! \nUser ID:"+dataSportPravidelne);
 
-    alert("Chyba! \nposilovani:"+posilovani);
+    alert("Chyba! \npravidelnost_beh:"+pravidelnost_beh);
 
                             //}else{
 
