@@ -536,7 +536,8 @@ $conn->close();
 <label for="uzivatel">Pravidelné sportovní a pohybové aktivity:</label> 
 
 
-<div id="SportUpdate">
+<div id="SportPravidelnetUpdate">
+<form id="SportPravidelnetUpdate" name="SportPravidelnetUpdate" method="post">
     <div class="row" style="background-color:#e3fad6;">
     <div class="col-sm-3">
 
@@ -1135,7 +1136,9 @@ $conn->close();
         </div> 
     </div>
     <? $conn->close();?>
-
+    </form>
+  <br>
+  <button type="submit" class="btn btn-success btn-sm"  onclick="loadSportPravidelneUpdate()">&nbsp;&nbsp;Uložit pravidelné sportovní a pohybové aktivity&nbsp;&nbsp;</button>  
 
 </div>
 
@@ -1144,7 +1147,7 @@ $conn->close();
 
 
 
-<br>***************************************<br>
+
  
 
     <? require "pripojeni_databaze.php";
@@ -1174,9 +1177,192 @@ function myFunction_<?echo $row["seznam_name"];?>() {
 
 
     <?  }
-    $conn->close(); ?>    
+    $conn->close(); ?>   
+    
+    
+
+    
 
 
+
+
+
+
+
+<script>
+ function loadSportPravidelneUpdate() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("SportPravidelnetUpdate").innerHTML = this.responseText;
+    }
+  };
+
+  let dataSportPravidelne = "uzivatel_id=<? echo $uzivatel_id;?>";
+
+    tenis_squash_badminton = document.SportPravidelnetUpdate.tenis_squash_badminton;
+           if(tenis_squash_badminton.checked) {
+    tenis_squash_badminton = 1;
+            }else{
+    tenis_squash_badminton = 0;
+            } 
+
+    kondicni_treninky = document.SportPravidelnetUpdate.kondicni_treninky;
+           if(kondicni_treninky.checked) {
+    kondicni_treninky = 1;
+            }else{
+    kondicni_treninky= 0;
+            } 
+
+    joga = document.SportPravidelnetUpdate.joga;
+           if(joga.checked) {
+    joga = 1;
+            }else{
+    joga= 0;
+            } 
+
+    cchi_kung = document.SportPravidelnetUpdate.cchi_kung;
+           if(cchi_kung.checked) {
+    cchi_kung = 1;
+            }else{
+    cchi_kung= 0;
+            } 
+
+    pesi_turistika = document.SportPravidelnetUpdate.pesi_turistika;
+           if(pesi_turistika.checked) {
+    pesi_turistika = 1;
+            }else{
+    pesi_turistika= 0;
+            } 
+
+    beh = document.SportPravidelnetUpdate.beh;
+           if(beh.checked) {
+    beh = 1;
+            }else{
+    beh= 0;
+            } 
+
+kolo_spinning = document.SportPravidelnetUpdate.kolo_spinning;
+           if(kolo_spinning.checked) {
+kolo_spinning = 1;
+            }else{
+kolo_spinning= 0;
+            } 
+brusle_inline = document.SportPravidelnetUpdate.brusle_inline;
+           if(brusle_inline.checked) {
+brusle_inline = 1;
+            }else{
+brusle_inline= 0;
+            }
+
+plavani = document.SportPravidelnetUpdate.plavani;
+           if(plavani.checked) {
+plavani = 1;
+            }else{
+plavani= 0;
+            }
+
+tanec = document.SportPravidelnetUpdate.tanec;
+           if(tanec.checked) {
+tanec = 1;
+            }else{
+tanec= 0;
+            }
+
+aerobic = document.SportPravidelnetUpdate.aerobic;
+           if(aerobic.checked) {
+aerobic = 1;
+            }else{
+aerobic= 0;
+            }
+
+volejbal = document.SportPravidelnetUpdate.volejbal;
+           if(volejbal.checked) {
+volejbal = 1;
+            }else{
+volejbal= 0;
+            }
+
+fotbal = document.SportPravidelnetUpdate.fotbal;
+           if(fotbal.checked) {
+fotbal = 1;
+            }else{
+fotbal= 0;
+            }
+
+
+hokej = document.SportPravidelnetUpdate.hokej;
+           if(hokej.checked) {
+hokej = 1;
+            }else{
+hokej= 0;
+            }
+
+bojove_sporty = document.SportPravidelnetUpdate.bojove_sporty;
+           if(bojove_sporty.checked) {
+bojove_sporty = 1;
+            }else{
+bojove_sporty= 0;
+            }
+
+florbal = document.SportPravidelnetUpdate.florbal;
+           if(florbal.checked) {
+florbal = 1;
+            }else{
+florbal= 0;
+        }
+
+posilovani = document.SportPravidelnetUpdate.posilovani;
+           if(posilovani.checked) {
+posilovani = 1;
+            }else{
+posilovani= 0;
+        }
+
+
+
+
+
+
+
+
+
+
+
+                            //if (joga_kurz == 1 && !lektor){
+    alert("Chyba! \nUser ID:"+dataSportPravidelne);
+
+    alert("Chyba! \nposilovani:"+posilovani);
+
+                            //}else{
+
+ 
+                            
+   
+    //dataJoga = dataJoga + "&joga_kurz="+joga_kurz;
+
+    xhttp.open("POST", "./script/form_prav_sport_aktivity_update.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send(dataJoga);
+    alert("Uložení:\nZáznam o pravidelný sportovních aktivitách byl uložen uložen.");
+                                //}
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>***************************************<br>
 
 
 
