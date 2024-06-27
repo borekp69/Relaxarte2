@@ -1027,10 +1027,10 @@ $conn->close();
               ?>
            </select>
         </div> 
-</div>
-<? $conn->close();?>
+    </div>
+    <? $conn->close();?>
 
-<div class="row" style="background-color:#e3fad6;">
+    <div class="row" style="background-color:#e3fad6;">
     <div class="col-sm-3">
 
      <div class="checkbox">
@@ -1062,10 +1062,10 @@ $conn->close();
               ?>
            </select>
         </div> 
-</div>
-<? $conn->close();?>
+    </div>
+    <? $conn->close();?>
 
-<div class="row" style="background-color:#e3fad6;">
+    <div class="row" style="background-color:#e3fad6;">
     <div class="col-sm-3">
 
      <div class="checkbox">
@@ -1097,12 +1097,12 @@ $conn->close();
               ?>
            </select>
         </div> 
-</div>
-<? $conn->close();?>
+    </div>
+    <? $conn->close();?>
 
 
-<div class="row" style="background-color:#e3fad6;">
-    <div class="col-sm-3">
+    <div class="row" style="background-color:#e3fad6;">
+        <div class="col-sm-3">
 
      <div class="checkbox">
         <? if ($tenis_squash_badminton_01 == 1){ ?>
