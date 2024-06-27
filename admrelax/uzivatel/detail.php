@@ -1328,27 +1328,43 @@ pravidelnost_joga = document.SportPravidelnetUpdate.pravidelnost_joga.value
 pravidelnost_cchi_kung = document.SportPravidelnetUpdate.pravidelnost_cchi_kung.value
 pravidelnost_pesi_turistika = document.SportPravidelnetUpdate.pravidelnost_pesi_turistika.value
 pravidelnost_beh = document.SportPravidelnetUpdate.pravidelnost_beh.value
+pravidelnost_kolo_spinning = document.SportPravidelnetUpdate.pravidelnost_kolo_spinning.value
+pravidelnost_brusle_inline = document.SportPravidelnetUpdate.pravidelnost_brusle_inline.value
+pravidelnost_plavani = document.SportPravidelnetUpdate.pravidelnost_plavani.value
+pravidelnost_tanec = document.SportPravidelnetUpdate.pravidelnost_tanec.value
+pravidelnost_aerobic = document.SportPravidelnetUpdate.pravidelnost_aerobic.value
+pravidelnost_volejbal = document.SportPravidelnetUpdate.pravidelnost_volejbal.value
+pravidelnost_fotbal = document.SportPravidelnetUpdate.pravidelnost_fotbal.value
+pravidelnost_hokej = document.SportPravidelnetUpdate.pravidelnost_hokej.value
+pravidelnost_bojove_sporty = document.SportPravidelnetUpdate.pravidelnost_bojove_sporty.value
+pravidelnost_florbal = document.SportPravidelnetUpdate.pravidelnost_florbal.value
+pravidelnost_posilovani = document.SportPravidelnetUpdate.pravidelnost_posilovani.value
+
+
+
+// alert("Chyba! \nUser ID:"+dataSportPravidelne);
 
 
 
 
-                            //if (joga_kurz == 1 && !lektor){
-    alert("Chyba! \nUser ID:"+dataSportPravidelne);
 
-    alert("Chyba! \npravidelnost_beh:"+pravidelnost_beh);
 
-                            //}else{
+if (posilovani == 1 && pravidelnost_posilovani == 0 || florbal == 1 && pravidelnost_florbal == 0 || bojove_sporty == 1 && pravidelnost_bojove_sporty == 0 || hokej == 1 && pravidelnost_hokej == 0 || fotbal == 1 && pravidelnost_fotbal == 0 || volejbal == 1 && pravidelnost_volejbal == 0 || aerobic == 1 && pravidelnost_aerobic == 0 || 
+tanec == 1 && pravidelnost_tanec == 0 || plavani == 1 && pravidelnost_plavani == 0){
+    alert("Chyba! \Pokud vyberete některou aktivitu, musíte vybrat i časovou dotaci!!:");
 
- 
-                            
-   
+                                }else{
+
+    alert("Odesílání dat! \Odesláno:");
+    
+    
     //dataJoga = dataJoga + "&joga_kurz="+joga_kurz;
 
     xhttp.open("POST", "./script/form_prav_sport_aktivity_update.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(dataJoga);
     alert("Uložení:\nZáznam o pravidelný sportovních aktivitách byl uložen uložen.");
-                                //}
+                                }
     }
 </script>
 
