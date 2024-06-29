@@ -1344,36 +1344,24 @@ pravidelnost_posilovani = document.SportPravidelnetUpdate.pravidelnost_posilovan
 
 // alert("Chyba! \nUser ID:"+dataSportPravidelne);
 
-
-
-
-
-
 if (posilovani == 1 && pravidelnost_posilovani == 0 || florbal == 1 && pravidelnost_florbal == 0 || bojove_sporty == 1 && pravidelnost_bojove_sporty == 0 || hokej == 1 && pravidelnost_hokej == 0 || fotbal == 1 && pravidelnost_fotbal == 0 || volejbal == 1 && pravidelnost_volejbal == 0 || aerobic == 1 && pravidelnost_aerobic == 0 || 
-tanec == 1 && pravidelnost_tanec == 0 || plavani == 1 && pravidelnost_plavani == 0){
-    alert("Chyba! \Pokud vyberete některou aktivitu, musíte vybrat i časovou dotaci!!:");
+tanec == 1 && pravidelnost_tanec == 0 || plavani == 1 && pravidelnost_plavani == 0 || brusle_inline == 1 && pravidelnost_brusle_inline == 0 || kolo_spinning == 1 && pravidelnost_kolo_spinning == 0 || beh == 1 && pravidelnost_beh == 0 || pesi_turistika == 1 && pravidelnost_pesi_turistika == 0 || cchi_kung == 1 && pravidelnost_cchi_kung == 0 || joga == 1 && pravidelnost_joga == 0 || kondicni_treninky == 1 && pravidelnost_kondicni_treninky == 0 || tenis_squash_badminton == 1 && pravidelnost_tenis_squash_badminton == 0){
+    alert("Chyba validace formuláře! \nPokud vyberete některou aktivitu, musíte vybrat i časovou dotaci!!");
 
                                 }else{
 
-    alert("Odesílání dat! \Odesláno:");
+    alert("Odesílání dat! \nUložení dat ještě není dokončeno!!!!!!!!:");
     
     
     //dataJoga = dataJoga + "&joga_kurz="+joga_kurz;
 
     xhttp.open("POST", "./script/form_prav_sport_aktivity_update.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send(dataJoga);
+    xhttp.send(dataSportPravidelne);
     alert("Uložení:\nZáznam o pravidelný sportovních aktivitách byl uložen uložen.");
                                 }
     }
 </script>
-
-
-
-
-
-
-
 
 
 
