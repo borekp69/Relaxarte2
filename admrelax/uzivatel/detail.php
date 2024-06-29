@@ -1349,11 +1349,16 @@ tanec == 1 && pravidelnost_tanec == 0 || plavani == 1 && pravidelnost_plavani ==
     alert("Chyba validace formuláře! \nPokud vyberete některou aktivitu, musíte vybrat i časovou dotaci!!");
 
                                 }else{
+    dataSportPravidelne = dataSportPravidelne + "&posilovani=" + posilovani;
+    dataSportPravidelne = dataSportPravidelne + "&pravidelnost_posilovani=" + pravidelnost_posilovani; 
+    dataSportPravidelne = dataSportPravidelne + "&florbal=" + florbal;
+    dataSportPravidelne = dataSportPravidelne + "&pravidelnost_florbal=" + pravidelnost_florbal; 
+    dataSportPravidelne = dataSportPravidelne + "&bojove_sporty=" + bojove_sporty;
+    dataSportPravidelne = dataSportPravidelne + "&pravidelnost_bojove_sporty=" + pravidelnost_bojove_sporty;  
+    dataSportPravidelne = dataSportPravidelne + "&hokej=" + hokej;
+    dataSportPravidelne = dataSportPravidelne + "&pravidelnost_hokej=" + pravidelnost_hokej;  
 
-    alert("Odesílání dat! \nUložení dat ještě není dokončeno!!!!!!!!:");
-    
-    
-    //dataJoga = dataJoga + "&joga_kurz="+joga_kurz;
+
 
     xhttp.open("POST", "./script/form_prav_sport_aktivity_update.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
