@@ -14,12 +14,15 @@ $pravidelnost_bojove_sporty_form = addslashes(htmlspecialchars(trim("$_POST[prav
 $hokej_form = addslashes(htmlspecialchars(trim("$_POST[hokej]")));
 $pravidelnost_hokej_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_hokej]")));
 
-
+$fotbal_form = addslashes(htmlspecialchars(trim("$_POST[fotbal]")));
+$pravidelnost_fotbal_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_fotbal]")));
 
 
 echo 'posilovani: '.$posilovani_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_posilovani_form.'<br>';
 echo 'florbal: '.$florbal_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_florbal_form.'<br>';
 echo 'bojove sporty: '.$bojove_sporty_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_bojove_sporty_form.'<br>';
 echo 'hokej: '.$hokej_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_hokej_form.'<br>';
+echo 'fotbal: '.$fotbal_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_fotbal_form.'<br>';
+
 
 ?>

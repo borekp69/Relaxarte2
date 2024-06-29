@@ -1359,6 +1359,9 @@ tanec == 1 && pravidelnost_tanec == 0 || plavani == 1 && pravidelnost_plavani ==
     dataSportPravidelne = dataSportPravidelne + "&pravidelnost_hokej=" + pravidelnost_hokej;  
 
 
+    dataSportPravidelne = dataSportPravidelne + "&fotbal=" + fotbal;
+    dataSportPravidelne = dataSportPravidelne + "&pravidelnost_fotbal=" + pravidelnost_fotbal;  
+
 
     xhttp.open("POST", "./script/form_prav_sport_aktivity_update.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
