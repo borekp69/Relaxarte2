@@ -29,11 +29,15 @@ $kolo_spinning_form = addslashes(htmlspecialchars(trim("$_POST[kolo_spinning]"))
 $pravidelnost_kolo_spinning_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_kolo_spinning]")));
 $beh_form = addslashes(htmlspecialchars(trim("$_POST[beh]")));
 $pravidelnost_beh_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_beh]")));
-
-
-
 $pesi_turistika_form = addslashes(htmlspecialchars(trim("$_POST[pesi_turistika]")));
 $pravidelnost_pesi_turistika_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_pesi_turistika]")));
+$cchi_kung_form = addslashes(htmlspecialchars(trim("$_POST[cchi_kung]")));
+$pravidelnost_cchi_kung_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_cchi_kung]")));
+$joga_form = addslashes(htmlspecialchars(trim("$_POST[joga]")));
+$pravidelnost_joga_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_joga]")));
+$kondicni_treninky_form = addslashes(htmlspecialchars(trim("$_POST[kondicni_treninky]")));
+$pravidelnost_kondicni_treninky_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_kondicni_treninky]")));
+
 
 
 
@@ -51,7 +55,9 @@ echo 'brusle_inline: '.$brusle_inline_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$p
 echo 'kolo_spinning: '.$kolo_spinning_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_kolo_spinning_form.'<br>';
 echo 'beh: '.$beh_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_beh_form.'<br>';
 echo 'pesi_turistika: '.$pesi_turistika_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_pesi_turistika_form.'<br>';
-
+echo 'cchi_kung: '.$cchi_kung_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_cchi_kung_form.'<br>';
+echo 'joga: '.$joga_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_joga_form.'<br>';
+echo 'kondicni_treninky: '.$kondicni_treninky_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_kondicni_treninky_form.'<br>';
 
 
 ?>

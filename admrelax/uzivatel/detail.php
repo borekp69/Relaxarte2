@@ -1374,10 +1374,15 @@ tanec == 1 && pravidelnost_tanec == 0 || plavani == 1 && pravidelnost_plavani ==
     dataSportPravidelne = dataSportPravidelne + "&pravidelnost_kolo_spinning=" + pravidelnost_kolo_spinning; 
     dataSportPravidelne = dataSportPravidelne + "&beh=" + beh;
     dataSportPravidelne = dataSportPravidelne + "&pravidelnost_beh=" + pravidelnost_beh; 
-
     dataSportPravidelne = dataSportPravidelne + "&pesi_turistika=" + pesi_turistika;
     dataSportPravidelne = dataSportPravidelne + "&pravidelnost_pesi_turistika=" + pravidelnost_pesi_turistika; 
+    dataSportPravidelne = dataSportPravidelne + "&cchi_kung=" + cchi_kung;
+    dataSportPravidelne = dataSportPravidelne + "&pravidelnost_cchi_kung=" + pravidelnost_cchi_kung; 
+    dataSportPravidelne = dataSportPravidelne + "&joga=" + joga;
+    dataSportPravidelne = dataSportPravidelne + "&pravidelnost_joga=" + pravidelnost_joga; 
 
+    dataSportPravidelne = dataSportPravidelne + "&kondicni_treninky=" + kondicni_treninky;
+    dataSportPravidelne = dataSportPravidelne + "&pravidelnost_kondicni_treninky=" + pravidelnost_kondicni_treninky; 
 
 
     xhttp.open("POST", "./script/form_prav_sport_aktivity_update.php", true);
