@@ -1362,16 +1362,24 @@ tanec == 1 && pravidelnost_tanec == 0 || plavani == 1 && pravidelnost_plavani ==
     dataSportPravidelne = dataSportPravidelne + "&pravidelnost_fotbal=" + pravidelnost_fotbal;  
     dataSportPravidelne = dataSportPravidelne + "&volejbal=" + volejbal;
     dataSportPravidelne = dataSportPravidelne + "&pravidelnost_volejbal=" + pravidelnost_volejbal;  
-
     dataSportPravidelne = dataSportPravidelne + "&aerobic=" + aerobic;
     dataSportPravidelne = dataSportPravidelne + "&pravidelnost_aerobic=" + pravidelnost_aerobic; 
+    dataSportPravidelne = dataSportPravidelne + "&tanec=" + tanec;
+    dataSportPravidelne = dataSportPravidelne + "&pravidelnost_tanec=" + pravidelnost_tanec; 
+    dataSportPravidelne = dataSportPravidelne + "&plavani=" + plavani;
+    dataSportPravidelne = dataSportPravidelne + "&pravidelnost_plavani=" + pravidelnost_plavani; 
+    dataSportPravidelne = dataSportPravidelne + "&brusle_inline=" + brusle_inline;
+    dataSportPravidelne = dataSportPravidelne + "&pravidelnost_brusle_inline=" + pravidelnost_brusle_inline; 
+    dataSportPravidelne = dataSportPravidelne + "&kolo_spinning=" + kolo_spinning;
+    dataSportPravidelne = dataSportPravidelne + "&pravidelnost_kolo_spinning=" + pravidelnost_kolo_spinning; 
+    dataSportPravidelne = dataSportPravidelne + "&beh=" + beh;
+    dataSportPravidelne = dataSportPravidelne + "&pravidelnost_beh=" + pravidelnost_beh; 
+
+    dataSportPravidelne = dataSportPravidelne + "&pesi_turistika=" + pesi_turistika;
+    dataSportPravidelne = dataSportPravidelne + "&pravidelnost_pesi_turistika=" + pravidelnost_pesi_turistika; 
 
 
 
-
-
-
-    
     xhttp.open("POST", "./script/form_prav_sport_aktivity_update.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(dataSportPravidelne);

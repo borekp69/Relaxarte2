@@ -17,13 +17,27 @@ $fotbal_form = addslashes(htmlspecialchars(trim("$_POST[fotbal]")));
 $pravidelnost_fotbal_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_fotbal]")));
 $volejbal_form = addslashes(htmlspecialchars(trim("$_POST[volejbal]")));
 $pravidelnost_volejbal_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_volejbal]")));
-
 $aerobic_form = addslashes(htmlspecialchars(trim("$_POST[aerobic]")));
 $pravidelnost_aerobic_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_aerobic]")));
+$tanec_form = addslashes(htmlspecialchars(trim("$_POST[tanec]")));
+$pravidelnost_tanec_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_tanec]")));
+$plavani_form = addslashes(htmlspecialchars(trim("$_POST[plavani]")));
+$pravidelnost_plavani_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_plavani]")));
+$brusle_inline_form = addslashes(htmlspecialchars(trim("$_POST[brusle_inline]")));
+$pravidelnost_brusle_inline_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_brusle_inline]")));
+$kolo_spinning_form = addslashes(htmlspecialchars(trim("$_POST[kolo_spinning]")));
+$pravidelnost_kolo_spinning_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_kolo_spinning]")));
+$beh_form = addslashes(htmlspecialchars(trim("$_POST[beh]")));
+$pravidelnost_beh_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_beh]")));
 
 
 
+$pesi_turistika_form = addslashes(htmlspecialchars(trim("$_POST[pesi_turistika]")));
+$pravidelnost_pesi_turistika_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_pesi_turistika]")));
 
+
+
+echo 'uzivatel ID:'.$uzivatel_id.'<br>';
 echo 'posilovani: '.$posilovani_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_posilovani_form.'<br>';
 echo 'florbal: '.$florbal_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_florbal_form.'<br>';
 echo 'bojove sporty: '.$bojove_sporty_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_bojove_sporty_form.'<br>';
@@ -31,6 +45,13 @@ echo 'hokej: '.$hokej_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_hoke
 echo 'fotbal: '.$fotbal_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_fotbal_form.'<br>';
 echo 'volejbal: '.$volejbal_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_volejbal_form.'<br>';
 echo 'aerobic: '.$aerobic_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_aerobic_form.'<br>';
+echo 'tanec: '.$tanec_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_tanec_form.'<br>';
+echo 'plavani: '.$plavani_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_plavani_form.'<br>';
+echo 'brusle_inline: '.$brusle_inline_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_brusle_inline_form.'<br>';
+echo 'kolo_spinning: '.$kolo_spinning_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_kolo_spinning_form.'<br>';
+echo 'beh: '.$beh_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_beh_form.'<br>';
+echo 'pesi_turistika: '.$pesi_turistika_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_pesi_turistika_form.'<br>';
+
 
 
 ?>
