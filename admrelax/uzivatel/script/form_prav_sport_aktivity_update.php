@@ -42,11 +42,46 @@ $pravidelnost_tenis_squash_badminton_form = addslashes(htmlspecialchars(trim("$_
 
 
 
+if ($posilovani_form == 0){
+    $pravidelnost_posilovani_form = 0;
+}
+
+if ($florbal_form == 0){
+    $pravidelnost_florbal_form = 0;
+}
+
+if ($bojove_sporty_form == 0){
+    $pravidelnost_bojove_sporty_form = 0;
+}
+
+if ($hokej_form == 0){
+    $pravidelnost_hokej_form = 0;
+}
+
+if ($fotbal_form == 0){
+    $pravidelnost_fotbal_form = 0;
+}
+
+if ($volejbal_form == 0){
+    $pravidelnost_volejbal_form = 0;
+}
+
+if ($aerobic_form == 0){
+    $pravidelnost_aerobic_form = 0;
+}
+
+if ($tanec_form == 0){
+    $pravidelnost_tanec_form = 0;
+}
+
+
+if ($plavani_form == 0){
+    $pravidelnost_plavani_form = 0;
+}
 
 
 
-
-echo 'uzivatel ID:'.$uzivatel_id.'<br>';
+echo '<br>uzivatel ID:'.$uzivatel_id.'<br>';
 echo 'posilovani: '.$posilovani_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_posilovani_form.'<br>';
 echo 'florbal: '.$florbal_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_florbal_form.'<br>';
 echo 'bojove sporty: '.$bojove_sporty_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_bojove_sporty_form.'<br>';
