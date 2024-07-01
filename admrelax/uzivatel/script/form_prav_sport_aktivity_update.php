@@ -40,8 +40,6 @@ $pravidelnost_kondicni_treninky_form = addslashes(htmlspecialchars(trim("$_POST[
 $tenis_squash_badminton_form = addslashes(htmlspecialchars(trim("$_POST[tenis_squash_badminton]")));
 $pravidelnost_tenis_squash_badminton_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_tenis_squash_badminton]")));
 
-
-
 if ($posilovani_form == 0){
     $pravidelnost_posilovani_form = 0;
 }
@@ -78,6 +76,30 @@ if ($tanec_form == 0){
 if ($plavani_form == 0){
     $pravidelnost_plavani_form = 0;
 }
+
+if ($brusle_inline_form == 0){
+    $pravidelnost_brusle_inline_form = 0;
+}
+
+if ($kolo_spinning_form == 0){
+    $pravidelnost_kolo_spinning_form = 0;
+}
+
+if ($beh_form == 0){
+    $pravidelnost_beh_form = 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
