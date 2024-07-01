@@ -1318,9 +1318,6 @@ posilovani = 1;
             }else{
 posilovani= 0;
         }
-
-
-
         
 pravidelnost_tenis_squash_badminton = document.SportPravidelnetUpdate.pravidelnost_tenis_squash_badminton.value
 pravidelnost_kondicni_treninky = document.SportPravidelnetUpdate.pravidelnost_kondicni_treninky.value
