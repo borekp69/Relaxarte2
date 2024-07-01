@@ -133,4 +133,15 @@ echo 'joga: '.$joga_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_joga_f
 echo 'kondicni_treninky: '.$kondicni_treninky_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_kondicni_treninky_form.'<br>';
 echo 'tenis_squash_badminton: '.$tenis_squash_badminton_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_tenis_squash_badminton_form.'<br>';
 
+
+
+
+
+
+
+
+
+
+
+
 ?>
