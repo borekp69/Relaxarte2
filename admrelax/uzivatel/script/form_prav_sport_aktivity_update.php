@@ -89,15 +89,26 @@ if ($beh_form == 0){
     $pravidelnost_beh_form = 0;
 }
 
+if ($pesi_turistika_form == 0){
+    $pravidelnost_pesi_turistika_form = 0;
+}
+
+if ($cchi_kung_form == 0){
+    $pravidelnost_cchi_kung_form = 0;
+}
 
 
+if ($joga_form == 0){
+    $pravidelnost_joga_form = 0;
+}
 
+if ($kondicni_treninky_form == 0){
+    $pravidelnost_kondicni_treninky_form = 0;
+}
 
-
-
-
-
-
+if ($tenis_squash_badminton_form == 0){
+    $pravidelnost_tenis_squash_badminton_form = 0;
+}
 
 
 
