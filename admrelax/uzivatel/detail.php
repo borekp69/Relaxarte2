@@ -1360,12 +1360,11 @@ tanec == 1 && pravidelnost_tanec == 0 || plavani == 1 && pravidelnost_plavani ==
     dataSportPravidelne = dataSportPravidelne + "&pravidelnost_hokej=" + pravidelnost_hokej;  
     dataSportPravidelne = dataSportPravidelne + "&fotbal=" + fotbal;
     dataSportPravidelne = dataSportPravidelne + "&pravidelnost_fotbal=" + pravidelnost_fotbal;  
-
-
     dataSportPravidelne = dataSportPravidelne + "&volejbal=" + volejbal;
     dataSportPravidelne = dataSportPravidelne + "&pravidelnost_volejbal=" + pravidelnost_volejbal;  
 
-
+    dataSportPravidelne = dataSportPravidelne + "&aerobic=" + aerobic;
+    dataSportPravidelne = dataSportPravidelne + "&pravidelnost_aerobic=" + pravidelnost_aerobic; 
 
 
 
