@@ -125,6 +125,10 @@ hokej = '$hokej_form',
 pravidelnost_hokej = '$pravidelnost_hokej_form',
 fotbal = '$fotbal_form',
 pravidelnost_fotbal = '$pravidelnost_fotbal_form',
+volejbal = '$volejbal_form',
+pravidelnost_volejbal = '$pravidelnost_volejbal_form',
+aerobic = '$aerobic_form',
+pravidelnost_aerobic = '$pravidelnost_aerobic_form',
 
 datum =  NOW()
     WHERE uzivatel_id = '$uzivatel_id'
