@@ -159,34 +159,31 @@ if ($conn->query($sql) === TRUE) {
 
 
 
-echo '<br>uzivatel ID:'.$uzivatel_id.'<br>';
-echo 'posilovani: '.$posilovani_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_posilovani_form.'<br>';
-echo 'florbal: '.$florbal_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_florbal_form.'<br>';
-echo 'bojove sporty: '.$bojove_sporty_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_bojove_sporty_form.'<br>';
-echo 'hokej: '.$hokej_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_hokej_form.'<br>';
-echo 'fotbal: '.$fotbal_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_fotbal_form.'<br>';
-echo 'volejbal: '.$volejbal_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_volejbal_form.'<br>';
-echo 'aerobic: '.$aerobic_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_aerobic_form.'<br>';
-echo 'tanec: '.$tanec_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_tanec_form.'<br>';
-echo 'plavani: '.$plavani_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_plavani_form.'<br>';
-echo 'brusle_inline: '.$brusle_inline_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_brusle_inline_form.'<br>';
-echo 'kolo_spinning: '.$kolo_spinning_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_kolo_spinning_form.'<br>';
-echo 'beh: '.$beh_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_beh_form.'<br>';
-echo 'pesi_turistika: '.$pesi_turistika_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_pesi_turistika_form.'<br>';
-echo 'cchi_kung: '.$cchi_kung_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_cchi_kung_form.'<br>';
-echo 'joga: '.$joga_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_joga_form.'<br>';
-echo 'kondicni_treninky: '.$kondicni_treninky_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_kondicni_treninky_form.'<br>';
-echo 'tenis_squash_badminton: '.$tenis_squash_badminton_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_tenis_squash_badminton_form.'<br>';
-
-
-
-
-
-
-
-
-
-
+//echo '<br>uzivatel ID:'.$uzivatel_id.'<br>';
+//echo 'posilovani: '.$posilovani_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_posilovani_form.'<br>';
+//echo 'florbal: '.$florbal_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_florbal_form.'<br>';
+//echo 'bojove sporty: '.$bojove_sporty_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_bojove_sporty_form.'<br>';
+//echo 'hokej: '.$hokej_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_hokej_form.'<br>';
+//echo 'fotbal: '.$fotbal_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_fotbal_form.'<br>';
+//echo 'volejbal: '.$volejbal_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_volejbal_form.'<br>';
+//echo 'aerobic: '.$aerobic_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_aerobic_form.'<br>';
+//echo 'tanec: '.$tanec_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_tanec_form.'<br>';
+//echo 'plavani: '.$plavani_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_plavani_form.'<br>';
+//echo 'brusle_inline: '.$brusle_inline_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_brusle_inline_form.'<br>';
+//echo 'kolo_spinning: '.$kolo_spinning_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_kolo_spinning_form.'<br>';
+//echo 'beh: '.$beh_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_beh_form.'<br>';
+//echo 'pesi_turistika: '.$pesi_turistika_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_pesi_turistika_form.'<br>';
+//echo 'cchi_kung: '.$cchi_kung_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_cchi_kung_form.'<br>';
+//echo 'joga: '.$joga_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_joga_form.'<br>';
+//echo 'kondicni_treninky: '.$kondicni_treninky_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_kondicni_treninky_form.'<br>';
+//echo 'tenis_squash_badminton: '.$tenis_squash_badminton_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_tenis_squash_badminton_form.'<br>';
 
 
 ?>
+
+
+
+
+
+  
+  
