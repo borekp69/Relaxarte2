@@ -111,8 +111,6 @@ if ($tenis_squash_badminton_form == 0){
 }
 
 
-
-
 require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
 $sql = "UPDATE sport_pravidelne SET
 posilovani = '$posilovani_form',
@@ -129,7 +127,26 @@ volejbal = '$volejbal_form',
 pravidelnost_volejbal = '$pravidelnost_volejbal_form',
 aerobic = '$aerobic_form',
 pravidelnost_aerobic = '$pravidelnost_aerobic_form',
-
+tanec = '$tanec_form',
+pravidelnost_tanec = '$pravidelnost_tanec_form',
+plavani = '$plavani_form',
+pravidelnost_plavani = '$pravidelnost_plavani_form',
+brusle_inline = '$brusle_inline_form',
+pravidelnost_brusle_inline = '$pravidelnost_brusle_inline_form',
+kolo_spinning = '$kolo_spinning_form',
+pravidelnost_kolo_spinning = '$pravidelnost_kolo_spinning_form',
+beh = '$beh_form',
+pravidelnost_beh = '$pravidelnost_beh_form',
+pesi_turistika = '$pesi_turistika_form',
+pravidelnost_pesi_turistika = '$pravidelnost_pesi_turistika_form',
+cchi_kung = '$cchi_kung_form',
+pravidelnost_cchi_kung = '$pravidelnost_cchi_kung_form',
+joga = '$joga_form',
+pravidelnost_joga = '$pravidelnost_joga_form',
+kondicni_treninky = '$kondicni_treninky_form',
+pravidelnost_kondicni_treninky = '$pravidelnost_kondicni_treninky_form',
+tenis_squash_badminton = '$tenis_squash_badminton_form',
+pravidelnost_tenis_squash_badminton = '$pravidelnost_tenis_squash_badminton_form',
 datum =  NOW()
     WHERE uzivatel_id = '$uzivatel_id'
     ";
