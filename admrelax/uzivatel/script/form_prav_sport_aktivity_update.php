@@ -113,6 +113,30 @@ if ($tenis_squash_badminton_form == 0){
 
 
 
+require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+$sql = "UPDATE sport_pravidelne SET
+posilovani = '$posilovani_form',
+pravidelnost_posilovani = '$pravidelnost_posilovani_form',
+florbal = '$florbal_form',
+pravidelnost_florbal = '$pravidelnost_florbal_form',
+bojove_sporty = '$bojove_sporty_form',
+pravidelnost_bojove_sporty = '$pravidelnost_bojove_sporty_form',
+hokej = '$hokej_form',
+pravidelnost_hokej = '$pravidelnost_hokej_form',
+fotbal = '$fotbal_form',
+pravidelnost_fotbal = '$pravidelnost_fotbal_form',
+
+datum =  NOW()
+    WHERE uzivatel_id = '$uzivatel_id'
+    ";
+if ($conn->query($sql) === TRUE) {    
+    } else {
+  echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
+    }
+    $conn->close(); 
+
+
+
 
 echo '<br>uzivatel ID:'.$uzivatel_id.'<br>';
 echo 'posilovani: '.$posilovani_form.'&nbsp;&nbsp;&nbsp;Pravidelnost: '.$pravidelnost_posilovani_form.'<br>';
