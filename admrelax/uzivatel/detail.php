@@ -531,11 +531,8 @@ $conn->close();
 ?>
 
 
-
-<br>***************************************<br>
+<br>
 <label for="uzivatel">Pravidelné sportovní a pohybové aktivity:</label> 
-
-
 <div id="SportPravidelnetUpdate">
 <form id="SportPravidelnetUpdate" name="SportPravidelnetUpdate" method="post">
     <div class="row" style="background-color:#e3fad6;">
@@ -613,14 +610,14 @@ $conn->close();
     <div class="row" style="background-color:#e3fad6;">
     <div class="col-sm-3">
 
-     <div class="checkbox">
+        <div class="checkbox">
         <? if ($bojove_sporty_01 == 1){ ?>
         <label><input type="checkbox" name="bojove_sporty" value="1" checked  id="My_bojove_sporty" onclick="myFunction_bojove_sporty()">Bojové sporty</label>
         <? }else{ ?>
         <label><input type="checkbox" name="bojove_sporty" value="1"  id="My_bojove_sporty" onclick="myFunction_bojove_sporty()">Bojové sporty</label>
         <?    }  ?>
         </div>
-     </div> 
+        </div> 
             <? if ($pravidelnost_bojove_sporty_01 == 0){
             $blok = 'none';
             }else{
@@ -1140,26 +1137,19 @@ $conn->close();
   <br>
   <button type="submit" class="btn btn-success btn-sm"  onclick="loadSportPravidelneUpdate()">&nbsp;&nbsp;Uložit pravidelné sportovní a pohybové aktivity&nbsp;&nbsp;</button>  
 
-</div>
 
-
-
-
-
-
-
- 
+  <br>
 
     <? require "pripojeni_databaze.php";
     $sql = "SELECT * FROM seznam WHERE seznam_cislo = '44' ORDER BY seznam_poradi ASC"; 
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {  
     
-    //require "pripojeni_databaze.php";
-    //$sql01 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
-    //$result01 = $conn->query($sql01);
-    //while($row01 = $result01->fetch_assoc()) {
-    //   }
+    require "pripojeni_databaze.php";
+    $sql01 = "SELECT * FROM seznam WHERE seznam_cislo = '2' ORDER BY seznam_poradi ASC";    
+    $result01 = $conn->query($sql01);
+    while($row01 = $result01->fetch_assoc()) {
+       }
     ?>
 
 
@@ -1176,11 +1166,11 @@ function myFunction_<?echo $row["seznam_name"];?>() {
 </script>
 
 
-    <?  }
+    <? }
     $conn->close(); ?>   
     
-    
-
+</div>    
+<br>
     
 
 
@@ -1386,16 +1376,6 @@ tanec == 1 && pravidelnost_tanec == 0 || plavani == 1 && pravidelnost_plavani ==
                                 }
     }
 </script>
-
-
-
-
-
-
-
-<br>***************************************<br>
-
-
 
 
 
