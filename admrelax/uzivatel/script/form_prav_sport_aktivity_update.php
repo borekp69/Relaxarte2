@@ -5,9 +5,6 @@ header("Pragma: no-cache");
 
 require "sifrovani_dat.php";
 $uzivatel_id = htmlspecialchars(trim("$_POST[uzivatel_id]"));
-$uzivatel_id = 10;
-
-
 $posilovani_form = addslashes(htmlspecialchars(trim("$_POST[posilovani]")));
 $pravidelnost_posilovani_form = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_posilovani]")));
 $florbal_form = addslashes(htmlspecialchars(trim("$_POST[florbal]")));
