@@ -830,16 +830,6 @@ $conn->close();
 
 
 
-
-
-
-
-
-
-
-
-
-
     <? 
     require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
     $sql = "SELECT * FROM seznam WHERE seznam_cislo = '44' ORDER BY seznam_poradi ASC"; 
