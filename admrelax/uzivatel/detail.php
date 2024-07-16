@@ -1546,8 +1546,27 @@ if (joga_kurz == 1 && !lektor){
                     <div class="checkbox">
                     <label><input type="checkbox" name="panev_posun_doprava" value="1">posun doprava</label> 
                     </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="panev_rotace_doleva" value="1">rotace doleva</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="panev_rotace_doprava" value="1">rotace doprava</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="panev_blokada" value="1">blokáda</label> 
+                    </div>
             </div>
 
+            <div class="col-sm-2" style="background-color:#ece5df;">
+                    <br>
+                    <label for="uzivatel">Postavení rukou:</label>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="ruce_posun_doleva" value="1">posun doleva</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="euce_posun_doprava" value="1">posun doprava</label> 
+                    </div>
+            </div>
 
 
 
