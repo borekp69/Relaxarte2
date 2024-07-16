@@ -1461,12 +1461,101 @@ if (joga_kurz == 1 && !lektor){
      }
     }
 </script>
-
-
-
-<br><br>
+<br>
 
 <br>*******************************************************
+
+<div class="row">
+    <div class="col-sm-12">
+            <div class="col-sm-2" style="background-color:#c0f9f8;">
+                    <br>
+                    <label for="uzivatel">Plosky nohou:</label>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="vybocene_palce" value="1">vybočené palce</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="ploche_nohy" value="1">ploché nohy</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="skrcene_prsty" value="1">skrčené prsty</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="prsty_blizko_u_sebersty" value="1">prsty blízko u sebe</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="ostruhy" value="1">ostruhy</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="ztuhle_narty" value="1">ztuhlé nárty</label> 
+                    </div>
+            </div>
+
+
+            <div class="col-sm-3" style="background-color:#d5ec95;">
+                    <br>
+                    <label for="uzivatel">Kotníky:</label>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="kotniky_zatuhle" value="1">zatuhlé</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="kotniky_praskajici" value="1">praskající</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="kotniky_otekle" value="1">oteklé</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="kotniky_zkracene_achylovy_slachy" value="1">zkrácené achylovy šlachy</label> 
+                    </div>
+            </div>
+
+            <div class="col-sm-2" style="background-color:#fae6aa;">
+                    <br>
+                    <label for="uzivatel">Kolena:</label>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="kolena_posun_doleva" value="1">posun doleva</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="kolena_posun_doprava" value="1">posun doprava</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="kolena_stoceni_dovnitr" value="1">stočení dovnitř</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="kolena_vytoceni_ven" value="1">vytočení ven</label> 
+                    </div>
+            </div>
+
+            <div class="col-sm-3" style="background-color:#f7d7b8;">
+                    <br>
+                    <label for="uzivatel">Pánev:</label>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="panev_preklopena_podsazena" value="1">překlopená - podsazená</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="panev_preklopena_dopredu" value="1">překlopená dopředu</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="panev_posunuta_dopredu_bez_preklopeni" value="1">posunutá dopředu bez překlopení</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="panev_posunuta_dozadu_bez_preklopeni" value="1">posunutá dozadu bez překlopení</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="panev_posun_doleva" value="1">posun doleva</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="panev_posun_doprava" value="1">posun doprava</label> 
+                    </div>
+            </div>
+
+
+
+
+    </div>
+</div>
+
+
+
 
 <br>*******************************************************
 
