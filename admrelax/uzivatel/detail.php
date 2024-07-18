@@ -1463,10 +1463,30 @@ if (joga_kurz == 1 && !lektor){
 </script>
 <br>
 
-<br>*******************************************************
+<br>*******************************************************<br>
 
+<label for="uzivatel">Kineziologický rozbor:</label> 
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12" style="background-color:#f9f8f6;">
+            <div class="col-sm-2" style="background-color:#faf7bd;">
+                    <br>
+                    <label for="uzivatel">Postavení nohou:</label>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="nohy_x" value="1">X</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="nohy_O" value="1">O</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="nohy_posun_doleva" value="1">posun doleva</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="nohy_posun_doprava" value="1">posun doprava</label> 
+                    </div>
+                    
+
+            </div>
+
             <div class="col-sm-2" style="background-color:#c0f9f8;">
                     <br>
                     <label for="uzivatel">Plosky nohou:</label>
@@ -1557,6 +1577,17 @@ if (joga_kurz == 1 && !lektor){
                     </div>
             </div>
 
+
+
+
+
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-12" style="background-color:#f9f8f6;">
+
             <div class="col-sm-2" style="background-color:#ece5df;">
                     <br>
                     <label for="uzivatel">Postavení rukou:</label>
@@ -1564,7 +1595,7 @@ if (joga_kurz == 1 && !lektor){
                     <label><input type="checkbox" name="ruce_posun_doleva" value="1">posun doleva</label> 
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="euce_posun_doprava" value="1">posun doprava</label> 
+                    <label><input type="checkbox" name="ruce_posun_doprava" value="1">posun doprava</label> 
                     </div>
             </div>
 
@@ -1572,6 +1603,10 @@ if (joga_kurz == 1 && !lektor){
 
     </div>
 </div>
+
+
+
+
 
 
 
