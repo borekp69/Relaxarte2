@@ -1671,11 +1671,26 @@ if (joga_kurz == 1 && !lektor){
 </div>
 
 
+<div class="row">
+    <div class="col-sm-12" style="background-color:#f9f8f6;">
+
+    <div class="col-sm-2" style="background-color:#ece0f4;">
+                    <br>
+                    <label for="uzivatel">Krční:</label>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="krcni_ztuhlost_sije" value="1">ztuhlost šíje</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="krcni_stuhlost_trapezu" value="1">ztuhlost trapézů</label> 
+                    </div>
+            </div>
 
 
 
 
 
+    </div>
+</div>
 
 <br>*******************************************************
 
