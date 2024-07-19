@@ -1588,7 +1588,7 @@ if (joga_kurz == 1 && !lektor){
 <div class="row">
     <div class="col-sm-12" style="background-color:#f9f8f6;">
 
-            <div class="col-sm-2" style="background-color:#ece5df;">
+            <div class="col-sm-2" style="background-color:#ece0f4;">
                     <br>
                     <label for="uzivatel">Postavení rukou:</label>
                     <div class="checkbox">
@@ -1599,6 +1599,72 @@ if (joga_kurz == 1 && !lektor){
                     </div>
             </div>
 
+            <div class="col-sm-3" style="background-color:#eacbd7;">
+                    <br>
+                    <label for="uzivatel">Ramena:</label>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="ramena_posun_doleva" value="1">posun doleva</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="ramena_posun_doprava" value="1">posun doprava</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="ramena_zvednuta_tense_k_usim" value="1">zvednutá tense k uším</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="ramena_dychani_do_ramen" value="1">dýchání do ramen</label> 
+                    </div>
+
+            </div>
+
+            <div class="col-sm-2" style="background-color:#d1d6f7;">
+                    <br>
+                    <label for="uzivatel">Lokty:</label>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="lokty_tenisovy_loket" value="1">tenisový loket</label>
+                    </div> 
+            </div>  
+
+            <div class="col-sm-2" style="background-color:#d1f7e7;">
+                    <br>
+                    <label for="uzivatel">Zápesti:</label>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="zapesti_karpaly" value="1">karpály</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="zapesti_neohebnost" value="1">neohebnost</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="zapesti_zatuhlost" value="1">zatuhlost</label> 
+                    </div>
+
+            </div>  
+
+
+
+            <div class="col-sm-3" style="background-color:#f7f5d1;">
+                    <br>
+                    <label for="uzivatel">Postavení páteře:</label>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="pater_kulata_zada" value="1">Kulatá záda</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="pater_prohnuta_zada" value="1">Prohnutá záda</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="pater_plocha_zada" value="1">Plochá záda</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="pater_skolioticke_drzeni" value="1">Skoliotické držení</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="pater_dysbalace_prave_ruky" value="1">Dysbalance pravé ruky</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="pater_dysbalace_leve_ruky" value="1">Dysbalance levé ruky</label> 
+                    </div>
+        
+            </div>   
 
 
     </div>
