@@ -1465,9 +1465,81 @@ if (joga_kurz == 1 && !lektor){
 
 <br>*******************************************************<br>
 
+<?
+require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+$sql = "SELECT uzivatel_hmotnost, uzivatel_kg FROM uzivatel WHERE uzivatel_id = $uzivatel_id LIMIT 1";
+$result = $conn->query($sql);
+
+while($row = $result->fetch_assoc()) {
+$uzivatel_hmotnost =  $row["uzivatel_hmotnost"];
+$uzivatel_kg =  $row["uzivatel_kg"];
+}
+$conn->close();
+?>
+<?  //echo '<br>hmotnost:'.$uzivatel_hmotnost.'<br>'; ?>
+<?  //echo '<br>kg:'.$uzivatel_kg.'<br>'; ?>
+
+
+
+<br>
 <label for="uzivatel">Kineziologický rozbor:</label> 
+<br>
+
+
+
+
 <div class="row">
-    <div class="col-sm-12" style="background-color:#f9f8f6;">
+    <div class="col-sm-4">
+        <br/>
+        <label for="uzivatel">Aktuální hmotnost, vyberte jednu z možností:</label> 
+        <select class="form-control" id="zobrazpole" name="hmotnost">
+        <option value="0"> -- Vyberte stav hmotnosti --</option>
+ 
+        <?
+        if ($uzivatel_hmotnost == 'Vyhovuje'){ ?>
+        <option value="Vyhovuje" selected>Hmotnost je vyhovující</option>
+        <option value="Nadváha">Nadváha</option>
+        <option value="Podváha">Nízká hmotnost</option>
+
+        <? }elseif ($uzivatel_hmotnost == 'Nadváha'){ ?>  
+        <option value="Vyhovuje">Hmotnost je vyhovující</option>
+        <option value="Nadváha" selected>Nadváha</option>
+        <option value="Podváha">Nízká hmotnost</option>
+   
+        <?  }else{ ?>
+        <option value="Vyhovuje">Hmotnost je vyhovující</option>
+        <option value="Nadváha">Nadváha</option>
+        <option value="Podváha" selected>Nízká hmotnost</option>
+        <? }?>
+        </select>
+    <br>    
+    </div>
+
+
+    <div class="form-group" id="otherFieldGroupDiv">
+        <div class="col-sm-4">
+            <br/>
+            <label for="uzivatel">Napište požadovanou korekci hmotnosti v kg:</label>
+            <input type="text" onkeypress="return isNumberKey(event)" class="form-control form-control-sm" id="vahakg" value = "<?echo $uzivatel_kg;?>" name="kg" maxlength="2" placeholder="Napište číslo v kg">
+            <br>
+        </div>
+    </div>
+    <script src="./js/vaha.js"></script>
+
+
+    
+</div>
+
+
+
+
+
+
+
+<div class="row" style="background-color:#f2f3f5;">
+    <div class="col-sm-12">
+
+        <div class="row">   
             <div class="col-sm-2" style="background-color:#faf7bd;">
                     <br>
                     <label for="uzivatel">Postavení nohou:</label>
@@ -1482,8 +1554,7 @@ if (joga_kurz == 1 && !lektor){
                     </div>
                     <div class="checkbox">
                     <label><input type="checkbox" name="nohy_posun_doprava" value="1">posun doprava</label> 
-                    </div>
-                    
+                    </div>               
 
             </div>
 
@@ -1576,17 +1647,11 @@ if (joga_kurz == 1 && !lektor){
                     <label><input type="checkbox" name="panev_blokada" value="1">blokáda</label> 
                     </div>
             </div>
+    
+        </div>
 
 
-
-
-
-    </div>
-</div>
-
-
-<div class="row">
-    <div class="col-sm-12" style="background-color:#f9f8f6;">
+        <div class="row">  
 
             <div class="col-sm-2" style="background-color:#ece0f4;">
                     <br>
@@ -1664,17 +1729,13 @@ if (joga_kurz == 1 && !lektor){
                     <label><input type="checkbox" name="pater_dysbalace_leve_ruky" value="1">Dysbalance levé ruky</label> 
                     </div>
         
-            </div>   
+            </div>
+        </div>
 
 
-    </div>
-</div>
+        <div class="row">  
 
-
-<div class="row">
-    <div class="col-sm-12" style="background-color:#f9f8f6;">
-
-    <div class="col-sm-2" style="background-color:#ece0f4;">
+            <div class="col-sm-4" style="background-color:#f9e9aa;">
                     <br>
                     <label for="uzivatel">Krční:</label>
                     <div class="checkbox">
@@ -1683,11 +1744,166 @@ if (joga_kurz == 1 && !lektor){
                     <div class="checkbox">
                     <label><input type="checkbox" name="krcni_stuhlost_trapezu" value="1">ztuhlost trapézů</label> 
                     </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="krcni_vyoseni_doleva" value="1">vyosení doleva</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="krcni_vyoseni_doprava" value="1">vyosení doprava</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="krcni_posun_brady_doleva" value="1">posun brady doleva</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="krcni_posun_brady_doprava" value="1">posun brady doprava</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="krcni_mala_lordoza" value="1">malá dordóza</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="krcni_velka_lordoza" value="1">velká dordóza</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="krcni_vyhrez" value="1">výhřez</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="krcni_zaklon_dozadu" value="1">záklon dozadu (brada zvednutá nahoru)</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="krcni_presun_dopredu" value="1">předsun dopředu</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="krcni_hlava_v_ramenou" value="1">hlava v ramenou</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="krcni_posun_jazylky" value="1">posun jazylky</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="krcni_oteklost_sije_z_prave_strany" value="1">oteklost šíje z pravé strany</label> 
+                    </div>
+                    <div class="checkbox">
+                    <label><input type="checkbox" name="krcni_oteklost_sije_z_leve_strany" value="1">oteklost šíje z leve strany</label> 
+                    </div>            
+            </div>
+
+            <div class="col-sm-2" style="background-color:#aaebf9;">
+                <br>
+                <label for="uzivatel">Hrudní:</label>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hrudni_vyhrbeni" value="1">vyhrbení</label> 
+                </div> 
+                <div class="checkbox">
+                <label><input type="checkbox" name="hrudni_prohnuti" value="1">prohnuti</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hrudni_hrb_na_zadech" value="1">hrb na zádech</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hrudni_vyoseni_doleva" value="1">vyosení doleva</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hrudni_vyoseni_doprava" value="1">vyosení doprava</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hrudni_vyhrez" value="1">výhřez</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hrudni_blokada_zeber" value="1">blokáda žeber</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hrudni_posun_zeber_doleva" value="1">posun žeber doleva</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hrudni_posun_zeber_doprava" value="1">posun žeber doprava</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hrudni_melke_dychani" value="1">mělké dýchání</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hrudni_nepruznost_zeber" value="1">nepružnost žeber</label> 
+                </div>
+        
             </div>
 
 
 
+            <div class="col-sm-2" style="background-color:#baf9aa;">
+                <br>
+                <label for="uzivatel">Lopatky:</label>
+                <div class="checkbox">
+                <label><input type="checkbox" name="lopatky_posun_doleva" value="1">posun doleva</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="lopatky_posun_doprava" value="1">posun doprava</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="lopatky_vylezaji_ven" value="1">vylézají ven</label> 
+                </div>
+            </div>
 
+
+            <div class="col-sm-2" style="background-color:#f9c8aa;">
+                <br>
+                <label for="uzivatel">Bederní:</label>
+                <div class="checkbox">
+                <label><input type="checkbox" name="bederni_prohnuti" value="1">prohnutí</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="bederni_vyoseni_doleva" value="1">vyosení doleva</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="bederni_vyoseni_doprava" value="1">vyosení doprava</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="bederni_vyhrez" value="1">výhřez</label> 
+                </div>
+            </div>
+
+            <div class="col-sm-2" style="background-color:#f9f3aa;">
+                <br>
+                <label for="uzivatel">Hypermobilita:</label>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hypermobilita_krcni_pater" value="1">krční páteř</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hypermobilita_hrudni_pater" value="1">hrudni páteř</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hypermobilita_bederni_pater" value="1">bederní páteř</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hypermobilita_krizova_kost" value="1">křížová kost</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hypermobilita_kostrc" value="1">kostrč</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hypermobilita_ramena" value="1">ramena</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hypermobilita_lokty" value="1">lokty</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hypermobilita_zapesti" value="1">zápěstí</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hypermobilita_prsty_na_rukou" value="1">prsty na rukou</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hypermobilita_kycle" value="1">kyčle</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hypermobilita_kolena" value="1">kolena</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hypermobilita_kotniky" value="1">kotníky</label> 
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox" name="hypermobilita_prsty_na_nohou" value="1">prsty na nohou</label> 
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 </div>
