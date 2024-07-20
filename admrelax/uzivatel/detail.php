@@ -1573,6 +1573,7 @@ $nohy_x = $radek["nohy_x"];
 $nohy_O = $radek["nohy_O"];
 $nohy_posun_doleva = $radek["nohy_posun_doleva"];
 $nohy_posun_doprava = $radek["nohy_posun_doprava"];
+$vybocene_palce = $radek["vybocene_palce"];
 } 
 
 $conn->close(); 
@@ -1598,10 +1599,11 @@ $conn->close();
                     <?  GenerujDiv('nohy_O', $nohy_O, 'O') ?>   
                     </div>
                     <div class="checkbox">
-                    <?  GenerujDiv('nohy_posun_doleva', $$nohy_posun_doleva, 'posun doleva') ?>      
+                    <?  GenerujDiv('nohy_posun_doleva', $nohy_posun_doleva, 'posun doleva') ?>      
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="nohy_posun_doprava" value="1">posun doprava</label> 
+                    <?  GenerujDiv('nohy_posun_doprava', $nohy_posun_doprava, 'posun doprava') ?>    
+                    
                     </div>               
 
             </div>
@@ -1610,7 +1612,8 @@ $conn->close();
                     <br>
                     <label for="uzivatel">Plosky nohou:</label>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="vybocene_palce" value="1">vybočené palce</label> 
+                    <?  GenerujDiv('vybocene_palce', $vybocene_palce, 'vybočené palce') ?>      
+                    
                     </div>
                     <div class="checkbox">
                     <label><input type="checkbox" name="ploche_nohy" value="1">ploché nohy</label> 
