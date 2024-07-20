@@ -1533,6 +1533,52 @@ $conn->close();
 
 
 
+<?
+
+//$ahodnota = 0;
+
+
+//function GenerujDiv($jmeno, $hodnota, $popis)
+//{
+//    echo 'name='.$jmeno.'<br>';
+//    echo 'value='.$hodnota.'<br>';
+//    echo 'popis:'.$popis.'<br>';
+//}
+
+function GenerujDiv($jmeno, $hodnota, $popis)
+{
+    if ($hodnota == 1){
+        echo '<label><input type="checkbox" name="'.$jmeno.'" value="1" checked>'.$popis.'</label> ';
+
+    }else{
+
+        echo '<label><input type="checkbox" name="'.$jmeno.'" value="1">'.$popis.'</label> ';
+
+    }
+    
+            //         <label><input type="checkbox" name="nohy_x" value="1" checked>X</label> 
+}
+
+?>
+
+<?
+
+
+
+require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+$sql_kineziologicky_rozbor = "SELECT * FROM kineziologicky_rozbor WHERE uzivatel_id = $uzivatel_id LIMIT 1";
+$result_kineziologicky_rozbor = $conn->query($sql_kineziologicky_rozbor);
+while($radek = $result_kineziologicky_rozbor->fetch_assoc()) {
+$nohy_x = $radek["nohy_x"];
+$nohy_O = $radek["nohy_O"];
+
+} 
+
+$conn->close(); 
+
+
+?>
+
 
 
 
@@ -1544,10 +1590,11 @@ $conn->close();
                     <br>
                     <label for="uzivatel">Postavení nohou:</label>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="nohy_x" value="1">X</label> 
-                    </div>
+                    <?  GenerujDiv('nohy_x', $nohy_x, 'X') ?>                  
+                    
+            </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="nohy_O" value="1">O</label> 
+                    <?  GenerujDiv('nohy_O', $nohy_O, 'O') ?>   
                     </div>
                     <div class="checkbox">
                     <label><input type="checkbox" name="nohy_posun_doleva" value="1">posun doleva</label> 
@@ -1571,7 +1618,7 @@ $conn->close();
                     <label><input type="checkbox" name="skrcene_prsty" value="1">skrčené prsty</label> 
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="prsty_blizko_u_sebersty" value="1">prsty blízko u sebe</label> 
+                    <label><input type="checkbox" name="prsty_blizko_u_sebe" value="1">prsty blízko u sebe</label> 
                     </div>
                     <div class="checkbox">
                     <label><input type="checkbox" name="ostruhy" value="1">ostruhy</label> 
