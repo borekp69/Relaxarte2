@@ -1905,6 +1905,34 @@ $conn->close();
 
         </div>
 
+    
+        <H4 align="center">Svaly</H4>
+        <div class="row"> 
+            <div class="col-sm-12">
+                
+                <label for="uzivatel">Ztruhlé:</label>
+                <textarea class="form-control" id="svaly_ztuhle" name="svaly_ztuhle" rows="2" maxlength="200" style="background-color:#FFFFFF;"></textarea>
+            </div>
+        </div>
+
+        <div class="row"> 
+            <div class="col-sm-12">
+                <br/>
+                <label for="uzivatel">Povolené:</label>
+                <textarea class="form-control" id="svaly_povolene" name="svaly_povolene" rows="2" maxlength="200" style="background-color:#FFFFFF;"></textarea>
+            </div>
+        </div>
+
+        <div class="row"> 
+            <div class="col-sm-12">
+                <br/>
+                <label for="uzivatel">Poznámka:</label>
+                <textarea class="form-control" id="svaly_poznamka" name="svaly_poznamka" rows="3" maxlength="200" style="background-color:#FFFFFF;"></textarea>
+                <br/>    
+            </div>
+        </div>
+
+
     </div>
 </div>
 
