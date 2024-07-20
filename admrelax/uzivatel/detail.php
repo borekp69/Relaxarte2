@@ -1571,7 +1571,8 @@ $result_kineziologicky_rozbor = $conn->query($sql_kineziologicky_rozbor);
 while($radek = $result_kineziologicky_rozbor->fetch_assoc()) {
 $nohy_x = $radek["nohy_x"];
 $nohy_O = $radek["nohy_O"];
-
+$nohy_posun_doleva = $radek["nohy_posun_doleva"];
+$nohy_posun_doprava = $radek["nohy_posun_doprava"];
 } 
 
 $conn->close(); 
@@ -1597,7 +1598,7 @@ $conn->close();
                     <?  GenerujDiv('nohy_O', $nohy_O, 'O') ?>   
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="nohy_posun_doleva" value="1">posun doleva</label> 
+                    <?  GenerujDiv('nohy_posun_doleva', $$nohy_posun_doleva, 'posun doleva') ?>      
                     </div>
                     <div class="checkbox">
                     <label><input type="checkbox" name="nohy_posun_doprava" value="1">posun doprava</label> 
