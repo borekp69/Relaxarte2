@@ -1583,6 +1583,26 @@ $kotniky_zatuhle = $radek["kotniky_zatuhle"];
 $kotniky_praskajici = $radek["kotniky_praskajici"];
 $kotniky_otekle = $radek["kotniky_otekle"];
 $kotniky_zkracene_achylovy_slachy = $radek["kotniky_zkracene_achylovy_slachy"];
+$kolena_posun_doleva = $radek["kolena_posun_doleva"];
+$kolena_posun_doprava = $radek["kolena_posun_doprava"];
+$kolena_stoceni_dovnitr = $radek["kolena_stoceni_dovnitr"];
+$kolena_vytoceni_ven = $radek["kolena_vytoceni_ven"];
+$panev_preklopena_podsazena = $radek["panev_preklopena_podsazena"];
+$panev_preklopena_dopredu = $radek["panev_preklopena_dopredu"];
+$panev_posunuta_dopredu_bez_preklopeni = $radek["panev_posunuta_dopredu_bez_preklopeni"];
+$panev_posunuta_dozadu_bez_preklopeni = $radek["panev_posunuta_dozadu_bez_preklopeni"];
+$panev_posun_doleva = $radek["panev_posun_doleva"];
+$panev_posun_doprava = $radek["panev_posun_doprava"];
+$panev_rotace_doleva = $radek["panev_rotace_doleva"];
+$panev_rotace_doprava = $radek["panev_rotace_doprava"];
+$panev_blokada = $radek["panev_blokada"];
+$ruce_posun_doleva = $radek["ruce_posun_doleva"];
+$ruce_posun_doprava = $radek["ruce_posun_doprava"];
+
+$ramena_posun_doleva = $radek["ramena_posun_doleva"];
+$ramena_posun_doprava = $radek["ramena_posun_doprava"];
+$ramena_zvednuta_tense_k_usim = $radek["ramena_zvednuta_tense_k_usim"];
+$ramena_dychani_do_ramen = $radek["ramena_dychani_do_ramen"];
 
 } 
 
@@ -1674,16 +1694,20 @@ $conn->close();
                     <br>
                     <label for="uzivatel">Kolena:</label>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="kolena_posun_doleva" value="1">posun doleva</label> 
+                    <?  GenerujDiv('kolena_posun_doleva', $kolena_posun_doleva, 'posun doleva') ?>      
+
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="kolena_posun_doprava" value="1">posun doprava</label> 
+                    <?  GenerujDiv('kolena_posun_doprava', $kolena_posun_doprava, 'posun doprava') ?>  
+
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="kolena_stoceni_dovnitr" value="1">stočení dovnitř</label> 
+                    <?  GenerujDiv('kolena_stoceni_dovnitr', $kolena_stoceni_dovnitr, 'stočení dovnitř') ?>    
+  
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="kolena_vytoceni_ven" value="1">vytočení ven</label> 
+                    <?  GenerujDiv('kolena_vytoceni_ven', $kolena_vytoceni_ven, 'vytočení ven') ?> 
+                   
                     </div>
             </div>
 
@@ -1691,31 +1715,40 @@ $conn->close();
                     <br>
                     <label for="uzivatel">Pánev:</label>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="panev_preklopena_podsazena" value="1">překlopená - podsazená</label> 
+                    <?  GenerujDiv('panev_preklopena_podsazena', $panev_preklopena_podsazena, 'překlopená - podsazená') ?> 
+                   
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="panev_preklopena_dopredu" value="1">překlopená dopředu</label> 
+                    <?  GenerujDiv('panev_preklopena_dopredu', $panev_preklopena_dopredu, 'překlopená - dopředu') ?>    
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="panev_posunuta_dopredu_bez_preklopeni" value="1">posunutá dopředu bez překlopení</label> 
+                    <?  GenerujDiv('panev_posunuta_dopredu_bez_preklopeni', $panev_posunuta_dopredu_bez_preklopeni, 'posunutá dopředu bez překlopení') ?>     
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="panev_posunuta_dozadu_bez_preklopeni" value="1">posunutá dozadu bez překlopení</label> 
+                    <?  GenerujDiv('panev_posunuta_dozadu_bez_preklopeni', $panev_posunuta_dozadu_bez_preklopeni, 'posunutá dozadu bez překlopení') ?>      
+                 
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="panev_posun_doleva" value="1">posun doleva</label> 
+                    <?  GenerujDiv('panev_posun_doleva', $panev_posun_doleva, 'posun doleva') ?>  
+                  
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="panev_posun_doprava" value="1">posun doprava</label> 
+                    <?  GenerujDiv('panev_posun_doprava', $panev_posun_doprava, 'posun doprava') ?>     
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="panev_rotace_doleva" value="1">rotace doleva</label> 
+                    <?  GenerujDiv('panev_rotace_doleva', $panev_rotace_doleva, 'rotace doleva') ?>    
+                  
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="panev_rotace_doprava" value="1">rotace doprava</label> 
+                    <?  GenerujDiv('panev_rotace_doprava', $panev_rotace_doprava, 'rotace doprava') ?> 
+                   
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="panev_blokada" value="1">blokáda</label> 
+                    <?  GenerujDiv('panev_blokada', $panev_blokada, 'blokáda') ?> 
+                    
                     </div>
             </div>
     
@@ -1728,10 +1761,12 @@ $conn->close();
                     <br>
                     <label for="uzivatel">Postavení rukou:</label>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="ruce_posun_doleva" value="1">posun doleva</label> 
+                    <?  GenerujDiv('ruce_posun_doleva', $ruce_posun_doleva, 'posun doleva') ?> 
+                   
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="ruce_posun_doprava" value="1">posun doprava</label> 
+                    <?  GenerujDiv('ruce_posun_doprava', $ruce_posun_doprava, 'posun doprava') ?> 
+                    
                     </div>
             </div>
 
@@ -1739,16 +1774,20 @@ $conn->close();
                     <br>
                     <label for="uzivatel">Ramena:</label>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="ramena_posun_doleva" value="1">posun doleva</label> 
+                    <?  GenerujDiv('ramena_posun_doleva', $ramena_posun_doleva, 'posun doleva') ?>    
+                     
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="ramena_posun_doprava" value="1">posun doprava</label> 
+                    <?  GenerujDiv('ramena_posun_doprava', $ramena_posun_doprava, 'posun doprava') ?>        
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="ramena_zvednuta_tense_k_usim" value="1">zvednutá tense k uším</label> 
+                    <?  GenerujDiv('ramena_zvednuta_tense_k_usim', $ramena_zvednuta_tense_k_usim, 'zvednutá tense k uším') ?>      
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="ramena_dychani_do_ramen" value="1">dýchání do ramen</label> 
+                    <?  GenerujDiv('ramena_dychani_do_ramen', $ramena_dychani_do_ramen, 'dýchání do ramen') ?>      
+                    
                     </div>
 
             </div>
