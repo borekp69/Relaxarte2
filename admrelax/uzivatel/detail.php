@@ -1574,6 +1574,12 @@ $nohy_O = $radek["nohy_O"];
 $nohy_posun_doleva = $radek["nohy_posun_doleva"];
 $nohy_posun_doprava = $radek["nohy_posun_doprava"];
 $vybocene_palce = $radek["vybocene_palce"];
+$ploche_nohy = $radek["ploche_nohy"];
+$skrcene_prsty = $radek["skrcene_prsty"];
+$prsty_blizko_u_sebe = $radek["prsty_blizko_u_sebe"];
+$ostruhy = $radek["ostruhy"];
+$ztuhle_narty = $radek["ztuhle_narty"];
+
 } 
 
 $conn->close(); 
@@ -1616,19 +1622,25 @@ $conn->close();
                     
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="ploche_nohy" value="1">ploché nohy</label> 
+                    <?  GenerujDiv('ploche_nohy', $ploche_nohy, 'ploché nohy') ?>       
+                    
+
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="skrcene_prsty" value="1">skrčené prsty</label> 
+                    <?  GenerujDiv('skrcene_prsty', $skrcene_prsty, 'skrčené prsty') ?>       
+                   
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="prsty_blizko_u_sebe" value="1">prsty blízko u sebe</label> 
+                    <?  GenerujDiv('prsty_blizko_u_sebe', $prsty_blizko_u_sebe, 'prsty blízko u sebe') ?>   
+                   
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="ostruhy" value="1">ostruhy</label> 
+                    <?  GenerujDiv('ostruhy', $ostruhy, 'ostruhy') ?>     
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="ztuhle_narty" value="1">ztuhlé nárty</label> 
+                    <?  GenerujDiv('ztuhle_narty', $ztuhle_narty, 'ztuhlé nárty') ?>  
+                    
                     </div>
             </div>
 
