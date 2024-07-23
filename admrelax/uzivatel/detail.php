@@ -1629,8 +1629,22 @@ $krcni_hlava_v_ramenou = $radek["krcni_hlava_v_ramenou"];
 $krcni_posun_jazylky = $radek["krcni_posun_jazylky"];
 $krcni_oteklost_sije_z_leve_strany = $radek["krcni_oteklost_sije_z_leve_strany"];
 $krcni_oteklost_sije_z_prave_strany = $radek["krcni_oteklost_sije_z_prave_strany"];
+$hrudni_vyhrbeni = $radek["hrudni_vyhrbeni"];
+$hrudni_prohnuti = $radek["hrudni_prohnuti"];
+$hrudni_hrb_na_zadech = $radek["hrudni_hrb_na_zadech"];
+$hrudni_vyoseni_doleva = $radek["hrudni_vyoseni_doleva"];
+$hrudni_vyoseni_doprava = $radek["hrudni_vyoseni_doprava"];
+$hrudni_vyhrez = $radek["hrudni_vyhrez"];
+$hrudni_blokada_zeber = $radek["hrudni_blokada_zeber"];
+$hrudni_posun_zeber_doleva = $radek["hrudni_posun_zeber_doleva"];
+$hrudni_posun_zeber_doprava = $radek["hrudni_posun_zeber_doprava"];
+$hrudni_melke_dychani = $radek["hrudni_melke_dychani"];
+$hrudni_nepruznost_zeber = $radek["hrudni_nepruznost_zeber"];
 
-$hrudni_vyhrbeni = 
+$lopatky_posun_doleva = $radek["lopatky_posun_doleva"];
+$lopatky_posun_doprava = $radek["lopatky_posun_doprava"];
+$lopatky_vylezaji_ven = $radek["lopatky_vylezaji_ven"];
+
 
 } 
 
@@ -1957,37 +1971,48 @@ $conn->close();
                 <br>
                 <label for="uzivatel">Hrudní:</label>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hrudni_vyhrbeni" value="1">vyhrbení</label> 
+                <?  GenerujDiv('hrudni_vyhrbeni', $hrudni_vyhrbeni, 'vyhrbení') ?>     
+                
                 </div> 
                 <div class="checkbox">
-                <label><input type="checkbox" name="hrudni_prohnuti" value="1">prohnutí</label> 
+                <?  GenerujDiv('hrudni_prohnuti', $hrudni_prohnuti, 'prohnutí') ?> 
+                
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hrudni_hrb_na_zadech" value="1">hrb na zádech</label> 
+                <?  GenerujDiv('hrudni_hrb_na_zadech', $hrudni_hrb_na_zadech, 'hrb na zádech') ?> 
+                
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hrudni_vyoseni_doleva" value="1">vyosení doleva</label> 
+                <?  GenerujDiv('hrudni_vyoseni_doleva', $hrudni_vyoseni_doleva, 'vyosení doleva') ?> 
+                
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hrudni_vyoseni_doprava" value="1">vyosení doprava</label> 
+                <?  GenerujDiv('hrudni_vyoseni_doprava', $hrudni_vyoseni_doprava, 'vyosení doprava') ?> 
+               
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hrudni_vyhrez" value="1">výhřez</label> 
+                <?  GenerujDiv('hrudni_vyhrez', $hrudni_vyhrez, 'výhřez') ?> 
+                
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hrudni_blokada_zeber" value="1">blokáda žeber</label> 
+                <?  GenerujDiv('hrudni_blokada_zeber', $hrudni_blokada_zeber, 'blokáda žeber') ?> 
+               
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hrudni_posun_zeber_doleva" value="1">posun žeber doleva</label> 
+                <?  GenerujDiv('hrudni_posun_zeber_doleva', $hrudni_posun_zeber_doleva, 'posun žeber doleva') ?> 
+               
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hrudni_posun_zeber_doprava" value="1">posun žeber doprava</label> 
+                <?  GenerujDiv('hrudni_posun_zeber_doprava', $hrudni_posun_zeber_doprava, 'posun žeber doprava') ?> 
+                
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hrudni_melke_dychani" value="1">mělké dýchání</label> 
+                <?  GenerujDiv('hrudni_melke_dychani', $hrudni_melke_dychani, 'mělké dýchání') ?> 
+                 
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hrudni_nepruznost_zeber" value="1">nepružnost žeber</label> 
+                <?  GenerujDiv('hrudni_nepruznost_zeber', $hrudni_nepruznost_zeber, 'nepružnost žeber') ?> 
+              
                 </div>        
             </div>
 
@@ -1996,13 +2021,16 @@ $conn->close();
                 <br>
                 <label for="uzivatel">Lopatky:</label>
                 <div class="checkbox">
-                <label><input type="checkbox" name="lopatky_posun_doleva" value="1">posun doleva</label> 
+                <?  GenerujDiv('lopatky_posun_doleva', $lopatky_posun_doleva, 'posun doleva') ?> 
+                
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="lopatky_posun_doprava" value="1">posun doprava</label> 
+                <?  GenerujDiv('lopatky_posun_doprava', $lopatky_posun_doprava, 'posun doprava') ?> 
+               
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="lopatky_vylezaji_ven" value="1">vylézají ven</label> 
+                <?  GenerujDiv('lopatky_vylezaji_ven', $lopatky_vylezaji_ven, 'vylézají ven') ?> 
+              
                 </div>
             </div>
 
