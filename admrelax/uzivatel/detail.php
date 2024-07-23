@@ -1614,7 +1614,6 @@ $pater_plocha_zada = $radek["pater_plocha_zada"];
 $pater_skolioticke_drzeni = $radek["pater_skolioticke_drzeni"];
 $pater_dysbalace_prave_ruky = $radek["pater_dysbalace_prave_ruky"];
 $pater_dysbalace_leve_ruky = $radek["pater_dysbalace_leve_ruky"];
-
 $krcni_ztuhlost_sije = $radek["krcni_ztuhlost_sije"];
 $krcni_stuhlost_trapezu = $radek["krcni_stuhlost_trapezu"];
 $krcni_vyoseni_doleva = $radek["krcni_vyoseni_doleva"];
@@ -1630,6 +1629,8 @@ $krcni_hlava_v_ramenou = $radek["krcni_hlava_v_ramenou"];
 $krcni_posun_jazylky = $radek["krcni_posun_jazylky"];
 $krcni_oteklost_sije_z_leve_strany = $radek["krcni_oteklost_sije_z_leve_strany"];
 $krcni_oteklost_sije_z_prave_strany = $radek["krcni_oteklost_sije_z_prave_strany"];
+
+$hrudni_vyhrbeni = 
 
 } 
 
@@ -1891,49 +1892,64 @@ $conn->close();
                     <br>
                     <label for="uzivatel">Krční:</label>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_ztuhlost_sije" value="1">ztuhlost šíje</label> 
+                    <?  GenerujDiv('krcni_ztuhlost_sije', $krcni_ztuhlost_sije, 'ztuhlost šíje') ?>     
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_stuhlost_trapezu" value="1">ztuhlost trapézů</label> 
+                    <?  GenerujDiv('krcni_stuhlost_trapezu', $krcni_stuhlost_trapezu, 'ztuhlost trapézů') ?> 
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_vyoseni_doleva" value="1">vyosení doleva</label> 
+                    <?  GenerujDiv('krcni_vyoseni_doleva', $krcni_vyoseni_doleva, 'vyosení doleva') ?>
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_vyoseni_doprava" value="1">vyosení doprava</label> 
+                    <?  GenerujDiv('krcni_vyoseni_doprava', $krcni_vyoseni_doprava, 'vyosení doprava') ?>
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_posun_brady_doleva" value="1">posun brady doleva</label> 
+                    <?  GenerujDiv('krcni_posun_brady_doleva', $krcni_posun_brady_doleva, 'posun brady doleva') ?>   
+                   
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_posun_brady_doprava" value="1">posun brady doprava</label> 
+                    <?  GenerujDiv('krcni_posun_brady_doprava', $krcni_posun_brady_doprava, 'posun brady doprava') ?>  
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_mala_lordoza" value="1">malá lordóza</label> 
+                    <?  GenerujDiv('krcni_mala_lordoza', $krcni_mala_lordoza, 'malá lordóza') ?>  
+                   
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_velka_lordoza" value="1">velká lordóza</label> 
+                    <?  GenerujDiv('krcni_velka_lordoza', $krcni_velka_lordoza, 'velká lordóza') ?>  
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_vyhrez" value="1">výhřez</label> 
+                    <?  GenerujDiv('krcni_vyhrez', $krcni_vyhrez, 'výhřez') ?>  
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_zaklon_dozadu" value="1">záklon dozadu (brada zvednutá nahoru)</label> 
+                    <?  GenerujDiv('krcni_zaklon_dozadu', $krcni_zaklon_dozadu, 'záklon dozadu (brada zvednutá nahoru)') ?> 
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_presun_dopredu" value="1">předsun dopředu</label> 
+                    <?  GenerujDiv('krcni_presun_dopredu', $krcni_presun_dopredu, 'předsun dopředu') ?> 
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_hlava_v_ramenou" value="1">hlava v ramenou</label> 
+                    <?  GenerujDiv('krcni_hlava_v_ramenou', $krcni_hlava_v_ramenou, 'hlava v ramenou') ?> 
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_posun_jazylky" value="1">posun jazylky</label> 
+                    <?  GenerujDiv('krcni_posun_jazylky', $krcni_posun_jazylky, 'posun jazylky') ?> 
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_oteklost_sije_z_leve_strany" value="1">oteklost šíje z levé strany</label> 
+                    <?  GenerujDiv('krcni_oteklost_sije_z_leve_strany', $krcni_oteklost_sije_z_leve_strany, 'oteklost šíje z levé strany') ?> 
+                     
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_oteklost_sije_z_prave_strany" value="1">oteklost šíje z pravé strany</label> 
+                    <?  GenerujDiv('krcni_oteklost_sije_z_prave_strany', $krcni_oteklost_sije_z_prave_strany, 'oteklost šíje z pravé strany') ?> 
+                    
                     </div>            
             </div>
 
