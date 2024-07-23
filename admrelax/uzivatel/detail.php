@@ -1573,6 +1573,10 @@ $nohy_x = $radek["nohy_x"];
 $nohy_O = $radek["nohy_O"];
 $nohy_posun_doleva = $radek["nohy_posun_doleva"];
 $nohy_posun_doprava = $radek["nohy_posun_doprava"];
+$nohy_prava_delsi_nez_leva = $radek["nohy_prava_delsi_nez_leva"]; 
+$nohy_leva_delsi_nez_prava = $radek["nohy_leva_delsi_nez_prava"]; 
+
+
 $vybocene_palce = $radek["vybocene_palce"];
 $ploche_nohy = $radek["ploche_nohy"];
 $skrcene_prsty = $radek["skrcene_prsty"];
@@ -1637,8 +1641,16 @@ $conn->close();
                     </div>
                     <div class="checkbox">
                     <?  GenerujDiv('nohy_posun_doprava', $nohy_posun_doprava, 'posun doprava') ?>    
-                    
-                    </div>               
+                    </div>
+                    <div class="checkbox">
+                    <?  GenerujDiv('nohy_prava_delsi_nez_leva', $nohy_prava_delsi_nez_leva, 'pravá delší než levá') ?>    
+                    </div>
+                    <div class="checkbox">
+                    <?  GenerujDiv('nohy_leva_delsi_nez_prava', $nohy_leva_delsi_nez_prava, 'levá delší než pravá ') ?>    
+                    </div>                    
+
+
+
 
             </div>
 
@@ -1823,8 +1835,6 @@ $conn->close();
 
             </div>  
 
-
-
             <div class="col-sm-3" style="background-color:#f7f5d1;">
                     <br>
                     <label for="uzivatel">Postavení páteře:</label>
@@ -1849,7 +1859,6 @@ $conn->close();
         
             </div>
         </div>
-
 
         <div class="row">  
 
@@ -1942,7 +1951,6 @@ $conn->close();
             </div>
 
 
-
             <div class="col-sm-2" style="background-color:#baf9aa;">
                 <br>
                 <label for="uzivatel">Lopatky:</label>
@@ -1956,7 +1964,6 @@ $conn->close();
                 <label><input type="checkbox" name="lopatky_vylezaji_ven" value="1">vylézají ven</label> 
                 </div>
             </div>
-
 
             <div class="col-sm-2" style="background-color:#f9c8aa;">
                 <br>
@@ -1982,7 +1989,7 @@ $conn->close();
                 <label><input type="checkbox" name="hypermobilita_krcni_pater" value="1">krční páteř</label> 
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hypermobilita_hrudni_pater" value="1">hrudni páteř</label> 
+                <label><input type="checkbox" name="hypermobilita_hrudni_pater" value="1">hrudní páteř</label> 
                 </div>
                 <div class="checkbox">
                 <label><input type="checkbox" name="hypermobilita_bederni_pater" value="1">bederní páteř</label> 
@@ -2022,7 +2029,6 @@ $conn->close();
 
         </div>
 
-    
         <H4 align="center">Svaly</H4>
         <div class="row"> 
             <div class="col-sm-12">
