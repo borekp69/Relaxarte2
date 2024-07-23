@@ -1575,8 +1575,6 @@ $nohy_posun_doleva = $radek["nohy_posun_doleva"];
 $nohy_posun_doprava = $radek["nohy_posun_doprava"];
 $nohy_prava_delsi_nez_leva = $radek["nohy_prava_delsi_nez_leva"]; 
 $nohy_leva_delsi_nez_prava = $radek["nohy_leva_delsi_nez_prava"]; 
-
-
 $vybocene_palce = $radek["vybocene_palce"];
 $ploche_nohy = $radek["ploche_nohy"];
 $skrcene_prsty = $radek["skrcene_prsty"];
@@ -1607,10 +1605,31 @@ $ramena_posun_doprava = $radek["ramena_posun_doprava"];
 $ramena_zvednuta_tense_k_usim = $radek["ramena_zvednuta_tense_k_usim"];
 $ramena_dychani_do_ramen = $radek["ramena_dychani_do_ramen"];
 $lokty_tenisovy_loket = $radek["lokty_tenisovy_loket"];
-
 $zapesti_karpaly = $radek["zapesti_karpaly"];
 $zapesti_neohebnost = $radek["zapesti_neohebnost"];
 $zapesti_zatuhlost = $radek["zapesti_zatuhlost"];
+$pater_kulata_zada = $radek["pater_kulata_zada"];
+$pater_prohnuta_zada = $radek["pater_prohnuta_zada"];
+$pater_plocha_zada = $radek["pater_plocha_zada"];
+$pater_skolioticke_drzeni = $radek["pater_skolioticke_drzeni"];
+$pater_dysbalace_prave_ruky = $radek["pater_dysbalace_prave_ruky"];
+$pater_dysbalace_leve_ruky = $radek["pater_dysbalace_leve_ruky"];
+
+$krcni_ztuhlost_sije = $radek["krcni_ztuhlost_sije"];
+$krcni_stuhlost_trapezu = $radek["krcni_stuhlost_trapezu"];
+$krcni_vyoseni_doleva = $radek["krcni_vyoseni_doleva"];
+$krcni_vyoseni_doprava = $radek["krcni_vyoseni_doprava"];
+$krcni_posun_brady_doleva = $radek["krcni_posun_brady_doleva"];
+$krcni_posun_brady_doprava = $radek["krcni_posun_brady_doprava"];
+$krcni_mala_lordoza = $radek["krcni_mala_lordoza"];
+$krcni_velka_lordoza = $radek["krcni_velka_lordoza"];
+$krcni_vyhrez = $radek["krcni_vyhrez"];
+$krcni_zaklon_dozadu = $radek["krcni_zaklon_dozadu"];
+$krcni_presun_dopredu = $radek["krcni_presun_dopredu"];
+$krcni_hlava_v_ramenou = $radek["krcni_hlava_v_ramenou"];
+$krcni_posun_jazylky = $radek["krcni_posun_jazylky"];
+$krcni_oteklost_sije_z_leve_strany = $radek["krcni_oteklost_sije_z_leve_strany"];
+$krcni_oteklost_sije_z_prave_strany = $radek["krcni_oteklost_sije_z_prave_strany"];
 
 } 
 
@@ -1839,22 +1858,28 @@ $conn->close();
                     <br>
                     <label for="uzivatel">Postavení páteře:</label>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="pater_kulata_zada" value="1">Kulatá záda</label> 
+                    <?  GenerujDiv('pater_kulata_zada', $pater_kulata_zada, 'Kulatá záda') ?>    
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="pater_prohnuta_zada" value="1">Prohnutá záda</label> 
+                    <?  GenerujDiv('pater_prohnuta_zada', $pater_prohnuta_zada, 'Prohnutá záda') ?> 
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="pater_plocha_zada" value="1">Plochá záda</label> 
+                    <?  GenerujDiv('pater_plocha_zada', $pater_plocha_zada, 'Plochá záda') ?>    
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="pater_skolioticke_drzeni" value="1">Skoliotické držení</label> 
+                    <?  GenerujDiv('pater_skolioticke_drzeni', $pater_skolioticke_drzeni, 'Skoliotické držení') ?>
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="pater_dysbalace_prave_ruky" value="1">Dysbalance pravé ruky</label> 
+                    <?  GenerujDiv('pater_dysbalace_leve_ruky', $pater_dysbalace_leve_ruky, 'Dysbalance levé ruky') ?>   
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="pater_dysbalace_leve_ruky" value="1">Dysbalance levé ruky</label> 
+                    <?  GenerujDiv('pater_dysbalace_prave_ruky', $pater_dysbalace_prave_ruky, 'Dysbalance pravé ruky') ?>  
+                    
                     </div>
         
             </div>
