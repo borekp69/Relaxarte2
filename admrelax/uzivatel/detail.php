@@ -1640,10 +1640,28 @@ $hrudni_posun_zeber_doleva = $radek["hrudni_posun_zeber_doleva"];
 $hrudni_posun_zeber_doprava = $radek["hrudni_posun_zeber_doprava"];
 $hrudni_melke_dychani = $radek["hrudni_melke_dychani"];
 $hrudni_nepruznost_zeber = $radek["hrudni_nepruznost_zeber"];
-
 $lopatky_posun_doleva = $radek["lopatky_posun_doleva"];
 $lopatky_posun_doprava = $radek["lopatky_posun_doprava"];
 $lopatky_vylezaji_ven = $radek["lopatky_vylezaji_ven"];
+$bederni_prohnuti = $radek["bederni_prohnuti"];
+$bederni_vyoseni_doleva = $radek["bederni_vyoseni_doleva"];
+$bederni_vyoseni_doprava = $radek["bederni_vyoseni_doprava"];
+$bederni_vyhrez = $radek["bederni_vyhrez"]; 
+
+$hypermobilita_krcni_pater = $radek["hypermobilita_krcni_pater"]; 
+$hypermobilita_hrudni_pater = $radek["hypermobilita_hrudni_pater"]; 
+$hypermobilita_bederni_pater = $radek["hypermobilita_bederni_pater"]; 
+$hypermobilita_krizova_kost = $radek["hypermobilita_krizova_kost"]; 
+$hypermobilita_kostrc = $radek["hypermobilita_kostrc"]; 
+$hypermobilita_ramena = $radek["hypermobilita_ramena"]; 
+$hypermobilita_lokty = $radek["hypermobilita_lokty"]; 
+$hypermobilita_zapesti = $radek["hypermobilita_zapesti"]; 
+$hypermobilita_prsty_na_rukou = $radek["hypermobilita_prsty_na_rukou"]; 
+$hypermobilita_kycle = $radek["hypermobilita_kycle"]; 
+$hypermobilita_kolena = $radek["hypermobilita_kolena"]; 
+$hypermobilita_kotniky = $radek["hypermobilita_kotniky"]; 
+$hypermobilita_prsty_na_nohou = $radek["hypermobilita_prsty_na_nohou"];  
+
 
 
 } 
@@ -2038,16 +2056,20 @@ $conn->close();
                 <br>
                 <label for="uzivatel">Bederní:</label>
                 <div class="checkbox">
-                <label><input type="checkbox" name="bederni_prohnuti" value="1">prohnutí</label> 
+                <?  GenerujDiv('bederni_prohnuti', $bederni_prohnuti, 'prohnutí') ?> 
+                 
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="bederni_vyoseni_doleva" value="1">vyosení doleva</label> 
+                <?  GenerujDiv('bederni_vyoseni_doleva', $bederni_vyoseni_doleva, 'vyosení doleva') ?>
+               
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="bederni_vyoseni_doprava" value="1">vyosení doprava</label> 
+                <?  GenerujDiv('bederni_vyoseni_doprava', $bederni_vyoseni_doprava, 'vyosení doprava') ?>
+             
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="bederni_vyhrez" value="1">výhřez</label> 
+                <?  GenerujDiv('bederni_vyhrez', $bederni_vyhrez, 'výhřez') ?>
+                
                 </div>
             </div>
 
@@ -2055,43 +2077,56 @@ $conn->close();
                 <br>
                 <label for="uzivatel">Hypermobilita:</label>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hypermobilita_krcni_pater" value="1">krční páteř</label> 
+                <?  GenerujDiv('hypermobilita_krcni_pater', $hypermobilita_krcni_pater, 'krční páteř') ?>
+                
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hypermobilita_hrudni_pater" value="1">hrudní páteř</label> 
+                <?  GenerujDiv('hypermobilita_hrudni_pater', $hypermobilita_hrudni_pater, 'hrudní páteř') ?>
+           
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hypermobilita_bederni_pater" value="1">bederní páteř</label> 
+                <?  GenerujDiv('hypermobilita_bederni_pater', $hypermobilita_bederni_pater, 'bederní páteř') ?>
+                
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hypermobilita_krizova_kost" value="1">křížová kost</label> 
+                <?  GenerujDiv('hypermobilita_krizova_kost', $hypermobilita_krizova_kost, 'křížová kost') ?>
+              
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hypermobilita_kostrc" value="1">kostrč</label> 
+                <?  GenerujDiv('hypermobilita_kostrc', $hypermobilita_kostrc, 'kostrč') ?>
+             
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hypermobilita_ramena" value="1">ramena</label> 
+                <?  GenerujDiv('hypermobilita_ramena', $hypermobilita_ramena, 'ramena') ?>
+                
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hypermobilita_lokty" value="1">lokty</label> 
+                <?  GenerujDiv('hypermobilita_lokty', $hypermobilita_lokty, 'lokty') ?>
+                
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hypermobilita_zapesti" value="1">zápěstí</label> 
+                <?  GenerujDiv('hypermobilita_zapesti', $hypermobilita_zapesti, 'zápěstí') ?>
+          
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hypermobilita_prsty_na_rukou" value="1">prsty na rukou</label> 
+                <?  GenerujDiv('hypermobilita_prsty_na_rukou', $hypermobilita_prsty_na_rukou, 'prsty na rukou') ?>
+             
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hypermobilita_kycle" value="1">kyčle</label> 
+                <?  GenerujDiv('hypermobilita_kycle', $hypermobilita_kycle, 'kyčle') ?>
+               
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hypermobilita_kolena" value="1">kolena</label> 
+                <?  GenerujDiv('hypermobilita_kolena', $hypermobilita_kolena, 'kolena') ?>
+               
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hypermobilita_kotniky" value="1">kotníky</label> 
+                <?  GenerujDiv('hypermobilita_kotniky', $hypermobilita_kotniky, 'kotníky') ?>
+             
                 </div>
                 <div class="checkbox">
-                <label><input type="checkbox" name="hypermobilita_prsty_na_nohou" value="1">prsty na nohou</label> 
+                <?  GenerujDiv('hypermobilita_prsty_na_nohou', $hypermobilita_prsty_na_nohou, 'prsty na nohou') ?>
+              
                 </div>
 
             </div>
