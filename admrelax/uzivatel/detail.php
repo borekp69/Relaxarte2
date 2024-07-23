@@ -1579,6 +1579,10 @@ $skrcene_prsty = $radek["skrcene_prsty"];
 $prsty_blizko_u_sebe = $radek["prsty_blizko_u_sebe"];
 $ostruhy = $radek["ostruhy"];
 $ztuhle_narty = $radek["ztuhle_narty"];
+$kotniky_zatuhle = $radek["kotniky_zatuhle"];
+$kotniky_praskajici = $radek["kotniky_praskajici"];
+$kotniky_otekle = $radek["kotniky_otekle"];
+$kotniky_zkracene_achylovy_slachy = $radek["kotniky_zkracene_achylovy_slachy"];
 
 } 
 
@@ -1649,16 +1653,20 @@ $conn->close();
                     <br>
                     <label for="uzivatel">Kotníky:</label>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="kotniky_zatuhle" value="1">zatuhlé</label> 
+                    <?  GenerujDiv('kotniky_zatuhle', $kotniky_zatuhle, 'zatuhlé') ?>  
+
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="kotniky_praskajici" value="1">praskající</label> 
+                    <?  GenerujDiv('kotniky_praskajici', $kotniky_praskajici, 'praskající') ?> 
+
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="kotniky_otekle" value="1">oteklé</label> 
+                    <?  GenerujDiv('kotniky_otekle', $kotniky_otekle, 'oteklé') ?> 
+ 
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="kotniky_zkracene_achylovy_slachy" value="1">zkrácené achylovy šlachy</label> 
+                    <?  GenerujDiv('kotniky_zkracene_achylovy_slachy', $kotniky_zkracene_achylovy_slachy, 'zkrácené achylovy šlachy') ?>    
+
                     </div>
             </div>
 
