@@ -1598,11 +1598,15 @@ $panev_rotace_doprava = $radek["panev_rotace_doprava"];
 $panev_blokada = $radek["panev_blokada"];
 $ruce_posun_doleva = $radek["ruce_posun_doleva"];
 $ruce_posun_doprava = $radek["ruce_posun_doprava"];
-
 $ramena_posun_doleva = $radek["ramena_posun_doleva"];
 $ramena_posun_doprava = $radek["ramena_posun_doprava"];
 $ramena_zvednuta_tense_k_usim = $radek["ramena_zvednuta_tense_k_usim"];
 $ramena_dychani_do_ramen = $radek["ramena_dychani_do_ramen"];
+$lokty_tenisovy_loket = $radek["lokty_tenisovy_loket"];
+
+$zapesti_karpaly = $radek["zapesti_karpaly"];
+$zapesti_neohebnost = $radek["zapesti_neohebnost"];
+$zapesti_zatuhlost = $radek["zapesti_zatuhlost"];
 
 } 
 
@@ -1796,21 +1800,25 @@ $conn->close();
                     <br>
                     <label for="uzivatel">Lokty:</label>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="lokty_tenisovy_loket" value="1">tenisový loket</label>
+                    <?  GenerujDiv('lokty_tenisovy_loket', $lokty_tenisovy_loket, 'tenisový loket') ?>  
+                    
                     </div> 
             </div>  
 
             <div class="col-sm-2" style="background-color:#d1f7e7;">
                     <br>
-                    <label for="uzivatel">Zápesti:</label>
+                    <label for="uzivatel">Zápěstí:</label>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="zapesti_karpaly" value="1">karpály</label> 
+                    <?  GenerujDiv('zapesti_karpaly', $zapesti_karpaly, 'karpály') ?>  
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="zapesti_neohebnost" value="1">neohebnost</label> 
+                    <?  GenerujDiv('zapesti_neohebnost', $zapesti_neohebnost, 'neohebnost') ?>  
+                    
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="zapesti_zatuhlost" value="1">zatuhlost</label> 
+                    <?  GenerujDiv('zapesti_zatuhlost', $zapesti_zatuhlost, 'zatuhlost') ?> 
+                    
                     </div>
 
             </div>  
@@ -1867,10 +1875,10 @@ $conn->close();
                     <label><input type="checkbox" name="krcni_posun_brady_doprava" value="1">posun brady doprava</label> 
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_mala_lordoza" value="1">malá dordóza</label> 
+                    <label><input type="checkbox" name="krcni_mala_lordoza" value="1">malá lordóza</label> 
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_velka_lordoza" value="1">velká dordóza</label> 
+                    <label><input type="checkbox" name="krcni_velka_lordoza" value="1">velká lordóza</label> 
                     </div>
                     <div class="checkbox">
                     <label><input type="checkbox" name="krcni_vyhrez" value="1">výhřez</label> 
@@ -1888,10 +1896,10 @@ $conn->close();
                     <label><input type="checkbox" name="krcni_posun_jazylky" value="1">posun jazylky</label> 
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_oteklost_sije_z_prave_strany" value="1">oteklost šíje z pravé strany</label> 
+                    <label><input type="checkbox" name="krcni_oteklost_sije_z_leve_strany" value="1">oteklost šíje z levé strany</label> 
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_oteklost_sije_z_leve_strany" value="1">oteklost šíje z leve strany</label> 
+                    <label><input type="checkbox" name="krcni_oteklost_sije_z_prave_strany" value="1">oteklost šíje z pravé strany</label> 
                     </div>            
             </div>
 
@@ -1902,7 +1910,7 @@ $conn->close();
                 <label><input type="checkbox" name="hrudni_vyhrbeni" value="1">vyhrbení</label> 
                 </div> 
                 <div class="checkbox">
-                <label><input type="checkbox" name="hrudni_prohnuti" value="1">prohnuti</label> 
+                <label><input type="checkbox" name="hrudni_prohnuti" value="1">prohnutí</label> 
                 </div>
                 <div class="checkbox">
                 <label><input type="checkbox" name="hrudni_hrb_na_zadech" value="1">hrb na zádech</label> 
@@ -1930,8 +1938,7 @@ $conn->close();
                 </div>
                 <div class="checkbox">
                 <label><input type="checkbox" name="hrudni_nepruznost_zeber" value="1">nepružnost žeber</label> 
-                </div>
-        
+                </div>        
             </div>
 
 
@@ -2020,7 +2027,7 @@ $conn->close();
         <div class="row"> 
             <div class="col-sm-12">
                 
-                <label for="uzivatel">Ztruhlé:</label>
+                <label for="uzivatel">Ztuhlé:</label>
                 <textarea class="form-control" id="svaly_ztuhle" name="svaly_ztuhle" rows="2" maxlength="200" style="background-color:#FFFFFF;"></textarea>
             </div>
         </div>
