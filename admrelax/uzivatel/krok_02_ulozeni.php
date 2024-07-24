@@ -189,6 +189,14 @@ $hrudni_posun_zeber_doprava = addslashes(htmlspecialchars(trim("$_POST[hrudni_po
 $hrudni_melke_dychani = addslashes(htmlspecialchars(trim("$_POST[hrudni_melke_dychani]")));
 $hrudni_nepruznost_zeber = addslashes(htmlspecialchars(trim("$_POST[hrudni_nepruznost_zeber]")));
 
+$lopatky_posun_doleva = addslashes(htmlspecialchars(trim("$_POST[lopatky_posun_doleva]")));
+$lopatky_posun_doprava = addslashes(htmlspecialchars(trim("$_POST[lopatky_posun_doprava]")));
+$lopatky_vylezaji_ven = addslashes(htmlspecialchars(trim("$_POST[lopatky_vylezaji_ven]")));
+
+$bederni_prohnuti = addslashes(htmlspecialchars(trim("$_POST[bederni_prohnuti]")));
+$bederni_vyoseni_doleva = addslashes(htmlspecialchars(trim("$_POST[bederni_vyoseni_doleva]")));
+$bederni_vyoseni_doprava = addslashes(htmlspecialchars(trim("$_POST[bederni_vyoseni_doprava]")));
+$bederni_vyhrez = addslashes(htmlspecialchars(trim("$_POST[bederni_vyhrez]")));
 
 
 
