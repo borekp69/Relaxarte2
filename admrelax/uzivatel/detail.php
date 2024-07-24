@@ -1624,7 +1624,7 @@ $krcni_mala_lordoza = $radek["krcni_mala_lordoza"];
 $krcni_velka_lordoza = $radek["krcni_velka_lordoza"];
 $krcni_vyhrez = $radek["krcni_vyhrez"];
 $krcni_zaklon_dozadu = $radek["krcni_zaklon_dozadu"];
-$krcni_presun_dopredu = $radek["krcni_presun_dopredu"];
+$krcni_predsun_dopredu = $radek["krcni_presun_dopredu"];
 $krcni_hlava_v_ramenou = $radek["krcni_hlava_v_ramenou"];
 $krcni_posun_jazylky = $radek["krcni_posun_jazylky"];
 $krcni_oteklost_sije_z_leve_strany = $radek["krcni_oteklost_sije_z_leve_strany"];
@@ -1965,7 +1965,7 @@ $conn->close();
                     
                     </div>
                     <div class="checkbox">
-                    <?  GenerujDiv('krcni_presun_dopredu', $krcni_presun_dopredu, 'předsun dopředu') ?> 
+                    <?  GenerujDiv('krcni_presun_dopredu', $krcni_predsun_dopredu, 'předsun dopředu') ?> 
                     
                     </div>
                     <div class="checkbox">

@@ -370,7 +370,7 @@ function myFunction_<?echo $row["seznam_name"];?>() {
                     
                     </div>
                     <div class="checkbox">
-                    <label><input type="checkbox" name="krcni_presun_dopredu" value="1">předsun dopředu</label>  
+                    <label><input type="checkbox" name="krcni_predsun_dopredu" value="1">předsun dopředu</label>  
                     
                     </div>
                     <div class="checkbox">

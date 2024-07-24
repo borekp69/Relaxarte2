@@ -161,6 +161,23 @@ $pater_skolioticke_drzeni = addslashes(htmlspecialchars(trim("$_POST[pater_skoli
 $pater_dysbalace_prave_ruky = addslashes(htmlspecialchars(trim("$_POST[pater_dysbalace_prave_ruky]")));
 $pater_dysbalace_leve_ruky = addslashes(htmlspecialchars(trim("$_POST[pater_dysbalace_leve_ruky]")));
 
+$krcni_ztuhlost_sije = addslashes(htmlspecialchars(trim("$_POST[krcni_ztuhlost_sije]")));
+$krcni_stuhlost_trapezu = addslashes(htmlspecialchars(trim("$_POST[krcni_stuhlost_trapezu]")));
+$krcni_vyoseni_doleva = addslashes(htmlspecialchars(trim("$_POST[krcni_vyoseni_doleva]")));
+$krcni_vyoseni_doprava = addslashes(htmlspecialchars(trim("$_POST[krcni_vyoseni_doprava]")));
+$krcni_posun_brady_doleva = addslashes(htmlspecialchars(trim("$_POST[krcni_posun_brady_doleva]")));
+$krcni_posun_brady_doprava = addslashes(htmlspecialchars(trim("$_POST[krcni_posun_brady_doprava]")));
+$krcni_mala_lordoza = addslashes(htmlspecialchars(trim("$_POST[krcni_mala_lordoza]")));
+$krcni_velka_lordoza = addslashes(htmlspecialchars(trim("$_POST[krcni_velka_lordoza]")));
+$krcni_vyhrez = addslashes(htmlspecialchars(trim("$_POST[krcni_vyhrez]")));
+$krcni_zaklon_dozadu = addslashes(htmlspecialchars(trim("$_POST[krcni_zaklon_dozadu]")));
+$krcni_predsun_dopredu = addslashes(htmlspecialchars(trim("$_POST[krcni_prdesun_dopredu]")));
+
+
+$krcni_hlava_v_ramenou = addslashes(htmlspecialchars(trim("$_POST[krcni_hlava_v_ramenou]")));
+$krcni_posun_jazylky = addslashes(htmlspecialchars(trim("$_POST[krcni_posun_jazylky]")));
+$krcni_oteklost_sije_z_leve_strany = addslashes(htmlspecialchars(trim("$_POST[krcni_oteklost_sije_z_leve_strany]")));
+$krcni_oteklost_sije_z_prave_strany = addslashes(htmlspecialchars(trim("$_POST[krcni_oteklost_sije_z_prave_strany]")));
 
 
 
