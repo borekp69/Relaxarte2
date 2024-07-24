@@ -198,6 +198,21 @@ $bederni_vyoseni_doleva = addslashes(htmlspecialchars(trim("$_POST[bederni_vyose
 $bederni_vyoseni_doprava = addslashes(htmlspecialchars(trim("$_POST[bederni_vyoseni_doprava]")));
 $bederni_vyhrez = addslashes(htmlspecialchars(trim("$_POST[bederni_vyhrez]")));
 
+$hypermobilita_krcni_pater = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_krcni_pater]")));
+$hypermobilita_hrudni_pater = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_hrudni_pater]")));
+$hypermobilita_bederni_pater = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_bederni_pater]")));
+$hypermobilita_krizova_kost = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_krizova_kost]")));
+$hypermobilita_kostrc = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_kostrc]")));
+$hypermobilita_ramena = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_ramena]")));
+$hypermobilita_lokty = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_lokty]")));
+$hypermobilita_zapesti = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_zapesti]")));
+$hypermobilita_prsty_na_rukou = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_prsty_na_rukou]")));
+$hypermobilita_kycle = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_kycle]")));
+$hypermobilita_kolena = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_kolena]")));
+$hypermobilita_kotniky = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_kotniky]")));
+$hypermobilita_prsty_na_nohou = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_prsty_na_nohou]")));
+
+
 
 
 
