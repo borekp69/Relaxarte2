@@ -172,12 +172,22 @@ $krcni_velka_lordoza = addslashes(htmlspecialchars(trim("$_POST[krcni_velka_lord
 $krcni_vyhrez = addslashes(htmlspecialchars(trim("$_POST[krcni_vyhrez]")));
 $krcni_zaklon_dozadu = addslashes(htmlspecialchars(trim("$_POST[krcni_zaklon_dozadu]")));
 $krcni_predsun_dopredu = addslashes(htmlspecialchars(trim("$_POST[krcni_prdesun_dopredu]")));
-
-
 $krcni_hlava_v_ramenou = addslashes(htmlspecialchars(trim("$_POST[krcni_hlava_v_ramenou]")));
 $krcni_posun_jazylky = addslashes(htmlspecialchars(trim("$_POST[krcni_posun_jazylky]")));
 $krcni_oteklost_sije_z_leve_strany = addslashes(htmlspecialchars(trim("$_POST[krcni_oteklost_sije_z_leve_strany]")));
 $krcni_oteklost_sije_z_prave_strany = addslashes(htmlspecialchars(trim("$_POST[krcni_oteklost_sije_z_prave_strany]")));
+
+$hrudni_vyhrbeni = addslashes(htmlspecialchars(trim("$_POST[hrudni_vyhrbeni]")));
+$hrudni_prohnuti = addslashes(htmlspecialchars(trim("$_POST[hrudni_prohnuti]")));
+$hrudni_hrb_na_zadech = addslashes(htmlspecialchars(trim("$_POST[hrudni_hrb_na_zadech]")));
+$hrudni_vyoseni_doleva = addslashes(htmlspecialchars(trim("$_POST[hrudni_vyoseni_doleva]")));
+$hrudni_vyoseni_doprava = addslashes(htmlspecialchars(trim("$_POST[hrudni_vyoseni_doprava]")));
+$hrudni_vyhrez = addslashes(htmlspecialchars(trim("$_POST[hrudni_vyhrez]")));
+$hrudni_blokada_zeber = addslashes(htmlspecialchars(trim("$_POST[hrudni_blokada_zeber]")));
+$hrudni_posun_zeber_doleva = addslashes(htmlspecialchars(trim("$_POST[hrudni_posun_zeber_doleva]")));
+$hrudni_posun_zeber_doprava = addslashes(htmlspecialchars(trim("$_POST[hrudni_posun_zeber_doprava]")));
+$hrudni_melke_dychani = addslashes(htmlspecialchars(trim("$_POST[hrudni_melke_dychani]")));
+$hrudni_nepruznost_zeber = addslashes(htmlspecialchars(trim("$_POST[hrudni_nepruznost_zeber]")));
 
 
 
