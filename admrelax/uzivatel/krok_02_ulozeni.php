@@ -171,7 +171,7 @@ $krcni_mala_lordoza = addslashes(htmlspecialchars(trim("$_POST[krcni_mala_lordoz
 $krcni_velka_lordoza = addslashes(htmlspecialchars(trim("$_POST[krcni_velka_lordoza]")));
 $krcni_vyhrez = addslashes(htmlspecialchars(trim("$_POST[krcni_vyhrez]")));
 $krcni_zaklon_dozadu = addslashes(htmlspecialchars(trim("$_POST[krcni_zaklon_dozadu]")));
-$krcni_predsun_dopredu = addslashes(htmlspecialchars(trim("$_POST[krcni_prdesun_dopredu]")));
+$krcni_predsun_dopredu = addslashes(htmlspecialchars(trim("$_POST[krcni_predsun_dopredu]")));
 $krcni_hlava_v_ramenou = addslashes(htmlspecialchars(trim("$_POST[krcni_hlava_v_ramenou]")));
 $krcni_posun_jazylky = addslashes(htmlspecialchars(trim("$_POST[krcni_posun_jazylky]")));
 $krcni_oteklost_sije_z_leve_strany = addslashes(htmlspecialchars(trim("$_POST[krcni_oteklost_sije_z_leve_strany]")));
@@ -212,7 +212,9 @@ $hypermobilita_kolena = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_k
 $hypermobilita_kotniky = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_kotniky]")));
 $hypermobilita_prsty_na_nohou = addslashes(htmlspecialchars(trim("$_POST[hypermobilita_prsty_na_nohou]")));
 
-
+$svaly_ztuhle = addslashes(htmlspecialchars(trim("$_POST[svaly_ztuhle]")));
+$svaly_povolene = addslashes(htmlspecialchars(trim("$_POST[svaly_povolene]")));
+$svaly_poznamka = addslashes(htmlspecialchars(trim("$_POST[svaly_poznamka]")));
 
 
 
@@ -509,6 +511,217 @@ if ($conn->query($sql) === TRUE) {
     $conn->close();    
 
 ?>
+
+
+
+<?
+require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+$sql = "INSERT INTO kineziologicky_rozbor (
+    uzivatel_id,
+    nohy_x,
+    nohy_O,
+    nohy_posun_doleva,
+    nohy_posun_doprava,
+    nohy_prava_delsi_nez_leva,
+    nohy_leva_delsi_nez_prava,
+    vybocene_palce,
+    ploche_nohy,
+    skrcene_prsty,
+    prsty_blizko_u_sebe,
+    ostruhy,
+    ztuhle_narty,
+    kotniky_zatuhle,
+    kotniky_praskajici,
+    kotniky_otekle,
+    kotniky_zkracene_achylovy_slachy,
+    kolena_posun_doleva,
+    kolena_posun_doprava,
+    kolena_stoceni_dovnitr,
+    kolena_vytoceni_ven,
+    panev_preklopena_podsazena,
+    panev_preklopena_dopredu,
+    panev_posunuta_dopredu_bez_preklopeni,
+    panev_posunuta_dozadu_bez_preklopeni,
+    panev_posun_doleva,
+    panev_posun_doprava,
+    panev_rotace_doleva,
+    panev_rotace_doprava,
+    panev_blokada,
+    ruce_posun_doleva,
+    ruce_posun_doprava,
+    ramena_posun_doleva,
+    ramena_posun_doprava,
+    ramena_zvednuta_tense_k_usim,
+    ramena_dychani_do_ramen,
+    lokty_tenisovy_loket,
+    zapesti_karpaly,
+    zapesti_neohebnost,
+    zapesti_zatuhlost,
+    pater_kulata_zada,
+    pater_prohnuta_zada,
+    pater_plocha_zada,
+    pater_skolioticke_drzeni,
+    pater_dysbalace_prave_ruky,
+    pater_dysbalace_leve_ruky,
+    krcni_ztuhlost_sije,
+    krcni_stuhlost_trapezu,
+    krcni_vyoseni_doleva,
+    krcni_vyoseni_doprava,
+    krcni_posun_brady_doleva,
+    krcni_posun_brady_doprava,
+    krcni_mala_lordoza,
+    krcni_velka_lordoza,
+    krcni_vyhrez,
+    krcni_zaklon_dozadu,
+    krcni_predsun_dopredu,
+    krcni_hlava_v_ramenou,
+    krcni_posun_jazylky,
+    krcni_oteklost_sije_z_leve_strany,
+    krcni_oteklost_sije_z_prave_strany,
+    hrudni_vyhrbeni,
+    hrudni_prohnuti,
+    hrudni_hrb_na_zadech,
+    hrudni_vyoseni_doleva,
+    hrudni_vyoseni_doprava,
+    hrudni_vyhrez,
+    hrudni_blokada_zeber,
+    hrudni_posun_zeber_doleva,
+    hrudni_posun_zeber_doprava,
+    hrudni_melke_dychani,
+    hrudni_nepruznost_zeber,
+    lopatky_posun_doleva,
+    lopatky_posun_doprava,
+    lopatky_vylezaji_ven,
+    bederni_prohnuti,
+    bederni_vyoseni_doleva,
+    bederni_vyoseni_doprava,
+    bederni_vyhrez,
+    hypermobilita_krcni_pater,
+    hypermobilita_hrudni_pater,
+    hypermobilita_bederni_pater,
+    hypermobilita_krizova_kost,
+    hypermobilita_kostrc,
+    hypermobilita_ramena,
+    hypermobilita_lokty,
+    hypermobilita_zapesti,
+    hypermobilita_prsty_na_rukou,
+    hypermobilita_kycle,
+    hypermobilita_kolena,
+    hypermobilita_kotniky,
+    hypermobilita_prsty_na_nohou,
+    svaly_ztuhle,
+    svaly_povolene,
+    svaly_poznamka,
+    datum
+    )
+    VALUES (    
+    '$uzivatel_id',    
+    '$nohy_x',
+    '$nohy_O',
+    '$nohy_posun_doleva',
+    '$nohy_posun_doprava',
+    '$nohy_prava_delsi_nez_leva',
+    '$nohy_leva_delsi_nez_prava',
+    '$vybocene_palce',
+    '$ploche_nohy',
+    '$skrcene_prsty',
+    '$prsty_blizko_u_sebe',
+    '$ostruhy',
+    '$ztuhle_narty',
+    '$kotniky_zatuhle',
+    '$kotniky_praskajici',
+    '$kotniky_otekle',
+    '$kotniky_zkracene_achylovy_slachy',
+    '$kolena_posun_doleva',
+    '$kolena_posun_doprava',
+    '$kolena_stoceni_dovnitr',
+    '$kolena_vytoceni_ven',
+    '$panev_preklopena_podsazena',
+    '$panev_preklopena_dopredu',
+    '$panev_posunuta_dopredu_bez_preklopeni',
+    '$panev_posunuta_dozadu_bez_preklopeni',
+    '$panev_posun_doleva',
+    '$panev_posun_doprava',
+    '$panev_rotace_doleva',
+    '$panev_rotace_doprava',
+    '$panev_blokada',
+    '$ruce_posun_doleva',
+    '$ruce_posun_doprava',
+    '$ramena_posun_doleva',
+    '$ramena_posun_doprava',
+    '$ramena_zvednuta_tense_k_usim',
+    '$ramena_dychani_do_ramen',
+    '$lokty_tenisovy_loket',
+    '$zapesti_karpaly',
+    '$zapesti_neohebnost',
+    '$zapesti_zatuhlost',
+    '$pater_kulata_zada',
+    '$pater_prohnuta_zada',
+    '$pater_plocha_zada',
+    '$pater_skolioticke_drzeni',
+    '$pater_dysbalace_prave_ruky',
+    '$pater_dysbalace_leve_ruky',
+    '$krcni_ztuhlost_sije',
+    '$krcni_stuhlost_trapezu',
+    '$krcni_vyoseni_doleva',
+    '$krcni_vyoseni_doprava',
+    '$krcni_posun_brady_doleva',
+    '$krcni_posun_brady_doprava',
+    '$krcni_mala_lordoza',
+    '$krcni_velka_lordoza',
+    '$krcni_vyhrez',
+    '$krcni_zaklon_dozadu',
+    '$krcni_predsun_dopredu',
+    '$krcni_hlava_v_ramenou',
+    '$krcni_posun_jazylky',
+    '$krcni_oteklost_sije_z_leve_strany',
+    '$krcni_oteklost_sije_z_prave_strany',
+    '$hrudni_vyhrbeni',
+    '$hrudni_prohnuti',
+    '$hrudni_hrb_na_zadech',
+    '$hrudni_vyoseni_doleva',
+    '$hrudni_vyoseni_doprava',
+    '$hrudni_vyhrez',
+    '$hrudni_blokada_zeber',
+    '$hrudni_posun_zeber_doleva',
+    '$hrudni_posun_zeber_doprava',
+    '$hrudni_melke_dychani',
+    '$hrudni_nepruznost_zeber',
+    '$lopatky_posun_doleva',
+    '$lopatky_posun_doprava',
+    '$lopatky_vylezaji_ven',
+    '$bederni_prohnuti',
+    '$bederni_vyoseni_doleva',
+    '$bederni_vyoseni_doprava',
+    '$bederni_vyhrez',
+    '$hypermobilita_krcni_pater',
+    '$hypermobilita_hrudni_pater',
+    '$hypermobilita_bederni_pater',
+    '$hypermobilita_krizova_kost',
+    '$hypermobilita_kostrc',
+    '$hypermobilita_ramena',
+    '$hypermobilita_lokty',
+    '$hypermobilita_zapesti',
+    '$hypermobilita_prsty_na_rukou',
+    '$hypermobilita_kycle',
+    '$hypermobilita_kolena',
+    '$hypermobilita_kotniky',
+    '$hypermobilita_prsty_na_nohou',
+    '$svaly_ztuhle',
+    '$svaly_povolene',
+    '$svaly_poznamka',
+     NOW()     
+    )"; 
+
+if ($conn->query($sql) === TRUE) {    
+} else {
+echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
+}
+$conn->close();   
+?>
+
+
+
 
 <script>
 setTimeout(function(){

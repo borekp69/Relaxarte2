@@ -92,8 +92,7 @@ function myFunction_<?echo $row["seznam_name"];?>() {
                     <label for="uzivatel">Postavení nohou:</label>
                     <div class="checkbox">
                     <label><input type="checkbox" name="nohy_x" value="1">X</label>                   
-                    
-            </div>
+                    </div>
                     <div class="checkbox">
                     <label><input type="checkbox" name="nohy_O" value="1">O</label>    
                     </div>
