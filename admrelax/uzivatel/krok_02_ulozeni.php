@@ -97,17 +97,90 @@ $kondicni_treninky = addslashes(htmlspecialchars(trim("$_POST[kondicni_treninky]
 $pravidelnost_kondicni_treninky = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_kondicni_treninky]")));
 $tenis_squash_badminton = addslashes(htmlspecialchars(trim("$_POST[tenis_squash_badminton]")));
 $pravidelnost_tenis_squash_badminton = addslashes(htmlspecialchars(trim("$_POST[pravidelnost_tenis_squash_badminton]")));
-
-
 $bezky = addslashes(htmlspecialchars(trim("$_POST[bezky]")));
 $brusle_zimni = addslashes(htmlspecialchars(trim("$_POST[brusle_zimni]")));
 $prace_na_zahrade = addslashes(htmlspecialchars(trim("$_POST[prace_na_zahrade]")));
 $sjezd_lyze = addslashes(htmlspecialchars(trim("$_POST[sjezd_lyze]")));
 $skialpinismus = addslashes(htmlspecialchars(trim("$_POST[skialpinismus]")));
-
-
 $joga_kurz = addslashes(htmlspecialchars(trim("$_POST[joga_kurz]")));
 $lektor = addslashes(htmlspecialchars(trim("$_POST[lektor]")));
+
+
+$nohy_x = addslashes(htmlspecialchars(trim("$_POST[nohy_x]")));
+$nohy_O = addslashes(htmlspecialchars(trim("$_POST[nohy_O]")));
+$nohy_posun_doleva = addslashes(htmlspecialchars(trim("$_POST[nohy_posun_doleva]")));
+$nohy_posun_doprava = addslashes(htmlspecialchars(trim("$_POST[nohy_posun_doprava]")));
+$nohy_prava_delsi_nez_leva = addslashes(htmlspecialchars(trim("$_POST[nohy_prava_delsi_nez_leva]")));
+$nohy_leva_delsi_nez_prava = addslashes(htmlspecialchars(trim("$_POST[nohy_leva_delsi_nez_prava]")));
+
+$vybocene_palce = addslashes(htmlspecialchars(trim("$_POST[vybocene_palce]")));
+$ploche_nohy = addslashes(htmlspecialchars(trim("$_POST[ploche_nohy]")));
+$skrcene_prsty = addslashes(htmlspecialchars(trim("$_POST[skrcene_prsty]")));
+$prsty_blizko_u_sebe = addslashes(htmlspecialchars(trim("$_POST[prsty_blizko_u_sebe]")));
+$ostruhy = addslashes(htmlspecialchars(trim("$_POST[ostruhy]")));
+$ztuhle_narty = addslashes(htmlspecialchars(trim("$_POST[ztuhle_narty]")));
+
+$kotniky_zatuhle = addslashes(htmlspecialchars(trim("$_POST[kotniky_zatuhle]")));
+$kotniky_praskajici = addslashes(htmlspecialchars(trim("$_POST[kotniky_praskajici]")));
+$kotniky_otekle = addslashes(htmlspecialchars(trim("$_POST[kotniky_otekle]")));
+$kotniky_zkracene_achylovy_slachy = addslashes(htmlspecialchars(trim("$_POST[kotniky_zkracene_achylovy_slachy]")));
+
+$kolena_posun_doleva = addslashes(htmlspecialchars(trim("$_POST[kolena_posun_doleva]")));
+$kolena_posun_doprava = addslashes(htmlspecialchars(trim("$_POST[kolena_posun_doprava]")));
+$kolena_stoceni_dovnitr = addslashes(htmlspecialchars(trim("$_POST[kolena_stoceni_dovnitr]")));
+$kolena_vytoceni_ven = addslashes(htmlspecialchars(trim("$_POST[kolena_vytoceni_ven]")));
+
+$panev_preklopena_podsazena = addslashes(htmlspecialchars(trim("$_POST[panev_preklopena_podsazena]")));
+$panev_preklopena_dopredu = addslashes(htmlspecialchars(trim("$_POST[panev_preklopena_dopredu]")));
+$panev_posunuta_dopredu_bez_preklopeni = addslashes(htmlspecialchars(trim("$_POST[panev_posunuta_dopredu_bez_preklopeni]")));
+$panev_posunuta_dozadu_bez_preklopeni = addslashes(htmlspecialchars(trim("$_POST[panev_posunuta_dozadu_bez_preklopeni]")));
+$panev_posun_doleva = addslashes(htmlspecialchars(trim("$_POST[panev_posun_doleva]")));
+$panev_posun_doprava = addslashes(htmlspecialchars(trim("$_POST[panev_posun_doprava]")));
+$panev_rotace_doleva = addslashes(htmlspecialchars(trim("$_POST[panev_rotace_doleva]")));
+$panev_rotace_doprava = addslashes(htmlspecialchars(trim("$_POST[panev_rotace_doprava]")));
+$panev_blokada = addslashes(htmlspecialchars(trim("$_POST[panev_blokada]")));
+
+$ruce_posun_doleva = addslashes(htmlspecialchars(trim("$_POST[ruce_posun_doleva]")));
+$ruce_posun_doprava = addslashes(htmlspecialchars(trim("$_POST[ruce_posun_doprava]")));
+
+$ramena_posun_doleva = addslashes(htmlspecialchars(trim("$_POST[ramena_posun_doleva]")));
+$ramena_posun_doprava = addslashes(htmlspecialchars(trim("$_POST[ramena_posun_doprava]")));
+$ramena_zvednuta_tense_k_usim = addslashes(htmlspecialchars(trim("$_POST[ramena_zvednuta_tense_k_usim]")));
+$ramena_dychani_do_ramen = addslashes(htmlspecialchars(trim("$_POST[ramena_dychani_do_ramen]")));
+
+$lokty_tenisovy_loket = addslashes(htmlspecialchars(trim("$_POST[lokty_tenisovy_loket]")));
+
+$zapesti_karpaly = addslashes(htmlspecialchars(trim("$_POST[zapesti_karpaly]")));
+$zapesti_neohebnost = addslashes(htmlspecialchars(trim("$_POST[zapesti_neohebnost]")));
+$zapesti_zatuhlost = addslashes(htmlspecialchars(trim("$_POST[zapesti_zatuhlost]")));
+
+$pater_kulata_zada = addslashes(htmlspecialchars(trim("$_POST[pater_kulata_zada]")));
+$pater_prohnuta_zada = addslashes(htmlspecialchars(trim("$_POST[pater_prohnuta_zada]")));
+$pater_plocha_zada = addslashes(htmlspecialchars(trim("$_POST[pater_plocha_zada]")));
+$pater_skolioticke_drzeni = addslashes(htmlspecialchars(trim("$_POST[pater_skolioticke_drzeni]")));
+$pater_dysbalace_prave_ruky = addslashes(htmlspecialchars(trim("$_POST[pater_dysbalace_prave_ruky]")));
+$pater_dysbalace_leve_ruky = addslashes(htmlspecialchars(trim("$_POST[pater_dysbalace_leve_ruky]")));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 if (!$joga_kurz) { $joga_kurz = 0; }
 if (!$lektor) { $lektor = 0; }
 if (!$posilovani) { $posilovani = 0; }

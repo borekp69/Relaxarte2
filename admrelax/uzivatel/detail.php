@@ -1647,7 +1647,6 @@ $bederni_prohnuti = $radek["bederni_prohnuti"];
 $bederni_vyoseni_doleva = $radek["bederni_vyoseni_doleva"];
 $bederni_vyoseni_doprava = $radek["bederni_vyoseni_doprava"];
 $bederni_vyhrez = $radek["bederni_vyhrez"]; 
-
 $hypermobilita_krcni_pater = $radek["hypermobilita_krcni_pater"]; 
 $hypermobilita_hrudni_pater = $radek["hypermobilita_hrudni_pater"]; 
 $hypermobilita_bederni_pater = $radek["hypermobilita_bederni_pater"]; 
@@ -1661,7 +1660,9 @@ $hypermobilita_kycle = $radek["hypermobilita_kycle"];
 $hypermobilita_kolena = $radek["hypermobilita_kolena"]; 
 $hypermobilita_kotniky = $radek["hypermobilita_kotniky"]; 
 $hypermobilita_prsty_na_nohou = $radek["hypermobilita_prsty_na_nohou"];  
-
+$svaly_ztuhle = $radek["svaly_ztuhle"];  
+$svaly_povolene = $radek["svaly_povolene"];  
+$svaly_poznamka = $radek["svaly_poznamka"];  
 
 
 } 
@@ -2138,7 +2139,7 @@ $conn->close();
             <div class="col-sm-12">
                 
                 <label for="uzivatel">Ztuhlé:</label>
-                <textarea class="form-control" id="svaly_ztuhle" name="svaly_ztuhle" rows="2" maxlength="200" style="background-color:#FFFFFF;"></textarea>
+                <textarea class="form-control" id="svaly_ztuhle" name="svaly_ztuhle" rows="2" maxlength="200" style="background-color:#FFFFFF;"><? echo $svaly_ztuhle; ?></textarea>
             </div>
         </div>
 
@@ -2146,7 +2147,7 @@ $conn->close();
             <div class="col-sm-12">
                 <br/>
                 <label for="uzivatel">Povolené:</label>
-                <textarea class="form-control" id="svaly_povolene" name="svaly_povolene" rows="2" maxlength="200" style="background-color:#FFFFFF;"></textarea>
+                <textarea class="form-control" id="svaly_povolene" name="svaly_povolene" rows="2" maxlength="200" style="background-color:#FFFFFF;"><? echo $svaly_povolene; ?></textarea>
             </div>
         </div>
 
@@ -2154,7 +2155,7 @@ $conn->close();
             <div class="col-sm-12">
                 <br/>
                 <label for="uzivatel">Poznámka:</label>
-                <textarea class="form-control" id="svaly_poznamka" name="svaly_poznamka" rows="3" maxlength="200" style="background-color:#FFFFFF;"></textarea>
+                <textarea class="form-control" id="svaly_poznamka" name="svaly_poznamka" rows="3" maxlength="200" style="background-color:#FFFFFF;"><? echo $svaly_poznamka; ?></textarea>
                 <br/>    
             </div>
         </div>
