@@ -2413,6 +2413,41 @@ function loadKineziologicky_rozbor() {
                     lokty_tenisovy_loket = 0;
                         }   
   
+        zapesti_karpaly = document.kinez_rozbor.zapesti_karpaly; 
+                if(zapesti_karpaly.checked) {
+                    zapesti_karpaly = 1;
+                }else{
+                    zapesti_karpaly = 0;
+                        } 
+                        
+
+        zapesti_neohebnost = document.kinez_rozbor.zapesti_neohebnost; 
+                if(zapesti_neohebnost.checked) {
+                    zapesti_neohebnost = 1;
+                }else{
+                    zapesti_neohebnost = 0;
+                        } 
+
+        zapesti_zatuhlost = document.kinez_rozbor.zapesti_zatuhlost; 
+                if(zapesti_zatuhlost.checked) {
+                    zapesti_zatuhlost = 1;
+                }else{
+                    zapesti_zatuhlost = 0;
+                        } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   
@@ -2421,10 +2456,7 @@ function loadKineziologicky_rozbor() {
   
   
   
-  
-  
-  
-alert("lokty_tenisovy_loket:" + lokty_tenisovy_loket);
+alert("zapesti_zatuhlost:" + zapesti_zatuhlost);
 
 
 
