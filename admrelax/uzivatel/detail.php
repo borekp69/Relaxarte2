@@ -2298,7 +2298,70 @@ function loadKineziologicky_rozbor() {
                     kolena_vytoceni_ven = 0;
                         } 
 
-    
+        panev_preklopena_podsazena = document.kinez_rozbor.panev_preklopena_podsazena; 
+                if(panev_preklopena_podsazena.checked) {
+                    panev_preklopena_podsazena = 1;
+                }else{
+                    panev_preklopena_podsazena = 0;
+                        }     
+
+        panev_preklopena_dopredu = document.kinez_rozbor.panev_preklopena_dopredu; 
+                if(panev_preklopena_dopredu.checked) {
+                    panev_preklopena_dopredu = 1;
+                }else{
+                    panev_preklopena_dopredu = 0;
+                        }  
+
+        panev_posunuta_dopredu_bez_preklopeni = document.kinez_rozbor.panev_posunuta_dopredu_bez_preklopeni; 
+                if(panev_posunuta_dopredu_bez_preklopeni.checked) {
+                    panev_posunuta_dopredu_bez_preklopeni = 1;
+                }else{
+                    panev_posunuta_dopredu_bez_preklopeni = 0;
+                        } 
+
+        panev_posunuta_dozadu_bez_preklopeni = document.kinez_rozbor.panev_posunuta_dozadu_bez_preklopeni; 
+                if(panev_posunuta_dozadu_bez_preklopeni.checked) {
+                    panev_posunuta_dozadu_bez_preklopeni = 1;
+                }else{
+                    panev_posunuta_dozadu_bez_preklopeni = 0;
+                        } 
+
+        
+        panev_posun_doleva = document.kinez_rozbor.panev_posun_doleva; 
+                if(panev_posun_doleva.checked) {
+                    panev_posun_doleva = 1;
+                }else{
+                    panev_posun_doleva = 0;
+                        } 
+
+        panev_posun_doprava = document.kinez_rozbor.panev_posun_doprava; 
+                if(panev_posun_doprava.checked) {
+                    panev_posun_doprava = 1;
+                }else{
+                    panev_posun_doprava = 0;
+                        } 
+
+
+        panev_rotace_doleva = document.kinez_rozbor.panev_rotace_doleva; 
+                if(panev_rotace_doleva.checked) {
+                    panev_rotace_doleva = 1;
+                }else{
+                    panev_rotace_doleva = 0;
+                        } 
+
+        panev_rotace_doprava = document.kinez_rozbor.panev_rotace_doprava; 
+                if(panev_rotace_doprava.checked) {
+                    panev_rotace_doprava = 1;
+                }else{
+                    panev_rotace_doprava = 0;
+                        } 
+
+        panev_blokada = document.kinez_rozbor.panev_blokada; 
+                if(panev_blokada.checked) {
+                    panev_blokada = 1;
+                }else{
+                    panev_blokada = 0;
+                        } 
 
 
 
@@ -2307,13 +2370,7 @@ function loadKineziologicky_rozbor() {
 
 
 
-
-
-
-
-
-
-                        alert("kolena_vytoceni_ven:" + kolena_vytoceni_ven);
+                        alert("panev_blokada:" + panev_blokada);
 
 
 
