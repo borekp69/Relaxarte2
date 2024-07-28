@@ -2682,30 +2682,155 @@ function loadKineziologicky_rozbor() {
                     lopatky_vylezaji_ven = 0;
                         } 
 
+        bederni_prohnuti = document.kinez_rozbor.bederni_prohnuti; 
+                if(bederni_prohnuti.checked) {
+                    bederni_prohnuti = 1;
+                }else{
+                    bederni_prohnuti = 0;
+                        }
 
+        bederni_vyoseni_doleva = document.kinez_rozbor.bederni_vyoseni_doleva; 
+                if(bederni_vyoseni_doleva.checked) {
+                    bederni_vyoseni_doleva = 1;
+                }else{
+                    bederni_vyoseni_doleva = 0;
+                        }
 
+        bederni_vyoseni_doprava = document.kinez_rozbor.bederni_vyoseni_doprava; 
+                if(bederni_vyoseni_doprava.checked) {
+                    bederni_vyoseni_doprava = 1;
+                }else{
+                    bederni_vyoseni_doprava = 0;
+                        }
 
+        bederni_vyhrez = document.kinez_rozbor.bederni_vyhrez; 
+                if(bederni_vyhrez.checked) {
+                    bederni_vyhrez = 1;
+                }else{
+                    bederni_vyhrez = 0;
+                        }
 
-alert("lopatky_vylezaji_ven:" + lopatky_vylezaji_ven);
+        hypermobilita_krcni_pater = document.kinez_rozbor.hypermobilita_krcni_pater; 
+                if(hypermobilita_krcni_pater.checked) {
+                    hypermobilita_krcni_pater = 1;
+                }else{
+                    hypermobilita_krcni_pater = 0;
+                        }
 
+        hypermobilita_hrudni_pater = document.kinez_rozbor.hypermobilita_hrudni_pater; 
+                if(hypermobilita_hrudni_pater.checked) {
+                    hypermobilita_hrudni_pater = 1;
+                }else{
+                    hypermobilita_hrudni_pater = 0;
+                        }
 
+        hypermobilita_bederni_pater = document.kinez_rozbor.hypermobilita_bederni_pater; 
+                if(hypermobilita_bederni_pater.checked) {
+                    hypermobilita_bederni_pater = 1;
+                }else{
+                    hypermobilita_bederni_pater = 0;
+                        }
 
+        hypermobilita_krizova_kost = document.kinez_rozbor.hypermobilita_krizova_kost; 
+                if(hypermobilita_krizova_kost.checked) {
+                    hypermobilita_krizova_kost = 1;
+                }else{
+                    hypermobilita_krizova_kost = 0;
+                        }
 
+        hypermobilita_kostrc = document.kinez_rozbor.hypermobilita_kostrc; 
+                if(hypermobilita_kostrc.checked) {
+                    hypermobilita_kostrc = 1;
+                }else{
+                    hypermobilita_kostrc = 0;
+                        }
 
+        hypermobilita_ramena = document.kinez_rozbor.hypermobilita_ramena; 
+                if(hypermobilita_ramena.checked) {
+                    hypermobilita_ramena = 1;
+                }else{
+                    hypermobilita_ramena = 0;
+                        }
 
+        hypermobilita_lokty = document.kinez_rozbor.hypermobilita_lokty; 
+                if(hypermobilita_lokty.checked) {
+                    hypermobilita_lokty = 1;
+                }else{
+                    hypermobilita_lokty = 0;
+                        }
 
+        hypermobilita_zapesti = document.kinez_rozbor.hypermobilita_zapesti; 
+                if(hypermobilita_zapesti.checked) {
+                    hypermobilita_zapesti = 1;
+                }else{
+                    hypermobilita_zapesti = 0;
+                        }
 
+        hypermobilita_prsty_na_rukou = document.kinez_rozbor.hypermobilita_prsty_na_rukou; 
+                if(hypermobilita_prsty_na_rukou.checked) {
+                    hypermobilita_prsty_na_rukou = 1;
+                }else{
+                    hypermobilita_prsty_na_rukou = 0;
+                        }
 
+        hypermobilita_kycle = document.kinez_rozbor.hypermobilita_kycle; 
+                if(hypermobilita_kycle.checked) {
+                    hypermobilita_kycle = 1;
+                }else{
+                    hypermobilita_kycle = 0;
+                        }
 
+        hypermobilita_kolena = document.kinez_rozbor.hypermobilita_kolena; 
+                if(hypermobilita_kolena.checked) {
+                    hypermobilita_kolena = 1;
+                }else{
+                    hypermobilita_kolena = 0;
+                        }
 
+        hypermobilita_kotniky = document.kinez_rozbor.hypermobilita_kotniky; 
+                if(hypermobilita_kotniky.checked) {
+                    hypermobilita_kotniky = 1;
+                }else{
+                    hypermobilita_kotniky = 0;
+                        }
 
+        hypermobilita_prsty_na_nohou = document.kinez_rozbor.hypermobilita_prsty_na_nohou; 
+                if(hypermobilita_prsty_na_nohou.checked) {
+                    hypermobilita_prsty_na_nohou = 1;
+                }else{
+                    hypermobilita_prsty_na_nohou = 0;
+                        }
+
+        svaly_ztuhle = document.kinez_rozbor.svaly_ztuhle.value;
+        svaly_povolene = document.kinez_rozbor.svaly_povolene.value;
+        svaly_poznamka = document.kinez_rozbor.svaly_poznamka.value;
+
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&nohy_x="+nohy_x;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&nohy_O="+nohy_O;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&nohy_posun_doleva="+nohy_posun_doleva;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&nohy_posun_doprava="+nohy_posun_doprava;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&nohy_prava_delsi_nez_leva="+nohy_prava_delsi_nez_leva;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&nohy_leva_delsi_nez_prava="+nohy_leva_delsi_nez_prava;
+
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&vybocene_palce="+vybocene_palce;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&ploche_nohy="+ploche_nohy;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&skrcene_prsty="+skrcene_prsty;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&prsty_blizko_u_sebe="+prsty_blizko_u_sebe;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&ostruhy="+ostruhy;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&ztuhle_narty="+ztuhle_narty;
+
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&kotniky_zatuhle="+kotniky_zatuhle;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&kotniky_praskajici="+kotniky_praskajici;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&kotniky_otekle="+kotniky_otekle;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&kotniky_zkracene_achylovy_slachy="+kotniky_zkracene_achylovy_slachy;
+       
 
 
 
   xhttp.open("POST", "./script/kineziologicky_rozboru_pdate.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send(dataKineziologicky_rozbor);
-  //alert("Uložení:\nZáznam kineziologický rozbor byl aktualizován.");
+  alert("Uložení:\nZáznam kineziologický rozbor byl aktualizován.");
 
 
      }
