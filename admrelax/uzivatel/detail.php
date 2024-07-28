@@ -2363,6 +2363,43 @@ function loadKineziologicky_rozbor() {
                     panev_blokada = 0;
                         } 
 
+        ruce_posun_doleva = document.kinez_rozbor.ruce_posun_doleva; 
+                if(ruce_posun_doleva.checked) {
+                    ruce_posun_doleva = 1;
+                }else{
+                    ruce_posun_doleva = 0;
+                        } 
+
+        ruce_posun_doprava = document.kinez_rozbor.ruce_posun_doprava; 
+                if(ruce_posun_doprava.checked) {
+                    ruce_posun_doprava = 1;
+                }else{
+                    ruce_posun_doprava = 0;
+                        } 
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+alert("ruce_posun_doprava:" + ruce_posun_doprava);
 
 
 
@@ -2370,7 +2407,10 @@ function loadKineziologicky_rozbor() {
 
 
 
-                        alert("panev_blokada:" + panev_blokada);
+
+
+
+
 
 
 
