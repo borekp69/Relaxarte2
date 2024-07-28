@@ -2378,8 +2378,40 @@ function loadKineziologicky_rozbor() {
                         } 
 
 
+        ramena_posun_doleva = document.kinez_rozbor.ramena_posun_doleva; 
+                if(ramena_posun_doleva.checked) {
+                    ramena_posun_doleva = 1;
+                }else{
+                    ramena_posun_doleva = 0;
+                        } 
 
-
+        ramena_posun_doprava = document.kinez_rozbor.ramena_posun_doprava; 
+                if(ramena_posun_doprava.checked) {
+                    ramena_posun_doprava = 1;
+                }else{
+                    ramena_posun_doprava = 0;
+                        } 
+  
+        ramena_zvednuta_tense_k_usim = document.kinez_rozbor.ramena_zvednuta_tense_k_usim; 
+                if(ramena_zvednuta_tense_k_usim.checked) {
+                    ramena_zvednuta_tense_k_usim = 1;
+                }else{
+                    ramena_zvednuta_tense_k_usim = 0;
+                        }  
+  
+        ramena_dychani_do_ramen = document.kinez_rozbor.ramena_dychani_do_ramen; 
+                if(ramena_dychani_do_ramen.checked) {
+                    ramena_dychani_do_ramen = 1;
+                }else{
+                    ramena_dychani_do_ramen = 0;
+                        }   
+  
+        lokty_tenisovy_loket = document.kinez_rozbor.lokty_tenisovy_loket; 
+                if(lokty_tenisovy_loket.checked) {
+                    lokty_tenisovy_loket = 1;
+                }else{
+                    lokty_tenisovy_loket = 0;
+                        }   
   
   
   
@@ -2392,14 +2424,7 @@ function loadKineziologicky_rozbor() {
   
   
   
-  
-  
-  
-  
-  
-  
-  
-alert("ruce_posun_doprava:" + ruce_posun_doprava);
+alert("lokty_tenisovy_loket:" + lokty_tenisovy_loket);
 
 
 
