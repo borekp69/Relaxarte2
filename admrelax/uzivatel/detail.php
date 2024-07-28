@@ -2661,14 +2661,32 @@ function loadKineziologicky_rozbor() {
                     hrudni_nepruznost_zeber = 0;
                         } 
 
+        lopatky_posun_doleva = document.kinez_rozbor.lopatky_posun_doleva; 
+                if(lopatky_posun_doleva.checked) {
+                    lopatky_posun_doleva = 1;
+                }else{
+                    lopatky_posun_doleva = 0;
+                        } 
+
+        lopatky_posun_doprava = document.kinez_rozbor.lopatky_posun_doprava; 
+                if(lopatky_posun_doprava.checked) {
+                    lopatky_posun_doprava = 1;
+                }else{
+                    lopatky_posun_doprava = 0;
+                        } 
+
+        lopatky_vylezaji_ven = document.kinez_rozbor.lopatky_vylezaji_ven; 
+                if(lopatky_vylezaji_ven.checked) {
+                    lopatky_vylezaji_ven = 1;
+                }else{
+                    lopatky_vylezaji_ven = 0;
+                        } 
 
 
 
 
 
-
-
-alert("hrudni_nepruznost_zeber:" + hrudni_nepruznost_zeber);
+alert("lopatky_vylezaji_ven:" + lopatky_vylezaji_ven);
 
 
 
