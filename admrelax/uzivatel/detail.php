@@ -2435,9 +2435,51 @@ function loadKineziologicky_rozbor() {
                     zapesti_zatuhlost = 0;
                         } 
 
+        pater_kulata_zada = document.kinez_rozbor.pater_kulata_zada; 
+                if(pater_kulata_zada.checked) {
+                    pater_kulata_zada = 1;
+                }else{
+                    pater_kulata_zada = 0;
+                        } 
+
+        pater_prohnuta_zada = document.kinez_rozbor.pater_prohnuta_zada; 
+                if(pater_prohnuta_zada.checked) {
+                    pater_prohnuta_zada = 1;
+                }else{
+                    pater_prohnuta_zada = 0;
+                        } 
 
 
+        pater_plocha_zada = document.kinez_rozbor.pater_plocha_zada; 
+                if(pater_plocha_zada.checked) {
+                    pater_plocha_zada = 1;
+                }else{
+                    pater_plocha_zada = 0;
+                        } 
 
+        pater_skolioticke_drzeni = document.kinez_rozbor.pater_skolioticke_drzeni; 
+                if(pater_skolioticke_drzeni.checked) {
+                    pater_skolioticke_drzeni = 1;
+                }else{
+                    pater_skolioticke_drzeni = 0;
+                        } 
+
+        pater_dysbalace_leve_ruky = document.kinez_rozbor.pater_dysbalace_leve_ruky; 
+                if(pater_dysbalace_leve_ruky.checked) {
+                    pater_dysbalace_leve_ruky = 1;
+                }else{
+                    pater_dysbalace_leve_ruky = 0;
+                        } 
+
+        pater_dysbalace_prave_ruky = document.kinez_rozbor.pater_dysbalace_prave_ruky; 
+                if(pater_dysbalace_prave_ruky.checked) {
+                    pater_dysbalace_prave_ruky = 1;
+                }else{
+                    pater_dysbalace_prave_ruky = 0;
+                        }  
+  
+  
+  
 
 
 
@@ -2452,11 +2494,7 @@ function loadKineziologicky_rozbor() {
   
   
   
-  
-  
-  
-  
-alert("zapesti_zatuhlost:" + zapesti_zatuhlost);
+alert("pater_dysbalace_prave_ruky:" + pater_dysbalace_prave_ruky);
 
 
 
