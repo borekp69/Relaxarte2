@@ -2583,6 +2583,83 @@ function loadKineziologicky_rozbor() {
                     krcni_oteklost_sije_z_prave_strany = 0;
                         } 
 
+        hrudni_vyhrbeni = document.kinez_rozbor.hrudni_vyhrbeni; 
+                if(hrudni_vyhrbeni.checked) {
+                    hrudni_vyhrbeni = 1;
+                }else{
+                    hrudni_vyhrbeni = 0;
+                        } 
+
+        hrudni_prohnuti = document.kinez_rozbor.hrudni_prohnuti; 
+                if(hrudni_prohnuti.checked) {
+                    hrudni_prohnuti = 1;
+                }else{
+                    hrudni_prohnuti = 0;
+                        } 
+
+        hrudni_hrb_na_zadech = document.kinez_rozbor.hrudni_hrb_na_zadech; 
+                if(hrudni_hrb_na_zadech.checked) {
+                    hrudni_hrb_na_zadech = 1;
+                }else{
+                    hrudni_hrb_na_zadech = 0;
+                        } 
+
+        hrudni_vyoseni_doleva = document.kinez_rozbor.hrudni_vyoseni_doleva; 
+                if(hrudni_vyoseni_doleva.checked) {
+                    hrudni_vyoseni_doleva = 1;
+                }else{
+                    hrudni_vyoseni_doleva = 0;
+                        } 
+
+        hrudni_vyoseni_doprava = document.kinez_rozbor.hrudni_vyoseni_doprava; 
+                if(hrudni_vyoseni_doprava.checked) {
+                    hrudni_vyoseni_doprava = 1;
+                }else{
+                    hrudni_vyoseni_doprava = 0;
+                        } 
+
+        hrudni_vyhrez = document.kinez_rozbor.hrudni_vyhrez; 
+                if(hrudni_vyhrez.checked) {
+                    hrudni_vyhrez = 1;
+                }else{
+                    hrudni_vyhrez = 0;
+                        } 
+
+        hrudni_blokada_zeber = document.kinez_rozbor.hrudni_blokada_zeber; 
+                if(hrudni_blokada_zeber.checked) {
+                    hrudni_blokada_zeber = 1;
+                }else{
+                    hrudni_blokada_zeber = 0;
+                        } 
+
+        hrudni_posun_zeber_doleva = document.kinez_rozbor.hrudni_posun_zeber_doleva; 
+                if(hrudni_posun_zeber_doleva.checked) {
+                    hrudni_posun_zeber_doleva = 1;
+                }else{
+                    hrudni_posun_zeber_doleva = 0;
+                        } 
+
+        hrudni_posun_zeber_doprava = document.kinez_rozbor.hrudni_posun_zeber_doprava; 
+                if(hrudni_posun_zeber_doprava.checked) {
+                    hrudni_posun_zeber_doprava = 1;
+                }else{
+                    hrudni_posun_zeber_doprava = 0;
+                        } 
+
+
+        hrudni_melke_dychani = document.kinez_rozbor.hrudni_melke_dychani; 
+                if(hrudni_melke_dychani.checked) {
+                    hrudni_melke_dychani = 1;
+                }else{
+                    hrudni_melke_dychani = 0;
+                        } 
+
+        hrudni_nepruznost_zeber = document.kinez_rozbor.hrudni_nepruznost_zeber; 
+                if(hrudni_nepruznost_zeber.checked) {
+                    hrudni_nepruznost_zeber = 1;
+                }else{
+                    hrudni_nepruznost_zeber = 0;
+                        } 
 
 
 
@@ -2591,21 +2668,7 @@ function loadKineziologicky_rozbor() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-                        
-
-alert("krcni_oteklost_sije_z_prave_strany:" + krcni_oteklost_sije_z_prave_strany);
+alert("hrudni_nepruznost_zeber:" + hrudni_nepruznost_zeber);
 
 
 
