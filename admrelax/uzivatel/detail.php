@@ -2279,7 +2279,21 @@ function loadKineziologicky_rozbor() {
 
 
     
-            alert("kotniky_zkracene_achylovy_slachy:" + kotniky_zkracene_achylovy_slachy);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        alert("kotniky_zkracene_achylovy_slachy:" + kotniky_zkracene_achylovy_slachy);
 
 
 
