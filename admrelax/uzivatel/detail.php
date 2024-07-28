@@ -2478,8 +2478,110 @@ function loadKineziologicky_rozbor() {
                     pater_dysbalace_prave_ruky = 0;
                         }  
   
+        krcni_ztuhlost_sije = document.kinez_rozbor.krcni_ztuhlost_sije; 
+                if(krcni_ztuhlost_sije.checked) {
+                    krcni_ztuhlost_sije = 1;
+                }else{
+                    krcni_ztuhlost_sije = 0;
+                        }   
+
+        krcni_stuhlost_trapezu = document.kinez_rozbor.krcni_stuhlost_trapezu; 
+                if(krcni_stuhlost_trapezu.checked) {
+                    krcni_stuhlost_trapezu = 1;
+                }else{
+                    krcni_stuhlost_trapezu = 0;
+                        } 
+
+        krcni_vyoseni_doleva = document.kinez_rozbor.krcni_vyoseni_doleva; 
+                if(krcni_vyoseni_doleva.checked) {
+                    krcni_vyoseni_doleva = 1;
+                }else{
+                    krcni_vyoseni_doleva = 0;
+                        } 
+
+        krcni_vyoseni_doprava = document.kinez_rozbor.krcni_vyoseni_doprava; 
+                if(krcni_vyoseni_doprava.checked) {
+                    krcni_vyoseni_doprava = 1;
+                }else{
+                    krcni_vyoseni_doprava = 0;
+                        } 
+
+        krcni_posun_brady_doleva = document.kinez_rozbor.krcni_posun_brady_doleva; 
+                if(krcni_posun_brady_doleva.checked) {
+                    krcni_posun_brady_doleva = 1;
+                }else{
+                    krcni_posun_brady_doleva = 0;
+                        } 
+
+        krcni_posun_brady_doprava = document.kinez_rozbor.krcni_posun_brady_doprava; 
+                if(krcni_posun_brady_doprava.checked) {
+                    krcni_posun_brady_doprava = 1;
+                }else{
+                    krcni_posun_brady_doprava = 0;
+                        } 
   
+        krcni_mala_lordoza = document.kinez_rozbor.krcni_mala_lordoza; 
+                if(krcni_mala_lordoza.checked) {
+                    krcni_mala_lordoza = 1;
+                }else{
+                    krcni_mala_lordoza = 0;
+                        }   
   
+        krcni_velka_lordoza = document.kinez_rozbor.krcni_velka_lordoza; 
+                if(krcni_velka_lordoza.checked) {
+                    krcni_velka_lordoza = 1;
+                }else{
+                    krcni_velka_lordoza = 0;
+                        }    
+
+        krcni_vyhrez = document.kinez_rozbor.krcni_vyhrez; 
+                if(krcni_vyhrez.checked) {
+                    krcni_vyhrez = 1;
+                }else{
+                    krcni_vyhrez = 0;
+                        } 
+
+        krcni_zaklon_dozadu = document.kinez_rozbor.krcni_zaklon_dozadu; 
+                if(krcni_zaklon_dozadu.checked) {
+                    krcni_zaklon_dozadu = 1;
+                }else{
+                    krcni_zaklon_dozadu = 0;
+                        } 
+
+        krcni_presun_dopredu = document.kinez_rozbor.krcni_presun_dopredu; 
+                if(krcni_presun_dopredu.checked) {
+                    krcni_presun_dopredu = 1;
+                }else{
+                    krcni_presun_dopredu = 0;
+                        } 
+
+        krcni_hlava_v_ramenou = document.kinez_rozbor.krcni_hlava_v_ramenou; 
+                if(krcni_hlava_v_ramenou.checked) {
+                    krcni_hlava_v_ramenou = 1;
+                }else{
+                    krcni_hlava_v_ramenou = 0;
+                        } 
+
+        krcni_posun_jazylky = document.kinez_rozbor.krcni_posun_jazylky; 
+                if(krcni_posun_jazylky.checked) {
+                    krcni_posun_jazylky = 1;
+                }else{
+                    krcni_posun_jazylky = 0;
+                        } 
+
+        krcni_oteklost_sije_z_leve_strany = document.kinez_rozbor.krcni_oteklost_sije_z_leve_strany; 
+                if(krcni_oteklost_sije_z_leve_strany.checked) {
+                    krcni_oteklost_sije_z_leve_strany = 1;
+                }else{
+                    krcni_oteklost_sije_z_leve_strany = 0;
+                        } 
+
+        krcni_oteklost_sije_z_prave_strany = document.kinez_rozbor.krcni_oteklost_sije_z_prave_strany; 
+                if(krcni_oteklost_sije_z_prave_strany.checked) {
+                    krcni_oteklost_sije_z_prave_strany = 1;
+                }else{
+                    krcni_oteklost_sije_z_prave_strany = 0;
+                        } 
 
 
 
@@ -2490,11 +2592,20 @@ function loadKineziologicky_rozbor() {
 
 
 
-  
-  
-  
-  
-alert("pater_dysbalace_prave_ruky:" + pater_dysbalace_prave_ruky);
+
+
+
+
+
+
+
+
+
+
+
+                        
+
+alert("krcni_oteklost_sije_z_prave_strany:" + krcni_oteklost_sije_z_prave_strany);
 
 
 
