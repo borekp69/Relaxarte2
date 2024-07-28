@@ -2839,18 +2839,54 @@ function loadKineziologicky_rozbor() {
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&panev_rotace_doprava="+panev_rotace_doprava;       
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&panev_blokada="+panev_blokada; 
 
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&ruce_posun_doleva="+ruce_posun_doleva;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&ruce_posun_doprava="+ruce_posun_doprava;
+
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&ramena_posun_doleva="+ramena_posun_doleva;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&ramena_posun_doprava="+ramena_posun_doprava;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&ramena_zvednuta_tense_k_usim="+ramena_zvednuta_tense_k_usim;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&ramena_dychani_do_ramen="+ramena_dychani_do_ramen;
+
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&lokty_tenisovy_loket="+lokty_tenisovy_loket;
+
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&zapesti_karpaly="+zapesti_karpaly;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&zapesti_neohebnost="+zapesti_neohebnost;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&zapesti_zatuhlost="+zapesti_zatuhlost;
+
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&pater_kulata_zada="+pater_kulata_zada;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&pater_prohnuta_zada="+pater_prohnuta_zada;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&pater_plocha_zada="+pater_plocha_zada;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&pater_skolioticke_drzeni="+pater_skolioticke_drzeni;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&pater_dysbalace_leve_ruky="+pater_dysbalace_leve_ruky;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&pater_dysbalace_prave_ruky="+pater_dysbalace_prave_ruky;       
+     
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_ztuhlost_sije="+krcni_ztuhlost_sije;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_stuhlost_trapezu="+krcni_stuhlost_trapezu;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_vyoseni_doleva="+krcni_vyoseni_doleva;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_vyoseni_doprava="+krcni_vyoseni_doprava;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_posun_brady_doleva="+krcni_posun_brady_doleva;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_posun_brady_doprava="+krcni_posun_brady_doprava;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_mala_lordoza="+krcni_mala_lordoza;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_velka_lordoza="+krcni_velka_lordoza;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_vyhrez="+krcni_vyhrez;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_zaklon_dozadu="+krcni_zaklon_dozadu;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_presun_dopredu="+krcni_presun_dopredu;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_hlava_v_ramenou="+krcni_hlava_v_ramenou;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_posun_jazylky="+krcni_posun_jazylky;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_oteklost_sije_z_leve_strany="+krcni_oteklost_sije_z_leve_strany;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_oteklost_sije_z_prave_strany="+krcni_oteklost_sije_z_prave_strany;
 
 
 
 
 
+       // alert("krcni_presun_dopredu: "+krcni_presun_dopredu);
 
-        
 
   xhttp.open("POST", "./script/kineziologicky_rozboru_pdate.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send(dataKineziologicky_rozbor);
-  alert("Uložení:\nZáznam kineziologický rozbor byl aktualizován.");
+ // alert("Uložení:\nZáznam kineziologický rozbor byl aktualizován.");
 
 
      }

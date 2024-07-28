@@ -72,7 +72,7 @@ $krcni_mala_lordoza = addslashes(htmlspecialchars(trim("$_POST[krcni_mala_lordoz
 $krcni_velka_lordoza = addslashes(htmlspecialchars(trim("$_POST[krcni_velka_lordoza]")));
 $krcni_vyhrez = addslashes(htmlspecialchars(trim("$_POST[krcni_vyhrez]")));
 $krcni_zaklon_dozadu = addslashes(htmlspecialchars(trim("$_POST[krcni_zaklon_dozadu]")));
-$krcni_predsun_dopredu = addslashes(htmlspecialchars(trim("$_POST[krcni_predsun_dopredu]")));
+$krcni_presun_dopredu = addslashes(htmlspecialchars(trim("$_POST[krcni_presun_dopredu]")));
 $krcni_hlava_v_ramenou = addslashes(htmlspecialchars(trim("$_POST[krcni_hlava_v_ramenou]")));
 $krcni_posun_jazylky = addslashes(htmlspecialchars(trim("$_POST[krcni_posun_jazylky]")));
 $krcni_oteklost_sije_z_leve_strany = addslashes(htmlspecialchars(trim("$_POST[krcni_oteklost_sije_z_leve_strany]")));
@@ -152,6 +152,45 @@ $svaly_poznamka = addslashes(htmlspecialchars(trim("$_POST[svaly_poznamka]")));
     echo 'panev_rotace_doleva: '.$panev_rotace_doleva.'<br/>';
     echo 'panev_rotace_doprava: '.$panev_rotace_doprava.'<br/>';
     echo 'panev_blokada: '.$panev_blokada.'<br/>';
+
+    echo 'ruce_posun_doleva: '.$ruce_posun_doleva.'<br/>';
+    echo 'ruce_posun_doprava: '.$ruce_posun_doprava.'<br/>';
+
+    echo 'ramena_posun_doleva: '.$ramena_posun_doleva.'<br/>';
+    echo 'ramena_posun_doprava: '.$ramena_posun_doprava.'<br/>';
+    echo 'ramena_zvednuta_tense_k_usim: '.$ramena_zvednuta_tense_k_usim.'<br/>';
+    echo 'ramena_dychani_do_ramen: '.$ramena_dychani_do_ramen.'<br/>';  
+
+    echo 'lokty_tenisovy_loket: '.$lokty_tenisovy_loket.'<br/>';
+
+    echo 'zapesti_karpaly: '.$zapesti_karpaly.'<br/>';
+    echo 'zapesti_neohebnost: '.$zapesti_neohebnost.'<br/>';
+    echo 'zapesti_zatuhlost: '.$zapesti_zatuhlost.'<br/>';  
+
+    echo 'pater_kulata_zada: '.$pater_kulata_zada.'<br/>';
+    echo 'pater_prohnuta_zada: '.$pater_prohnuta_zada.'<br/>';
+    echo 'pater_plocha_zada: '.$pater_plocha_zada.'<br/>';  
+    echo 'pater_skolioticke_drzeni: '.$pater_skolioticke_drzeni.'<br/>';
+    echo 'pater_dysbalace_leve_ruky: '.$pater_dysbalace_leve_ruky.'<br/>';
+    echo 'pater_dysbalace_prave_ruky: '.$pater_dysbalace_prave_ruky.'<br/>';  
+
+    echo 'krcni_ztuhlost_sije: '.$krcni_ztuhlost_sije.'<br/>';
+    echo 'krcni_stuhlost_trapezu: '.$krcni_stuhlost_trapezu.'<br/>';
+    echo 'krcni_vyoseni_doleva: '.$krcni_vyoseni_doleva.'<br/>';  
+    echo 'krcni_vyoseni_doprava: '.$krcni_vyoseni_doprava.'<br/>';
+    echo 'krcni_posun_brady_doleva: '.$krcni_posun_brady_doleva.'<br/>';
+    echo 'krcni_posun_brady_doprava: '.$krcni_posun_brady_doprava.'<br/>';  
+    echo 'krcni_mala_lordoza: '.$krcni_mala_lordoza.'<br/>';
+    echo 'krcni_velka_lordoza: '.$krcni_velka_lordoza.'<br/>';
+    echo 'krcni_vyhrez: '.$krcni_vyhrez.'<br/>';  
+    echo 'krcni_zaklon_dozadu: '.$krcni_zaklon_dozadu.'<br/>';
+    echo 'krcni_presun_dopredu: '.$krcni_presun_dopredu.'<br/>';
+    echo 'krcni_hlava_v_ramenou: '.$krcni_hlava_v_ramenou.'<br/>';  
+    echo 'krcni_posun_jazylky: '.$krcni_posun_jazylky.'<br/>';
+    echo 'krcni_oteklost_sije_z_leve_strany: '.$krcni_oteklost_sije_z_leve_strany.'<br/>';
+    echo 'krcni_oteklost_sije_z_prave_strany: '.$krcni_oteklost_sije_z_prave_strany.'<br/>';  
+
+
 
 
 
