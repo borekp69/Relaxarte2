@@ -2805,6 +2805,9 @@ function loadKineziologicky_rozbor() {
         svaly_povolene = document.kinez_rozbor.svaly_povolene.value;
         svaly_poznamka = document.kinez_rozbor.svaly_poznamka.value;
 
+        hmotnost = document.kinez_rozbor.hmotnost.value;
+        kg = document.kinez_rozbor.kg.value;
+
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&nohy_x="+nohy_x;
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&nohy_O="+nohy_O;
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&nohy_posun_doleva="+nohy_posun_doleva;
@@ -2876,11 +2879,50 @@ function loadKineziologicky_rozbor() {
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_oteklost_sije_z_leve_strany="+krcni_oteklost_sije_z_leve_strany;       
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_oteklost_sije_z_prave_strany="+krcni_oteklost_sije_z_prave_strany;
 
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hrudni_vyhrbeni="+hrudni_vyhrbeni;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hrudni_prohnuti="+hrudni_prohnuti;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hrudni_hrb_na_zadech="+hrudni_hrb_na_zadech;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hrudni_vyoseni_doleva="+hrudni_vyoseni_doleva;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hrudni_vyoseni_doprava="+hrudni_vyoseni_doprava;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hrudni_vyhrez="+hrudni_vyhrez; 
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hrudni_blokada_zeber="+hrudni_blokada_zeber;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hrudni_posun_zeber_doleva="+hrudni_posun_zeber_doleva;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hrudni_posun_zeber_doprava="+hrudni_posun_zeber_doprava;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hrudni_melke_dychani="+hrudni_melke_dychani;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hrudni_nepruznost_zeber="+hrudni_nepruznost_zeber;       
+
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&lopatky_posun_doleva="+lopatky_posun_doleva;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&lopatky_posun_doprava="+lopatky_posun_doprava;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&lopatky_vylezaji_ven="+lopatky_vylezaji_ven;   
+
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&bederni_prohnuti="+bederni_prohnuti;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&bederni_vyoseni_doleva="+bederni_vyoseni_doleva;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&bederni_vyoseni_doprava="+bederni_vyoseni_doprava;          
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&bederni_vyhrez="+bederni_vyhrez; 
+
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hypermobilita_krcni_pater="+hypermobilita_krcni_pater;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hypermobilita_hrudni_pater="+hypermobilita_hrudni_pater;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hypermobilita_bederni_pater="+hypermobilita_bederni_pater;          
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hypermobilita_krizova_kost="+hypermobilita_krizova_kost; 
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hypermobilita_kostrc="+hypermobilita_kostrc;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hypermobilita_ramena="+hypermobilita_ramena;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hypermobilita_lokty="+hypermobilita_lokty;          
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hypermobilita_zapesti="+hypermobilita_zapesti; 
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hypermobilita_prsty_na_rukou="+hypermobilita_prsty_na_rukou;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hypermobilita_kycle="+hypermobilita_kycle;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hypermobilita_kolena="+hypermobilita_kolena;          
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hypermobilita_kotniky="+hypermobilita_kotniky; 
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hypermobilita_prsty_na_nohou="+hypermobilita_prsty_na_nohou; 
+
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&svaly_ztuhle="+svaly_ztuhle; 
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&svaly_povolene="+svaly_povolene; 
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&svaly_poznamka="+svaly_poznamka; 
 
 
 
 
-       // alert("krcni_presun_dopredu: "+krcni_presun_dopredu);
+
+        alert("kg: "+kg);
 
 
   xhttp.open("POST", "./script/kineziologicky_rozboru_pdate.php", true);

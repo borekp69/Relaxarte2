@@ -119,80 +119,146 @@ $svaly_poznamka = addslashes(htmlspecialchars(trim("$_POST[svaly_poznamka]")));
 
 
     echo 'ID_uzivatel: '.$uzivatel_id.'<br>';
-    echo 'nohy_x: '.$nohy_x.'<br/>';
-    echo 'nohy_O: '.$nohy_O.'<br/>';
-    echo 'nohy_posun_doleva: '.$nohy_posun_doleva.'<br/>';
-    echo 'nohy_posun_doprava: '.$nohy_posun_doprava.'<br/>';
-    echo 'nohy_prava_delsi_nez_leva: '.$nohy_prava_delsi_nez_leva.'<br/>';
-    echo 'nohy_leva_delsi_nez_prava: '.$nohy_leva_delsi_nez_prava.'<br/>';
+    //echo 'nohy_x: '.$nohy_x.'<br/>';
+    //echo 'nohy_O: '.$nohy_O.'<br/>';
+    //echo 'nohy_posun_doleva: '.$nohy_posun_doleva.'<br/>';
+    //echo 'nohy_posun_doprava: '.$nohy_posun_doprava.'<br/>';
+    //echo 'nohy_prava_delsi_nez_leva: '.$nohy_prava_delsi_nez_leva.'<br/>';
+    //echo 'nohy_leva_delsi_nez_prava: '.$nohy_leva_delsi_nez_prava.'<br/>';
 
-    echo 'vybocene_palce: '.$vybocene_palce.'<br/>';
-    echo 'ploche_nohy: '.$ploche_nohy.'<br/>';
-    echo 'skrcene_prsty: '.$skrcene_prsty.'<br/>';
-    echo 'prsty_blizko_u_sebe: '.$prsty_blizko_u_sebe.'<br/>';
-    echo 'ostruhy: '.$ostruhy.'<br/>';
-    echo 'ztuhle_narty: '.$ztuhle_narty.'<br/>';
+    //echo 'vybocene_palce: '.$vybocene_palce.'<br/>';
+    //echo 'ploche_nohy: '.$ploche_nohy.'<br/>';
+    //echo 'skrcene_prsty: '.$skrcene_prsty.'<br/>';
+    //echo 'prsty_blizko_u_sebe: '.$prsty_blizko_u_sebe.'<br/>';
+    //echo 'ostruhy: '.$ostruhy.'<br/>';
+    //echo 'ztuhle_narty: '.$ztuhle_narty.'<br/>';
 
-    echo 'kotniky_zatuhle: '.$kotniky_zatuhle.'<br/>';
-    echo 'kotniky_praskajici: '.$kotniky_praskajici.'<br/>';
-    echo 'kotniky_otekle: '.$kotniky_otekle.'<br/>';
-    echo 'kotniky_zkracene_achylovy_slachy: '.$kotniky_zkracene_achylovy_slachy.'<br/>';
+    //echo 'kotniky_zatuhle: '.$kotniky_zatuhle.'<br/>';
+    //echo 'kotniky_praskajici: '.$kotniky_praskajici.'<br/>';
+    //echo 'kotniky_otekle: '.$kotniky_otekle.'<br/>';
+    //echo 'kotniky_zkracene_achylovy_slachy: '.$kotniky_zkracene_achylovy_slachy.'<br/>';
 
-    echo 'kolena_posun_doleva: '.$kolena_posun_doleva.'<br/>';
-    echo 'kolena_posun_doprava: '.$kolena_posun_doprava.'<br/>';
-    echo 'kolena_stoceni_dovnitr: '.$kolena_stoceni_dovnitr.'<br/>';
-    echo 'kolena_vytoceni_ven: '.$kolena_vytoceni_ven.'<br/>';
+    //echo 'kolena_posun_doleva: '.$kolena_posun_doleva.'<br/>';
+    //echo 'kolena_posun_doprava: '.$kolena_posun_doprava.'<br/>';
+    //echo 'kolena_stoceni_dovnitr: '.$kolena_stoceni_dovnitr.'<br/>';
+    //echo 'kolena_vytoceni_ven: '.$kolena_vytoceni_ven.'<br/>';
 
-    echo 'panev_preklopena_podsazena: '.$panev_preklopena_podsazena.'<br/>';
-    echo 'panev_preklopena_dopredu: '.$panev_preklopena_dopredu.'<br/>';
-    echo 'panev_posunuta_dopredu_bez_preklopeni: '.$panev_posunuta_dopredu_bez_preklopeni.'<br/>';
-    echo 'panev_posunuta_dozadu_bez_preklopeni: '.$panev_posunuta_dozadu_bez_preklopeni.'<br/>';
-    echo 'panev_posun_doleva: '.$panev_posun_doleva.'<br/>';
-    echo 'panev_posun_doprava: '.$panev_posun_doprava.'<br/>';
-    echo 'panev_rotace_doleva: '.$panev_rotace_doleva.'<br/>';
-    echo 'panev_rotace_doprava: '.$panev_rotace_doprava.'<br/>';
-    echo 'panev_blokada: '.$panev_blokada.'<br/>';
+    //echo 'panev_preklopena_podsazena: '.$panev_preklopena_podsazena.'<br/>';
+    //echo 'panev_preklopena_dopredu: '.$panev_preklopena_dopredu.'<br/>';
+    //echo 'panev_posunuta_dopredu_bez_preklopeni: '.$panev_posunuta_dopredu_bez_preklopeni.'<br/>';
+    //echo 'panev_posunuta_dozadu_bez_preklopeni: '.$panev_posunuta_dozadu_bez_preklopeni.'<br/>';
+    //echo 'panev_posun_doleva: '.$panev_posun_doleva.'<br/>';
+    //echo 'panev_posun_doprava: '.$panev_posun_doprava.'<br/>';
+    //echo 'panev_rotace_doleva: '.$panev_rotace_doleva.'<br/>';
+    //echo 'panev_rotace_doprava: '.$panev_rotace_doprava.'<br/>';
+    //echo 'panev_blokada: '.$panev_blokada.'<br/>';
 
-    echo 'ruce_posun_doleva: '.$ruce_posun_doleva.'<br/>';
-    echo 'ruce_posun_doprava: '.$ruce_posun_doprava.'<br/>';
+    //echo 'ruce_posun_doleva: '.$ruce_posun_doleva.'<br/>';
+    //echo 'ruce_posun_doprava: '.$ruce_posun_doprava.'<br/>';
 
-    echo 'ramena_posun_doleva: '.$ramena_posun_doleva.'<br/>';
-    echo 'ramena_posun_doprava: '.$ramena_posun_doprava.'<br/>';
-    echo 'ramena_zvednuta_tense_k_usim: '.$ramena_zvednuta_tense_k_usim.'<br/>';
-    echo 'ramena_dychani_do_ramen: '.$ramena_dychani_do_ramen.'<br/>';  
+    //echo 'ramena_posun_doleva: '.$ramena_posun_doleva.'<br/>';
+    //echo 'ramena_posun_doprava: '.$ramena_posun_doprava.'<br/>';
+    //echo 'ramena_zvednuta_tense_k_usim: '.$ramena_zvednuta_tense_k_usim.'<br/>';
+    //echo 'ramena_dychani_do_ramen: '.$ramena_dychani_do_ramen.'<br/>';  
 
-    echo 'lokty_tenisovy_loket: '.$lokty_tenisovy_loket.'<br/>';
+    //echo 'lokty_tenisovy_loket: '.$lokty_tenisovy_loket.'<br/>';
 
-    echo 'zapesti_karpaly: '.$zapesti_karpaly.'<br/>';
-    echo 'zapesti_neohebnost: '.$zapesti_neohebnost.'<br/>';
-    echo 'zapesti_zatuhlost: '.$zapesti_zatuhlost.'<br/>';  
+    //echo 'zapesti_karpaly: '.$zapesti_karpaly.'<br/>';
+    //echo 'zapesti_neohebnost: '.$zapesti_neohebnost.'<br/>';
+    //echo 'zapesti_zatuhlost: '.$zapesti_zatuhlost.'<br/>';  
 
-    echo 'pater_kulata_zada: '.$pater_kulata_zada.'<br/>';
-    echo 'pater_prohnuta_zada: '.$pater_prohnuta_zada.'<br/>';
-    echo 'pater_plocha_zada: '.$pater_plocha_zada.'<br/>';  
-    echo 'pater_skolioticke_drzeni: '.$pater_skolioticke_drzeni.'<br/>';
-    echo 'pater_dysbalace_leve_ruky: '.$pater_dysbalace_leve_ruky.'<br/>';
-    echo 'pater_dysbalace_prave_ruky: '.$pater_dysbalace_prave_ruky.'<br/>';  
+    //echo 'pater_kulata_zada: '.$pater_kulata_zada.'<br/>';
+    //echo 'pater_prohnuta_zada: '.$pater_prohnuta_zada.'<br/>';
+    //echo 'pater_plocha_zada: '.$pater_plocha_zada.'<br/>';  
+    //echo 'pater_skolioticke_drzeni: '.$pater_skolioticke_drzeni.'<br/>';
+    //echo 'pater_dysbalace_leve_ruky: '.$pater_dysbalace_leve_ruky.'<br/>';
+    //echo 'pater_dysbalace_prave_ruky: '.$pater_dysbalace_prave_ruky.'<br/>';  
 
-    echo 'krcni_ztuhlost_sije: '.$krcni_ztuhlost_sije.'<br/>';
-    echo 'krcni_stuhlost_trapezu: '.$krcni_stuhlost_trapezu.'<br/>';
-    echo 'krcni_vyoseni_doleva: '.$krcni_vyoseni_doleva.'<br/>';  
-    echo 'krcni_vyoseni_doprava: '.$krcni_vyoseni_doprava.'<br/>';
-    echo 'krcni_posun_brady_doleva: '.$krcni_posun_brady_doleva.'<br/>';
-    echo 'krcni_posun_brady_doprava: '.$krcni_posun_brady_doprava.'<br/>';  
-    echo 'krcni_mala_lordoza: '.$krcni_mala_lordoza.'<br/>';
-    echo 'krcni_velka_lordoza: '.$krcni_velka_lordoza.'<br/>';
-    echo 'krcni_vyhrez: '.$krcni_vyhrez.'<br/>';  
-    echo 'krcni_zaklon_dozadu: '.$krcni_zaklon_dozadu.'<br/>';
-    echo 'krcni_presun_dopredu: '.$krcni_presun_dopredu.'<br/>';
-    echo 'krcni_hlava_v_ramenou: '.$krcni_hlava_v_ramenou.'<br/>';  
-    echo 'krcni_posun_jazylky: '.$krcni_posun_jazylky.'<br/>';
-    echo 'krcni_oteklost_sije_z_leve_strany: '.$krcni_oteklost_sije_z_leve_strany.'<br/>';
-    echo 'krcni_oteklost_sije_z_prave_strany: '.$krcni_oteklost_sije_z_prave_strany.'<br/>';  
-
-
+    //echo 'krcni_ztuhlost_sije: '.$krcni_ztuhlost_sije.'<br/>';
+    //echo 'krcni_stuhlost_trapezu: '.$krcni_stuhlost_trapezu.'<br/>';
+    //echo 'krcni_vyoseni_doleva: '.$krcni_vyoseni_doleva.'<br/>';  
+    //echo 'krcni_vyoseni_doprava: '.$krcni_vyoseni_doprava.'<br/>';
+    //echo 'krcni_posun_brady_doleva: '.$krcni_posun_brady_doleva.'<br/>';
+    //echo 'krcni_posun_brady_doprava: '.$krcni_posun_brady_doprava.'<br/>';  
+    //echo 'krcni_mala_lordoza: '.$krcni_mala_lordoza.'<br/>';
+    //echo 'krcni_velka_lordoza: '.$krcni_velka_lordoza.'<br/>';
+    //echo 'krcni_vyhrez: '.$krcni_vyhrez.'<br/>';  
+    //echo 'krcni_zaklon_dozadu: '.$krcni_zaklon_dozadu.'<br/>';
+    //echo 'krcni_presun_dopredu: '.$krcni_presun_dopredu.'<br/>';
+    //echo 'krcni_hlava_v_ramenou: '.$krcni_hlava_v_ramenou.'<br/>';  
+    //echo 'krcni_posun_jazylky: '.$krcni_posun_jazylky.'<br/>';
+    //echo 'krcni_oteklost_sije_z_leve_strany: '.$krcni_oteklost_sije_z_leve_strany.'<br/>';
+    //echo 'krcni_oteklost_sije_z_prave_strany: '.$krcni_oteklost_sije_z_prave_strany.'<br/>';  
 
 
+    //echo 'hrudni_vyhrbeni: '.$hrudni_vyhrbeni.'<br/>';
+    //echo 'hrudni_prohnuti: '.$hrudni_prohnuti.'<br/>';  
+    //echo 'hrudni_hrb_na_zadech: '.$hrudni_hrb_na_zadech.'<br/>';
+    //echo 'hrudni_vyoseni_doleva: '.$hrudni_vyoseni_doleva.'<br/>';
+    //echo 'hrudni_vyoseni_doprava: '.$hrudni_vyoseni_doprava.'<br/>';  
+    //echo 'hrudni_vyhrez: '.$hrudni_vyhrez.'<br/>';
+    //echo 'hrudni_blokada_zeber: '.$hrudni_blokada_zeber.'<br/>';
+    //echo 'hrudni_posun_zeber_doleva: '.$hrudni_posun_zeber_doleva.'<br/>';  
+    //echo 'hrudni_posun_zeber_doprava: '.$hrudni_posun_zeber_doprava.'<br/>';
+    //echo 'hrudni_melke_dychani: '.$hrudni_melke_dychani.'<br/>';
+    //echo 'hrudni_nepruznost_zeber: '.$hrudni_nepruznost_zeber.'<br/>';  
 
+    //echo 'lopatky_posun_doleva: '.$lopatky_posun_doleva.'<br/>';
+    //echo 'lopatky_posun_doprava: '.$lopatky_posun_doprava.'<br/>';
+    //echo 'lopatky_vylezaji_ven: '.$lopatky_vylezaji_ven.'<br/>'; 
+    
+    //echo 'bederni_prohnuti: '.$bederni_prohnuti.'<br/>';
+    //echo 'bederni_vyoseni_doleva: '.$bederni_vyoseni_doleva.'<br/>';
+    //echo 'bederni_vyoseni_doprava: '.$bederni_vyoseni_doprava.'<br/>';    
+    //echo 'bederni_vyhrez: '.$bederni_vyhrez.'<br/>';   
+
+    //echo 'hypermobilita_krcni_pater: '.$hypermobilita_krcni_pater.'<br/>';
+    //echo 'hypermobilita_hrudni_pater: '.$hypermobilita_hrudni_pater.'<br/>';
+    //echo 'hypermobilita_bederni_pater: '.$hypermobilita_bederni_pater.'<br/>';    
+    //echo 'hypermobilita_krizova_kost: '.$hypermobilita_krizova_kost.'<br/>';  
+    //echo 'hypermobilita_kostrc: '.$hypermobilita_kostrc.'<br/>';
+    //echo 'hypermobilita_ramena: '.$hypermobilita_ramena.'<br/>';
+    //echo 'hypermobilita_lokty: '.$hypermobilita_lokty.'<br/>';    
+    //echo 'hypermobilita_zapesti: '.$hypermobilita_zapesti.'<br/>';  
+    //echo 'hypermobilita_prsty_na_rukou: '.$hypermobilita_prsty_na_rukou.'<br/>';
+    //echo 'hypermobilita_kycle: '.$hypermobilita_kycle.'<br/>';
+    //echo 'hypermobilita_kolena: '.$hypermobilita_kolena.'<br/>';    
+    //echo 'hypermobilita_kotniky: '.$hypermobilita_kotniky.'<br/>';  
+    //echo 'hypermobilita_prsty_na_nohou: '.$hypermobilita_prsty_na_nohou.'<br/>';
+
+   echo 'svaly_ztuhle: '.$svaly_ztuhle.'<br/>';    
+   echo 'svaly_povolene: '.$svaly_povolene.'<br/>';  
+    echo 'svaly_poznamka: '.$svaly_poznamka.'<br/>'; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 ?>
