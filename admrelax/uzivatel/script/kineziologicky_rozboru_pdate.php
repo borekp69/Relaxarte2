@@ -138,6 +138,21 @@ $svaly_poznamka = addslashes(htmlspecialchars(trim("$_POST[svaly_poznamka]")));
     echo 'kotniky_otekle: '.$kotniky_otekle.'<br/>';
     echo 'kotniky_zkracene_achylovy_slachy: '.$kotniky_zkracene_achylovy_slachy.'<br/>';
 
+    echo 'kolena_posun_doleva: '.$kolena_posun_doleva.'<br/>';
+    echo 'kolena_posun_doprava: '.$kolena_posun_doprava.'<br/>';
+    echo 'kolena_stoceni_dovnitr: '.$kolena_stoceni_dovnitr.'<br/>';
+    echo 'kolena_vytoceni_ven: '.$kolena_vytoceni_ven.'<br/>';
+
+    echo 'panev_preklopena_podsazena: '.$panev_preklopena_podsazena.'<br/>';
+    echo 'panev_preklopena_dopredu: '.$panev_preklopena_dopredu.'<br/>';
+    echo 'panev_posunuta_dopredu_bez_preklopeni: '.$panev_posunuta_dopredu_bez_preklopeni.'<br/>';
+    echo 'panev_posunuta_dozadu_bez_preklopeni: '.$panev_posunuta_dozadu_bez_preklopeni.'<br/>';
+    echo 'panev_posun_doleva: '.$panev_posun_doleva.'<br/>';
+    echo 'panev_posun_doprava: '.$panev_posun_doprava.'<br/>';
+    echo 'panev_rotace_doleva: '.$panev_rotace_doleva.'<br/>';
+    echo 'panev_rotace_doprava: '.$panev_rotace_doprava.'<br/>';
+    echo 'panev_blokada: '.$panev_blokada.'<br/>';
+
 
 
 

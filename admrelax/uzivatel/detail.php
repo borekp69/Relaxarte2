@@ -2824,8 +2824,28 @@ function loadKineziologicky_rozbor() {
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&kotniky_otekle="+kotniky_otekle;
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&kotniky_zkracene_achylovy_slachy="+kotniky_zkracene_achylovy_slachy;
        
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&kolena_posun_doleva="+kolena_posun_doleva;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&kolena_posun_doprava="+kolena_posun_doprava;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&kolena_stoceni_dovnitr="+kolena_stoceni_dovnitr;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&kolena_vytoceni_ven="+kolena_vytoceni_ven;
+
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&panev_preklopena_podsazena="+panev_preklopena_podsazena;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&panev_preklopena_dopredu="+panev_preklopena_dopredu;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&panev_posunuta_dopredu_bez_preklopeni="+panev_posunuta_dopredu_bez_preklopeni;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&panev_posunuta_dozadu_bez_preklopeni="+panev_posunuta_dozadu_bez_preklopeni;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&panev_posun_doleva="+panev_posun_doleva;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&panev_posun_doprava="+panev_posun_doprava;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&panev_rotace_doleva="+panev_rotace_doleva;
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&panev_rotace_doprava="+panev_rotace_doprava;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&panev_blokada="+panev_blokada; 
 
 
+
+
+
+
+
+        
 
   xhttp.open("POST", "./script/kineziologicky_rozboru_pdate.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
