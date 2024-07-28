@@ -2269,14 +2269,34 @@ function loadKineziologicky_rozbor() {
                     kotniky_zkracene_achylovy_slachy = 0;
                         } 
 
+        kolena_posun_doleva = document.kinez_rozbor.kolena_posun_doleva; 
+                if(kolena_posun_doleva.checked) {
+                    kolena_posun_doleva = 1;
+                }else{
+                    kolena_posun_doleva = 0;
+                        } 
+
+        kolena_posun_doprava = document.kinez_rozbor.kolena_posun_doprava; 
+                if(kolena_posun_doprava.checked) {
+                    kolena_posun_doprava = 1;
+                }else{
+                    kolena_posun_doprava = 0;
+                        } 
+
+        kolena_stoceni_dovnitr = document.kinez_rozbor.kolena_stoceni_dovnitr; 
+                if(kolena_stoceni_dovnitr.checked) {
+                    kolena_stoceni_dovnitr = 1;
+                }else{
+                    kolena_stoceni_dovnitr = 0;
+                        } 
 
 
-
-
-
-
-
-
+        kolena_vytoceni_ven = document.kinez_rozbor.kolena_vytoceni_ven; 
+                if(kolena_vytoceni_ven.checked) {
+                    kolena_vytoceni_ven = 1;
+                }else{
+                    kolena_vytoceni_ven = 0;
+                        } 
 
     
 
@@ -2293,7 +2313,7 @@ function loadKineziologicky_rozbor() {
 
 
 
-                        alert("kotniky_zkracene_achylovy_slachy:" + kotniky_zkracene_achylovy_slachy);
+                        alert("kolena_vytoceni_ven:" + kolena_vytoceni_ven);
 
 
 
