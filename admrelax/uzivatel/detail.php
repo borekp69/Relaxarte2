@@ -2945,6 +2945,9 @@ function loadKineziologicky_rozbor() {
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&svaly_povolene="+svaly_povolene; 
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&svaly_poznamka="+svaly_poznamka; 
 
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hmotnost="+hmotnost; 
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&kg="+kg; 
+
 
 
 if (hmotnost == "Vyhovuje"){
