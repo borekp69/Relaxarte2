@@ -1461,9 +1461,7 @@ if (joga_kurz == 1 && !lektor){
      }
     }
 </script>
-<br>
 
-<br>*******************************************************<br>
 
 <div id="kineziologicky_rozbor">
     <form id="kinez_rozbor" name="kinez_rozbor" method="post">
@@ -1480,10 +1478,26 @@ if (joga_kurz == 1 && !lektor){
             $conn->close();
             ?>
 
-
-            <br>
+            <br/>
             <label for="uzivatel">Kineziologický rozbor:</label> 
-            <br>
+
+
+        <?
+            if (!$uzivatel_hmotnost && $uzivatel_kg == 0 ){
+               // echo 'Uživatel musí vyplnit údaje<br>';
+        ?>
+        <br/><br/>
+        <label for="uzivatel">Uživatel zatím nevyplnil požadované informace o aktuální hmotnosti.</label><br/><br/>
+            <a href="krok_03_ulozeni.php?uzivatel_id=<? echo encrypt_decrypt('encrypt', $uzivatel_id);?>" type="button" class="btn btn-warning btn-sm">Doplnit data nyní</a>
+            <br/><br/>
+
+        <?          
+            }else{
+
+              //  echo 'tady bude fotmulář<br>';
+          
+            
+            ?>
 
 
             <div class="row">
@@ -1524,6 +1538,16 @@ if (joga_kurz == 1 && !lektor){
                 </div>
                 <script src="./js/vaha.js"></script>    
             </div>
+
+
+            <?
+              }
+            ?>
+
+
+
+
+
 
         <?
 
@@ -2808,6 +2832,9 @@ function loadKineziologicky_rozbor() {
         hmotnost = document.kinez_rozbor.hmotnost.value;
         kg = document.kinez_rozbor.kg.value;
 
+
+
+
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&nohy_x="+nohy_x;
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&nohy_O="+nohy_O;
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&nohy_posun_doleva="+nohy_posun_doleva;
@@ -2920,9 +2947,11 @@ function loadKineziologicky_rozbor() {
 
 
 
+if (hmotnost == "Vyhovuje"){
+ kg = 0;   
+}
 
-
-        alert("kg: "+kg);
+        alert("Hmotnost "+hmotnost+"\nkg: "+kg);
 
 
   xhttp.open("POST", "./script/kineziologicky_rozboru_pdate.php", true);
@@ -4692,22 +4721,22 @@ odpocinek_zahrada = document.RelaxArteUpdateForm.odpocinek_zahrada;
 
 
 
-budoucnost = document.RelaxArteUpdateForm.budoucnost.value;
-urazy = document.RelaxArteUpdateForm.urazy.value;
-unava = document.RelaxArteUpdateForm.unava.value;
-hmotnost = document.RelaxArteUpdateForm.hmotnost.value;
-kg = document.RelaxArteUpdateForm.kg.value;
-   //alert("Uložení:\nZáznam snášenlivost chladu a tepla byl uložen!!!!!!."+neuspokujici_zdravotni_stav);
+    budoucnost = document.RelaxArteUpdateForm.budoucnost.value;
+    urazy = document.RelaxArteUpdateForm.urazy.value;
+    unava = document.RelaxArteUpdateForm.unava.value;
+    hmotnost = document.RelaxArteUpdateForm.hmotnost.value;
+    kg = document.RelaxArteUpdateForm.kg.value;
+    //alert("Uložení:\nZáznam snášenlivost chladu a tepla byl uložen!!!!!!."+neuspokujici_zdravotni_stav);
 
 
 
 
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-if (this.readyState == 4 && this.status == 200) {
-  document.getElementById("RelaxarteUpdate<? echo $uzivatel_id;?>").innerHTML = this.responseText;
-    }
-};
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("RelaxarteUpdate<? echo $uzivatel_id;?>").innerHTML = this.responseText;
+        }
+    };
 
 
 if(neuspokujici_zdravotni_stav == 0 && nezvladani_stresu == 0 && psychicke_problemy == 0 && problem_s_hmotnosti == 0 && samota == 0 && unavovy_syndrom == 0 && zvedavost == 0){
