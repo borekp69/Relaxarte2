@@ -267,13 +267,14 @@ $kg_form = addslashes(htmlspecialchars(trim("$_POST[kg]")));
             prsty_blizko_u_sebe = '$prsty_blizko_u_sebe_form',
             ostruhy = '$ostruhy_form',
             ztuhle_narty = '$ztuhle_narty_form',
-
             kotniky_zatuhle = '$kotniky_zatuhle_form',
             kotniky_praskajici = '$kotniky_praskajici_form',
             kotniky_otekle = '$kotniky_otekle_form',
             kotniky_zkracene_achylovy_slachy = '$kotniky_zkracene_achylovy_slachy_form',
-
-
+            kolena_posun_doleva = '$kolena_posun_doleva_form',
+            kolena_posun_doprava = '$kolena_posun_doprava_form',
+            kolena_stoceni_dovnitr = '$kolena_stoceni_dovnitr_form',
+            kolena_vytoceni_ven = '$kolena_vytoceni_ven_form',
 
 
             datum =  NOW()
