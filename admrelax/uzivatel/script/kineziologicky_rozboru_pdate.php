@@ -238,17 +238,17 @@ $kg_form = addslashes(htmlspecialchars(trim("$_POST[kg]")));
   // echo 'kg: '.$kg.'<br/>'; 
 
 
-    require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
-    $sql = "UPDATE uzivatel SET
-        uzivatel_hmotnost = '$hmotnost_form',
-        uzivatel_kg = '$kg_form'
-        WHERE uzivatel_id = '$uzivatel_id'
-        ";
-        if ($conn->query($sql) === TRUE) {    
-        } else {
-    echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
-        }
-        $conn->close(); 
+        require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+        $sql = "UPDATE uzivatel SET
+            uzivatel_hmotnost = '$hmotnost_form',
+            uzivatel_kg = '$kg_form'
+            WHERE uzivatel_id = '$uzivatel_id'
+            ";
+            if ($conn->query($sql) === TRUE) {    
+            } else {
+        echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
+            }
+            $conn->close(); 
 
 
 
@@ -256,15 +256,27 @@ $kg_form = addslashes(htmlspecialchars(trim("$_POST[kg]")));
             require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
             $sql = "UPDATE kineziologicky_rozbor SET
             nohy_x = '$nohy_x_form',
+            nohy_O = '$nohy_O_form',
+            nohy_posun_doleva = '$nohy_posun_doleva_form',
+            nohy_posun_doprava = '$nohy_posun_doprava_form',
+            nohy_prava_delsi_nez_leva = '$nohy_prava_delsi_nez_leva_form',
+            nohy_leva_delsi_nez_prava = '$nohy_leva_delsi_nez_prava_form',
+
+            vybocene_palce = '$vybocene_palce_form',
+            ploche_nohy = '$ploche_nohy_form',
+            skrcene_prsty = '$skrcene_prsty_form',
+            prsty_blizko_u_sebe = '$prsty_blizko_u_sebe_form',
+            ostruhy = '$ostruhy_form',
+            ztuhle_narty = '$ztuhle_narty_form',
+
 
             datum =  NOW()
-            WHERE uzivatel_id = '$uzivatel_id'
-        ";
-    if ($conn->query($sql) === TRUE) {    
-    } else {
-    echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
-    }
-    $conn->close(); 
+            WHERE uzivatel_id = '$uzivatel_id' ";
+            if ($conn->query($sql) === TRUE) {    
+            } else {
+            echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
+            }
+            $conn->close(); 
 
 
 
