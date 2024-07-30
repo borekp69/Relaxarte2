@@ -284,8 +284,25 @@ $kg_form = addslashes(htmlspecialchars(trim("$_POST[kg]")));
             panev_rotace_doleva = '$panev_rotace_doleva_form',
             panev_rotace_doprava = '$panev_rotace_doprava_form',
             panev_blokada = '$panev_blokada_form',
+            ruce_posun_doleva = '$ruce_posun_doleva_form',
+            ruce_posun_doprava = '$ruce_posun_doprava_form',
+            ramena_posun_doleva = '$ramena_posun_doleva_form',
+            ramena_posun_doprava = '$ramena_posun_doprava_form',
+            ramena_zvednuta_tense_k_usim = '$ramena_zvednuta_tense_k_usim_form',
+            ramena_dychani_do_ramen = '$ramena_dychani_do_ramen_form',
+            lokty_tenisovy_loket = '$lokty_tenisovy_loket_form',
+            zapesti_karpaly = '$zapesti_karpaly_form',
+            zapesti_neohebnost = '$zapesti_neohebnost_form',
+            zapesti_zatuhlost = '$zapesti_zatuhlost_form',
 
-            
+
+
+
+
+
+
+
+
 
 
 
