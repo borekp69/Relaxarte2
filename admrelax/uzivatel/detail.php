@@ -1463,7 +1463,7 @@ if (joga_kurz == 1 && !lektor){
 </script>
 
 
-<div id="kineziologicky_rozbor">
+<div id="kineziologicky_rozbor<? echo $uzivatel_id;?>">
     <form id="kinez_rozbor" name="kinez_rozbor" method="post">
 
             <?
@@ -2162,7 +2162,7 @@ function loadKineziologicky_rozbor() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("kineziologicky_rozbor").innerHTML = this.responseText;
+      document.getElementById("kineziologicky_rozbor<? echo $uzivatel_id;?>").innerHTML = this.responseText;
     }
   };
  
