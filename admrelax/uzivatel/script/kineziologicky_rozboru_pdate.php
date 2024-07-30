@@ -294,12 +294,12 @@ $kg_form = addslashes(htmlspecialchars(trim("$_POST[kg]")));
             zapesti_karpaly = '$zapesti_karpaly_form',
             zapesti_neohebnost = '$zapesti_neohebnost_form',
             zapesti_zatuhlost = '$zapesti_zatuhlost_form',
-
-
-
-
-
-
+            pater_kulata_zada = '$pater_kulata_zada_form',
+            pater_prohnuta_zada = '$pater_prohnuta_zada_form',
+            pater_plocha_zada = '$pater_plocha_zada_form',
+            pater_skolioticke_drzeni = '$pater_skolioticke_drzeni_form',
+            pater_dysbalace_leve_ruky = '$pater_dysbalace_leve_ruky_form',
+            pater_dysbalace_prave_ruky = '$pater_dysbalace_prave_ruky_form',
 
 
 
