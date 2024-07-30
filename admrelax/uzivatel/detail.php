@@ -2948,13 +2948,11 @@ function loadKineziologicky_rozbor() {
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&hmotnost="+hmotnost; 
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&kg="+kg; 
 
+        if (hmotnost == "Vyhovuje"){
+        kg = 0;   
+        }
 
-
-if (hmotnost == "Vyhovuje"){
- kg = 0;   
-}
-
-        alert("Hmotnost "+hmotnost+"\nkg: "+kg);
+       // alert("Hmotnost "+hmotnost+"\nkg: "+kg);
 
 
   xhttp.open("POST", "./script/kineziologicky_rozboru_pdate.php", true);

@@ -253,7 +253,18 @@ $kg_form = addslashes(htmlspecialchars(trim("$_POST[kg]")));
 
 
 
+            require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+            $sql = "UPDATE kineziologicky_rozbor SET
+            nohy_x = '$nohy_x_form',
 
+            datum =  NOW()
+            WHERE uzivatel_id = '$uzivatel_id'
+        ";
+    if ($conn->query($sql) === TRUE) {    
+    } else {
+    echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
+    }
+    $conn->close(); 
 
 
 
