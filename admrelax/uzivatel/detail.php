@@ -1542,14 +1542,7 @@ if (joga_kurz == 1 && !lektor){
 
             <?
               }
-            ?>
 
-
-
-
-
-
-        <?
 
             function GenerujDiv($jmeno, $hodnota, $popis)
             {
@@ -1563,10 +1556,6 @@ if (joga_kurz == 1 && !lektor){
                 }
             
             }
-
-
-
-
 
         require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
         $sql_kineziologicky_rozbor = "SELECT * FROM kineziologicky_rozbor WHERE uzivatel_id = $uzivatel_id LIMIT 1";
@@ -2165,7 +2154,7 @@ if (joga_kurz == 1 && !lektor){
     <button type="submit" class="btn btn-success btn-sm"  onclick="loadKineziologicky_rozbor()">&nbsp;&nbsp;Uložit kineziologický rozbor&nbsp;&nbsp;</button>
 
 </div>
-
+<br/>
 
 <script>
 
@@ -2952,14 +2941,10 @@ function loadKineziologicky_rozbor() {
         kg = 0;   
         }
 
-       // alert("Hmotnost "+hmotnost+"\nkg: "+kg);
-
-
   xhttp.open("POST", "./script/kineziologicky_rozboru_pdate.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send(dataKineziologicky_rozbor);
- // alert("Uložení:\nZáznam kineziologický rozbor byl aktualizován.");
-
+  alert("Uložení:\nZáznam kineziologický rozbor byl aktualizován.");
 
      }
 
@@ -2969,9 +2954,6 @@ function loadKineziologicky_rozbor() {
 
 
 
-
-
-<br>*******************************************************
 
 
 
