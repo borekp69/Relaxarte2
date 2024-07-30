@@ -1962,7 +1962,7 @@ if (joga_kurz == 1 && !lektor){
                             
                             </div>
                             <div class="checkbox">
-                            <?  GenerujDiv('krcni_presun_dopredu', $krcni_predsun_dopredu, 'předsun dopředu') ?> 
+                            <?  GenerujDiv('krcni_predsun_dopredu', $krcni_predsun_dopredu, 'předsun dopředu') ?> 
                             
                             </div>
                             <div class="checkbox">
@@ -2572,11 +2572,11 @@ function loadKineziologicky_rozbor() {
                     krcni_zaklon_dozadu = 0;
                         } 
 
-        krcni_presun_dopredu = document.kinez_rozbor.krcni_presun_dopredu; 
-                if(krcni_presun_dopredu.checked) {
-                    krcni_presun_dopredu = 1;
+        krcni_predsun_dopredu = document.kinez_rozbor.krcni_predsun_dopredu; 
+                if(krcni_predsun_dopredu.checked) {
+                    krcni_predsun_dopredu = 1;
                 }else{
-                    krcni_presun_dopredu = 0;
+                    krcni_predsun_dopredu = 0;
                         } 
 
         krcni_hlava_v_ramenou = document.kinez_rozbor.krcni_hlava_v_ramenou; 
@@ -2900,7 +2900,7 @@ function loadKineziologicky_rozbor() {
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_velka_lordoza="+krcni_velka_lordoza;       
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_vyhrez="+krcni_vyhrez;
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_zaklon_dozadu="+krcni_zaklon_dozadu;
-        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_presun_dopredu="+krcni_presun_dopredu;       
+        dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_predsun_dopredu="+krcni_predsun_dopredu;       
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_hlava_v_ramenou="+krcni_hlava_v_ramenou;
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_posun_jazylky="+krcni_posun_jazylky;
         dataKineziologicky_rozbor = dataKineziologicky_rozbor + "&krcni_oteklost_sije_z_leve_strany="+krcni_oteklost_sije_z_leve_strany;       

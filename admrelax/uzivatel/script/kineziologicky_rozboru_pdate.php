@@ -72,7 +72,7 @@ $krcni_mala_lordoza_form = addslashes(htmlspecialchars(trim("$_POST[krcni_mala_l
 $krcni_velka_lordoza_form = addslashes(htmlspecialchars(trim("$_POST[krcni_velka_lordoza]")));
 $krcni_vyhrez_form = addslashes(htmlspecialchars(trim("$_POST[krcni_vyhrez]")));
 $krcni_zaklon_dozadu_form = addslashes(htmlspecialchars(trim("$_POST[krcni_zaklon_dozadu]")));
-$krcni_presun_dopredu_form = addslashes(htmlspecialchars(trim("$_POST[krcni_presun_dopredu]")));
+$krcni_predsun_dopredu_form = addslashes(htmlspecialchars(trim("$_POST[krcni_predsun_dopredu]")));
 $krcni_hlava_v_ramenou_form = addslashes(htmlspecialchars(trim("$_POST[krcni_hlava_v_ramenou]")));
 $krcni_posun_jazylky_form = addslashes(htmlspecialchars(trim("$_POST[krcni_posun_jazylky]")));
 $krcni_oteklost_sije_z_leve_strany_form = addslashes(htmlspecialchars(trim("$_POST[krcni_oteklost_sije_z_leve_strany]")));
@@ -300,6 +300,23 @@ $kg_form = addslashes(htmlspecialchars(trim("$_POST[kg]")));
             pater_skolioticke_drzeni = '$pater_skolioticke_drzeni_form',
             pater_dysbalace_leve_ruky = '$pater_dysbalace_leve_ruky_form',
             pater_dysbalace_prave_ruky = '$pater_dysbalace_prave_ruky_form',
+            krcni_ztuhlost_sije = '$krcni_ztuhlost_sije_form',
+            krcni_stuhlost_trapezu = '$krcni_stuhlost_trapezu_form',
+            krcni_vyoseni_doleva = '$krcni_vyoseni_doleva_form',
+            krcni_vyoseni_doprava = '$krcni_vyoseni_doprava_form',
+            krcni_posun_brady_doleva = '$krcni_posun_brady_doleva_form',
+            krcni_posun_brady_doprava = '$krcni_posun_brady_doprava_form',
+            krcni_mala_lordoza = '$krcni_mala_lordoza_form',
+            krcni_velka_lordoza = '$krcni_velka_lordoza_form',
+            krcni_vyhrez = '$krcni_vyhrez_form',
+            krcni_zaklon_dozadu = '$krcni_zaklon_dozadu_form',
+            krcni_predsun_dopredu = '$krcni_predsun_dopredu_form',
+            krcni_hlava_v_ramenou = '$krcni_hlava_v_ramenou_form',
+            krcni_posun_jazylky = '$krcni_posun_jazylky_form',
+            krcni_oteklost_sije_z_leve_strany = '$krcni_oteklost_sije_z_leve_strany_form',
+            krcni_oteklost_sije_z_prave_strany = '$krcni_oteklost_sije_z_prave_strany_form',
+
+
 
 
 
