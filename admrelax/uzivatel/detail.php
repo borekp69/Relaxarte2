@@ -2957,6 +2957,11 @@ function loadKineziologicky_rozbor() {
 
 
 
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+
 <?   }  // konec podmínky z řádku 360 ?>
 
 
