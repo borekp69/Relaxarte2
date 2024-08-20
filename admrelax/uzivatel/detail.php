@@ -2953,11 +2953,7 @@ function loadKineziologicky_rozbor() {
 
 
 
-
-
-
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+<? require "./script/treninkovy_plan.php"; ?>
 
 
 
