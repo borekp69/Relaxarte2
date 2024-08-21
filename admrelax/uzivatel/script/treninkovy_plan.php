@@ -43,16 +43,30 @@ header("Pragma: no-cache");
             </div> 
 
                 <div class="col-sm-3">
-                    <br>
-                    <label for="uzivatel">Typ procedury:</label>
-                    <select class="form-control" id="typ_procedury" name="typ_procedury" required> 
-                    <option value="0"> Vyberte možnost</option> 
-                    <option value="1">Vstupní diagnostika TČM + Akupunktura</option>
-                    <option value="2">Navazující konzultace TČM + Akupunktura</option>
-                    <option value="3">Akutní konzultace + Akupunktura</option>
-                    <option value="4">Konzultace</option>
-                    </select>
+                    <br/>
+                    <label for="uzivatel">Typ tréninku skupinový</label>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="dynamicke_cviceni">Dynamické cvičení</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="dynamicka_meditace">Dynamická meditace</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="zdrave_jogove_protazeni">Zdravé jógové protažení</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="tajczy_cjuan">Tajczy cjuaň</label>
+                    </div>                
+                
+                
                 </div> 
+
+
+
+
 
                 <div class="col-sm-3">
                     <br>
