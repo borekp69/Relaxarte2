@@ -14,6 +14,7 @@ header("Pragma: no-cache");
 <h4>Tréninkový plán:</h4>
 
 <div id="treninkovy_plan_<?echo $uzivatel_id; ?>">
+<form id="treninkovy_plan_<?echo $uzivatel_id; ?>" name="treninkovy_plan_<?echo $uzivatel_id; ?>" method="post">    
 
     <div class="row">
         <div class="col-sm-12" style="background-color:#DBDBDB;">        
@@ -39,7 +40,7 @@ header("Pragma: no-cache");
                     <div class="col-sm-2">
                         <br>
                         <label for="uzivatel">K čerpání:</label>                        
-                        <input type="text" onkeypress="return isNumberKey(event)" class="form-control form-control-sm" id="pocet_lekci" value = "" name="pocet_lekci" maxlength="2" placeholder="Počet plánovaných lekcí">
+                        <input type="text" onkeypress="return isNumberKey(event)" class="form-control form-control-sm" id="k_cerpani" value = "" name="k_cerpani" maxlength="2" placeholder="Počet lekcí k čerpání" readonly>
                     </div>  
                     
                     
@@ -175,5 +176,75 @@ header("Pragma: no-cache");
 
 
 
+                </form>
+  <br>
+  <button type="submit" class="btn btn-success btn-sm"  onclick="loadTreninkovy_plan_<?echo $uzivatel_id; ?>()">&nbsp;&nbsp;Uložit tréninkový plán&nbsp;&nbsp;</button>  
+
 </div>
+
+<script>
+ function loadTreninkovy_plan_<?echo $uzivatel_id; ?>() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("treninkovy_plan_<?echo $uzivatel_id; ?>").innerHTML = this.responseText;
+    }
+  };
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+  var yyyy = today.getFullYear();
+  dnesek = yyyy + '-' + mm + '-' + dd; 
+
+  let dataTreninkovy_plan = "uzivatel_id=<?echo $uzivatel_id; ?>";
+  var datum_treninku_zacatek = document.treninkovy_plan_<?echo $uzivatel_id; ?>.datum_treninku_zacatek.value;
+  var datum_treninku_konec = document.treninkovy_plan_<?echo $uzivatel_id; ?>.datum_treninku_konec.value;
+  var pocet_lekci =  document.treninkovy_plan_<?echo $uzivatel_id; ?>.pocet_lekci.value;
+  var lektor_procedury = document.treninkovy_plan_<?echo $uzivatel_id; ?>.lektor_procedury.value;
+
+  var detail_zamereni = "AAAA";
+
+
+  if(datum_treninku_zacatek < dnesek){
+    alert("!!! Chyba formuláře Tréninkový plán !!!  \n  Není možné naplánovat trénink do minulosti !");
+    
+    }else{
+
+    if (datum_treninku_zacatek.length == 0 || lektor_procedury == 0 ){
+    alert("!!! Chyba formuláře Tréninkový plán !!!  \n\n  Musíte vypnit všechna pole formuláře !");
+
+        }else{
+  if (confirm("Uložení tréninkového plánu:\n"+
+    "\nDatum od: " +datum_treninku_zacatek+ 
+    "\nDatum do:: "+datum_treninku_konec+" "+
+    "\nPočet lekcí: "+pocet_lekci+" "+   
+   // "\nDélka procedury: "+delka_procedury+" minut"+
+
+    "\nTyp procedury: "+detail_zamereni) == true){ 
+
+  //  dataPlanovanaProcedura = dataPlanovanaProcedura + "&datum_procedury="+datum_procedury;
+  //  dataPlanovanaProcedura = dataPlanovanaProcedura + "&zacatek_procedury="+zacatek_procedury;
+   // dataPlanovanaProcedura = dataPlanovanaProcedura + "&delka_procedury="+delka_procedury;
+  //  dataPlanovanaProcedura = dataPlanovanaProcedura + "&lektor_procedury="+lektor_procedury;
+  //  dataPlanovanaProcedura = dataPlanovanaProcedura + "&prihlaseny_uzivatel="+prihlaseny_uzivatel;
+  //  dataPlanovanaProcedura = dataPlanovanaProcedura + "&prihlaseny_uzivatel="+prihlaseny_uzivatel;
+
+  alert("Uložení:\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.");
+
+
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send(dataTreninkovy_plan);
+
+            }else{
+
+            // bylo stisknuto STORNO  
+              }
+            }
+        }
+  
+
+
+}
+</script>   
+
 <br/>-----------------------------------------------<br/>
