@@ -79,6 +79,10 @@ header("Pragma: no-cache");
                     </select>
                 </div> 
 
+
+
+
+
                     <div class="col-sm-4">
                         <br/>
                         <label for="uzivatel">Typ tréninku skupinový:</label>
@@ -100,6 +104,9 @@ header("Pragma: no-cache");
                     
                     
                     </div> 
+
+
+
 
 
 
@@ -197,43 +204,89 @@ header("Pragma: no-cache");
   dnesek = yyyy + '-' + mm + '-' + dd; 
 
   let dataTreninkovy_plan = "uzivatel_id=<?echo $uzivatel_id; ?>";
+
   var datum_treninku_zacatek = document.treninkovy_plan_<?echo $uzivatel_id; ?>.datum_treninku_zacatek.value;
   var datum_treninku_konec = document.treninkovy_plan_<?echo $uzivatel_id; ?>.datum_treninku_konec.value;
   var pocet_lekci =  document.treninkovy_plan_<?echo $uzivatel_id; ?>.pocet_lekci.value;
-  var lektor_procedury = document.treninkovy_plan_<?echo $uzivatel_id; ?>.lektor_procedury.value;
+  var detail_zamereni = document.treninkovy_plan_<?echo $uzivatel_id; ?>.detail_zamereni.value;  
+  var lektor_procedury = parseInt(document.treninkovy_plan_<?echo $uzivatel_id; ?>.lektor_procedury.value);  // dodělat lektory do konfirm okna
+  var typ_treninku = parseInt(document.treninkovy_plan_<?echo $uzivatel_id; ?>.typ_treninku.value); // dodělat typ tréninku do konfirm okna
 
-  var detail_zamereni = "AAAA";
+
+// ---------------  Typ tréninku skupinový
+    var dynamicke_cviceni = document.treninkovy_plan_<?echo $uzivatel_id; ?>.dynamicke_cviceni; 
+        if(dynamicke_cviceni.checked) {
+                dynamicke_cviceni = 1;
+    }else{
+                dynamicke_cviceni= 0;
+    }
+
+     var dynamicka_meditace = document.treninkovy_plan_<?echo $uzivatel_id; ?>.dynamicka_meditace;
+        if(dynamicka_meditace.checked) {
+                dynamicka_meditace = 1;
+    }else{
+                dynamicka_meditace= 0;
+    }
+
+    var zdrave_jogove_protazeni = document.treninkovy_plan_<?echo $uzivatel_id; ?>.zdrave_jogove_protazeni;
+        if(zdrave_jogove_protazeni.checked) {
+                zdrave_jogove_protazeni = 1;
+    }else{
+                zdrave_jogove_protazeni= 0;
+    } 
+
+    var tajczy_cjuan = document.treninkovy_plan_<?echo $uzivatel_id; ?>.tajczy_cjuan;
+        if(tajczy_cjuan.checked) {
+                tajczy_cjuan = 1;
+    }else{
+                tajczy_cjuan= 0;
+    }
+
+
+
+// ---------------  Způsob tréninku
+
+
+
+var lekt = document.treninkovy_plan_<?echo $uzivatel_id; ?>.lektor_procedury;
+var lektorConfirm = lekt.options[lekt.selectedIndex].text;
+
+var TypTren= document.treninkovy_plan_<?echo $uzivatel_id; ?>.typ_treninku;
+var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
+
 
 
   if(datum_treninku_zacatek < dnesek){
-    alert("!!! Chyba formuláře Tréninkový plán !!!  \n  Není možné naplánovat trénink do minulosti !");
+        alert("!!! Chyba formuláře Tréninkový plán !!!  \n  Není možné naplánovat trénink do minulosti !");
     
     }else{
 
-    if (datum_treninku_zacatek.length == 0 || lektor_procedury == 0 ){
-    alert("!!! Chyba formuláře Tréninkový plán !!!  \n\n  Musíte vypnit všechna pole formuláře !");
+    if (datum_treninku_zacatek.length == 0 || datum_treninku_konec.length == 0 || lektor_procedury == 0 || typ_treninku == 0 || pocet_lekci == 0){
+        alert("!!! Chyba formuláře Tréninkový plán !!!  \n\n  Musíte vypnit všechna pole formuláře !");
 
         }else{
+
   if (confirm("Uložení tréninkového plánu:\n"+
-    "\nDatum od: " +datum_treninku_zacatek+ 
-    "\nDatum do:: "+datum_treninku_konec+" "+
-    "\nPočet lekcí: "+pocet_lekci+" "+   
-   // "\nDélka procedury: "+delka_procedury+" minut"+
+    "\nDatum od: " + datum_treninku_zacatek + 
+    "\nDatum do: "+ datum_treninku_konec +" "+
+    "\nPočet lekcí: "+ pocet_lekci +" "+   
+    "\nTyp tréninku: "+ TypTrenConfirm +" "+ 
+    "\nLektor: "+ lektorConfirm +" \n"+ 
+    "\nDetail zaměření: "+detail_zamereni) == true){ 
 
-    "\nTyp procedury: "+detail_zamereni) == true){ 
 
-  //  dataPlanovanaProcedura = dataPlanovanaProcedura + "&datum_procedury="+datum_procedury;
-  //  dataPlanovanaProcedura = dataPlanovanaProcedura + "&zacatek_procedury="+zacatek_procedury;
-   // dataPlanovanaProcedura = dataPlanovanaProcedura + "&delka_procedury="+delka_procedury;
-  //  dataPlanovanaProcedura = dataPlanovanaProcedura + "&lektor_procedury="+lektor_procedury;
-  //  dataPlanovanaProcedura = dataPlanovanaProcedura + "&prihlaseny_uzivatel="+prihlaseny_uzivatel;
-  //  dataPlanovanaProcedura = dataPlanovanaProcedura + "&prihlaseny_uzivatel="+prihlaseny_uzivatel;
+        dataTreninkovy_plan = dataTreninkovy_plan + "&datum_treninku_zacatek="+datum_treninku_zacatek;        
+        dataTreninkovy_plan = dataTreninkovy_plan + "&datum_treninku_konec="+datum_treninku_konec;
+        dataTreninkovy_plan = dataTreninkovy_plan + "&pocet_lekci="+pocet_lekci;
+        dataTreninkovy_plan = dataTreninkovy_plan + "&lektor_procedury="+lektor_procedury;
+        dataTreninkovy_plan = dataTreninkovy_plan + "&typ_treninku="+typ_treninku;
+        dataTreninkovy_plan = dataTreninkovy_plan + "&detail_zamereni="+detail_zamereni;
 
-  alert("Uložení:\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.");
 
-    xhttp.open("POST", "./script/xxx.php", true);
+    xhttp.open("POST", "./script/modul_trenink_insert.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(dataTreninkovy_plan);
+    alert("Uložení:\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.");
 
             }else{
 
