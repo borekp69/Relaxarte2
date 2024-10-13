@@ -286,7 +286,7 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
     xhttp.open("POST", "./script/modul_trenink_insert.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(dataTreninkovy_plan);
-    alert("Uložení:\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.");
+    alert("Uložení:\nUložení zatím není funkční.");
 
             }else{
 
