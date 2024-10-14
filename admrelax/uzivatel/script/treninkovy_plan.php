@@ -212,22 +212,23 @@ header("Pragma: no-cache");
   var lektor_procedury = parseInt(document.treninkovy_plan_<?echo $uzivatel_id; ?>.lektor_procedury.value);  // dodělat lektory do konfirm okna
   var typ_treninku = parseInt(document.treninkovy_plan_<?echo $uzivatel_id; ?>.typ_treninku.value); // dodělat typ tréninku do konfirm okna
 
-
-// ---------------  Typ tréninku skupinový
-    var dynamicke_cviceni = document.treninkovy_plan_<?echo $uzivatel_id; ?>.dynamicke_cviceni; 
-        if(dynamicke_cviceni.checked) {
+    var dynamicke_cviceni = document.treninkovy_plan_<?echo $uzivatel_id; ?>.dynamicke_cviceni;
+    
+     if(dynamicke_cviceni.checked) {
                 dynamicke_cviceni = 1;
     }else{
                 dynamicke_cviceni= 0;
     }
 
-     var dynamicka_meditace = document.treninkovy_plan_<?echo $uzivatel_id; ?>.dynamicka_meditace;
+    
+    var dynamicka_meditace = document.treninkovy_plan_<?echo $uzivatel_id; ?>.dynamicka_meditace;
         if(dynamicka_meditace.checked) {
                 dynamicka_meditace = 1;
     }else{
                 dynamicka_meditace= 0;
     }
 
+    
     var zdrave_jogove_protazeni = document.treninkovy_plan_<?echo $uzivatel_id; ?>.zdrave_jogove_protazeni;
         if(zdrave_jogove_protazeni.checked) {
                 zdrave_jogove_protazeni = 1;
@@ -235,6 +236,7 @@ header("Pragma: no-cache");
                 zdrave_jogove_protazeni= 0;
     } 
 
+    
     var tajczy_cjuan = document.treninkovy_plan_<?echo $uzivatel_id; ?>.tajczy_cjuan;
         if(tajczy_cjuan.checked) {
                 tajczy_cjuan = 1;
@@ -243,8 +245,82 @@ header("Pragma: no-cache");
     }
 
 
+    var zvyseni_kondice = document.treninkovy_plan_<?echo $uzivatel_id; ?>.zvyseni_kondice;
+        if(zvyseni_kondice.checked) {
+            zvyseni_kondice = 1;
+    }else{
+        zvyseni_kondice= 0;
+    }
 
-// ---------------  Způsob tréninku
+    var nabrani_svalove_hmoty = document.treninkovy_plan_<?echo $uzivatel_id; ?>.nabrani_svalove_hmoty;
+        if(nabrani_svalove_hmoty.checked) {
+            nabrani_svalove_hmoty = 1;
+    }else{
+        nabrani_svalove_hmoty= 0;
+    }
+
+
+    var dychani_posileni_hss = document.treninkovy_plan_<?echo $uzivatel_id; ?>.dychani_posileni_hss;
+        if(dychani_posileni_hss.checked) {
+            dychani_posileni_hss = 1;
+    }else{
+        dychani_posileni_hss= 0;
+    }
+
+
+    var posileni_panevniho_dna = document.treninkovy_plan_<?echo $uzivatel_id; ?>.posileni_panevniho_dna;
+        if(posileni_panevniho_dna.checked) {
+            posileni_panevniho_dna = 1;
+    }else{
+        posileni_panevniho_dna= 0;
+    }
+
+
+    var stabilizace_kloubu = document.treninkovy_plan_<?echo $uzivatel_id; ?>.stabilizace_kloubu;
+        if(stabilizace_kloubu.checked) {
+            stabilizace_kloubu = 1;
+    }else{
+        stabilizace_kloubu= 0;
+    }
+
+
+    var srovnani_patere = document.treninkovy_plan_<?echo $uzivatel_id; ?>.srovnani_patere;
+        if(srovnani_patere.checked) {
+            srovnani_patere = 1;
+    }else{
+        srovnani_patere= 0;
+    }
+
+    var energeticka_harmonizace = document.treninkovy_plan_<?echo $uzivatel_id; ?>.energeticka_harmonizace;
+        if(energeticka_harmonizace.checked) {
+            energeticka_harmonizace = 1;
+    }else{
+        energeticka_harmonizace= 0;
+    }
+
+
+    var dysbalance = document.treninkovy_plan_<?echo $uzivatel_id; ?>.dysbalance;
+        if(dysbalance.checked) {
+            dysbalance = 1;
+    }else{
+        dysbalance= 0;
+    }
+
+    var koordinace = document.treninkovy_plan_<?echo $uzivatel_id; ?>.koordinace;
+        if(koordinace.checked) {
+            koordinace = 1;
+    }else{
+        koordinace= 0;
+    }
+
+    var psychika = document.treninkovy_plan_<?echo $uzivatel_id; ?>.psychika;
+        if(psychika.checked) {
+            psychika = 1;
+    }else{
+        psychika= 0;
+    }
+
+
 
 
 
@@ -275,12 +351,36 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
     "\nDetail zaměření: "+detail_zamereni) == true){ 
 
 
-        dataTreninkovy_plan = dataTreninkovy_plan + "&datum_treninku_zacatek="+datum_treninku_zacatek;        
-        dataTreninkovy_plan = dataTreninkovy_plan + "&datum_treninku_konec="+datum_treninku_konec;
-        dataTreninkovy_plan = dataTreninkovy_plan + "&pocet_lekci="+pocet_lekci;
-        dataTreninkovy_plan = dataTreninkovy_plan + "&lektor_procedury="+lektor_procedury;
-        dataTreninkovy_plan = dataTreninkovy_plan + "&typ_treninku="+typ_treninku;
-        dataTreninkovy_plan = dataTreninkovy_plan + "&detail_zamereni="+detail_zamereni;
+<?
+        function generujDotaz($trenink)
+            {
+                echo 'dataTreninkovy_plan = dataTreninkovy_plan + "&'.$trenink.'="+'.$trenink.";\n";
+            }
+
+        generujDotaz("detail_zamereni"); 
+        generujDotaz("datum_treninku_zacatek"); 
+        generujDotaz("datum_treninku_konec"); 
+        generujDotaz("pocet_lekci");
+        generujDotaz("lektor_procedury");
+        generujDotaz("typ_treninku");
+        generujDotaz("dynamicke_cviceni");
+        generujDotaz("dynamicka_meditace");
+        generujDotaz("zdrave_jogove_protazeni");
+        generujDotaz("tajczy_cjuan");
+        generujDotaz("zvyseni_kondice");
+        generujDotaz("nabrani_svalove_hmoty");
+        generujDotaz("dychani_posileni_hss");
+        generujDotaz("posileni_panevniho_dna");
+        generujDotaz("stabilizace_kloubu");
+        generujDotaz("srovnani_patere");
+        generujDotaz("energeticka_harmonizace");
+        generujDotaz("dysbalance");
+        generujDotaz("koordinace");
+        generujDotaz("psychika");
+?>
+
+
+     
 
 
     xhttp.open("POST", "./script/modul_trenink_insert.php", true);
