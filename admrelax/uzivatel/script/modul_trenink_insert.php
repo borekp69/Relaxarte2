@@ -4,10 +4,7 @@ header ("Cache-Control:no-cache, must-revalidate"); //HTTP/1.1
 header("Pragma: no-cache"); 
 require  $_SERVER['DOCUMENT_ROOT'].'/admrelax/hlavicky_session.php';
 
-
-
 $uzivatel_id = htmlspecialchars(trim("$_POST[uzivatel_id]"));
-
 $datum_treninku_zacatek_form = addslashes(htmlspecialchars(trim("$_POST[datum_treninku_zacatek]")));
 $datum_treninku_konec_form = addslashes(htmlspecialchars(trim("$_POST[datum_treninku_konec]")));
 $pocet_lekci_form = addslashes(htmlspecialchars(trim("$_POST[pocet_lekci]")));
@@ -28,10 +25,11 @@ $energeticka_harmonizace_form = addslashes(htmlspecialchars(trim("$_POST[energet
 $dysbalance_form = addslashes(htmlspecialchars(trim("$_POST[dysbalance]")));
 $koordinace_form = addslashes(htmlspecialchars(trim("$_POST[koordinace]")));
 $psychika_form = addslashes(htmlspecialchars(trim("$_POST[psychika]")));
+$prihlaseny_uzivatel_form = addslashes(htmlspecialchars(trim("$_POST[prihlaseny_uzivatel]")));
 
 
 
-//echo "<b>uzivatel_id:</b> ".$uzivatel_id."<br>";
+echo "<b>uzivatel_id:</b> ".$uzivatel_id."<br>";
 //echo "<b>datum_treninku_zacatek_form:</b> ".$datum_treninku_zacatek_form."<br>";
 //echo "<b>datum_treninku_konec_form:</b> ".$datum_treninku_konec_form."<br>";
 //echo "<b>pocet_lekci_form:</b> ".$pocet_lekci_form."<br>";
@@ -54,6 +52,62 @@ $psychika_form = addslashes(htmlspecialchars(trim("$_POST[psychika]")));
 //echo "<b>psychika_form:</b> ".$psychika_form."<br>";
 
 
+require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+$sql = "INSERT INTO treninkovy_plan(
+uzivatel_id,
+datum_treninku_zacatek,
+datum_treninku_konec,
+pocet_lekci,
+k_cerpani,
+lektor_procedury,
+typ_treninku,
+skupinovy_dynamicke_cviceni,
+skupinovy_dynamicka_meditace,
+skupinovy_zdrave_jogove_protazeni,
+skupinovy_tajczy_cjuan,
+zpusob_zvyseni_kondice,
+zpusob_nabrani_svalove_hmoty,
+zpusob_dychani_posileni_hss,
+zpusob_posileni_panevniho_dna,
+zpusob_stabilizace_kloubu,
+zpusob_srovnani_patere,
+zpusob_energeticka_harmonizace,
+zpusob_dysbalance,
+zpusob_koordinace,
+zpusob_psychika,
+detail_zamereni,
+prihlaseny_uzivatel
+)
+VALUES (
+'$uzivatel_id',
+'$datum_treninku_zacatek_form',
+'$datum_treninku_konec_form',
+'$pocet_lekci_form',
+'$pocet_lekci_form',
+'$lektor_procedury_form',
+'$typ_treninku_form',
+'$dynamicke_cviceni_form',
+'$dynamicka_meditace_form',
+'$zdrave_jogove_protazeni_form',
+'$tajczy_cjuan_form',
+'$zvyseni_kondice_form',
+'$nabrani_svalove_hmoty_form',
+'$dychani_posileni_hss_form',
+'$posileni_panevniho_dna_form',
+'$stabilizace_kloubu_form',
+'$srovnani_patere_form',
+'$energeticka_harmonizace_form',
+'$dysbalance_form',
+'$koordinace_form',
+'$psychika_form',
+'$detail_zamereni_form',
+'$prihlaseny_uzivatel_form'
+)";       
+
+if ($conn->query($sql) === TRUE) {    
+    } else {
+  echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
+    }
 
 
 
