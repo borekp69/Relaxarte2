@@ -323,10 +323,9 @@ header("Pragma: no-cache");
 
 
 
-
+var prihlaseny_uzivatel = "<? echo $_SESSION['uzivatel_jmeno_session'].' '.$_SESSION['uzivatel_prijmeni_session']; ?>"; 
 var lekt = document.treninkovy_plan_<?echo $uzivatel_id; ?>.lektor_procedury;
 var lektorConfirm = lekt.options[lekt.selectedIndex].text;
-
 var TypTren= document.treninkovy_plan_<?echo $uzivatel_id; ?>.typ_treninku;
 var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
 
@@ -349,6 +348,7 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
     "\nTyp tréninku: "+ TypTrenConfirm +" "+ 
     "\nLektor: "+ lektorConfirm +" \n"+ 
     "\nDetail zaměření: "+detail_zamereni) == true){ 
+
 
 
 <?
@@ -377,11 +377,8 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
         generujDotaz("dysbalance");
         generujDotaz("koordinace");
         generujDotaz("psychika");
+        generujDotaz("prihlaseny_uzivatel");
 ?>
-
-
-     
-
 
     xhttp.open("POST", "./script/modul_trenink_insert.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
