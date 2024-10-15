@@ -29,7 +29,7 @@ $prihlaseny_uzivatel_form = addslashes(htmlspecialchars(trim("$_POST[prihlaseny_
 
 
 
-echo "<b>uzivatel_id:</b> ".$uzivatel_id."<br>";
+//echo "<b>uzivatel_id:</b> ".$uzivatel_id."<br>";
 //echo "<b>datum_treninku_zacatek_form:</b> ".$datum_treninku_zacatek_form."<br>";
 //echo "<b>datum_treninku_konec_form:</b> ".$datum_treninku_konec_form."<br>";
 //echo "<b>pocet_lekci_form:</b> ".$pocet_lekci_form."<br>";
