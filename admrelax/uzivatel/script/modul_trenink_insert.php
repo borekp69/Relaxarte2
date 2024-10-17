@@ -52,6 +52,15 @@ $prihlaseny_uzivatel_form = addslashes(htmlspecialchars(trim("$_POST[prihlaseny_
 //echo "<b>psychika_form:</b> ".$psychika_form."<br>";
 
 
+
+if($typ_treninku_form == 1){
+  $dynamicke_cviceni_form = 0;
+  $dynamicka_meditace_form = 0;
+  $zdrave_jogove_protazeni_form = 0;
+  $tajczy_cjuan_form = 0;
+}
+
+
 require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
 $sql = "INSERT INTO treninkovy_plan(
 uzivatel_id,
@@ -109,7 +118,49 @@ if ($conn->query($sql) === TRUE) {
   echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
     }
 
+require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+$sql = "SELECT MAX(treninkovy_plan_id) AS max_id FROM treninkovy_plan";
+$result = $conn->query($sql);
+while($radek = $result->fetch_assoc()) {
+$max_id = $radek["max_id"];  
+}
+$conn->close(); 
 
+echo "<br>max_id: ".$max_id."<br>";
+//echo "<br>uzivatel_id: ".$uzivatel_id."<br>";
+
+require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+$sql = "SELECT * FROM treninkovy_plan WHERE treninkovy_plan_id = $max_id";
+$result = $conn->query($sql);
+while($radek = $result->fetch_assoc()) {
+$datum_treninku_zacatek = $radek["datum_treninku_zacatek"]; 
+$datum_treninku_konec = $radek["datum_treninku_konec"]; 
+$pocet_lekci = $radek["pocet_lekci"];
+$k_cerpani = $radek["k_cerpani"];
+$lektor_procedury = $radek["lektor_procedury"];
+$typ_treninku = $radek["typ_treninku"];
+$skupinovy_dynamicke_cviceni = $radek["skupinovy_dynamicke_cviceni"];
+$skupinovy_dynamicka_meditace = $radek["skupinovy_dynamicka_meditace"];
+$skupinovy_zdrave_jogove_protazeni = $radek["skupinovy_zdrave_jogove_protazeni"];
+$skupinovy_tajczy_cjuan = $radek["skupinovy_tajczy_cjuan"];
+
+  
+  }
+$conn->close();
+
+
+  echo "datum_treninku_zacatek: ".$datum_treninku_zacatek."<br>";
+  echo "datum_treninku_konec: ".$datum_treninku_konec."<br>";
+  echo "pocet_lekci: ".$pocet_lekci."<br>";
+  echo "k_cerpani: ".$k_cerpani."<br>";
+  echo "lektor_procedury: ".$lektor_procedury."<br>";
+  echo "typ_treninku: ".$typ_treninku."<br>";
+  echo "skupinovy_dynamicke_cviceni: ".$skupinovy_dynamicke_cviceni."<br>";
+  echo "skupinovy_dynamicka_meditace: ".$skupinovy_dynamicka_meditace."<br>";
+  echo "skupinovy_zdrave_jogove_protazeni: ".$skupinovy_zdrave_jogove_protazeni."<br>";
+  echo "skupinovy_tajczy_cjuan: ".$skupinovy_tajczy_cjuan."<br>";
+
+ 
 
 
 ?>
