@@ -192,7 +192,7 @@ $conn->close();
 <div id="treninkovy_plan_<?echo $treninkovy_plan_id; ?>">
   <form id="treninkovy_plan_<?echo $treninkovy_plan_id; ?>" name="treninkovy_plan_<?echo $treninkovy_plan_id; ?>" method="post">   
   <div class="row">
-        <div class="col-sm-12" style="background-color:#DBDBDB;">        
+        <div class="col-sm-12" style="background-color:#a1facd;">        
     
                     <div class="col-sm-2">
                         <br>
@@ -244,7 +244,7 @@ $conn->close();
 
 
     <div class="row">  
-            <div class="col-sm-12" style="background-color:#DBDBDB;">                
+            <div class="col-sm-12" style="background-color:#a1facd;">                
                 <div class="col-sm-4">
                     <br>
                     <label for="uzivatel">Typ tréninku:</label>
@@ -333,68 +333,89 @@ $conn->close();
 
 
                     <div class="col-sm-4">
-                        <br>
-                        <label for="uzivatel">Způsob tréninku:</label>
-
-                        <div class="checkbox">
-                            <? if ($zpusob_zvyseni_kondice == 1){?>
+                          <br>
+                          <label for="uzivatel">Způsob tréninku:</label>
+                          <div class="checkbox">
+                              <? if ($zpusob_zvyseni_kondice == 1){?>
                               <label><input type="checkbox" name="zvyseni_kondice" checked disabled>zvýšení kondice</label>
-                            <? }else{ ?>
+                              <? }else{ ?>
                               <label><input type="checkbox" name="zvyseni_kondice" disabled>zvýšení kondice</label>
                               <?  } ?>                     
-                        </div>
+                          </div>
 
-                        <div class="checkbox">
+                          <div class="checkbox">
                             <? if ($zpusob_nabrani_svalove_hmoty == 1){?>
                             <label><input type="checkbox" name="nabrani_svalove_hmoty" checked disabled>nabrání svalové hmoty</label>
                             <? }else{ ?>
                               <label><input type="checkbox" name="nabrani_svalove_hmoty" disabled>nabrání svalové hmoty</label>
                               <?  } ?> 
-                        </div> 
+                          </div> 
 
-                        <div class="checkbox">
+                          <div class="checkbox">
                             <? if ($zpusob_dychani_posileni_hss == 1){?>
-                              <label><input type="checkbox" name="dychani_posileni_hss" checked disabled>>dýchání, posílení HSS</label>
+                              <label><input type="checkbox" name="dychani_posileni_hss" checked disabled>dýchání, posílení HSS</label>
                               <? }else{ ?>
                                 <label><input type="checkbox" name="dychani_posileni_hss" disabled>dýchání, posílení HSS</label>
                                 <?  } ?>  
-                        </div> 
+                          </div> 
 
-                        <div class="checkbox">
-                            <label><input type="checkbox" name="posileni_panevniho_dna">posílení pánevního dna</label>
-                        </div>
+                          <div class="checkbox">
+                            <? if ($zpusob_posileni_panevniho_dna == 1){?>
+                            <label><input type="checkbox" name="posileni_panevniho_dna" checked disabled>posílení pánevního dna</label>
+                            <? }else{ ?>
+                            <label><input type="checkbox" name="posileni_panevniho_dna" disabled>posílení pánevního dna</label>
+                            <?  } ?>  
+                          </div>
                         
-                        <div class="checkbox">
-                            <label><input type="checkbox" name="stabilizace_kloubu">stabilizace kloubů</label>
-                        </div>
+                          <div class="checkbox">
+                            <? if ($zpusob_stabilizace_kloubu == 1){?>
+                            <label><input type="checkbox" name="stabilizace_kloubu" checked disabled>stabilizace kloubů</label>
+                            <? }else{ ?>
+                            <label><input type="checkbox" name="stabilizace_kloubu" disabled>stabilizace kloubů</label> 
+                            <?  } ?> 
+                          </div>
 
-                        <div class="checkbox">
-                            <label><input type="checkbox" name="srovnani_patere">srovnání páteře</label>
-                        </div> 
+                          <div class="checkbox">
+                             <? if ($zpusob_srovnani_patere == 1){?>
+                            <label><input type="checkbox" name="srovnani_patere" checked disabled>srovnání páteře</label>
+                            <? }else{ ?>
+                            <label><input type="checkbox" name="srovnani_patere" disabled>srovnání páteře</label>
+                            <?  } ?>
+                          </div> 
 
-                        <div class="checkbox">
-                            <label><input type="checkbox" name="energeticka_harmonizace">energetická harmonizace</label>
-                        </div>  
+                          <div class="checkbox">
+                            <? if ($zpusob_energeticka_harmonizace == 1){?>
+                            <label><input type="checkbox" name="energeticka_harmonizace" checked disabled>energetická harmonizace</label>
+                            <? }else{ ?>
+                            <label><input type="checkbox" name="energeticka_harmonizace" disabled>energetická harmonizace</label>
+                            <?  } ?>
+                          </div>  
                     
-                        <div class="checkbox">
-                            <label><input type="checkbox" name="dysbalance">dysbalance</label>
-                        </div> 
-
+                          <div class="checkbox">
+                            <? if ($zpusob_dysbalance == 1){?>
+                            <label><input type="checkbox" name="dysbalance" checked disabled>dysbalance</label>
+                            <? }else{ ?>
+                            <label><input type="checkbox" name="dysbalance" disabled>dysbalance</label>                            
+                            <?  } ?>
+                          </div> 
                         
-                        <div class="checkbox">
-                            <label><input type="checkbox" name="koordinace">koordinace</label>
-                        </div>
+                          <div class="checkbox">
+                            <? if ($zpusob_koordinace == 1){?>
+                            <label><input type="checkbox" name="koordinace" checked disabled>koordinace</label>
+                            <? }else{ ?>
+                            <label><input type="checkbox" name="koordinace" disabled>koordinace</label>
+                            <?  } ?>
+                          </div>
 
-                        <div class="checkbox">
-                            <label><input type="checkbox" name="psychika">psychika</label>
-                        </div>              
-                   
-                      
-                    </div>
-    
+                          <div class="checkbox">
+                            <? if ($zpusob_psychika == 1){?>
+                            <label><input type="checkbox" name="psychika" checked disabled>psychika</label>
+                            <? }else{ ?>
+                            <label><input type="checkbox" name="psychika" disabled>psychika</label>
+                            <?  } ?>
+                          </div>        
+                   </div>
             </div>
-
-
         </div>
 
 
@@ -440,7 +461,7 @@ $conn->close();
 
   
     <div class="row">
-                    <div class="col-sm-12" style="background-color:#DBDBDB;">
+                    <div class="col-sm-12" style="background-color:#a1facd;">
                         <br/>
                         <label for="uzivatel">Detail zaměření:</label>
                         <textarea class="form-control" id="detail_zamereni" name="detail_zamereni" rows="2" maxlength="200" style="background-color:#FFFFFF;" readonly><? echo $detail_zamereni;?></textarea>
