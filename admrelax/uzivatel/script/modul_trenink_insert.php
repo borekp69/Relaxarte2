@@ -296,7 +296,7 @@ $conn->close();
                           </div>
 
                         <div class="checkbox">
-                            <? if ($skupinovy_dynamicke_cviceni == 1){?>
+                            <? if ($skupinovy_dynamicka_meditace == 1){?>
                               <label><input type="checkbox" name="dynamicka_meditace" checked disabled>Dynamická meditace</label>
                             <? }else{ ?>
                               <label><input type="checkbox" name="dynamicka_meditace" disabled>Dynamická meditace</label>
@@ -437,28 +437,6 @@ $conn->close();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
     <div class="row">
                     <div class="col-sm-12" style="background-color:#a1facd;">
@@ -474,3 +452,5 @@ $conn->close();
   <button type="submit" class="btn btn-success btn-sm"  onclick="loadTreninkovy_plan_<?echo $uzivatel_id; ?>()">&nbsp;&nbsp;XXXXXX&nbsp;&nbsp;</button>  
 
 </div>
+
+
