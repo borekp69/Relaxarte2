@@ -735,7 +735,7 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
                     if ($stav_treninku == 1){ //naplanovano
                      ?>
                         <button type="button" class="btn btn-primary btn-sm" onclick="loadTreninkCerpat<? echo $treninkovy_plan_id;?>()">Čerpat trénink</button>&nbsp;&nbsp;
-                        <button type="button" class="btn btn-warning btn-sm" onclick="loadTreninkStornoKlientem<? echo $treninkovy_plan_id;?>()">Storno tréninku - klientemXXX</button>&nbsp;&nbsp;
+                        <button type="button" class="btn btn-warning btn-sm" onclick="loadTreninkStornoKlientem<? echo $treninkovy_plan_id;?>()">Storno tréninku - klientem</button>&nbsp;&nbsp;
                         <button type="button" class="btn btn-info btn-sm" onclick="loadTreninkStornoRelaxartem<? echo $treninkovy_plan_id;?>()">Storno tréninku - RELAXARTEM</button>&nbsp;&nbsp;
                         <button type="button" class="btn btn-danger btn-sm" onclick="loadTreninkDelete<? echo $treninkovy_plan_id;?>()">Smazat plánovaný trénink</button>&nbsp;&nbsp;   
                     <?
