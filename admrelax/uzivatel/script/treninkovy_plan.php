@@ -188,7 +188,7 @@ header("Pragma: no-cache");
   <button type="submit" class="btn btn-success btn-sm"  onclick="loadTreninkovy_plan_<?echo $uzivatel_id; ?>()">&nbsp;&nbsp;Uložit tréninkový plán&nbsp;&nbsp;</button>  
 
 </div>
-
+<br>
 <script>
  function loadTreninkovy_plan_<?echo $uzivatel_id; ?>() {
     var xhttp = new XMLHttpRequest();
@@ -383,7 +383,7 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
     xhttp.open("POST", "./script/modul_trenink_insert.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(dataTreninkovy_plan);
-    alert("Uložení:\nUložení zatím není funkční.");
+    alert("Uložení:\nZáznam byl uložen.");
 
             }else{
 
@@ -431,24 +431,33 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
 
 
     if ($stav_treninku == 1){ //naplanovano
-        $barva_box = '#a1facd'; 
+        $barva_box = '#a1facd';
+        $stav_treninku_str = 'Naplánováno';
+       
+
+
 
     }elseif($stav_treninku == 2){ //vycerpano
         $barva_box = '#bfb8fa';
+        $stav_treninku_str = 'Vyčerpáno'; 
 
     }elseif($stav_treninku == 3){ //stornováno klientem
         $barva_box = '#eee4a9';
+        $stav_treninku_str = 'Stornováno klientem'; 
 
     }elseif($stav_treninku == 4){ //stornováno Relaxartem
         $barva_box = '#eee4a9';
+        $stav_treninku_str = 'Stornováno Relexartem'; 
 
     }else{
         $barva_box = '#828283'; // chybovy stav
-
+        $stav_treninku_str = 'Chybný stav'; 
  }
     ?>
-  <div id="treninkovy_plan_<?echo $treninkovy_plan_id; ?>">
-  <form id="treninkovy_plan_<?echo $treninkovy_plan_id; ?>" name="treninkovy_plan_<?echo $treninkovy_plan_id; ?>" method="post">   
+
+
+<div id="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>">
+  <form id="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>" name="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>" method="post">   
   <div class="row">
         <div class="col-sm-12" style="background-color:<? echo $barva_box; ?>;">        
     
@@ -498,7 +507,31 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
 
 
 
+    <div class="row">
+        <div class="col-sm-12" style="background-color:<? echo $barva_box; ?>;"> 
+            <div class="col-sm-3">
+            <br>
+            <label for="uzivatel">Stav tréninku:</label>
+            <input type="text" id="stav_treninku_str" name="stav_treninku_str" class="form-control form-control-sm" value = "<? echo $stav_treninku_str;?>" readonly> 
+            </div>
 
+            <div class="col-sm-3">
+            <br>
+            <label for="uzivatel">Uložil:</label>
+            <input type="text" id="prihlaseny_uzivatel" name="prihlaseny_uzivatel" class="form-control form-control-sm" value = "<? echo $prihlaseny_uzivatel;?>" readonly> 
+            </div>
+
+            <div class="col-sm-3">
+            <br>
+            <label for="uzivatel">Datum:</label>
+            <input type="text" id="datum" name="datum" class="form-control form-control-sm" value = "<? echo $datum;?>" readonly> 
+            </div>
+
+
+    
+        </div>   
+
+    </div>      
 
 
     <div class="row">  
@@ -688,16 +721,80 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
                         <textarea class="form-control" id="detail_zamereni" name="detail_zamereni" rows="2" maxlength="200" style="background-color:#FFFFFF;" readonly><? echo $detail_zamereni;?></textarea>
                         <br/>                     
                     </div>
-                </div> 
+    </div> 
 
-  </form>
-  <br>
-  <button type="submit" class="btn btn-success btn-sm"  onclick="loadTreninkovy_plan_<?echo $uzivatel_id; ?>()">&nbsp;&nbsp;AAAAAAAAAAAAA&nbsp;&nbsp;</button>  
+
+  
+
+    <div class="row">
+                    <div class="col-sm-12" style="background-color:<? echo $barva_box; ?>;">
+                        <br/>                        
+                        
+
+                <?
+                    if ($stav_treninku == 1){ //naplanovano
+                     ?>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="loadTreninkCerpat<? echo $treninkovy_plan_id;?>()">Čerpat trénink</button>&nbsp;&nbsp;
+                        <button type="button" class="btn btn-warning btn-sm" onclick="loadTreninkStornoKlientem<? echo $treninkovy_plan_id;?>()">Storno tréninku - klientemXXX</button>&nbsp;&nbsp;
+                        <button type="button" class="btn btn-info btn-sm" onclick="loadTreninkStornoRelaxartem<? echo $treninkovy_plan_id;?>()">Storno tréninku - RELAXARTEM</button>&nbsp;&nbsp;
+                        <button type="button" class="btn btn-danger btn-sm" onclick="loadTreninkDelete<? echo $treninkovy_plan_id;?>()">Smazat plánovaný trénink</button>&nbsp;&nbsp;   
+                    <?
+                
+                
+                    }elseif($stav_treninku == 2){ //vycerpano
+                        ?>
+                       <button type="button" class="btn btn-danger btn-sm" onclick="loadTreninkDelete<? echo $treninkovy_plan_id;?>()">Smazat plánovaný trénink</button>&nbsp;&nbsp;   
+                        <? 
+
+                    }elseif($stav_treninku == 3){ //stornováno klientem
+                        ?>
+                       <button type="button" class="btn btn-danger btn-sm" onclick="loadTreninkDelete<? echo $treninkovy_plan_id;?>()">Smazat plánovaný trénink</button>&nbsp;&nbsp;   
+                        <?                        
+                
+                    }elseif($stav_treninku == 4){ //stornováno Relaxartem
+                        ?>
+                        <button type="button" class="btn btn-danger btn-sm" onclick="loadTreninkDelete<? echo $treninkovy_plan_id;?>()">Smazat plánovaný trénink</button>&nbsp;&nbsp;   
+                         <?   
+                        
+                
+                    }else{
+                    
+                    echo 'Chybná hodnota !!!';
+                    
+                 }
+                ?>
+
+
+                        <br/><br/>                     
+                    </div>
+    </div> 
+
+          
+ </form>
+ 
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </div>
 
 
 
+
+
+<br>
 
   
   

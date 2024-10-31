@@ -163,29 +163,29 @@ $conn->close();
 
 
 
-  echo "treninkovy_plan_id: ".$treninkovy_plan_id."<br>";
-  echo "datum_treninku_zacatek: ".$datum_treninku_zacatek."<br>";
-  echo "datum_treninku_konec: ".$datum_treninku_konec."<br>";
-  echo "pocet_lekci: ".$pocet_lekci."<br>";
-  echo "k_cerpani: ".$k_cerpani."<br>";
-  echo "lektor_procedury: ".$lektor_procedury."<br>";
-  echo "typ_treninku: ".$typ_treninku."<br>";
-  echo "skupinovy_dynamicke_cviceni: ".$skupinovy_dynamicke_cviceni."<br>";
-  echo "skupinovy_dynamicka_meditace: ".$skupinovy_dynamicka_meditace."<br>";
-  echo "skupinovy_zdrave_jogove_protazeni: ".$skupinovy_zdrave_jogove_protazeni."<br>";
-  echo "skupinovy_tajczy_cjuan: ".$skupinovy_tajczy_cjuan."<br>";
-  echo "zpusob_zvyseni_kondice: ".$zpusob_zvyseni_kondice."<br>";
-  echo "zpusob_nabrani_svalove_hmoty: ".$zpusob_nabrani_svalove_hmoty."<br>";
-  echo "zpusob_dychani_posileni_hss: ".$zpusob_dychani_posileni_hss."<br>";
-  echo "zpusob_posileni_panevniho_dna: ".$zpusob_posileni_panevniho_dna."<br>";
-  echo "zpusob_stabilizace_kloubu: ".$zpusob_stabilizace_kloubu."<br>";
-  echo "zpusob_srovnani_patere: ".$zpusob_srovnani_patere."<br>";
-  echo "zpusob_energeticka_harmonizace: ".$zpusob_energeticka_harmonizace."<br>";
-  echo "zpusob_dysbalance: ".$zpusob_dysbalance."<br>";
-  echo "zpusob_koordinace: ".$zpusob_koordinace."<br>";
-  echo "zpusob_psychika: ".$zpusob_psychika."<br>";
-  echo "detail_zamereni: ".$detail_zamereni."<br>";
-  echo "datum ložení: ".$datum."<br>";
+ // echo "treninkovy_plan_id: ".$treninkovy_plan_id."<br>";
+ // echo "datum_treninku_zacatek: ".$datum_treninku_zacatek."<br>";
+ // echo "datum_treninku_konec: ".$datum_treninku_konec."<br>";
+ // echo "pocet_lekci: ".$pocet_lekci."<br>";
+//  echo "k_cerpani: ".$k_cerpani."<br>";
+//  echo "lektor_procedury: ".$lektor_procedury."<br>";
+//  echo "typ_treninku: ".$typ_treninku."<br>";
+//  echo "skupinovy_dynamicke_cviceni: ".$skupinovy_dynamicke_cviceni."<br>";
+//  echo "skupinovy_dynamicka_meditace: ".$skupinovy_dynamicka_meditace."<br>";
+//  echo "skupinovy_zdrave_jogove_protazeni: ".$skupinovy_zdrave_jogove_protazeni."<br>";
+//  echo "skupinovy_tajczy_cjuan: ".$skupinovy_tajczy_cjuan."<br>";
+//  echo "zpusob_zvyseni_kondice: ".$zpusob_zvyseni_kondice."<br>";
+//  echo "zpusob_nabrani_svalove_hmoty: ".$zpusob_nabrani_svalove_hmoty."<br>";
+//  echo "zpusob_dychani_posileni_hss: ".$zpusob_dychani_posileni_hss."<br>";
+//  echo "zpusob_posileni_panevniho_dna: ".$zpusob_posileni_panevniho_dna."<br>";
+//  echo "zpusob_stabilizace_kloubu: ".$zpusob_stabilizace_kloubu."<br>";
+//  echo "zpusob_srovnani_patere: ".$zpusob_srovnani_patere."<br>";
+//  echo "zpusob_energeticka_harmonizace: ".$zpusob_energeticka_harmonizace."<br>";
+//  echo "zpusob_dysbalance: ".$zpusob_dysbalance."<br>";
+//  echo "zpusob_koordinace: ".$zpusob_koordinace."<br>";
+//  echo "zpusob_psychika: ".$zpusob_psychika."<br>";
+//  echo "detail_zamereni: ".$detail_zamereni."<br>";
+//  echo "datum ložení: ".$datum."<br>";
 
 
 ?>
@@ -423,20 +423,6 @@ $conn->close();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
     <div class="row">
                     <div class="col-sm-12" style="background-color:#a1facd;">
@@ -449,7 +435,8 @@ $conn->close();
 
   </form>
   <br>
-  <button type="submit" class="btn btn-success btn-sm"  onclick="loadTreninkovy_plan_<?echo $uzivatel_id; ?>()">&nbsp;&nbsp;XXXXXX&nbsp;&nbsp;</button>  
+  <button type="submit" class="btn btn-success btn-sm"  onclick="loadTreninkovy_plan_<?echo $uzivatel_id; ?>()">&nbsp;&nbsp;XXXXXX&nbsp;&nbsp;</button> 
+  <button type="button" class="btn btn-danger btn-sm" onclick="loadPlanovanaProceduraTCMDelete30()">Smazat naplánovanou proceduru</button>&nbsp;&nbsp 
 
 </div>
 
