@@ -772,6 +772,43 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
           
  </form>
  
+ <script>
+  function loadTreninkDelete<? echo $treninkovy_plan_id;?>() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("treninkovy_plan_<?echo $uzivatel_id; ?>").innerHTML = this.responseText;      
+      }
+    };
+  
+        var  treninkovy_plan_delete_id = "&treninkovy_plan_delete_id="+<? echo $treninkovy_plan_id;?>;
+        
+        datum_treninku_zacatek =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.datum_treninku_zacatek.value;
+        datum_treninku_konec =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.datum_treninku_konec.value;
+        k_cerpani =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.k_cerpani.value;
+        lektor = document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.lektor.value; 
+        stav_treninku =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.stav_treninku_str.value;
+        typ_treninku =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.typ_treninku.value;
+
+        if (confirm("Opravdu chcete smazat naplánovaný trénink?\n"+
+        "\nDatum od: "+datum_treninku_zacatek+
+        "\nDatum do: "+datum_treninku_konec+
+        "\nPočet zbývajících lekcí: "+k_cerpani+
+        "\nLektor: "+lektor+
+        "\nStav tréninku: "+stav_treninku) == true){
+
+       xhttp.open("POST", "./script/modul_trenink_delete.php", true);
+       xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+       xhttp.send(treninkovy_plan_delete_id);
+    
+    }else{
+          // bylo stisknuto STORNO  
+      }    
+
+     }
+
+</script>
+
 
             
 
