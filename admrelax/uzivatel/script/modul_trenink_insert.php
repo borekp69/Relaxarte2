@@ -126,7 +126,7 @@ $max_id = $radek["max_id"];
 }
 $conn->close(); 
 
-echo "<br>max_id: ".$max_id."<br>";
+//echo "<br>max_id: ".$max_id."<br>";
 
 
 require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
