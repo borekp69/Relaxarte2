@@ -456,9 +456,9 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
     ?>
 
 
-<div id="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>">
-  <form id="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>" name="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>" method="post">   
-  <div class="row">
+<div id="treninkovy_plan<?echo $treninkovy_plan_id; ?>">
+   <form id="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>" name="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>" method="post">   
+            <div class="row">
         <div class="col-sm-12" style="background-color:<? echo $barva_box; ?>;">        
     
                     <div class="col-sm-2">
@@ -502,13 +502,13 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
                               <input type="text" id="lektor" name="lektor" class="form-control form-control-sm" value = "<? echo $lektor;?>" readonly>                             
                         </div>
         </div> 
-    </div>
+     </div>
 
 
 
 
-    <div class="row">
-        <div class="col-sm-12" style="background-color:<? echo $barva_box; ?>;"> 
+        <div class="row">
+            <div class="col-sm-12" style="background-color:<? echo $barva_box; ?>;"> 
             <div class="col-sm-3">
             <br>
             <label for="uzivatel">Stav tréninku:</label>
@@ -529,12 +529,12 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
 
 
     
-        </div>   
+             </div>   
 
-    </div>      
+        </div>      
 
 
-    <div class="row">  
+            <div class="row">  
             <div class="col-sm-12" style="background-color:<? echo $barva_box; ?>;">                
                 <div class="col-sm-4">
                     <br>
@@ -714,19 +714,19 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
 
 
   
-    <div class="row">
+             <div class="row">
                     <div class="col-sm-12" style="background-color:<? echo $barva_box; ?>;">
                         <br/>
                         <label for="uzivatel">Detail zaměření:</label>
                         <textarea class="form-control" id="detail_zamereni" name="detail_zamereni" rows="2" maxlength="200" style="background-color:#FFFFFF;" readonly><? echo $detail_zamereni;?></textarea>
                         <br/>                     
                     </div>
-    </div> 
+             </div> 
 
 
   
 
-    <div class="row">
+            <div class="row">
                     <div class="col-sm-12" style="background-color:<? echo $barva_box; ?>;">
                         <br/>                        
                         
@@ -767,22 +767,29 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
 
                         <br/><br/>                     
                     </div>
-    </div> 
+
 
           
- </form>
- 
+        </form>
+ </div> 
+
  <script>
   function loadTreninkDelete<? echo $treninkovy_plan_id;?>() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("treninkovy_plan_<?echo $uzivatel_id; ?>").innerHTML = this.responseText;      
+      document.getElementById("treninkovy_plan<? echo $treninkovy_plan_id; ?>").innerHTML = this.responseText;      
       }
     };
-  
-        var  treninkovy_plan_delete_id = "&treninkovy_plan_delete_id="+<? echo $treninkovy_plan_id;?>;
-        
+ 
+
+    var  trenink_id_temp = <? echo $treninkovy_plan_id; ?>;
+         treninkovy_plan_delete_id = "&treninkovy_plan_delete_id="+trenink_id_temp ; 
+    
+
+
+   
+
         datum_treninku_zacatek =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.datum_treninku_zacatek.value;
         datum_treninku_konec =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.datum_treninku_konec.value;
         k_cerpani =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.k_cerpani.value;
