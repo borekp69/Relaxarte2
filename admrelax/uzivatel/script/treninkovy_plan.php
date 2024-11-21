@@ -785,11 +785,6 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
 
     var  trenink_id_temp = <? echo $treninkovy_plan_id; ?>;
          treninkovy_plan_delete_id = "&treninkovy_plan_delete_id="+trenink_id_temp ; 
-    
-
-
-   
-
         datum_treninku_zacatek =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.datum_treninku_zacatek.value;
         datum_treninku_konec =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.datum_treninku_konec.value;
         k_cerpani =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.k_cerpani.value;
