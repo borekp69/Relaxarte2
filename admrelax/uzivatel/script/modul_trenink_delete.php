@@ -14,7 +14,7 @@ if ($conn->query($sql) === TRUE) {
 echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
 }  
 
-
+echo '<b>Trénink byl smazán.</b>';
 //  ---- Dodelat mazání položek !!!!!!!!!!!!!!!!!!!
 
 
