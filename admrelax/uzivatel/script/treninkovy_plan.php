@@ -820,8 +820,7 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("treninkovy_plan<? echo $treninkovy_plan_id; ?>").innerHTML = this.responseText;      
       }
-    };
- 
+    }; 
 
         var  trenink_id_temp = <? echo $treninkovy_plan_id; ?>;
         var prihlaseny_uzivatel = "<? echo $_SESSION['uzivatel_jmeno_session'].' '.$_SESSION['uzivatel_prijmeni_session']; ?>"; 
@@ -832,13 +831,8 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
         lektor = document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.lektor.value; 
         stav_treninku =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.stav_treninku_str.value;
         typ_treninku =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.typ_treninku.value;
-        var prihlaseny_uzivatel = "<? echo $_SESSION['uzivatel_jmeno_session'].' '.$_SESSION['uzivatel_prijmeni_session']; ?>"; 
-
-
-
+        var prihlaseny_uzivatel = "<? echo $_SESSION['uzivatel_jmeno_session'].' '.$_SESSION['uzivatel_prijmeni_session']; ?>";
         treninkovy_plan_storno_relax_id = treninkovy_plan_storno_relax_id + "&prihlaseny_uzivatel="+prihlaseny_uzivatel;
-
-
         if (confirm("Opravdu chcete stornovat naplánovaný trénink? \nStornování tréninku ze strany RELAXARTE.\n"+
         "\nDatum od: "+datum_treninku_zacatek+
         "\nDatum do: "+datum_treninku_konec+
@@ -861,7 +855,44 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
 
 
 
+<script>
+  function loadTreninkStornoKlientem<? echo $treninkovy_plan_id;?>() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("treninkovy_plan<? echo $treninkovy_plan_id; ?>").innerHTML = this.responseText;      
+      }
+    }; 
 
+        var  trenink_id_temp = <? echo $treninkovy_plan_id; ?>;
+        var prihlaseny_uzivatel = "<? echo $_SESSION['uzivatel_jmeno_session'].' '.$_SESSION['uzivatel_prijmeni_session']; ?>"; 
+         treninkovy_plan_storno_relax_id = "&treninkovy_plan_storno_relax_id="+trenink_id_temp ; 
+        datum_treninku_zacatek =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.datum_treninku_zacatek.value;
+        datum_treninku_konec =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.datum_treninku_konec.value;
+        k_cerpani =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.k_cerpani.value;
+        lektor = document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.lektor.value; 
+        stav_treninku =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.stav_treninku_str.value;
+        typ_treninku =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.typ_treninku.value;
+        var prihlaseny_uzivatel = "<? echo $_SESSION['uzivatel_jmeno_session'].' '.$_SESSION['uzivatel_prijmeni_session']; ?>";
+        treninkovy_plan_storno_relax_id = treninkovy_plan_storno_relax_id + "&prihlaseny_uzivatel="+prihlaseny_uzivatel;
+        if (confirm("Opravdu chcete stornovat naplánovaný trénink? \nStornování tréninku ze strany klienta.\n"+
+        "\nDatum od: "+datum_treninku_zacatek+
+        "\nDatum do: "+datum_treninku_konec+
+        "\nPočet zbývajících lekcí: "+k_cerpani+
+        "\nLektor: "+lektor+
+        "\nStav tréninku: "+stav_treninku) == true){
+
+       xhttp.open("POST", "./script/modul_trenink_storno_klient.php", true);
+       xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+       xhttp.send(treninkovy_plan_storno_relax_id);
+    
+    }else{
+          // bylo stisknuto STORNO  
+      }    
+
+     }
+
+</script>
 
 
 
