@@ -456,8 +456,93 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
     ?>
 
 
-<div id="treninkovy_plan<?echo $treninkovy_plan_id; ?>">
-   <form id="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>" name="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>" method="post">   
+
+<?              if ($typ_treninku == 1){  
+                    $typ_treninku_tmp = 'individuální';
+
+                    }else if ($typ_treninku == 2){ 
+                    $typ_treninku_tmp = 'skupinový';
+                
+                    }else if ($typ_treninku == 3){ 
+                        $typ_treninku_tmp = 'kombinace';  
+                
+                    }else{ 
+                        $typ_treninku_tmp = 'Chybný stav tréninku';
+                    }
+
+                                require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+                                $sql = "SELECT * FROM lektor WHERE lektor_id = $lektor_procedury";
+                                $result = $conn->query($sql);
+                                while($radek = $result->fetch_assoc()) {
+                                $lektor = $radek["lektor_titul"].' '. $radek["lektor_prijmeni"].' '.$radek["lektor_jmeno"];                               
+                                } 
+                                $conn->close();
+                                ?>
+<div class="row">
+<div class="col-sm-12">  
+        
+
+      <div class="col-sm-3"> 
+      <b>Typ tréninku: <? echo $typ_treninku_tmp;?></b> 
+      </div>
+
+      <div class="col-sm-3" style="background-color:<? echo $barva_box; ?>;"> 
+      Stav: <? echo $stav_treninku_str?> 
+      </div>
+
+      <div class="col-sm-2"> 
+      <b>K čerpání: <? echo  $k_cerpani; ?></b> 
+      </div>
+
+      <div class="col-sm-3"> 
+      <b><? echo $lektor;?></b>
+      </div>
+
+
+     
+
+
+<script type="text/javascript" language="JavaScript">
+function HideContent(d) {
+document.getElementById(d).style.display = "none";
+}
+function ShowContent(d) {
+document.getElementById(d).style.display = "block";
+}
+function ReverseDisplay(d) {
+if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
+else { document.getElementById(d).style.display = "none"; }
+}
+</script>
+
+      
+<div class="col-sm-1"> 
+          <a href="javascript:ReverseDisplay('uniquename_T<? echo $treninkovy_plan_id;?>')">
+          <button type="button" class="btn btn-default btn-sm" >
+          <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Podrobnosti</button>
+          </a> 
+        </div>
+      </div>
+    </div>
+ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div id="uniquename_T<? echo $treninkovy_plan_id; ?>" style="display:none;">
+
+    <div id="treninkovy_plan<?echo $treninkovy_plan_id; ?>">
+    <form id="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>" name="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>" method="post">   
             <div class="row">
         <div class="col-sm-12" style="background-color:<? echo $barva_box; ?>;">        
     
@@ -489,15 +574,6 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
                         <div class="col-sm-3">
                                 <br>
                                 <label for="uzivatel">Lektor:</label>
-                                <?
-                                require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
-                                $sql = "SELECT * FROM lektor WHERE lektor_id = $lektor_procedury";
-                                $result = $conn->query($sql);
-                                while($radek = $result->fetch_assoc()) {
-                                $lektor = $radek["lektor_titul"].' '. $radek["lektor_prijmeni"].' '.$radek["lektor_jmeno"];                               
-                                } 
-                                $conn->close();
-                                ?>
                               
                               <input type="text" id="lektor" name="lektor" class="form-control form-control-sm" value = "<? echo $lektor;?>" readonly>                             
                         </div>
@@ -771,9 +847,13 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
 
           
         </form>
- </div> 
+        </div> 
+        <br>
+ </div>
 
- <script>
+
+
+<script>
   function loadTreninkDelete<? echo $treninkovy_plan_id;?>() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
