@@ -20,9 +20,6 @@ prihlaseny_uzivatel = '$prihlaseny_uzivatel_form',
 datum = NOW()
 WHERE treninkovy_plan_id = $treninkovy_plan_storno_relax_id LIMIT 1";
 
-
-
-
 if ($conn->query($sql) === TRUE) {    
 } else {
 echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';

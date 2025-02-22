@@ -987,7 +987,7 @@ function loadTreninkCerpat<? echo $treninkovy_plan_id;?>() {
 
         var  trenink_id_temp = <? echo $treninkovy_plan_id; ?>;
         var prihlaseny_uzivatel = "<? echo $_SESSION['uzivatel_jmeno_session'].' '.$_SESSION['uzivatel_prijmeni_session']; ?>"; 
-         treninkovy_plan_storno_relax_id = "&treninkovy_plan_storno_relax_id="+trenink_id_temp ; 
+         treninkovy_plan_cerpani_id = "&treninkovy_plan_cerpani_id="+trenink_id_temp ; 
         datum_treninku_zacatek =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.datum_treninku_zacatek.value;
         datum_treninku_konec =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.datum_treninku_konec.value;
         k_cerpani =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.k_cerpani.value;
@@ -995,7 +995,7 @@ function loadTreninkCerpat<? echo $treninkovy_plan_id;?>() {
         stav_treninku =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.stav_treninku_str.value;
         typ_treninku =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.typ_treninku.value;
         var prihlaseny_uzivatel = "<? echo $_SESSION['uzivatel_jmeno_session'].' '.$_SESSION['uzivatel_prijmeni_session']; ?>";
-        treninkovy_plan_storno_relax_id = treninkovy_plan_storno_relax_id + "&prihlaseny_uzivatel="+prihlaseny_uzivatel;
+        treninkovy_plan_cerpani_id = treninkovy_plan_cerpani_id + "&prihlaseny_uzivatel="+prihlaseny_uzivatel;
         if (confirm("Opravdu chcete stornovat naplánovaný trénink? \nXXXXXStornování tréninku ze strany klienta.\n"+
         "\nDatum od: "+datum_treninku_zacatek+
         "\nDatum do: "+datum_treninku_konec+
@@ -1005,7 +1005,7 @@ function loadTreninkCerpat<? echo $treninkovy_plan_id;?>() {
 
        xhttp.open("POST", "./script/modul_trenink_cerpani.php", true);
        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-       xhttp.send(treninkovy_plan_storno_relax_id);
+       xhttp.send(treninkovy_plan_cerpani_id);
     
     }else{
           // bylo stisknuto STORNO  
