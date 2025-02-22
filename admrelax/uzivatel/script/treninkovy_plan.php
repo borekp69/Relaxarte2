@@ -977,7 +977,7 @@ else { document.getElementById(d).style.display = "none"; }
 
 <script>
    
-function loadTreninkCerpat <? echo $treninkovy_plan_id;?>() {
+function loadTreninkCerpat<? echo $treninkovy_plan_id;?>() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -1013,7 +1013,7 @@ function loadTreninkCerpat <? echo $treninkovy_plan_id;?>() {
 
      }
 
-</sript>    
+</script>    
 
 
 
