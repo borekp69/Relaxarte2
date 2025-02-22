@@ -1,7 +1,11 @@
 <?
+
 header("Cache-control: private");
 header ("Cache-Control:no-cache, must-revalidate"); //HTTP/1.1
 header("Pragma: no-cache");
+
+
+
 
 //require "sifrovani_dat.php";
 
@@ -10,6 +14,9 @@ header("Pragma: no-cache");
 //echo 'uzivatel_id: '.$uzivatel_id.'<br>';
 
 ?>
+
+
+
 <script src="./js/jencisla.js"></script> 
 <h4>Tréninkový plán:</h4>
 
@@ -474,17 +481,20 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
                                 $lektor = $radek["lektor_titul"].' '. $radek["lektor_prijmeni"].' '.$radek["lektor_jmeno"];                               
                                 } 
                                 $conn->close();
-                                ?>
+  ?>
+
+
 <div class="row">
     <div class="col-sm-12">  
         
+
 
                     <div class="col-sm-3"> 
                     <b>Typ tréninku: <? echo $typ_treninku_tmp;?></b> 
                     </div>
 
                     <div class="col-sm-3" style="background-color:<? echo $barva_box; ?>;"> 
-                    Stav: <? echo $stav_treninku_str?> 
+                    Stav: <? echo $stav_treninku_str?>
                     </div>
 
                     <div class="col-sm-2"> 
@@ -492,7 +502,7 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
                     </div>
 
                     <div class="col-sm-3"> 
-                    <b><? echo $lektor;?></b>
+                    <b><? echo $lektor;?></b>                    
                     </div>
 
 
@@ -993,7 +1003,7 @@ function loadTreninkCerpat<? echo $treninkovy_plan_id;?>() {
         typ_treninku =  document.treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>.typ_treninku.value;
         var prihlaseny_uzivatel = "<? echo $_SESSION['uzivatel_jmeno_session'].' '.$_SESSION['uzivatel_prijmeni_session']; ?>";
         treninkovy_plan_cerpani_id = treninkovy_plan_cerpani_id + "&prihlaseny_uzivatel="+prihlaseny_uzivatel;
-        if (confirm("Opravdu chcete čerpat trénink?\n"+
+        if (confirm("Opravdu chcete čerpat lekci?\n"+
         "\nPočet zbývajících lekcí: "+k_cerpani) == true){
 
        xhttp.open("POST", "./script/modul_trenink_cerpani.php", true);
