@@ -1003,7 +1003,7 @@ function loadTreninkCerpat<? echo $treninkovy_plan_id;?>() {
         "\nLektor: "+lektor+
         "\nStav tréninku: "+stav_treninku) == true){
 
-       xhttp.open("POST", "./script/modul_trenink_storno_klient.php", true);
+       xhttp.open("POST", "./script/modul_trenink_cerpani.php", true);
        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
        xhttp.send(treninkovy_plan_storno_relax_id);
     
