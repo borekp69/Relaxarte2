@@ -5,8 +5,6 @@ header("Pragma: no-cache");
 $treninkovy_plan_cerpani_id = htmlspecialchars(trim("$_POST[treninkovy_plan_cerpani_id]"));
 $prihlaseny_uzivatel_form = addslashes(htmlspecialchars(trim("$_POST[prihlaseny_uzivatel]")));
 
-//echo 'ID:'.$treninkovy_plan_cerpani_id.'<br>';
-//echo 'Prihlaseny uzivatel:'.$prihlaseny_uzivatel_form.'<br>';
 
 require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
 $sql_trenink_plan = "SELECT * FROM treninkovy_plan WHERE treninkovy_plan_id = $treninkovy_plan_cerpani_id LIMIT 1 ";
@@ -22,6 +20,7 @@ $k_cerpani = $radek_trenink_plan["k_cerpani"];
         stav_treninku = 2,
         datum = NOW()
         WHERE treninkovy_plan_id = $treninkovy_plan_cerpani_id LIMIT 1";
+        
 
     }else{
         $sql = "UPDATE treninkovy_plan SET k_cerpani = k_cerpani -1,
@@ -37,8 +36,23 @@ $k_cerpani = $radek_trenink_plan["k_cerpani"];
     }  
     
 
+require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php"; //treninkovy_plan_cerpani
+$sql = "INSERT INTO treninkovy_plan_cerpani (
+treninkovy_plan_id,
+prihlaseny_uzivatel,
+datum
+ )
+    VALUES (
+'$treninkovy_plan_cerpani_id',
+'$prihlaseny_uzivatel_form',
+ NOW()     
+    )"; 
 
-
+if ($conn->query($sql) === TRUE) {    
+} else {
+echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
+}
+$conn->close();   
 
 
 
