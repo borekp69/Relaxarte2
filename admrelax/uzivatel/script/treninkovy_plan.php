@@ -434,9 +434,6 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
         $barva_box = '#a1facd';
         $stav_treninku_str = 'Naplánováno';
        
-
-
-
     }elseif($stav_treninku == 2){ //vycerpano
         $barva_box = '#bfb8fa';
         $stav_treninku_str = 'Vyčerpáno'; 

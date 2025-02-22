@@ -16,9 +16,12 @@ require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
 $sql = "UPDATE treninkovy_plan SET k_cerpani = k_cerpani -1,
 prihlaseny_uzivatel = '$prihlaseny_uzivatel_form',
 datum = NOW()
-WHERE treninkovy_plan_id = $treninkovy_cerpani_id LIMIT 1";
+WHERE treninkovy_plan_id = $treninkovy_plan_cerpani_id LIMIT 1";
 
-
+if ($conn->query($sql) === TRUE) {    
+} else {
+echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
+}  
 
 
         
