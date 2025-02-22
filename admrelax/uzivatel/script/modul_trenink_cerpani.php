@@ -105,32 +105,14 @@ $k_cerpani = $radek_trenink_plan["k_cerpani"];
                     $conn->close();
  
 
- //echo 'stav_treninku:'.$stav_treninku.'<br>';
-
-
 
 ?>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                      <div id="treninkovy_plan<?echo $treninkovy_plan_id; ?>">
-                                                                  <form id="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>" name="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>" method="post">   
-                                                                  <div class="row">
-                                                              <div class="col-sm-12" style="background-color:<? echo $barva_box; ?>;">        
+<div id="treninkovy_plan<?echo $treninkovy_plan_id; ?>">
+    <form id="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>" name="treninkovy_plan_update_<?echo $treninkovy_plan_id; ?>" method="post">   
+        <div class="row">
+            <div class="col-sm-12" style="background-color:<? echo $barva_box; ?>;">        
                                                           
                                                                           <div class="col-sm-2">
                                                                               <br>
@@ -606,10 +588,6 @@ function loadTreninkCerpat<? echo $treninkovy_plan_id;?>() {
 
 
 
-
-<br>
-
-  
   
   
     <?
