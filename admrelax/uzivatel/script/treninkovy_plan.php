@@ -537,16 +537,6 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
 
 
 
-
-
-
-
-
-
-
-
-
-
  <div id="uniquename_T<? echo $treninkovy_plan_id; ?>" style="display:none;">
 
     <div id="treninkovy_plan<?echo $treninkovy_plan_id; ?>">
@@ -1018,26 +1008,9 @@ function loadTreninkCerpat<? echo $treninkovy_plan_id;?>() {
      }
 
 </script>    
-
-
-
-
-
 </div>
-
-
-
-
-
 <br>
-
-  
-  
-  
     <?
         }
 
     ?>
-
-
-<br/>-----------------------------------------------<br/>
