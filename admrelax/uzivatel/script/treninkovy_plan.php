@@ -447,11 +447,11 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
 
     }elseif($stav_treninku == 3){ //stornováno klientem
         $barva_box = '#eee4a9';
-        $stav_treninku_str = 'Stornováno klientem'; 
+        $stav_treninku_str = 'Storno klientem'; 
 
     }elseif($stav_treninku == 4){ //stornováno Relaxartem
         $barva_box = '#eee4a9';
-        $stav_treninku_str = 'Stornováno Relexartem'; 
+        $stav_treninku_str = 'Storno Relexartem'; 
 
     }else{
         $barva_box = '#828283'; // chybovy stav
@@ -484,16 +484,16 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
   ?>
 
 
-<div class="row">
-    <div class="col-sm-12">  
-        
+<div class="row" style="border-style: double;">
+    <div class="col-sm-12"  style="background-color:<? echo $barva_box; ?>;">  
+     <br>   
 
 
                     <div class="col-sm-3"> 
                     <b>Typ tréninku: <? echo $typ_treninku_tmp;?></b> 
                     </div>
 
-                    <div class="col-sm-3" style="background-color:<? echo $barva_box; ?>;"> 
+                    <div class="col-sm-2"> 
                     Stav: <? echo $stav_treninku_str?>
                     </div>
 
@@ -523,15 +523,16 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
                 </script>
 
       
-                <div class="col-sm-1"> 
+                <div class="col-sm-2"> 
                             <a href="javascript:ReverseDisplay('uniquename_T<? echo $treninkovy_plan_id;?>')">
                             <button type="button" class="btn btn-default btn-sm" >
                             <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Podrobnosti</button>
-                            </a> 
+                            </a><br><br>
                 </div>
-      </div>
-    </div>
- <br>
+         </div>
+    
+        </div>
+ 
 
 
 
@@ -1004,7 +1005,7 @@ function loadTreninkCerpat<? echo $treninkovy_plan_id;?>() {
         var prihlaseny_uzivatel = "<? echo $_SESSION['uzivatel_jmeno_session'].' '.$_SESSION['uzivatel_prijmeni_session']; ?>";
         treninkovy_plan_cerpani_id = treninkovy_plan_cerpani_id + "&prihlaseny_uzivatel="+prihlaseny_uzivatel;
         if (confirm("Opravdu chcete čerpat lekci?\n"+
-        "\nPočet zbývajících lekcí: "+k_cerpani) == true){
+        "Počet zbývajících lekcí: "+k_cerpani) == true){
 
        xhttp.open("POST", "./script/modul_trenink_cerpani.php", true);
        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
