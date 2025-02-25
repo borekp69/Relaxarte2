@@ -15,6 +15,13 @@ header("Pragma: no-cache");
 
 ?>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+
+
+
+
 
 
 <script src="./js/jencisla.js"></script> 
@@ -484,29 +491,51 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
   ?>
 
 
-<div class="row" style="border-style: double;">
-    <div class="col-sm-12"  style="background-color:<? echo $barva_box; ?>;">  
-     <br>   
+    <div class="row" style="border-style: double;">
 
 
-                    <div class="col-sm-3"> 
-                    <b>Typ tréninku: <? echo $typ_treninku_tmp;?></b> 
-                    </div>
-
-                    <div class="col-sm-2"> 
-                    Stav: <? echo $stav_treninku_str?>
-                    </div>
-
-                    <div class="col-sm-2"> 
-                    <b>K čerpání: <? echo  $k_cerpani; ?></b> 
-                    </div>
-
-                    <div class="col-sm-3"> 
-                    <b><? echo $lektor;?></b>                    
-                    </div>
 
 
-     
+    <script>
+                $(document).ready(function(){
+                    setInterval(function(){
+                        $.ajax({
+                            url: 'script/test/content.php?treninkovy_plan_id=<? echo $treninkovy_plan_id; ?>', // URL of the server-side script
+                            success: function(data) {
+                                $('#content_<? echo $treninkovy_plan_id; ?>').html(data); // Update the content of the DIV element
+                            }
+                        });
+                    }, 5000); // Refresh the content every 5 seconds
+                });
+                </script>
+      
+
+
+
+                <div class="col-sm-12"  style="background-color:<? echo $barva_box; ?>;">  
+                <br>   
+
+
+
+                                    <div class="col-sm-3"> 
+                                    <b>Typ tréninku: <? echo $typ_treninku_tmp;?></b> 
+                                    </div>                    
+
+                                    <div class="col-sm-2"  id="content_<? echo $treninkovy_plan_id; ?>"> 
+                                    <b>Stav: <? echo $stav_treninku_str;?></b>
+                                    </div>
+
+                                    <div class="col-sm-2"> 
+                                    <b>K čerpání: <? echo  $k_cerpani; ?></b> 
+                                    </div>
+
+                                    <div class="col-sm-3"> 
+                                    <b><? echo $lektor;?></b>                    
+                                    </div>
+
+
+
+              
 
 
                 <script type="text/javascript" language="JavaScript">
@@ -531,8 +560,22 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
                 </div>
          </div>
     
-        </div>
- 
+    </div>
+
+
+
+  
+
+
+
+
+    
+    
+
+
+
+
+
 
 
 

@@ -10,7 +10,7 @@
 $(document).ready(function(){
     setInterval(function(){
         $.ajax({
-            url: 'content.php', // URL of the server-side script
+            url: 'content.php?uzivatel_id=10', // URL of the server-side script
             success: function(data) {
                 $('#content').html(data); // Update the content of the DIV element
             }
@@ -20,4 +20,4 @@ $(document).ready(function(){
 </script>
 
 obsah:
-<div id="content"></div>
+<div id="content">XXXXXX</div>
