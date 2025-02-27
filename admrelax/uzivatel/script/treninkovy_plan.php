@@ -496,19 +496,7 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
 
 
 
-    <script>
-                $(document).ready(function(){
-                    setInterval(function(){
-                        $.ajax({
-                            url: 'script/test/content.php?treninkovy_plan_id=<? echo $treninkovy_plan_id; ?>', // URL of the server-side script
-                            success: function(data) {
-                                $('#content_<? echo $treninkovy_plan_id; ?>').html(data); // Update the content of the DIV element
-                            }
-                        });
-                    }, 5000); // Refresh the content every 5 seconds
-                });
-                </script>
-      
+
 
 
 
@@ -521,11 +509,11 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
                                     <b>Typ tréninku: <? echo $typ_treninku_tmp;?></b> 
                                     </div>                    
 
-                                    <div class="col-sm-2"  id="content_<? echo $treninkovy_plan_id; ?>"> 
+                                    <div class="col-sm-2"  id="content_stav<? echo $treninkovy_plan_id; ?>"> 
                                     <b>Stav: <? echo $stav_treninku_str;?></b>
                                     </div>
 
-                                    <div class="col-sm-2"> 
+                                    <div class="col-sm-2" id="content_k_cerpani<? echo $treninkovy_plan_id; ?>"> 
                                     <b>K čerpání: <? echo  $k_cerpani; ?></b> 
                                     </div>
 
@@ -561,21 +549,6 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
          </div>
     
     </div>
-
-
-
-  
-
-
-
-
-    
-    
-
-
-
-
-
 
 
 
@@ -1043,6 +1016,30 @@ function loadTreninkCerpat<? echo $treninkovy_plan_id;?>() {
        xhttp.open("POST", "./script/modul_trenink_cerpani.php", true);
        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
        xhttp.send(treninkovy_plan_cerpani_id);
+
+       $(document).ready(function(){
+                    setInterval(function(){
+                        $.ajax({
+                            url: 'script/test/content.php?q=1&treninkovy_plan_id=<? echo $treninkovy_plan_id; ?>',                            
+                            success: function(data) {
+                                $('#content_stav<? echo $treninkovy_plan_id; ?>').html(data);                              
+                            }                            
+                        });
+                    }, ); 
+                });
+
+
+                $(document).ready(function(){
+                    setInterval(function(){
+                        $.ajax({                           
+                            url: 'script/test/content.php?q=2&treninkovy_plan_id=<? echo $treninkovy_plan_id; ?>', 
+                            success: function(data) {                               
+                                $('#content_k_cerpani<? echo $treninkovy_plan_id; ?>').html(data);
+                            }                            
+                        });
+                    }, ); 
+                })
+
     
     }else{
           // bylo stisknuto STORNO  

@@ -1,15 +1,12 @@
 <?
 //$uzivatel_id  = 10;
-$treninkovy_plan_id = htmlspecialchars(trim("$_GET[treninkovy_plan_id]")); 
+$q = htmlspecialchars(trim("$_GET[q]")); 
 $treninkovy_plan_id_form = htmlspecialchars(trim("$_GET[treninkovy_plan_id]")); 
 
   require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
-  $sql_trenink_plan = "SELECT * FROM treninkovy_plan WHERE treninkovy_plan_id = $treninkovy_plan_id ";
+  $sql_trenink_plan = "SELECT * FROM treninkovy_plan WHERE treninkovy_plan_id = $treninkovy_plan_id_form ";
   $result_trenink_plan = $conn->query($sql_trenink_plan);
-          while($radek_trenink_plan = $result_trenink_plan->fetch_assoc()) {
-
-
-        
+          while($radek_trenink_plan = $result_trenink_plan->fetch_assoc()) {        
               $k_cerpani = $radek_trenink_plan["k_cerpani"];
               $lektor_procedury =  $radek_trenink_plan["lektor_procedury"];
               $typ_treninku = $radek_trenink_plan["typ_treninku"];          
@@ -54,24 +51,45 @@ $treninkovy_plan_id_form = htmlspecialchars(trim("$_GET[treninkovy_plan_id]"));
                       $typ_treninku_tmp = 'Chybný stav tréninku';
                   }
 
-                              require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
-                              $sql = "SELECT * FROM lektor WHERE lektor_id = $lektor_procedury";
-                              $result = $conn->query($sql);
-                              while($radek = $result->fetch_assoc()) {
-                              $lektor = $radek["lektor_titul"].' '. $radek["lektor_prijmeni"].' '.$radek["lektor_jmeno"];                               
-                              } 
-                              $conn->close();
+                             // require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+                             // $sql = "SELECT * FROM lektor WHERE lektor_id = $lektor_procedury";
+                             // $result = $conn->query($sql);
+                             // while($radek = $result->fetch_assoc()) {
+                             // $lektor = $radek["lektor_titul"].' '. $radek["lektor_prijmeni"].' '.$radek["lektor_jmeno"];                               
+                             // } 
+                             // $conn->close();
 ?>
 
 
 
        
+<? 
+    if ($q== 1){ // stav treninku
 
-               
-                 <? //echo $stav_treninku_str;?>      
-                <?// echo 'stav_treninku_str:'.$stav_treninku_str.'<br>';?>
-                <b>Stav: <? echo $stav_treninku_str;?></b>
-                  
+echo '<b>Stav: '.$stav_treninku_str.'</b>';
+
+}else if ($q == 2){  // k čerpání
+    
+    echo '<b>K čerpání: '.$k_cerpani.'</b>';  
+
+}else if ($q == 3){  //barva podkladu
+    
+    echo '<b>K čerpání: '.$k_cerpani.'</b>';     
+
+}else{ 
+
+    echo '<b>Chybný parametr funkce</b>';
+}    
+
+
+?>      
+
+
+
+
+
+
+     
 
            
           
@@ -86,4 +104,5 @@ $treninkovy_plan_id_form = htmlspecialchars(trim("$_GET[treninkovy_plan_id]"));
 
 <?
 }
+$conn->close();
 ?>
