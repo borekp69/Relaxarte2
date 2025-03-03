@@ -74,7 +74,7 @@ echo '<b>Stav: '.$stav_treninku_str.'</b>';
 
 }else if ($q == 3){  //barva podkladu
     
-    echo '<b>K čerpání: '.$k_cerpani.'</b>';     
+    echo '</b>';     
 
 }else{ 
 

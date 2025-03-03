@@ -1020,7 +1020,7 @@ function loadTreninkCerpat<? echo $treninkovy_plan_id;?>() {
        $(document).ready(function(){
                     setInterval(function(){
                         $.ajax({
-                            url: 'script/test/content.php?q=1&treninkovy_plan_id=<? echo $treninkovy_plan_id; ?>',                            
+                            url: 'script/jQuery/content.php?q=1&treninkovy_plan_id=<? echo $treninkovy_plan_id; ?>',                            
                             success: function(data) {
                                 $('#content_stav<? echo $treninkovy_plan_id; ?>').html(data);                              
                             }                            
@@ -1032,7 +1032,7 @@ function loadTreninkCerpat<? echo $treninkovy_plan_id;?>() {
                 $(document).ready(function(){
                     setInterval(function(){
                         $.ajax({                           
-                            url: 'script/test/content.php?q=2&treninkovy_plan_id=<? echo $treninkovy_plan_id; ?>', 
+                            url: 'script/jQuery/content.php?q=2&treninkovy_plan_id=<? echo $treninkovy_plan_id; ?>', 
                             success: function(data) {                               
                                 $('#content_k_cerpani<? echo $treninkovy_plan_id; ?>').html(data);
                             }                            
