@@ -7,17 +7,29 @@ $treninkovy_plan_delete_id = htmlspecialchars(trim("$_POST[treninkovy_plan_delet
 //echo 'ID trenink:'.$treninkovy_plan_delete_id.'<br>';
 
 require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
-$sql = "DELETE FROM treninkovy_plan WHERE treninkovy_plan_id = $treninkovy_plan_delete_id. LIMIT 1";
+$sql = "DELETE FROM treninkovy_plan WHERE treninkovy_plan_id = $treninkovy_plan_delete_id ";
  
 if ($conn->query($sql) === TRUE) {    
 } else {
 echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
 }  
 
-echo '<b>Trénink byl smazán.</b>';
-//  ---- Dodelat mazání položek !!!!!!!!!!!!!!!!!!!
 
-
+require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+$sql = "DELETE FROM treninkovy_plan_cerpani WHERE treninkovy_plan_id = $treninkovy_plan_delete_id  ";
+ 
+if ($conn->query($sql) === TRUE) {    
+} else {
+echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
+} 
 
 
 ?>
+
+            <div class="alert alert-danger">
+            <strong>Upozornění</strong> Tréninkový plán byl smazán!
+            </div>        
+
+
+
+

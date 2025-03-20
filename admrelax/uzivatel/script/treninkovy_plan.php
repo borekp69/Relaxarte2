@@ -500,7 +500,7 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
 
 
 
-                <div class="col-sm-12"  style="background-color:<? echo $barva_box; ?>;">  
+                <div class="col-sm-12">  
                 <br>   
 
 
@@ -855,17 +855,60 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
                     ?>
 
 
-                            <br/><br/>                     
+
+                                                            <br/>  <br/> 
+                                                            <b>Histrie čerpání tréninku:</b>
+                                                            <br/>  <br/> 
+                                                            <?
+                                                            require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+                                                            $sql_treninkovy_plan_cerpani = "SELECT * FROM treninkovy_plan_cerpani WHERE	treninkovy_plan_id = $treninkovy_plan_id  ORDER BY datum ASC";
+
+
+
+                                                            $result_trenink_plan_cerpani = $conn->query($sql_treninkovy_plan_cerpani);
+                                                            while($radek_trenink_plan_cerpani = $result_trenink_plan_cerpani->fetch_assoc()) {
+
+                                                            ?>
+
+                                                            <div class="row" style="background-color:<? echo $barva_box; ?>;">
+                                                                                <div class="col-sm-12">
+
+                                                                                <div class="col-sm-4">
+                                                                                <label for="uzivatel">Datum:</label>
+                                                                                <? echo $radek_trenink_plan_cerpani["datum"];?></div>
+
+                                                                                <div class="col-sm-4">
+                                                                                <label for="uzivatel">Čerpání zadal:</label>
+                                                                                <? echo $radek_trenink_plan_cerpani["prihlaseny_uzivatel"];?></div>
+
+                                                                                </div>
+
+                                                            </div>
+
+
+                                                            <?
+                                                            }
+
+                                                            $conn->close();
+                                                            ?>
+
+
+
+
+                            <br/>                    
                         </div>
 
 
+         
             
-            </form>
+               </form>
             </div> 
             <br>
  </div>
-
-
+            
+ 
+ 
+ 
 
 <script>
   function loadTreninkDelete<? echo $treninkovy_plan_id;?>() {
@@ -896,6 +939,30 @@ var TypTrenConfirm = TypTren.options[TypTren.selectedIndex].text;
        xhttp.open("POST", "./script/modul_trenink_delete.php", true);
        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
        xhttp.send(treninkovy_plan_delete_id);
+
+
+       $(document).ready(function(){
+                    setInterval(function(){
+                        $.ajax({
+                            url: 'script/jQuery/content.php?q=1&treninkovy_plan_id=<? echo $treninkovy_plan_id; ?>',                            
+                            success: function(data) {
+                                $('#content_stav<? echo $treninkovy_plan_id; ?>').html(data);                              
+                            }                            
+                        });
+                    }, ); 
+                });
+
+
+                $(document).ready(function(){
+                    setInterval(function(){
+                        $.ajax({                           
+                            url: 'script/jQuery/content.php?q=2&treninkovy_plan_id=<? echo $treninkovy_plan_id; ?>', 
+                            success: function(data) {                               
+                                $('#content_k_cerpani<? echo $treninkovy_plan_id; ?>').html(data);
+                            }                            
+                        });
+                    }, ); 
+                })
     
     }else{
           // bylo stisknuto STORNO  
@@ -1047,7 +1114,7 @@ function loadTreninkCerpat<? echo $treninkovy_plan_id;?>() {
 
      }
 
-</script>    
+    </script>    
 </div>
 <br>
     <?

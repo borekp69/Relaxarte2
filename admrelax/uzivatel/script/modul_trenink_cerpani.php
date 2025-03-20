@@ -421,17 +421,50 @@ $conn->close();
                         
                     }
                     ?>
+                                                            <br/>  <br/> 
+                                                            <b>Histrie čerpání tréninku:</b>
+                                                            <br/>  <br/> 
+                                                            <?
+                                                            require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+                                                            $sql_treninkovy_plan_cerpani = "SELECT * FROM treninkovy_plan_cerpani WHERE	treninkovy_plan_id = $treninkovy_plan_id  ORDER BY datum ASC";
 
 
-                            <br/><br/>                     
+
+                                                            $result_trenink_plan_cerpani = $conn->query($sql_treninkovy_plan_cerpani);
+                                                            while($radek_trenink_plan_cerpani = $result_trenink_plan_cerpani->fetch_assoc()) {
+
+                                                            ?>
+
+                                                            <div class="row" style="background-color:<? echo $barva_box; ?>;">
+                                                                                <div class="col-sm-12">
+
+                                                                                <div class="col-sm-4">
+                                                                                <label for="uzivatel">Datum:</label>
+                                                                                <? echo $radek_trenink_plan_cerpani["datum"];?></div>
+
+                                                                                <div class="col-sm-4">
+                                                                                <label for="uzivatel">Čerpání zadal:</label>
+                                                                                <? echo $radek_trenink_plan_cerpani["prihlaseny_uzivatel"];?></div>
+
+                                                                                </div>
+
+                                                            </div>
+
+
+                                                            <?
+                                                            }
+
+                                                            $conn->close();
+                                                            ?>
+
+                            <br/>                   
                         </div>
 
 
             
             </form>
             </div> 
-            <br>
-
+       
 
 
 
