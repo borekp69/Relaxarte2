@@ -165,7 +165,7 @@ header("Pragma: no-cache");
                         
                                 <div class="col-sm-3">
                                         <br>
-                                        <label for="uzivatel">Problémy po oblíbeném jídle</label>
+                                        <label for="uzivatel">Problémy po oblíbeném jídle:</label>
                                         <select class="form-control" id="problemy_po_oblibenem_jidle" name="problemy_po_oblibenem_jidle">
                                         <option value="0"> Vyberte možnost</option>
                                         <option value="1">Ano</option>
@@ -181,7 +181,7 @@ header("Pragma: no-cache");
 
                                 <div class="col-sm-3">
                                         <br>
-                                        <label for="uzivatel">Problémy po jídle obecně</label>
+                                        <label for="uzivatel">Problémy po jídle obecně:</label>
                                         <select class="form-control" id="problemy_po_jidle_obecne" name="problemy_po_jidle_obecne">
                                         <option value="0"> Vyberte možnost</option>
                                         <option value="1">Ano</option>
