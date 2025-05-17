@@ -200,44 +200,70 @@ header("Pragma: no-cache");
 
 
          <div class="row">
-                    <div class="col-sm-12" style="background-color:#DBDBDB;">  
-                                    <div class="col-sm-3">
+                        <div class="col-sm-12" style="background-color:#DBDBDB;">  
+                                        <div class="col-sm-3">
+                                                        <br>
+                                                        <label for="uzivatel">Spánek</label>
+                                                        <select class="form-control" id="spanek" name="spanek">
+                                                        <option value="0"> Vyberte možnost</option>
+                                                        <option value="1">Dobrý</option>
+                                                        <option value="2">Špatný</option>
+                                                        <option value="3">Nemožnost usnout</option>
+                                                        <option value="4">Mluvení ze spaní</option>
+                                                        <option value="5">Klidný</option>
+                                                        <option value="6">Neklidný</option>
+                                                        <option value="7">Časté buzení</option> 
+                                                        
+                                                        </select>
+                                        </div>
+                        
+                                        <div class="col-sm-3">
                                                 <br>
-                                                <label for="uzivatel">Spánek</label>
-                                                <select class="form-control" id="spanek" name="spanek">
-                                                <option value="0"> Vyberte možnost</option>
-                                                <option value="1">Dobrý</option>
-                                                <option value="2">Špatný</option>
-                                                <option value="3">Nemožnost usnout</option>
-                                                <option value="4">Mluvení ze spaní</option>
-                                                <option value="5">Klidný</option>
-                                                <option value="6">Neklidný</option>
-                                                <option value="7">Časté buzení</option>   
-                                                </option>
-                                                </select>
-                                    </div>
-                
-                                    <div class="col-sm-3">
-                                            <br>
-                                            <label for="uzivatel">Poloha ve spánku:</label>
-                                            <input type="text" class="form-control form-control-sm" id="poloha_ve_spanku" value = "" name="poloha_ve_spanku" maxlength="100" placeholder="Poloha ve spánku" >        
-                                    </div> 
+                                                <label for="uzivatel">Poloha ve spánku:</label>
+                                                <input type="text" class="form-control form-control-sm" id="poloha_ve_spanku" value = "" name="poloha_ve_spanku" maxlength="100" placeholder="Poloha ve spánku" >        
+                                        </div> 
 
-                                    <div class="col-sm-3">
-                                            <br>
-                                            <label for="uzivatel">V jakou hodinu nemůžete spát?</label>
-                                            <input type="text" class="form-control form-control-sm" id="v_jakou_hodinu_nemuzete_spat" value = "" name="v_jakou_hodinu_nemuzete_spat" maxlength="100" placeholder="V jakou hodinu nemůžete spát?" >        
-                                    </div> 
-                
-                    </div>
-        
-        
-        
-        
-        
-        
-        
+                                        <div class="col-sm-3">
+                                                <br>
+                                                <label for="uzivatel">V jakou hodinu nemůžete spát?</label>
+                                                <input type="text" class="form-control form-control-sm" id="v_jakou_hodinu_nemuzete_spat" value = "" name="v_jakou_hodinu_nemuzete_spat" maxlength="100" placeholder="V jakou hodinu nemůžete spát?" >        
+                                        </div> 
+                        
+                       </div>           
         </div>
+
+
+        <div class="row">
+                        <div class="col-sm-12" style="background-color:#DBDBDB;">  
+                                <div class="col-sm-3">
+                                                        <br>
+                                                        <label for="uzivatel">Vracejí se některé sny:</label>
+                                                        <select class="form-control" id="vraceji_se_nektere_sny" name="vraceji_se_nektere_sny">
+                                                        <option value="0"> Vyberte možnost</option>
+                                                        <option value="1">Ano</option>
+                                                        <option value="2">Ne</option>  
+                                                        </select>
+                                </div>
+
+                                <div class="col-sm-6">
+                                                <br>
+                                                <label for="uzivatel">Popis:</label>
+                                                <input type="text" class="form-control form-control-sm" id="popis_snu" value = "" name="popis_snu" maxlength="100" placeholder="Které sny se Vám často vracejí?" >        
+                                </div> 
+
+
+
+
+
+
+                        </div>
+
+
+
+
+        </div>       
+
+
 
 
 
