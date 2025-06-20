@@ -309,7 +309,7 @@ header("Pragma: no-cache");
                                                                                 </select>
                                                         </div>  
                                                         
-                                                        <div class="col-sm-3">
+                                                        <div class="col-sm-2">
                                                                <br><br>
                                                                 <div class="checkbox">
                                                                 <label><input type="checkbox" name="bourka" value="1">bouřka</label>
@@ -352,15 +352,45 @@ header("Pragma: no-cache");
                                                                 </div> 
                                                                 
                                                                 <div class="checkbox">
-                                                                <label><input type="checkbox" name="jine" value="1">jiné</label>
+                                                                <label><input type="checkbox" name="jine" value="1" id="Moje_strachy" onclick="myFunction_strachy()">jiné</label>
                                                                 </div>       
 
                                                         </div>        
 
 
 
+                                                                <div class="col-sm-7" id="text_strach" style="display:none">
+                                                                                        <br>
+                                                                                        <label for="uzivatel">Popis:</label>
+                                                                                        <input type="text" class="form-control form-control-sm" id="popis_strachu" value = "" name="popis_strachu" maxlength="200" placeholder="Popis strachu" >        
+                                                                </div> 
+
+
+
+
+
+
+
+
+                                                        
+
+
                                                 </div>
                                 </div>  
+
+
+<script>
+function myFunction_strachy() {
+  var checkBox = document.getElementById("Moje_strachy");
+  var text = document.getElementById("text_strach");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+
 
 
 <br>XXXXXXXXXXXXXXX<br>
