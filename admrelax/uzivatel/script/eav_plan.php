@@ -299,97 +299,99 @@ header("Pragma: no-cache");
 
                                 <div class="row">
                                                 <div class="col-sm-12" style="background-color:#DBDBDB;">  
-                                                        <div class="col-sm-3">
-                                                                                <br>
-                                                                                <label for="uzivatel">Strachy v životě:</label>
-                                                                                <select class="form-control" id="strachy_v_zivote" name="strachy_v_zivote">
-                                                                                <option value="0"> Vyberte možnost</option>
-                                                                                <option value="1">Ano</option>
-                                                                                <option value="2">Ne</option>  
-                                                                                </select>
-                                                        </div>  
-                                                        
-                                                        <div class="col-sm-2">
-                                                               <br><br>
-                                                                <div class="checkbox">
-                                                                <label><input type="checkbox" name="bourka" value="1">bouřka</label>
-                                                                </div>
-
-                                                                <div class="checkbox">
-                                                                <label><input type="checkbox" name="vyska" value="1">výška</label>
-                                                                </div>
-                                                             
-                                                                <div class="checkbox">
-                                                                <label><input type="checkbox" name="zkouska" value="1">zkouška</label>
-                                                                </div>
-
-                                                                <div class="checkbox">
-                                                                <label><input type="checkbox" name="voda" value="1">voda</label>
-                                                                </div>  
-                                                                
-                                                                <div class="checkbox">
-                                                                <label><input type="checkbox" name="nemoc" value="1">nemoc</label>
-                                                                </div> 
-                                                                
-                                                                <div class="checkbox">
-                                                                <label><input type="checkbox" name="zvire" value="1">zvíře</label>
-                                                                </div> 
-                                                                
-                                                                <div class="checkbox">
-                                                                <label><input type="checkbox" name="cestovani" value="1">cestování</label>
-                                                                </div>   
-
-                                                                <div class="checkbox">
-                                                                <label><input type="checkbox" name="dopravni_prostredek" value="1">dopravní prostředek</label>
-                                                                </div>  
-
-                                                                <div class="checkbox">
-                                                                <label><input type="checkbox" name="zlodej" value="1">zloděj</label>
-                                                                </div> 
-
-                                                                <div class="checkbox">
-                                                                <label><input type="checkbox" name="smrt" value="1">smrt</label>
-                                                                </div> 
-                                                                
-                                                                <div class="checkbox">
-                                                                <label><input type="checkbox" name="jine" value="1" id="Moje_strachy" onclick="myFunction_strachy()">jiné</label>
-                                                                </div>       
-
-                                                        </div>        
-
-
-
-                                                                <div class="col-sm-7" id="text_strach" style="display:none">
+                                                                <div class="col-sm-3">
                                                                                         <br>
-                                                                                        <label for="uzivatel">Popis:</label>
-                                                                                        <input type="text" class="form-control form-control-sm" id="popis_strachu" value = "" name="popis_strachu" maxlength="200" placeholder="Popis strachu" >        
-                                                                </div> 
-
-
-
-
-
-
-
-
+                                                                                        <label for="uzivatel">Strachy v životě:</label>
+                                                                                        <select class="form-control" id="strachy_v_zivote" name="strachy_v_zivote">
+                                                                                        <option value="0"> Vyberte možnost</option>
+                                                                                        <option value="1">Ano</option>
+                                                                                        <option value="2">Ne</option>  
+                                                                                        </select>
+                                                                                        <br>
+                                                                </div>  
                                                         
+                                                        <div class="form-group" id="ZivotniStrachy">
+
+                                                                                                <div class="col-sm-2">
+                                                                                                        <br><br>
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="bourka" value="1">bouřka</label>
+                                                                                                        </div>
+
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="vyska" value="1">výška</label>
+                                                                                                        </div>
+                                                                                                
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="zkouska" value="1">zkouška</label>
+                                                                                                        </div>
+
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="voda" value="1">voda</label>
+                                                                                                        </div>  
+                                                                                                        
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="nemoc" value="1">nemoc</label>
+                                                                                                        </div> 
+                                                                                                        
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="zvire" value="1">zvíře</label>
+                                                                                                        </div> 
+                                                                                                        
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="cestovani" value="1">cestování</label>
+                                                                                                        </div>   
+
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="dopravni_prostredek" value="1">dopravní prostředek</label>
+                                                                                                        </div>  
+
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="zlodej" value="1">zloděj</label>
+                                                                                                        </div> 
+
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="smrt" value="1">smrt</label>
+                                                                                                        </div> 
+                                                                                                        
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="jine" value="1" id="Moje_strachy" onclick="myFunction_strachy()">jiné</label>
+                                                                                                        </div>      
+
+                                                                                                </div>        
 
 
+                                                                                                        <div class="col-sm-7" id="text_strach" style="display:none">
+                                                                                                                                <br>
+                                                                                                                                <label for="uzivatel">Popis:</label>
+                                                                                                                                <input type="text" class="form-control form-control-sm" id="popis_strachu" value = "" name="popis_strachu" maxlength="200" placeholder="Popis strachu" >        
+                                                                                                        </div> 
+                                
+                                                                                                        
+                                                        </div>
+                                                       
+ 
                                                 </div>
+                                           
                                 </div>  
 
 
-<script>
-function myFunction_strachy() {
-  var checkBox = document.getElementById("Moje_strachy");
-  var text = document.getElementById("text_strach");
-  if (checkBox.checked == true){
-    text.style.display = "block";
-  } else {
-     text.style.display = "none";
-  }
-}
-</script>
+
+
+
+                <script src="./js/strachy.js"></script>
+
+                <script>
+                function myFunction_strachy() {
+                var checkBox = document.getElementById("Moje_strachy");
+                var text = document.getElementById("text_strach");
+                if (checkBox.checked == true){
+                text.style.display = "block";
+                } else {
+                text.style.display = "none";
+                }
+                }
+                </script>
 
 
 
