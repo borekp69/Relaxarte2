@@ -13,6 +13,13 @@ header("Pragma: no-cache");
 
 <h4>Diagnostika EAV:</h4>
 
+
+ <form action="./script/eav_plan_insert.php" method="post"> 
+
+
+
+
+
 <div id="diagnostika_eav_<?echo $uzivatel_id; ?>">
 
                         <div class="row">
@@ -31,7 +38,9 @@ header("Pragma: no-cache");
                                                         <input type="text" class="form-control form-control-sm" id="reakce_na_pocasi" value = "" name="reakce_na_pocasi" maxlength="100" placeholder="chladné, vlhké, horké, suché, mlha, bouřka, změny, sníh, vítr">
                                                         </div>
                                         </div>
+                                </div>
 
+                                <div class="row">
 
                                         <div class="col-sm-12" style="background-color:#DBDBDB;">             
                                                 <div class="col-sm-3">
@@ -47,7 +56,7 @@ header("Pragma: no-cache");
                                                 <div class="col-sm-4">
                                                 <br>
                                                 <label for="uzivatel">Doplňte fázi měsíce:</label>
-                                                <input type="text" class="form-control form-control-sm" id="reakce_na mesicni_cyklus_text" value = "" name="reakce_na mesicni_cyklus_text" maxlength="100" placeholder="nov, přibývání, ubývání">        
+                                                <input type="text" class="form-control form-control-sm" id="reakce_na_mesicni_cyklus_text" value = "" name="reakce_na_mesicni_cyklus_text" maxlength="100" placeholder="nov, přibývání, ubývání">        
                                                 </div>    
 
                                                 <div class="col-sm-3">
@@ -61,6 +70,7 @@ header("Pragma: no-cache");
                                                 </div> 
                                         </div>   
                         </div>
+
                                 <div class="row">
 
                                                         <div class="col-sm-12" style="background-color:#DBDBDB;">    
@@ -68,7 +78,7 @@ header("Pragma: no-cache");
                                                                 <div class="col-sm-3">
                                                                         <br>
                                                                         <label for="uzivatel">Preference nápojů:</label>
-                                                                        <select class="form-control" id="preference_nápoju" name="preference_nápoju">
+                                                                        <select class="form-control" id="preference_napoju" name="preference_napoju">
                                                                         <option value="0"> Vyberte možnost</option>
                                                                         <option value="1">teplé</option>
                                                                         <option value="2">studené</option>
@@ -78,7 +88,7 @@ header("Pragma: no-cache");
                                                                 <div class="col-sm-4">
                                                                 <br>
                                                                 <label for="uzivatel">Druh nápojů:</label>
-                                                                <input type="text" class="form-control form-control-sm" id="druh_napoju" value = "" name="reakce_na mesicni_cyklus_text" maxlength="100" placeholder="Druh nápojů">        
+                                                                <input type="text" class="form-control form-control-sm" id="druh_napoju" value = "" name="druh_napoju" maxlength="100" placeholder="Druh nápojů">        
                                                                 </div> 
                                                                 
                                                                 <div class="col-sm-3">
@@ -181,7 +191,7 @@ header("Pragma: no-cache");
                                                                         <div class="col-sm-9">
                                                                                 <br>
                                                                                 <label for="uzivatel">Popis problémů:</label>
-                                                                                <input type="text" class="form-control form-control-sm" id="problemy_po_oblibenem_jidle" value = "" name="problemy_po_oblibenem_jidle" maxlength="200" placeholder="Popis problémů po oblíbeném jídle" >        
+                                                                                <input type="text" class="form-control form-control-sm" id="problemy_po_oblibenem_jidle_text" value = "" name="problemy_po_oblibenem_jidle_text" maxlength="200" placeholder="Popis problémů po oblíbeném jídle" >        
                                                                         </div>                                              
                                                         </div> 
                                                         <script src="./js/oblibenejidlo.js"></script>
@@ -215,7 +225,7 @@ header("Pragma: no-cache");
                                                                         <div class="col-sm-9">
                                                                                 <br>
                                                                                 <label for="uzivatel">Popis problémů:</label>
-                                                                                <input type="text" class="form-control form-control-sm" id="problemy_po_jidle_obecne_popis" value = "" name="problemy_po_jidle_obecne_popis" maxlength="200" placeholder="Popis problémů po jídle obecně" >        
+                                                                                <input type="text" class="form-control form-control-sm" id="problemy_po_jidle_obecne_text" value = "" name="problemy_po_jidle_obecne_text" maxlength="200" placeholder="Popis problémů po jídle obecně" >        
                                                                         </div>     
                                                         </div>
                                                         <script src="./js/obecnejidlo.js"></script>
@@ -848,6 +858,10 @@ header("Pragma: no-cache");
                                                 </div>                                                                         
                                         </div>
         </div>
+
+
+  <center><button type="submit" class="btn btn-success">&nbsp;<span class="glyphicon glyphicon-save"></span>&nbsp;&nbsp;Uložit&nbsp;&nbsp;</button></center>
+ </form>
 
 
 
