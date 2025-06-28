@@ -77,9 +77,50 @@ $lymmfa_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[lymmfa_p_oce
 $lymmfa_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[lymmfa_l_aktualni]")));
 $lymmfa_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[lymmfa_l_ocekavana]")));
 
+$plice_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[plice_p_aktualni]")));
+$plice_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[plice_p_ocekavana]")));
+$plice_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[plice_l_aktualni]")));
+$plice_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[plice_l_ocekavana]")));
 
+$tluste_strevo_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[tluste_strevo_p_aktualni]")));
+$tluste_strevo_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[tluste_strevo_p_ocekavana]")));
+$tluste_strevo_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[tluste_strevo_l_aktualni]")));
+$tluste_strevo_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[tluste_strevo_l_ocekavana]")));
 
+$nervova_degenerace_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[nervova_degenerace_p_aktualni]")));
+$nervova_degenerace_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[nervova_degenerace_p_ocekavana]")));
+$nervova_degenerace_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[nervova_degenerace_l_aktualni]")));
+$nervova_degenerace_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[nervova_degenerace_l_ocekavana]")));
 
+$obal_srdce_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[obal_srdce_p_aktualni]")));
+$obal_srdce_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[obal_srdce_p_ocekavana]")));
+$obal_srdce_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[obal_srdce_l_aktualni]")));
+$obal_srdce_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[obal_srdce_l_ocekavana]")));
+
+$alergie_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[alergie_p_aktualni]")));
+$alergie_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[alergie_p_ocekavana]")));
+$alergie_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[alergie_l_aktualni]")));
+$alergie_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[alergie_l_ocekavana]")));
+
+$organova_degenerace_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[organova_degenerace_p_aktualni]")));
+$organova_degenerace_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[organova_degenerace_p_ocekavana]")));
+$organova_degenerace_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[organova_degenerace_l_aktualni]")));
+$organova_degenerace_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[organova_degenerace_l_ocekavana]")));
+
+$tri_ohrivace_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[tri_ohrivace_p_aktualni]")));
+$tri_ohrivace_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[tri_ohrivace_p_ocekavana]")));
+$tri_ohrivace_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[tri_ohrivace_l_aktualni]")));
+$tri_ohrivace_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[tri_ohrivace_l_ocekavana]")));
+
+$srdce_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[srdce_p_aktualni]")));
+$srdce_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[srdce_p_ocekavana]")));
+$srdce_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[srdce_l_aktualni]")));
+$srdce_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[srdce_l_ocekavana]")));
+
+$tenke_strevo_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[tenke_strevo_p_aktualni]")));
+$tenke_strevo_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[tenke_strevo_p_ocekavana]")));
+$tenke_strevo_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[tenke_strevo_l_aktualni]")));
+$tenke_strevo_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[tenke_strevo_l_ocekavana]")));
 
 
 
@@ -128,3 +169,48 @@ echo 'lymmfa_p_aktualni: '.$lymmfa_p_aktualni_form.'<br>';
 echo 'lymmfa_p_ocekavana: '.$lymmfa_p_ocekavana_form.'<br>';
 echo 'lymmfa_l_aktualni: '.$lymmfa_l_aktualni_form.'<br>';
 echo 'lymmfa_l_ocekavana: '.$lymmfa_l_ocekavana_form.'<br>';
+
+echo 'plice_p_aktualni: '.$plice_p_aktualni_form.'<br>';
+echo 'plice_p_ocekavana: '.$plice_p_ocekavana_form.'<br>';
+echo 'plice_l_aktualni: '.$plice_l_aktualni_form.'<br>';
+echo 'plice_l_ocekavana: '.$plice_l_ocekavana_form.'<br>';
+
+echo 'tluste_strevo_p_aktualni: '.$tluste_strevo_p_aktualni_form.'<br>';
+echo 'tluste_strevo_p_ocekavana: '.$tluste_strevo_p_ocekavana_form.'<br>';
+echo 'tluste_strevo_l_aktualni: '.$tluste_strevo_l_aktualni_form.'<br>';
+echo 'tluste_strevo_l_ocekavana: '.$tluste_strevo_l_ocekavana_form.'<br>';
+
+echo 'nervova_degenerace_p_aktualni: '.$nervova_degenerace_p_aktualni_form.'<br>';
+echo 'nervova_degenerace_p_ocekavana: '.$nervova_degenerace_p_ocekavana_form.'<br>';
+echo 'nervova_degenerace_l_aktualni: '.$nervova_degenerace_l_aktualni_form.'<br>';
+echo 'nervova_degenerace_l_ocekavana: '.$nervova_degenerace_l_ocekavana_form.'<br>';
+
+echo 'obal_srdce_p_aktualni: '.$obal_srdce_p_aktualni_form.'<br>';
+echo 'obal_srdce_p_ocekavana: '.$obal_srdce_p_ocekavana_form.'<br>';
+echo 'obal_srdce_l_aktualni: '.$obal_srdce_l_aktualni_form.'<br>';
+echo 'obal_srdce_l_ocekavana: '.$obal_srdce_l_ocekavana_form.'<br>';
+
+echo 'alergie_p_aktualni: '.$alergie_p_aktualni_form.'<br>';
+echo 'alergie_p_ocekavana: '.$alergie_p_ocekavana_form.'<br>';
+echo 'alergie_l_aktualni: '.$alergie_l_aktualni_form.'<br>';
+echo 'alergie_l_ocekavana: '.$alergie_l_ocekavana_form.'<br>';
+
+echo 'organova_degenerace_p_aktualni: '.$organova_degenerace_p_aktualni_form.'<br>';
+echo 'organova_degenerace_p_ocekavana: '.$organova_degenerace_p_ocekavana_form.'<br>';
+echo 'organova_degenerace_l_aktualni: '.$organova_degenerace_l_aktualni_form.'<br>';
+echo 'organova_degenerace_l_ocekavana: '.$organova_degenerace_l_ocekavana_form.'<br>';
+
+echo 'tri_ohrivace_p_aktualni: '.$tri_ohrivace_p_aktualni_form.'<br>';
+echo 'tri_ohrivace_p_ocekavana: '.$tri_ohrivace_p_ocekavana_form.'<br>';
+echo 'tri_ohrivace_l_aktualni: '.$tri_ohrivace_l_aktualni_form.'<br>';
+echo 'tri_ohrivace_l_ocekavana: '.$tri_ohrivace_l_ocekavana_form.'<br>';
+
+echo 'srdce_p_aktualni: '.$srdce_p_aktualni_form.'<br>';
+echo 'srdce_p_ocekavana: '.$srdce_p_ocekavana_form.'<br>';
+echo 'srdce_l_aktualni: '.$srdce_l_aktualni_form.'<br>';
+echo 'srdce_l_ocekavana: '.$srdce_l_ocekavana_form.'<br>';
+
+echo 'tenke_strevo_p_aktualni: '.$tenke_strevo_p_aktualni_form.'<br>';
+echo 'tenke_strevo_p_ocekavana: '.$tenke_strevo_p_ocekavana_form.'<br>';
+echo 'tenke_strevo_l_aktualni: '.$tenke_strevo_l_aktualni_form.'<br>';
+echo 'tenke_strevo_l_ocekavana: '.$tenke_strevo_l_ocekavana_form.'<br>';
