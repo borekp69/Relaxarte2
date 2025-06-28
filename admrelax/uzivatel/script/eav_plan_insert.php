@@ -122,34 +122,56 @@ $tenke_strevo_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[tenke_
 $tenke_strevo_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[tenke_strevo_l_aktualni]")));
 $tenke_strevo_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[tenke_strevo_l_ocekavana]")));
 
+$slinivka_slezina_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[slinivka_slezina_p_aktualni]")));
+$slinivka_slezina_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[slinivka_slezina_p_ocekavana]")));
+$slinivka_slezina_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[slinivka_slezina_l_aktualni]")));
+$slinivka_slezina_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[slinivka_slezina_l_ocekavana]")));
+
+$jatra_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[jatra_p_aktualni]")));
+$jatra_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[jatra_p_ocekavana]")));
+$jatra_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[jatra_l_aktualni]")));
+$jatra_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[jatra_l_ocekavana]")));
+
+$kloubni_degenerace_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[kloubni_degenerace_p_aktualni]")));
+$kloubni_degenerace_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[kloubni_degenerace_p_ocekavana]")));
+$kloubni_degenerace_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[kloubni_degenerace_l_aktualni]")));
+$kloubni_degenerace_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[kloubni_degenerace_l_ocekavana]")));
+
+$zaludek_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[zaludek_p_aktualni]")));
+$zaludek_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[zaludek_p_ocekavana]")));
+$zaludek_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[zaludek_l_aktualni]")));
+$zaludek_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[zaludek_l_ocekavana]")));
 
 
-echo 'celkova_hodnota_form: '.$celkova_hodnota_form.'<br>';
-echo 'v_jakych_rodinnych_pomerech_zijete_form: '.$v_jakych_rodinnych_pomerech_zijete_form.'<br>';
-echo 'reakce_na_pocasi_form: '.$reakce_na_pocasi_form.'<br>';
-echo 'reakce_na_mesicni_cyklus_form: '.$reakce_na_mesicni_cyklus_form.'<br>';
-echo 'reakce_na_mesicni_cyklus_text_form: '.$reakce_na_mesicni_cyklus_text_form.'<br>';
-echo 'casta_zizen_form: '.$casta_zizen_form.'<br>';
-echo 'preference_napoju_form: '.$preference_napoju_form.'<br>';
-echo 'druh_napoju_form: '.$druh_napoju_form.'<br>';
-echo 'chut_k_jidlu_form: '.$chut_k_jidlu_form.'<br>';
-echo 'hlad_v_koli_hodin_form: '.$hlad_v_koli_hodin_form.'<br>';
-echo 'oblibene_jidlo_form: '.$oblibene_jidlo_form.'<br>';
-echo 'neoblibene_jidlo_form: '.$neoblibene_jidlo_form.'<br>';
-echo 'sladke_form: '.$sladke_form.'<br>';
-echo 'soleni_form: '.$soleni_form.'<br>';
-echo 'koreneni_form: '.$koreneni_form.'<br>';
-echo 'problemy_po_oblibenem_jidle_form: '.$problemy_po_oblibenem_jidle_form.'<br>';
-echo 'problemy_po_oblibenem_jidle_text_form: '.$problemy_po_oblibenem_jidle_text_form.'<br>';
-echo 'problemy_po_jidle_obecne_form: '.$problemy_po_jidle_obecne_form.'<br>';
-echo 'problemy_po_jidle_obecne_text_form: '.$problemy_po_jidle_obecne_text_form.'<br>';
-echo 'spanek_form: '.$spanek_form.'<br>';
-echo 'poloha_ve_spanku_form: '.$poloha_ve_spanku_form.'<br>';
-echo 'v_jakou_hodinu_nemuzete_spat_form: '.$v_jakou_hodinu_nemuzete_spat_form.'<br>';
-echo 'poznamka_text_form: '.$poznamka_text_form.'<br>';
-echo 'vraceji_se_nektere_sny_form: '.$vraceji_se_nektere_sny_form.'<br>';
-echo 'popis_snu_form: '.$popis_snu_form.'<br>';
-echo 'strachy_v_zivote_form: '.$strachy_v_zivote_form.'<br>';
+
+
+
+    echo 'celkova_hodnota_form: '.$celkova_hodnota_form.'<br>';
+    echo 'v_jakych_rodinnych_pomerech_zijete_form: '.$v_jakych_rodinnych_pomerech_zijete_form.'<br>';
+    echo 'reakce_na_pocasi_form: '.$reakce_na_pocasi_form.'<br>';
+    echo 'reakce_na_mesicni_cyklus_form: '.$reakce_na_mesicni_cyklus_form.'<br>';
+    echo 'reakce_na_mesicni_cyklus_text_form: '.$reakce_na_mesicni_cyklus_text_form.'<br>';
+    echo 'casta_zizen_form: '.$casta_zizen_form.'<br>';
+    echo 'preference_napoju_form: '.$preference_napoju_form.'<br>';
+    echo 'druh_napoju_form: '.$druh_napoju_form.'<br>';
+    echo 'chut_k_jidlu_form: '.$chut_k_jidlu_form.'<br>';
+    echo 'hlad_v_koli_hodin_form: '.$hlad_v_koli_hodin_form.'<br>';
+    echo 'oblibene_jidlo_form: '.$oblibene_jidlo_form.'<br>';
+    echo 'neoblibene_jidlo_form: '.$neoblibene_jidlo_form.'<br>';
+    echo 'sladke_form: '.$sladke_form.'<br>';
+    echo 'soleni_form: '.$soleni_form.'<br>';
+    echo 'koreneni_form: '.$koreneni_form.'<br>';
+    echo 'problemy_po_oblibenem_jidle_form: '.$problemy_po_oblibenem_jidle_form.'<br>';
+    echo 'problemy_po_oblibenem_jidle_text_form: '.$problemy_po_oblibenem_jidle_text_form.'<br>';
+    echo 'problemy_po_jidle_obecne_form: '.$problemy_po_jidle_obecne_form.'<br>';
+    echo 'problemy_po_jidle_obecne_text_form: '.$problemy_po_jidle_obecne_text_form.'<br>';
+    echo 'spanek_form: '.$spanek_form.'<br>';
+    echo 'poloha_ve_spanku_form: '.$poloha_ve_spanku_form.'<br>';
+    echo 'v_jakou_hodinu_nemuzete_spat_form: '.$v_jakou_hodinu_nemuzete_spat_form.'<br>';
+    echo 'poznamka_text_form: '.$poznamka_text_form.'<br>';
+    echo 'vraceji_se_nektere_sny_form: '.$vraceji_se_nektere_sny_form.'<br>';
+    echo 'popis_snu_form: '.$popis_snu_form.'<br>';
+    echo 'strachy_v_zivote_form: '.$strachy_v_zivote_form.'<br>';
 
 echo 'bourka_form: '.$bourka_form.'<br>';
 echo 'vyska_form: '.$vyska_form.'<br>';
@@ -214,3 +236,30 @@ echo 'tenke_strevo_p_aktualni: '.$tenke_strevo_p_aktualni_form.'<br>';
 echo 'tenke_strevo_p_ocekavana: '.$tenke_strevo_p_ocekavana_form.'<br>';
 echo 'tenke_strevo_l_aktualni: '.$tenke_strevo_l_aktualni_form.'<br>';
 echo 'tenke_strevo_l_ocekavana: '.$tenke_strevo_l_ocekavana_form.'<br>';
+
+echo '<br>';
+echo 'slinivka_slezina_p_aktualni: '.$slinivka_slezina_p_aktualni_form.'<br>';
+echo 'slinivka_slezina_p_ocekavana: '.$slinivka_slezina_p_ocekavana_form.'<br>';
+echo 'slinivka_slezina_l_aktualni: '.$slinivka_slezina_l_aktualni_form.'<br>';
+echo 'slinivka_slezina_l_ocekavana: '.$slinivka_slezina_l_ocekavana_form.'<br>';
+
+echo 'jatra_p_aktualni: '.$jatra_p_aktualni_form.'<br>';
+echo 'jatra_p_ocekavana: '.$jatra_p_ocekavana_form.'<br>';
+echo 'jatra_l_aktualni: '.$jatra_l_aktualni_form.'<br>';
+echo 'jatra_l_ocekavana: '.$jatra_l_ocekavana_form.'<br>';
+
+echo 'kloubni_degenerace_p_aktualni: '.$kloubni_degenerace_p_aktualni_form.'<br>';
+echo 'kloubni_degenerace_p_ocekavana: '.$kloubni_degenerace_p_ocekavana_form.'<br>';
+echo 'kloubni_degenerace_l_aktualni: '.$kloubni_degenerace_l_aktualni_form.'<br>';
+echo 'kloubni_degenerace_l_ocekavana: '.$kloubni_degenerace_l_ocekavana_form.'<br>';
+
+echo 'zaludek_p_aktualni: '.$zaludek_p_aktualni_form.'<br>';
+echo 'zaludek_p_ocekavana: '.$zaludek_p_ocekavana_form.'<br>';
+echo 'zaludek_l_aktualni: '.$zaludek_l_aktualni_form.'<br>';
+echo 'zaludek_l_ocekavana: '.$zaludek_l_ocekavana_form.'<br>';
+
+
+
+
+
+
