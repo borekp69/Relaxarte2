@@ -142,8 +142,35 @@ $zaludek_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[zaludek_p_o
 $zaludek_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[zaludek_l_aktualni]")));
 $zaludek_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[zaludek_l_ocekavana]")));
 
+$vazivova_degenerace_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[vazivova_degenerace_p_aktualni]")));
+$vazivova_degenerace_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[vazivova_degenerace_p_ocekavana]")));
+$vazivova_degenerace_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[vazivova_degenerace_l_aktualni]")));
+$vazivova_degenerace_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[vazivova_degenerace_l_ocekavana]")));
 
+$kuze_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[kuze_p_aktualni]")));
+$kuze_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[kuze_p_ocekavana]")));
+$kuze_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[kuze_l_aktualni]")));
+$kuze_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[kuze_l_ocekavana]")));
 
+$tukova_degenerace_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[tukova_degenerace_p_aktualni]")));
+$tukova_degenerace_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[tukova_degenerace_p_ocekavana]")));
+$tukova_degenerace_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[tukova_degenerace_l_aktualni]")));
+$tukova_degenerace_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[tukova_degenerace_l_ocekavana]")));
+
+$zlucnik_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[zlucnik_p_aktualni]")));
+$zlucnik_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[zlucnik_p_ocekavana]")));
+$zlucnik_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[zlucnik_l_aktualni]")));
+$zlucnik_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[zlucnik_l_ocekavana]")));
+
+$ledviny_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[ledviny_p_aktualni]")));
+$ledviny_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[ledviny_p_ocekavana]")));
+$ledviny_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[ledviny_l_aktualni]")));
+$ledviny_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[ledviny_l_ocekavana]")));
+
+$mocovy_mechyr_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[mocovy_mechyr_p_aktualni]")));
+$mocovy_mechyr_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[mocovy_mechyr_p_ocekavana]")));
+$mocovy_mechyr_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[mocovy_mechyr_l_aktualni]")));
+$mocovy_mechyr_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[mocovy_mechyr_l_ocekavana]")));
 
 
     echo 'celkova_hodnota_form: '.$celkova_hodnota_form.'<br>';
@@ -258,8 +285,33 @@ echo 'zaludek_p_ocekavana: '.$zaludek_p_ocekavana_form.'<br>';
 echo 'zaludek_l_aktualni: '.$zaludek_l_aktualni_form.'<br>';
 echo 'zaludek_l_ocekavana: '.$zaludek_l_ocekavana_form.'<br>';
 
+echo 'vazivova_degenerace_p_aktualni: '.$vazivova_degenerace_p_aktualni_form.'<br>';
+echo 'vazivova_degenerace_p_ocekavana: '.$vazivova_degenerace_p_ocekavana_form.'<br>';
+echo 'vazivova_degenerace_l_aktualni: '.$vazivova_degenerace_l_aktualni_form.'<br>';
+echo 'vazivova_degenerace_l_ocekavana: '.$vazivova_degenerace_l_ocekavana_form.'<br>';
+
+echo 'kuze_p_aktualni: '.$kuze_p_aktualni_form.'<br>';
+echo 'kuze_p_ocekavana: '.$kuze_p_ocekavana_form.'<br>';
+echo 'kuze_l_aktualni: '.$kuze_l_aktualni_form.'<br>';
+echo 'kuze_l_ocekavana: '.$kuze_l_ocekavana_form.'<br>';
+
+echo 'tukova_degenerace_p_aktualni: '.$tukova_degenerace_p_aktualni_form.'<br>';
+echo 'tukova_degenerace_p_ocekavana: '.$tukova_degenerace_p_ocekavana_form.'<br>';
+echo 'tukova_degenerace_l_aktualni: '.$tukova_degenerace_l_aktualni_form.'<br>';
+echo 'tukova_degenerace_l_ocekavana: '.$tukova_degenerace_l_ocekavana_form.'<br>';
+
+echo 'zlucnik_p_aktualni: '.$zlucnik_p_aktualni_form.'<br>';
+echo 'zlucnik_p_ocekavana: '.$zlucnik_p_ocekavana_form.'<br>';
+echo 'zlucnik_l_aktualni: '.$zlucnik_l_aktualni_form.'<br>';
+echo 'zlucnik_l_ocekavana: '.$zlucnik_l_ocekavana_form.'<br>';
+
+echo 'ledviny_p_aktualni: '.$ledviny_p_aktualni_form.'<br>';
+echo 'ledviny_p_ocekavana: '.$ledviny_p_ocekavana_form.'<br>';
+echo 'ledviny_l_aktualni: '.$ledviny_l_aktualni_form.'<br>';
+echo 'ledviny_l_ocekavana: '.$ledviny_l_ocekavana_form.'<br>';
 
 
-
-
-
+echo 'mocovy_mechyr_p_aktualni: '.$mocovy_mechyr_p_aktualni_form.'<br>';
+echo 'mocovy_mechyr_p_ocekavana: '.$mocovy_mechyr_p_ocekavana_form.'<br>';
+echo 'mocovy_mechyr_l_aktualni: '.$mocovy_mechyr_l_aktualni_form.'<br>';
+echo 'mocovy_mechyr_l_ocekavana: '.$mocovy_mechyr_l_ocekavana_form.'<br>';
