@@ -6,6 +6,7 @@ header("Pragma: no-cache");
 $prihlaseny_uzivatel_form = addslashes(htmlspecialchars(trim("$_POST[prihlaseny_uzivatel]")));
 
 
+$celkova_hodnota_form = addslashes(htmlspecialchars(trim("$_POST[celkova_hodnota]")));
 $v_jakych_rodinnych_pomerech_zijete_form = addslashes(htmlspecialchars(trim("$_POST[v_jakych_rodinnych_pomerech_zijete]")));
 $reakce_na_pocasi_form = addslashes(htmlspecialchars(trim("$_POST[reakce_na_pocasi]")));
 $reakce_na_mesicni_cyklus_form = addslashes(htmlspecialchars(trim("$_POST[reakce_na_mesicni_cyklus]")));
@@ -23,15 +24,66 @@ $koreneni_form = addslashes(htmlspecialchars(trim("$_POST[koreneni]")));
 $problemy_po_oblibenem_jidle_form = addslashes(htmlspecialchars(trim("$_POST[problemy_po_oblibenem_jidle]")));
 $problemy_po_oblibenem_jidle_text_form = addslashes(htmlspecialchars(trim("$_POST[problemy_po_oblibenem_jidle_text]")));
 $problemy_po_jidle_obecne_form = addslashes(htmlspecialchars(trim("$_POST[problemy_po_jidle_obecne]")));
-
-
 $problemy_po_jidle_obecne_text_form = addslashes(htmlspecialchars(trim("$_POST[problemy_po_jidle_obecne_text]")));
 $spanek_form = addslashes(htmlspecialchars(trim("$_POST[spanek]")));
 $poloha_ve_spanku_form = addslashes(htmlspecialchars(trim("$_POST[poloha_ve_spanku]")));
 $v_jakou_hodinu_nemuzete_spat_form = addslashes(htmlspecialchars(trim("$_POST[v_jakou_hodinu_nemuzete_spat]")));
+$poznamka_text_form = addslashes(htmlspecialchars(trim("$_POST[poznamka_text]")));
+$vraceji_se_nektere_sny_form = addslashes(htmlspecialchars(trim("$_POST[vraceji_se_nektere_sny]")));
+$popis_snu_form = addslashes(htmlspecialchars(trim("$_POST[popis_snu]")));
+$strachy_v_zivote_form = addslashes(htmlspecialchars(trim("$_POST[strachy_v_zivote]")));
+
+
+$popis_strachu_form = addslashes(htmlspecialchars(trim("$_POST[popis_strachu]")));
+
+$bourka_form = addslashes(htmlspecialchars(trim("$_POST[bourka]")));
+if (!$bourka_form){$bourka_form = 0;}
+
+$vyska_form = addslashes(htmlspecialchars(trim("$_POST[vyska]")));
+if (!$vyska_form){$vyska_form = 0;}
+
+$zkouska_form = addslashes(htmlspecialchars(trim("$_POST[zkouska]")));
+if (!$zkouska_form){$zkouska_form = 0;}
+
+$voda_form = addslashes(htmlspecialchars(trim("$_POST[voda]")));
+if (!$voda_form){$voda_form = 0;}
+
+$nemoc_form = addslashes(htmlspecialchars(trim("$_POST[nemoc]")));
+if (!$nemoc_form){$nemoc_form = 0;}
+
+$zvire_form = addslashes(htmlspecialchars(trim("$_POST[zvire]")));
+if (!$zvire_form){$zvire_form = 0;}
+
+$cestovani_form = addslashes(htmlspecialchars(trim("$_POST[cestovani]")));
+if (!$cestovani_form){$cestovani_form = 0;}
+
+$dopravni_prostredek_form = addslashes(htmlspecialchars(trim("$_POST[dopravni_prostredek]")));
+if (!$dopravni_prostredek_form){$dopravni_prostredek_form = 0;}
+
+$zlodej_form = addslashes(htmlspecialchars(trim("$_POST[zlodej]")));
+if (!$zlodej_form){$zlodej_form = 0;}
+
+$smrt_form = addslashes(htmlspecialchars(trim("$_POST[smrt]")));
+if (!$smrt_form){$smrt_form = 0;}
+
+$jine_form = addslashes(htmlspecialchars(trim("$_POST[jine]")));
+if (!$jine_form){
+    $jine_form = 0;
+    $popis_strachu_form = '';    
+}
+
+$lymmfa_p_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[lymmfa_p_aktualni]")));
+$lymmfa_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[lymmfa_p_ocekavana]")));
+$lymmfa_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[lymmfa_l_aktualni]")));
+$lymmfa_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[lymmfa_l_ocekavana]")));
 
 
 
+
+
+
+
+echo 'celkova_hodnota_form: '.$celkova_hodnota_form.'<br>';
 echo 'v_jakych_rodinnych_pomerech_zijete_form: '.$v_jakych_rodinnych_pomerech_zijete_form.'<br>';
 echo 'reakce_na_pocasi_form: '.$reakce_na_pocasi_form.'<br>';
 echo 'reakce_na_mesicni_cyklus_form: '.$reakce_na_mesicni_cyklus_form.'<br>';
@@ -53,3 +105,26 @@ echo 'problemy_po_jidle_obecne_text_form: '.$problemy_po_jidle_obecne_text_form.
 echo 'spanek_form: '.$spanek_form.'<br>';
 echo 'poloha_ve_spanku_form: '.$poloha_ve_spanku_form.'<br>';
 echo 'v_jakou_hodinu_nemuzete_spat_form: '.$v_jakou_hodinu_nemuzete_spat_form.'<br>';
+echo 'poznamka_text_form: '.$poznamka_text_form.'<br>';
+echo 'vraceji_se_nektere_sny_form: '.$vraceji_se_nektere_sny_form.'<br>';
+echo 'popis_snu_form: '.$popis_snu_form.'<br>';
+echo 'strachy_v_zivote_form: '.$strachy_v_zivote_form.'<br>';
+
+echo 'bourka_form: '.$bourka_form.'<br>';
+echo 'vyska_form: '.$vyska_form.'<br>';
+echo 'zkouska_form: '.$zkouska_form.'<br>';
+echo 'voda_form: '.$voda_form.'<br>';
+echo 'nemoc_form: '.$nemoc_form.'<br>';
+echo 'zvire_form: '.$zvire_form.'<br>';
+echo 'cestovani_form: '.$cestovani_form.'<br>';
+echo 'dopravni_prostredek_form: '.$dopravni_prostredek_form.'<br>';
+echo 'zlodej_form: '.$zlodej_form.'<br>';
+echo 'smrt_form: '.$smrt_form.'<br>';
+echo 'jine_form: '.$jine_form.'<br>';
+echo 'jine_popis_strachu: '.$popis_strachu_form.'<br>';
+
+
+echo 'lymmfa_p_aktualni: '.$lymmfa_p_aktualni_form.'<br>';
+echo 'lymmfa_p_ocekavana: '.$lymmfa_p_ocekavana_form.'<br>';
+echo 'lymmfa_l_aktualni: '.$lymmfa_l_aktualni_form.'<br>';
+echo 'lymmfa_l_ocekavana: '.$lymmfa_l_ocekavana_form.'<br>';

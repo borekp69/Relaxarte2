@@ -22,6 +22,20 @@ header("Pragma: no-cache");
 
 <div id="diagnostika_eav_<?echo $uzivatel_id; ?>">
 
+
+                                        <div class="row">
+                                                                <div class="col-sm-12" style="background-color:#DBDBDB;"> 
+                                                                        <div class="col-sm-6">
+                                                                                <br>
+                                                                                <label for="uzivatel">Celková hodnota:</label>
+                                                                                <input type="text" class="form-control form-control-sm" id="celkova_hodnota" value = "" name="celkova_hodnota" maxlength="5" placeholder="Celková hodnota" required>
+                                                                        </div>                                                                      
+
+                                                                </div>
+
+                                        </div>
+
+
                         <div class="row">
 
                         
@@ -29,13 +43,13 @@ header("Pragma: no-cache");
                                                         <div class="col-sm-6">
                                                         <br>
                                                         <label for="uzivatel">V jakých rodinných poměrech žijete:</label>
-                                                        <input type="text" class="form-control form-control-sm" id="v_jakych_rodinnych_pomerech_zijete" value = "" name="v_jakych_rodinnych_pomerech_zijete" maxlength="100" placeholder="V jakých rodinných poměrech žijete?">
+                                                        <input type="text" class="form-control form-control-sm" id="v_jakych_rodinnych_pomerech_zijete" value = "" name="v_jakych_rodinnych_pomerech_zijete" maxlength="100" placeholder="V jakých rodinných poměrech žijete?" required>
                                                         </div>  
 
                                                         <div class="col-sm-6">
                                                         <br>
                                                         <label for="uzivatel">Reakce na počasí:</label>
-                                                        <input type="text" class="form-control form-control-sm" id="reakce_na_pocasi" value = "" name="reakce_na_pocasi" maxlength="100" placeholder="chladné, vlhké, horké, suché, mlha, bouřka, změny, sníh, vítr">
+                                                        <input type="text" class="form-control form-control-sm" id="reakce_na_pocasi" value = "" name="reakce_na_pocasi" maxlength="100" placeholder="chladné, vlhké, horké, suché, mlha, bouřka, změny, sníh, vítr" required>
                                                         </div>
                                         </div>
                                 </div>
@@ -46,7 +60,7 @@ header("Pragma: no-cache");
                                                 <div class="col-sm-3">
                                                 <br>
                                                 <label for="uzivatel">Reakce na měsíční cyklus:</label>
-                                                <select class="form-control" id="reakce_na mesicni_cyklus" name="reakce_na_mesicni_cyklus">
+                                                <select class="form-control" id="reakce_na mesicni_cyklus" name="reakce_na_mesicni_cyklus" required >
                                                 <option value="0"> Vyberte možnost</option>
                                                 <option value="1">Ano</option>
                                                 <option value="2">Ne</option>
@@ -62,7 +76,7 @@ header("Pragma: no-cache");
                                                 <div class="col-sm-3">
                                                 <br>
                                                 <label for="uzivatel">Částá žízeň:</label>
-                                                <select class="form-control" id="casta_zizen" name="casta_zizen">
+                                                <select class="form-control" id="casta_zizen" name="casta_zizen" required>
                                                 <option value="0"> Vyberte možnost</option>
                                                 <option value="1">Ano</option>
                                                 <option value="2">Ne</option>
@@ -78,7 +92,7 @@ header("Pragma: no-cache");
                                                                 <div class="col-sm-3">
                                                                         <br>
                                                                         <label for="uzivatel">Preference nápojů:</label>
-                                                                        <select class="form-control" id="preference_napoju" name="preference_napoju">
+                                                                        <select class="form-control" id="preference_napoju" name="preference_napoju" required>
                                                                         <option value="0"> Vyberte možnost</option>
                                                                         <option value="1">teplé</option>
                                                                         <option value="2">studené</option>
@@ -94,7 +108,7 @@ header("Pragma: no-cache");
                                                                 <div class="col-sm-3">
                                                                         <br>
                                                                         <label for="uzivatel">Chuť k jídlu:</label>
-                                                                        <select class="form-control" id="chut_k_jidlu" name="chut_k_jidlu">
+                                                                        <select class="form-control" id="chut_k_jidlu" name="chut_k_jidlu" requiredstra>
                                                                         <option value="0"> Vyberte možnost</option>
                                                                         <option value="1">Normální</option>
                                                                         <option value="2">Dobrá</option>
@@ -243,7 +257,7 @@ header("Pragma: no-cache");
                                                                 <div class="col-sm-3">
                                                                                 <br>
                                                                                 <label for="uzivatel">Spánek</label>
-                                                                                <select class="form-control" id="spanek" name="spanek">
+                                                                                <select class="form-control" id="spanek" name="spanek" required>
                                                                                 <option value="0"> Vyberte možnost</option>
                                                                                 <option value="1">Dobrý</option>
                                                                                 <option value="2">Špatný</option>
@@ -265,7 +279,7 @@ header("Pragma: no-cache");
                                                                 <div class="col-sm-3">
                                                                         <br>
                                                                         <label for="uzivatel">V jakou hodinu nemůžete spát?</label>
-                                                                        <input type="text" class="form-control form-control-sm" id="v_jakou_hodinu_nemuzete_spat" value = "" name="v_jakou_hodinu_nemuzete_spat" maxlength="200" placeholder="V jakou hodinu nemůžete spát?" >        
+                                                                        <input type="text" class="form-control form-control-sm" id="v_jakou_hodinu_nemuzete_spat" value = "" name="v_jakou_hodinu_nemuzete_spat" maxlength="200" placeholder="V jakou hodinu nemůžete spát?" required>        
                                                                 </div> 
                                                 
                                         </div>           
@@ -312,7 +326,7 @@ header("Pragma: no-cache");
                                                                 <div class="col-sm-3">
                                                                                         <br>
                                                                                         <label for="uzivatel">Strachy v životě:</label>
-                                                                                        <select class="form-control" id="strachy_v_zivote" name="strachy_v_zivote">
+                                                                                        <select class="form-control" id="strachy_v_zivote" name="strachy_v_zivote" required>
                                                                                         <option value="0"> Vyberte možnost</option>
                                                                                         <option value="1">Ano</option>
                                                                                         <option value="2">Ne</option>  
@@ -384,6 +398,17 @@ header("Pragma: no-cache");
                                                 </div>
                                            
                                 </div>  
+
+
+
+                                                        <div class="row">
+                                                                                <div class="col-sm-12" style="background-color:#DBDBDB;">  
+                                                                                                <br>
+                                                                                                <label for="uzivatel">Poznámka:</label>
+                                                                                                <textarea class="form-control" id="poznamka_text" name="poznamka_text" rows="4" maxlength="500" placeholder="Textová poznámka o délce max 500 znaků"></textarea>
+                                                                                                <br>
+                                                                                </div>
+                                                        </div>
 
 
 
@@ -860,12 +885,13 @@ header("Pragma: no-cache");
         </div>
 
 <br>
-  <center><button type="submit" class="btn btn-success">&nbsp;<span class="glyphicon glyphicon-save"></span>&nbsp;&nbsp;Uložit&nbsp;&nbsp;</button></center>
+
+    <button type="submit" class="btn btn-success btn-sm"  onclick="XXXXXXXloadDoc()">&nbsp;&nbsp;Uložit diagnostiku EAV&nbsp;&nbsp;</button>
  </form>
 
 
 
-<br>XXXXXXXXXXXXXXX<br>
+<br><br><br>XXXXXXXXXXXXXXX<br>
 </div>
 
 
