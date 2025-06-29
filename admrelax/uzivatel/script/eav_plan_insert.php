@@ -3,6 +3,7 @@ header("Cache-control: private");
 header ("Cache-Control:no-cache, must-revalidate"); //HTTP/1.1
 header("Pragma: no-cache");
 
+
 $prihlaseny_uzivatel_form = addslashes(htmlspecialchars(trim("$_POST[prihlaseny_uzivatel]")));
 
 
