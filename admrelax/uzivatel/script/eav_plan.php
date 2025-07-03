@@ -14,13 +14,18 @@ header("Pragma: no-cache");
 <h4>Diagnostika EAV:</h4>
 
 
- <form action="./script/eav_plan_insert.php" method="post"> 
+
 
 
 
 
 
 <div id="diagnostika_eav_<?echo $uzivatel_id; ?>">
+
+        <form id="diagnostika_eav_<?echo $uzivatel_id; ?>"  name="diagnostika_eav_<?echo $uzivatel_id; ?>" method="post"> 
+
+
+
 
 
                                         <div class="row">
@@ -883,11 +888,49 @@ header("Pragma: no-cache");
                                                 </div>                                                                         
                                         </div>
         </div>
+ </form>
+                <br>
+                <button type="submit" class="btn btn-success btn-sm"  onclick="loadEav_plan_<?echo $uzivatel_id; ?>()">&nbsp;&nbsp;Uložit diagnostiku EAV&nbsp;&nbsp;</button>
+
 
 <br>
+        <script>
+  function loadEav_plan_<?echo $uzivatel_id; ?>() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("diagnostika_eav_<?echo $uzivatel_id; ?>").innerHTML = this.responseText;
+    }
+  };       
+  
+  var prihlaseny_uzivatel = "<? echo $_SESSION['uzivatel_jmeno_session'].' '.$_SESSION['uzivatel_prijmeni_session']; ?>";
+  var celkova_hodnota = document.diagnostika_eav_<?echo $uzivatel_id; ?>.celkova_hodnota.value;
+  var v_jakych_rodinnych_pomerech_zijete = document.diagnostika_eav_<?echo $uzivatel_id; ?>.v_jakych_rodinnych_pomerech_zijete.value;
+  var reakce_na_pocasi = document.diagnostika_eav_<?echo $uzivatel_id; ?>.reakce_na_pocasi.value;
+  var reakce_na_mesicni_cyklus = document.diagnostika_eav_<?echo $uzivatel_id; ?>.reakce_na_mesicni_cyklus.value;
 
-    <button type="submit" class="btn btn-success btn-sm"  onclick="XXXXXXXloadDoc()">&nbsp;&nbsp;Uložit diagnostiku EAV&nbsp;&nbsp;</button>
- </form>
+  var reakce_na_mesicni_cyklus_text = document.diagnostika_eav_<?echo $uzivatel_id; ?>.reakce_na_mesicni_cyklus_text.value;
+
+
+
+
+
+  let dataEav_plan = "uzivatel_id=<?echo $uzivatel_id; ?>";
+
+                        alert("Uživatel ID: " + reakce_na_mesicni_cyklus_text);
+
+
+
+
+
+
+
+
+        
+        
+}
+</script> 
+
 
 
 
