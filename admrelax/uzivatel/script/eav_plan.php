@@ -908,16 +908,18 @@ header("Pragma: no-cache");
   var v_jakych_rodinnych_pomerech_zijete = document.diagnostika_eav_<?echo $uzivatel_id; ?>.v_jakych_rodinnych_pomerech_zijete.value;
   var reakce_na_pocasi = document.diagnostika_eav_<?echo $uzivatel_id; ?>.reakce_na_pocasi.value;
   var reakce_na_mesicni_cyklus = document.diagnostika_eav_<?echo $uzivatel_id; ?>.reakce_na_mesicni_cyklus.value;
-
   var reakce_na_mesicni_cyklus_text = document.diagnostika_eav_<?echo $uzivatel_id; ?>.reakce_na_mesicni_cyklus_text.value;
+  var casta_zizen = document.diagnostika_eav_<?echo $uzivatel_id; ?>.casta_zizen.value;
 
 
 
 
+
+  
 
   let dataEav_plan = "uzivatel_id=<?echo $uzivatel_id; ?>";
 
-                        alert("Uživatel ID: " + reakce_na_mesicni_cyklus_text);
+                        alert("Uživatel ID: " + casta_zizen);
 
 
 
