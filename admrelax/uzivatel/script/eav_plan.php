@@ -903,23 +903,138 @@ header("Pragma: no-cache");
     }
   };       
   
-  var prihlaseny_uzivatel = "<? echo $_SESSION['uzivatel_jmeno_session'].' '.$_SESSION['uzivatel_prijmeni_session']; ?>";
-  var celkova_hodnota = document.diagnostika_eav_<?echo $uzivatel_id; ?>.celkova_hodnota.value;
-  var v_jakych_rodinnych_pomerech_zijete = document.diagnostika_eav_<?echo $uzivatel_id; ?>.v_jakych_rodinnych_pomerech_zijete.value;
-  var reakce_na_pocasi = document.diagnostika_eav_<?echo $uzivatel_id; ?>.reakce_na_pocasi.value;
-  var reakce_na_mesicni_cyklus = document.diagnostika_eav_<?echo $uzivatel_id; ?>.reakce_na_mesicni_cyklus.value;
-  var reakce_na_mesicni_cyklus_text = document.diagnostika_eav_<?echo $uzivatel_id; ?>.reakce_na_mesicni_cyklus_text.value;
-  var casta_zizen = document.diagnostika_eav_<?echo $uzivatel_id; ?>.casta_zizen.value;
+                var prihlaseny_uzivatel = "<? echo $_SESSION['uzivatel_jmeno_session'].' '.$_SESSION['uzivatel_prijmeni_session']; ?>";
+                var celkova_hodnota = document.diagnostika_eav_<?echo $uzivatel_id; ?>.celkova_hodnota.value;
+                var v_jakych_rodinnych_pomerech_zijete = document.diagnostika_eav_<?echo $uzivatel_id; ?>.v_jakych_rodinnych_pomerech_zijete.value;
+                var reakce_na_pocasi = document.diagnostika_eav_<?echo $uzivatel_id; ?>.reakce_na_pocasi.value;
+                var reakce_na_mesicni_cyklus = document.diagnostika_eav_<?echo $uzivatel_id; ?>.reakce_na_mesicni_cyklus.value;
+                var reakce_na_mesicni_cyklus_text = document.diagnostika_eav_<?echo $uzivatel_id; ?>.reakce_na_mesicni_cyklus_text.value;
+                var casta_zizen = document.diagnostika_eav_<?echo $uzivatel_id; ?>.casta_zizen.value;
+                var preference_napoju = document.diagnostika_eav_<?echo $uzivatel_id; ?>.preference_napoju.value;
+                var druh_napoju = document.diagnostika_eav_<?echo $uzivatel_id; ?>.druh_napoju.value;
+                var chut_k_jidlu = document.diagnostika_eav_<?echo $uzivatel_id; ?>.chut_k_jidlu.value;
+                var hlad_v_koli_hodin = document.diagnostika_eav_<?echo $uzivatel_id; ?>.hlad_v_koli_hodin.value;
+                var oblibene_jidlo = document.diagnostika_eav_<?echo $uzivatel_id; ?>.oblibene_jidlo.value;
+                var neoblibene_jidlo = document.diagnostika_eav_<?echo $uzivatel_id; ?>.neoblibene_jidlo.value;
+                var sladke = document.diagnostika_eav_<?echo $uzivatel_id; ?>.sladke.value;
+                var soleni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.soleni.value;
+                var koreneni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.koreneni.value;
+                var problemy_po_oblibenem_jidle = document.diagnostika_eav_<?echo $uzivatel_id; ?>.problemy_po_oblibenem_jidle.value;
+                var problemy_po_oblibenem_jidle_text = document.diagnostika_eav_<?echo $uzivatel_id; ?>.problemy_po_oblibenem_jidle_text.value;
+                var problemy_po_jidle_obecne = document.diagnostika_eav_<?echo $uzivatel_id; ?>.problemy_po_jidle_obecne.value;
+                var problemy_po_jidle_obecne_text = document.diagnostika_eav_<?echo $uzivatel_id; ?>.problemy_po_jidle_obecne_text.value;
+                var spanek = document.diagnostika_eav_<?echo $uzivatel_id; ?>.spanek.value;
+                var poloha_ve_spanku = document.diagnostika_eav_<?echo $uzivatel_id; ?>.poloha_ve_spanku.value;
+                var v_jakou_hodinu_nemuzete_spat = document.diagnostika_eav_<?echo $uzivatel_id; ?>.v_jakou_hodinu_nemuzete_spat.value;
+                var vraceji_se_nektere_sny = document.diagnostika_eav_<?echo $uzivatel_id; ?>.vraceji_se_nektere_sny.value;
+                var popis_snu = document.diagnostika_eav_<?echo $uzivatel_id; ?>.popis_snu.value;
+                var strachy_v_zivote = document.diagnostika_eav_<?echo $uzivatel_id; ?>.strachy_v_zivote.value;
+
+
+                var bourka = document.diagnostika_eav_<?echo $uzivatel_id; ?>.bourka;
+
+                if(bourka.checked) {
+                        bourka = 1;
+                }else{
+                        bourka = 0;
+                }
+
+
+
+                var vyska = document.diagnostika_eav_<?echo $uzivatel_id; ?>.vyska;
+
+                if(vyska.checked) {
+                        vyska = 1;
+                }else{
+                        vyska = 0;
+                }
+
+                var zkouska = document.diagnostika_eav_<?echo $uzivatel_id; ?>.zkouska;
+
+                if(zkouska.checked) {
+                        zkouska = 1;
+                }else{
+                        zkouska = 0;
+                }
+
+                var voda = document.diagnostika_eav_<?echo $uzivatel_id; ?>.voda;
+
+                if(voda.checked) {
+                        voda = 1;
+                }else{
+                        voda = 0;
+                }
+
+                var nemoc = document.diagnostika_eav_<?echo $uzivatel_id; ?>.nemoc;
+
+                if(nemoc.checked) {
+                        nemoc = 1;
+                }else{
+                        nemoc = 0;
+                }
+
+                var zvire = document.diagnostika_eav_<?echo $uzivatel_id; ?>.zvire;
+
+                if(zvire.checked) {
+                        zvire = 1;
+                }else{
+                        zvire = 0;
+                }
+
+
+                var cestovani = document.diagnostika_eav_<?echo $uzivatel_id; ?>.cestovani;
+
+                if(cestovani.checked) {
+                        cestovani = 1;
+                }else{
+                        cestovani = 0;
+                } 
+
+
+                var dopravni_prostredek = document.diagnostika_eav_<?echo $uzivatel_id; ?>.dopravni_prostredek;
+
+                if(dopravni_prostredek.checked) {
+                        dopravni_prostredek = 1;
+                }else{
+                        dopravni_prostredek = 0;
+                } 
+
+
+                var zlodej = document.diagnostika_eav_<?echo $uzivatel_id; ?>.zlodej;
+
+                if(zlodej.checked) {
+                        zlodej = 1;
+                }else{
+                        zlodej = 0;
+                } 
+
+
+                var smrt = document.diagnostika_eav_<?echo $uzivatel_id; ?>.smrt;
+
+                if(smrt.checked) {
+                        smrt = 1;
+                }else{
+                        smrt = 0;
+                } 
+
+
+                var jine = document.diagnostika_eav_<?echo $uzivatel_id; ?>.jine;
+
+                if(jine.checked) {
+                        jine = 1;
+                }else{
+                        jine = 0;
+                }
 
 
 
 
 
-  
+
 
   let dataEav_plan = "uzivatel_id=<?echo $uzivatel_id; ?>";
 
-                        alert("Uživatel ID: " + casta_zizen);
+                        alert("Uživatel ID: " + jine);
 
 
 
