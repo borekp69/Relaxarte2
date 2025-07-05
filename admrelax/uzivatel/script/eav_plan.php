@@ -1038,69 +1038,84 @@ header("Pragma: no-cache");
                 var lymmfa_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.lymmfa_p_ocekavana.value;
                 var lymmfa_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.lymmfa_l_aktualni.value;
                 var lymmfa_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.lymmfa_l_ocekavana.value;
-
                 var plice_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.plice_p_aktualni.value;
                 var plice_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.plice_p_ocekavana.value;
                 var plice_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.plice_l_aktualni.value;
-                var plice_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.plice_l_ocekavana.value;    
-                
+                var plice_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.plice_l_ocekavana.value;                
                 var tluste_strevo_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tluste_strevo_p_aktualni.value;
                 var tluste_strevo_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tluste_strevo_p_ocekavana.value;               
                 var tluste_strevo_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tluste_strevo_l_aktualni.value;
-                var tluste_strevo_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tluste_strevo_l_ocekavana.value;  
-
+                var tluste_strevo_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tluste_strevo_l_ocekavana.value; 
                 var nervova_degenerace_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.nervova_degenerace_p_aktualni.value;
                 var nervova_degenerace_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.nervova_degenerace_p_ocekavana.value;
                 var nervova_degenerace_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.nervova_degenerace_l_aktualni.value;
                 var nervova_degenerace_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.nervova_degenerace_l_ocekavana.value;
-
                 var obal_srdce_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.obal_srdce_p_aktualni.value;
                 var obal_srdce_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.obal_srdce_p_ocekavana.value;
                 var obal_srdce_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.obal_srdce_l_aktualni.value;
                 var obal_srdce_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.obal_srdce_l_ocekavana.value;
-
                 var alergie_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.alergie_p_aktualni.value;
                 var alergie_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.alergie_p_ocekavana.value;
                 var alergie_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.alergie_l_aktualni.value;
                 var alergie_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.alergie_l_ocekavana.value;
-
                 var organova_degenerace_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.organova_degenerace_p_aktualni.value;
                 var organova_degenerace_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.organova_degenerace_p_ocekavana.value;
                 var organova_degenerace_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.organova_degenerace_l_aktualni.value;
                 var organova_degenerace_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.organova_degenerace_l_ocekavana.value;
-
                 var tri_ohrivace_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tri_ohrivace_p_aktualni.value;
                 var tri_ohrivace_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tri_ohrivace_p_ocekavana.value;
                 var tri_ohrivace_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tri_ohrivace_l_aktualni.value;
                 var tri_ohrivace_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tri_ohrivace_l_ocekavana.value;
-
                 var srdce_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.srdce_p_aktualni.value;
                 var srdce_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.srdce_p_ocekavana.value;
                 var srdce_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.srdce_l_aktualni.value;
                 var srdce_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.srdce_l_ocekavana.value;
-
                 var tenke_strevo_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tenke_strevo_p_aktualni.value;
                 var tenke_strevo_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tenke_strevo_p_ocekavana.value;
                 var tenke_strevo_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tenke_strevo_l_aktualni.value;
                 var tenke_strevo_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tenke_strevo_l_ocekavana.value;
-
                 var slinivka_slezina_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.slinivka_slezina_p_aktualni.value;
                 var slinivka_slezina_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.slinivka_slezina_p_ocekavana.value;
                 var slinivka_slezina_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.slinivka_slezina_l_aktualni.value;
                 var slinivka_slezina_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.slinivka_slezina_l_ocekavana.value;
-
                 var jatra_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.jatra_p_aktualni.value;
                 var jatra_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.jatra_p_ocekavana.value;
                 var jatra_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.jatra_l_aktualni.value;
                 var jatra_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.jatra_l_ocekavana.value;
+                var kloubni_degenerace_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.kloubni_degenerace_p_aktualni.value;
+                var kloubni_degenerace_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.kloubni_degenerace_p_ocekavana.value;
+                var kloubni_degenerace_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.kloubni_degenerace_l_aktualni.value;
+                var kloubni_degenerace_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.kloubni_degenerace_l_ocekavana.value;
+                var zaludek_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.zaludek_p_aktualni.value;
+                var zaludek_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.zaludek_p_ocekavana.value;
+                var zaludek_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.zaludek_l_aktualni.value;
+                var zaludek_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.zaludek_l_ocekavana.value;
+                var vazivova_degenerace_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.vazivova_degenerace_p_aktualni.value;
+                var vazivova_degenerace_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.vazivova_degenerace_p_ocekavana.value;                
+                var vazivova_degenerace_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.vazivova_degenerace_l_aktualni.value;
+                var vazivova_degenerace_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.vazivova_degenerace_l_ocekavana.value;
+                var kuze_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.kuze_p_aktualni.value;
+                var kuze_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.kuze_p_ocekavana.value;
+                var kuze_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.kuze_l_aktualni.value;
+                var kuze_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.kuze_l_ocekavana.value;
+                var tukova_degenerace_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tukova_degenerace_p_aktualni.value;
+                var tukova_degenerace_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tukova_degenerace_p_ocekavana.value;
+                var tukova_degenerace_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tukova_degenerace_l_aktualni.value;
+                var tukova_degenerace_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tukova_degenerace_l_ocekavana.value;
+                var zlucnik_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.zlucnik_p_aktualni.value;
+                var zlucnik_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.zlucnik_p_ocekavana.value;
+                var zlucnik_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.zlucnik_l_aktualni.value;
+                var zlucnik_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.zlucnik_l_ocekavana.value;
+                var ledviny_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.ledviny_p_aktualni.value;
+                var ledviny_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.ledviny_p_ocekavana.value;
+                var ledviny_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.ledviny_l_aktualni.value;
+                var ledviny_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.ledviny_l_ocekavana.value;
+                var mocovy_mechyr_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.mocovy_mechyr_p_aktualni.value;
+                var mocovy_mechyr_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.mocovy_mechyr_p_ocekavana.value;
+                var mocovy_mechyr_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.mocovy_mechyr_l_aktualni.value;
+                var mocovy_mechyr_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.mocovy_mechyr_l_ocekavana.value;
 
-
-
-
-
-
-
-                        if(!celkova_hodnota || !v_jakych_rodinnych_pomerech_zijete || !reakce_na_pocasi || reakce_na_mesicni_cyklus == 0 || casta_zizen == 0 || preference_napoju == 0 || chut_k_jidlu == 0 || spanek == 0 || !v_jakou_hodinu_nemuzete_spat || strachy_v_zivote == 0) {  
+        if(!celkova_hodnota || !v_jakych_rodinnych_pomerech_zijete || !reakce_na_pocasi || reakce_na_mesicni_cyklus == 0 || casta_zizen == 0 || preference_napoju == 0 || chut_k_jidlu == 0 || spanek == 0 || !v_jakou_hodinu_nemuzete_spat || strachy_v_zivote == 0) {  
                                 alert("Musíte vyplmit všechna povinná pole označená *"); 
 
                                 }else{
@@ -1188,34 +1203,53 @@ header("Pragma: no-cache");
                     dataEav_plan = dataEav_plan + "&tenke_strevo_p_ocekavana="+tenke_strevo_p_ocekavana;
                     dataEav_plan = dataEav_plan + "&tenke_strevo_l_aktualni="+tenke_strevo_l_aktualni;
                     dataEav_plan = dataEav_plan + "&tenke_strevo_l_ocekavana="+tenke_strevo_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&slinivka_slezina_p_ocekavana="+slinivka_slezina_p_ocekavana;
+                    dataEav_plan = dataEav_plan + "&slinivka_slezina_p_aktualni="+slinivka_slezina_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&slinivka_slezina_l_ocekavana="+slinivka_slezina_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&slinivka_slezina_l_aktualni="+slinivka_slezina_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&jatra_p_aktualni="+jatra_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&jatra_p_ocekavana="+jatra_p_ocekavana;
+                    dataEav_plan = dataEav_plan + "&jatra_l_aktualni="+jatra_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&jatra_l_ocekavana="+jatra_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&kloubni_degenerace_p_aktualni="+kloubni_degenerace_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&kloubni_degenerace_p_ocekavana="+kloubni_degenerace_p_ocekavana;
+                    dataEav_plan = dataEav_plan + "&kloubni_degenerace_l_aktualni="+kloubni_degenerace_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&kloubni_degenerace_l_ocekavana="+kloubni_degenerace_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&zaludek_p_aktualni="+zaludek_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&zaludek_p_ocekavana="+zaludek_p_ocekavana;
+                    dataEav_plan = dataEav_plan + "&zaludek_l_aktualni="+zaludek_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&zaludek_l_ocekavana="+zaludek_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&vazivova_degenerace_p_aktualni="+vazivova_degenerace_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&vazivova_degenerace_p_ocekavana="+vazivova_degenerace_p_ocekavana;
+                    dataEav_plan = dataEav_plan + "&vazivova_degenerace_l_aktualni="+vazivova_degenerace_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&vazivova_degenerace_l_ocekavana="+vazivova_degenerace_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&kuze_p_aktualni="+kuze_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&kuze_p_ocekavana="+kuze_p_ocekavana;                   
+                    dataEav_plan = dataEav_plan + "&kuze_l_aktualni="+kuze_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&kuze_l_ocekavana="+kuze_l_ocekavana;                    
+                    dataEav_plan = dataEav_plan + "&tukova_degenerace_p_aktualni="+tukova_degenerace_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&tukova_degenerace_p_ocekavana="+tukova_degenerace_p_ocekavana;                     
+                    dataEav_plan = dataEav_plan + "&tukova_degenerace_l_aktualni="+tukova_degenerace_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&tukova_degenerace_l_ocekavana="+tukova_degenerace_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&zlucnik_p_aktualni="+zlucnik_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&zlucnik_p_ocekavana="+zlucnik_p_ocekavana;  
+                    dataEav_plan = dataEav_plan + "&zlucnik_l_aktualni="+zlucnik_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&zlucnik_l_ocekavana="+zlucnik_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&ledviny_p_aktualni="+ledviny_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&ledviny_p_ocekavana="+ledviny_p_ocekavana;  
+                    dataEav_plan = dataEav_plan + "&ledviny_l_aktualni="+ledviny_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&ledviny_l_ocekavana="+ledviny_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&mocovy_mechyr_p_aktualni="+mocovy_mechyr_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&mocovy_mechyr_p_ocekavana="+mocovy_mechyr_p_ocekavana;                    
+                    dataEav_plan = dataEav_plan + "&mocovy_mechyr_l_aktualni="+mocovy_mechyr_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&mocovy_mechyr_l_ocekavana="+mocovy_mechyr_l_ocekavana;   
 
+                   xhttp.open("POST", "./script/eav_plan_insert.php", true);
+                   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                   xhttp.send(dataEav_plan);
+                   alert("Uložení:\nAktualizovaný záznam plánované procedury byl uložen.");
 
-
-
-
-        xhttp.open("POST", "./script/eav_plan_insert.php", true);
-        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhttp.send(dataEav_plan);
-        alert("Uložení:\nAktualizovaný záznam plánované procedury byl uložen.");
-
-
-
-                        }
-
-
-
-
-
-               
-                        
-
-
-
-
-
-
-
-        
+                        }        
         
 }
 </script> 

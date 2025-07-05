@@ -320,4 +320,4 @@ echo 'ledviny_l_ocekavana: '.$ledviny_l_ocekavana_form.'<br>';
 echo 'mocovy_mechyr_p_aktualni: '.$mocovy_mechyr_p_aktualni_form.'<br>';
 echo 'mocovy_mechyr_p_ocekavana: '.$mocovy_mechyr_p_ocekavana_form.'<br>';
 echo 'mocovy_mechyr_l_aktualni: '.$mocovy_mechyr_l_aktualni_form.'<br>';
-echo 'mocovy_mechyr_l_ocekavana: '.$mocovy_mechyr_l_ocekavana_form.'<br>';
+echo 'mocovy_mechyr_l_ocekavana: '.$mocovy_mechyr_l_ocekavana_form.'<br><br><br>';
