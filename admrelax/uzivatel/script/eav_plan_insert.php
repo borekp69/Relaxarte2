@@ -4,6 +4,8 @@ header ("Cache-Control:no-cache, must-revalidate"); //HTTP/1.1
 header("Pragma: no-cache");
 
 
+
+$uzivatel_id_form = addslashes(htmlspecialchars(trim("$_POST[uzivatel_id]"))); 
 $prihlaseny_uzivatel_form = addslashes(htmlspecialchars(trim("$_POST[prihlaseny_uzivatel]")));
 
 
@@ -173,6 +175,9 @@ $mocovy_mechyr_p_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[mocov
 $mocovy_mechyr_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[mocovy_mechyr_l_aktualni]")));
 $mocovy_mechyr_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[mocovy_mechyr_l_ocekavana]")));
 
+
+    echo 'uzivatel_id_form: '.$uzivatel_id_form.'<br>';
+    echo 'prihlaseny_uzivatel: '.$prihlaseny_uzivatel_form.'<br>';
 
     echo 'celkova_hodnota_form: '.$celkova_hodnota_form.'<br>';
     echo 'v_jakych_rodinnych_pomerech_zijete_form: '.$v_jakych_rodinnych_pomerech_zijete_form.'<br>';

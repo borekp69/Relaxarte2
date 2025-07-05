@@ -32,7 +32,7 @@ header("Pragma: no-cache");
                                                                 <div class="col-sm-12" style="background-color:#DBDBDB;"> 
                                                                         <div class="col-sm-6">
                                                                                 <br>
-                                                                                <label for="uzivatel">Celková hodnota:</label>
+                                                                                <label for="uzivatel">* Celková hodnota:</label>
                                                                                 <input type="text" class="form-control form-control-sm" id="celkova_hodnota" value = "" name="celkova_hodnota" maxlength="5" placeholder="Celková hodnota" required>
                                                                         </div>                                                                      
 
@@ -47,13 +47,13 @@ header("Pragma: no-cache");
                                         <div class="col-sm-12" style="background-color:#DBDBDB;">  
                                                         <div class="col-sm-6">
                                                         <br>
-                                                        <label for="uzivatel">V jakých rodinných poměrech žijete:</label>
+                                                        <label for="uzivatel">* V jakých rodinných poměrech žijete:</label>
                                                         <input type="text" class="form-control form-control-sm" id="v_jakych_rodinnych_pomerech_zijete" value = "" name="v_jakych_rodinnych_pomerech_zijete" maxlength="100" placeholder="V jakých rodinných poměrech žijete?" required>
                                                         </div>  
 
                                                         <div class="col-sm-6">
                                                         <br>
-                                                        <label for="uzivatel">Reakce na počasí:</label>
+                                                        <label for="uzivatel">* Reakce na počasí:</label>
                                                         <input type="text" class="form-control form-control-sm" id="reakce_na_pocasi" value = "" name="reakce_na_pocasi" maxlength="100" placeholder="chladné, vlhké, horké, suché, mlha, bouřka, změny, sníh, vítr" required>
                                                         </div>
                                         </div>
@@ -64,7 +64,7 @@ header("Pragma: no-cache");
                                         <div class="col-sm-12" style="background-color:#DBDBDB;">             
                                                 <div class="col-sm-3">
                                                 <br>
-                                                <label for="uzivatel">Reakce na měsíční cyklus:</label>
+                                                <label for="uzivatel">* Reakce na měsíční cyklus:</label>
                                                 <select class="form-control" id="reakce_na mesicni_cyklus" name="reakce_na_mesicni_cyklus" required >
                                                 <option value="0"> Vyberte možnost</option>
                                                 <option value="1">Ano</option>
@@ -80,7 +80,7 @@ header("Pragma: no-cache");
 
                                                 <div class="col-sm-3">
                                                 <br>
-                                                <label for="uzivatel">Částá žízeň:</label>
+                                                <label for="uzivatel">* Částá žízeň:</label>
                                                 <select class="form-control" id="casta_zizen" name="casta_zizen" required>
                                                 <option value="0"> Vyberte možnost</option>
                                                 <option value="1">Ano</option>
@@ -96,7 +96,7 @@ header("Pragma: no-cache");
                                                         
                                                                 <div class="col-sm-3">
                                                                         <br>
-                                                                        <label for="uzivatel">Preference nápojů:</label>
+                                                                        <label for="uzivatel">* Preference nápojů:</label>
                                                                         <select class="form-control" id="preference_napoju" name="preference_napoju" required>
                                                                         <option value="0"> Vyberte možnost</option>
                                                                         <option value="1">teplé</option>
@@ -112,7 +112,7 @@ header("Pragma: no-cache");
                                                                 
                                                                 <div class="col-sm-3">
                                                                         <br>
-                                                                        <label for="uzivatel">Chuť k jídlu:</label>
+                                                                        <label for="uzivatel">* Chuť k jídlu:</label>
                                                                         <select class="form-control" id="chut_k_jidlu" name="chut_k_jidlu" requiredstra>
                                                                         <option value="0"> Vyberte možnost</option>
                                                                         <option value="1">Normální</option>
@@ -261,7 +261,7 @@ header("Pragma: no-cache");
                                                 <div class="col-sm-12" style="background-color:#DBDBDB;">  
                                                                 <div class="col-sm-3">
                                                                                 <br>
-                                                                                <label for="uzivatel">Spánek</label>
+                                                                                <label for="uzivatel">* Spánek</label>
                                                                                 <select class="form-control" id="spanek" name="spanek" required>
                                                                                 <option value="0"> Vyberte možnost</option>
                                                                                 <option value="1">Dobrý</option>
@@ -283,7 +283,7 @@ header("Pragma: no-cache");
 
                                                                 <div class="col-sm-3">
                                                                         <br>
-                                                                        <label for="uzivatel">V jakou hodinu nemůžete spát?</label>
+                                                                        <label for="uzivatel">* V jakou hodinu nemůžete spát?</label>
                                                                         <input type="text" class="form-control form-control-sm" id="v_jakou_hodinu_nemuzete_spat" value = "" name="v_jakou_hodinu_nemuzete_spat" maxlength="200" placeholder="V jakou hodinu nemůžete spát?" required>        
                                                                 </div> 
                                                 
@@ -330,7 +330,7 @@ header("Pragma: no-cache");
                                                 <div class="col-sm-12" style="background-color:#DBDBDB;">  
                                                                 <div class="col-sm-3">
                                                                                         <br>
-                                                                                        <label for="uzivatel">Strachy v životě:</label>
+                                                                                        <label for="uzivatel">* Strachy v životě:</label>
                                                                                         <select class="form-control" id="strachy_v_zivote" name="strachy_v_zivote" required>
                                                                                         <option value="0"> Vyberte možnost</option>
                                                                                         <option value="1">Ano</option>
@@ -1017,25 +1017,197 @@ header("Pragma: no-cache");
                         smrt = 0;
                 } 
 
+              
 
+                var popis_strachu = document.diagnostika_eav_<?echo $uzivatel_id; ?>.popis_strachu.value;
+                
                 var jine = document.diagnostika_eav_<?echo $uzivatel_id; ?>.jine;
 
                 if(jine.checked) {
                         jine = 1;
+                        popis_strachu = popis_strachu;
                 }else{
                         jine = 0;
+                        popis_strachu = "";
                 }
 
 
+                var poznamka_text = document.diagnostika_eav_<?echo $uzivatel_id; ?>.poznamka_text.value;
+
+                var lymmfa_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.lymmfa_p_aktualni.value;
+                var lymmfa_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.lymmfa_p_ocekavana.value;
+                var lymmfa_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.lymmfa_l_aktualni.value;
+                var lymmfa_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.lymmfa_l_ocekavana.value;
+
+                var plice_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.plice_p_aktualni.value;
+                var plice_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.plice_p_ocekavana.value;
+                var plice_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.plice_l_aktualni.value;
+                var plice_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.plice_l_ocekavana.value;    
+                
+                var tluste_strevo_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tluste_strevo_p_aktualni.value;
+                var tluste_strevo_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tluste_strevo_p_ocekavana.value;               
+                var tluste_strevo_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tluste_strevo_l_aktualni.value;
+                var tluste_strevo_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tluste_strevo_l_ocekavana.value;  
+
+                var nervova_degenerace_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.nervova_degenerace_p_aktualni.value;
+                var nervova_degenerace_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.nervova_degenerace_p_ocekavana.value;
+                var nervova_degenerace_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.nervova_degenerace_l_aktualni.value;
+                var nervova_degenerace_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.nervova_degenerace_l_ocekavana.value;
+
+                var obal_srdce_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.obal_srdce_p_aktualni.value;
+                var obal_srdce_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.obal_srdce_p_ocekavana.value;
+                var obal_srdce_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.obal_srdce_l_aktualni.value;
+                var obal_srdce_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.obal_srdce_l_ocekavana.value;
+
+                var alergie_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.alergie_p_aktualni.value;
+                var alergie_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.alergie_p_ocekavana.value;
+                var alergie_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.alergie_l_aktualni.value;
+                var alergie_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.alergie_l_ocekavana.value;
+
+                var organova_degenerace_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.organova_degenerace_p_aktualni.value;
+                var organova_degenerace_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.organova_degenerace_p_ocekavana.value;
+                var organova_degenerace_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.organova_degenerace_l_aktualni.value;
+                var organova_degenerace_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.organova_degenerace_l_ocekavana.value;
+
+                var tri_ohrivace_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tri_ohrivace_p_aktualni.value;
+                var tri_ohrivace_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tri_ohrivace_p_ocekavana.value;
+                var tri_ohrivace_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tri_ohrivace_l_aktualni.value;
+                var tri_ohrivace_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tri_ohrivace_l_ocekavana.value;
+
+                var srdce_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.srdce_p_aktualni.value;
+                var srdce_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.srdce_p_ocekavana.value;
+                var srdce_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.srdce_l_aktualni.value;
+                var srdce_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.srdce_l_ocekavana.value;
+
+                var tenke_strevo_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tenke_strevo_p_aktualni.value;
+                var tenke_strevo_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tenke_strevo_p_ocekavana.value;
+                var tenke_strevo_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tenke_strevo_l_aktualni.value;
+                var tenke_strevo_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.tenke_strevo_l_ocekavana.value;
+
+                var slinivka_slezina_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.slinivka_slezina_p_aktualni.value;
+                var slinivka_slezina_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.slinivka_slezina_p_ocekavana.value;
+                var slinivka_slezina_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.slinivka_slezina_l_aktualni.value;
+                var slinivka_slezina_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.slinivka_slezina_l_ocekavana.value;
+
+                var jatra_p_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.jatra_p_aktualni.value;
+                var jatra_p_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.jatra_p_ocekavana.value;
+                var jatra_l_aktualni = document.diagnostika_eav_<?echo $uzivatel_id; ?>.jatra_l_aktualni.value;
+                var jatra_l_ocekavana = document.diagnostika_eav_<?echo $uzivatel_id; ?>.jatra_l_ocekavana.value;
 
 
 
 
 
-  let dataEav_plan = "uzivatel_id=<?echo $uzivatel_id; ?>";
 
-                        alert("Uživatel ID: " + jine);
 
+                        if(!celkova_hodnota || !v_jakych_rodinnych_pomerech_zijete || !reakce_na_pocasi || reakce_na_mesicni_cyklus == 0 || casta_zizen == 0 || preference_napoju == 0 || chut_k_jidlu == 0 || spanek == 0 || !v_jakou_hodinu_nemuzete_spat || strachy_v_zivote == 0) {  
+                                alert("Musíte vyplmit všechna povinná pole označená *"); 
+
+                                }else{
+
+
+
+
+                let dataEav_plan = "uzivatel_id=<?echo $uzivatel_id; ?>";
+                    dataEav_plan = dataEav_plan + "&prihlaseny_uzivatel="+prihlaseny_uzivatel;
+                    dataEav_plan = dataEav_plan + "&celkova_hodnota="+celkova_hodnota;
+                    dataEav_plan = dataEav_plan + "&v_jakych_rodinnych_pomerech_zijete="+v_jakych_rodinnych_pomerech_zijete;
+                    dataEav_plan = dataEav_plan + "&reakce_na_pocasi="+reakce_na_pocasi;
+                    dataEav_plan = dataEav_plan + "&reakce_na_mesicni_cyklus="+reakce_na_mesicni_cyklus;
+                    dataEav_plan = dataEav_plan + "&reakce_na_mesicni_cyklus_text="+reakce_na_mesicni_cyklus_text;
+                    dataEav_plan = dataEav_plan + "&casta_zizen="+casta_zizen;
+                    dataEav_plan = dataEav_plan + "&preference_napoju="+preference_napoju;
+                    dataEav_plan = dataEav_plan + "&druh_napoju="+druh_napoju;
+                    dataEav_plan = dataEav_plan + "&chut_k_jidlu="+chut_k_jidlu;
+                    dataEav_plan = dataEav_plan + "&hlad_v_koli_hodin="+hlad_v_koli_hodin;
+                    dataEav_plan = dataEav_plan + "&oblibene_jidlo="+oblibene_jidlo;
+                    dataEav_plan = dataEav_plan + "&neoblibene_jidlo="+neoblibene_jidlo;
+                    dataEav_plan = dataEav_plan + "&sladke="+sladke;
+                    dataEav_plan = dataEav_plan + "&soleni="+soleni;
+                    dataEav_plan = dataEav_plan + "&koreneni="+koreneni;
+                    dataEav_plan = dataEav_plan + "&problemy_po_oblibenem_jidle="+problemy_po_oblibenem_jidle;
+                    dataEav_plan = dataEav_plan + "&problemy_po_oblibenem_jidle_text="+problemy_po_oblibenem_jidle_text;
+                    dataEav_plan = dataEav_plan + "&problemy_po_jidle_obecne="+problemy_po_jidle_obecne;
+                    dataEav_plan = dataEav_plan + "&problemy_po_jidle_obecne_text="+problemy_po_jidle_obecne_text;
+                    dataEav_plan = dataEav_plan + "&spanek="+spanek;
+                    dataEav_plan = dataEav_plan + "&poloha_ve_spanku="+poloha_ve_spanku;
+                    dataEav_plan = dataEav_plan + "&v_jakou_hodinu_nemuzete_spat="+v_jakou_hodinu_nemuzete_spat;
+                    dataEav_plan = dataEav_plan + "&vraceji_se_nektere_sny="+vraceji_se_nektere_sny;
+                    dataEav_plan = dataEav_plan + "&popis_snu="+popis_snu;
+                    dataEav_plan = dataEav_plan + "&strachy_v_zivote="+strachy_v_zivote;
+                    dataEav_plan = dataEav_plan + "&bourka="+bourka;
+                    dataEav_plan = dataEav_plan + "&vyska="+vyska;
+                    dataEav_plan = dataEav_plan + "&zkouska="+zkouska;
+                    dataEav_plan = dataEav_plan + "&voda="+voda;
+                    dataEav_plan = dataEav_plan + "&nemoc="+nemoc;
+                    dataEav_plan = dataEav_plan + "&zvire="+zvire;
+                    dataEav_plan = dataEav_plan + "&cestovani="+cestovani;
+                    dataEav_plan = dataEav_plan + "&dopravni_prostredek="+dopravni_prostredek;
+                    dataEav_plan = dataEav_plan + "&zlodej="+zlodej;
+                    dataEav_plan = dataEav_plan + "&smrt="+smrt;
+                    dataEav_plan = dataEav_plan + "&jine="+jine;
+                    dataEav_plan = dataEav_plan + "&popis_strachu="+popis_strachu;
+                    dataEav_plan = dataEav_plan + "&poznamka_text="+poznamka_text;
+                    dataEav_plan = dataEav_plan + "&lymmfa_p_aktualni="+lymmfa_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&lymmfa_p_ocekavana="+lymmfa_p_ocekavana;
+                    dataEav_plan = dataEav_plan + "&lymmfa_l_aktualni="+lymmfa_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&lymmfa_l_ocekavana="+lymmfa_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&plice_p_aktualni="+plice_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&plice_p_ocekavana="+plice_p_ocekavana;
+                    dataEav_plan = dataEav_plan + "&plice_l_aktualni="+plice_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&plice_l_ocekavana="+plice_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&tluste_strevo_p_aktualni="+tluste_strevo_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&tluste_strevo_p_ocekavana="+tluste_strevo_p_ocekavana;
+                    dataEav_plan = dataEav_plan + "&tluste_strevo_l_aktualni="+tluste_strevo_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&tluste_strevo_l_ocekavana="+tluste_strevo_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&nervova_degenerace_p_aktualni="+nervova_degenerace_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&nervova_degenerace_p_ocekavana="+nervova_degenerace_p_ocekavana;
+                    dataEav_plan = dataEav_plan + "&nervova_degenerace_l_aktualni="+nervova_degenerace_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&nervova_degenerace_l_ocekavana="+nervova_degenerace_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&obal_srdce_p_aktualni="+obal_srdce_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&obal_srdce_p_ocekavana="+obal_srdce_p_ocekavana;
+                    dataEav_plan = dataEav_plan + "&obal_srdce_l_aktualni="+obal_srdce_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&obal_srdce_l_ocekavana="+obal_srdce_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&alergie_p_aktualni="+alergie_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&alergie_p_ocekavana="+alergie_p_ocekavana;
+                    dataEav_plan = dataEav_plan + "&alergie_l_aktualni="+alergie_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&alergie_l_ocekavana="+alergie_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&organova_degenerace_p_aktualni="+organova_degenerace_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&organova_degenerace_p_ocekavana="+organova_degenerace_p_ocekavana;                   
+                    dataEav_plan = dataEav_plan + "&organova_degenerace_l_aktualni="+organova_degenerace_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&organova_degenerace_l_ocekavana="+organova_degenerace_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&tri_ohrivace_p_aktualni="+tri_ohrivace_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&tri_ohrivace_p_ocekavana="+tri_ohrivace_p_ocekavana;
+                    dataEav_plan = dataEav_plan + "&tri_ohrivace_l_aktualni="+tri_ohrivace_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&tri_ohrivace_l_ocekavana="+tri_ohrivace_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&srdce_p_aktualni="+srdce_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&srdce_p_ocekavana="+srdce_p_ocekavana;
+                    dataEav_plan = dataEav_plan + "&srdce_l_aktualni="+srdce_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&srdce_l_ocekavana="+srdce_l_ocekavana;
+                    dataEav_plan = dataEav_plan + "&tenke_strevo_p_aktualni="+tenke_strevo_p_aktualni;
+                    dataEav_plan = dataEav_plan + "&tenke_strevo_p_ocekavana="+tenke_strevo_p_ocekavana;
+                    dataEav_plan = dataEav_plan + "&tenke_strevo_l_aktualni="+tenke_strevo_l_aktualni;
+                    dataEav_plan = dataEav_plan + "&tenke_strevo_l_ocekavana="+tenke_strevo_l_ocekavana;
+
+
+
+
+
+        xhttp.open("POST", "./script/eav_plan_insert.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(dataEav_plan);
+        alert("Uložení:\nAktualizovaný záznam plánované procedury byl uložen.");
+
+
+
+                        }
+
+
+
+
+
+               
+                        
 
 
 
