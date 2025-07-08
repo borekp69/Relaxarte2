@@ -176,151 +176,151 @@ $mocovy_mechyr_l_aktualni_form = addslashes(htmlspecialchars(trim("$_POST[mocovy
 $mocovy_mechyr_l_ocekavana_form = addslashes(htmlspecialchars(trim("$_POST[mocovy_mechyr_l_ocekavana]")));
 
 
-    echo 'uzivatel_id_form: '.$uzivatel_id_form.'<br>';
-    echo 'prihlaseny_uzivatel: '.$prihlaseny_uzivatel_form.'<br>';
+    // echo 'uzivatel_id_form: '.$uzivatel_id_form.'<br>';
+    // echo 'prihlaseny_uzivatel: '.$prihlaseny_uzivatel_form.'<br>';
 
-    echo 'celkova_hodnota_form: '.$celkova_hodnota_form.'<br>';
-    echo 'v_jakych_rodinnych_pomerech_zijete_form: '.$v_jakych_rodinnych_pomerech_zijete_form.'<br>';
-    echo 'reakce_na_pocasi_form: '.$reakce_na_pocasi_form.'<br>';
-    echo 'reakce_na_mesicni_cyklus_form: '.$reakce_na_mesicni_cyklus_form.'<br>';
-    echo 'reakce_na_mesicni_cyklus_text_form: '.$reakce_na_mesicni_cyklus_text_form.'<br>';
-    echo 'casta_zizen_form: '.$casta_zizen_form.'<br>';
-    echo 'preference_napoju_form: '.$preference_napoju_form.'<br>';
-    echo 'druh_napoju_form: '.$druh_napoju_form.'<br>';
-    echo 'chut_k_jidlu_form: '.$chut_k_jidlu_form.'<br>';
-    echo 'hlad_v_koli_hodin_form: '.$hlad_v_koli_hodin_form.'<br>';
-    echo 'oblibene_jidlo_form: '.$oblibene_jidlo_form.'<br>';
-    echo 'neoblibene_jidlo_form: '.$neoblibene_jidlo_form.'<br>';
-    echo 'sladke_form: '.$sladke_form.'<br>';
-    echo 'soleni_form: '.$soleni_form.'<br>';
-    echo 'koreneni_form: '.$koreneni_form.'<br>';
-    echo 'problemy_po_oblibenem_jidle_form: '.$problemy_po_oblibenem_jidle_form.'<br>';
-    echo 'problemy_po_oblibenem_jidle_text_form: '.$problemy_po_oblibenem_jidle_text_form.'<br>';
-    echo 'problemy_po_jidle_obecne_form: '.$problemy_po_jidle_obecne_form.'<br>';
-    echo 'problemy_po_jidle_obecne_text_form: '.$problemy_po_jidle_obecne_text_form.'<br>';
-    echo 'spanek_form: '.$spanek_form.'<br>';
-    echo 'poloha_ve_spanku_form: '.$poloha_ve_spanku_form.'<br>';
-    echo 'v_jakou_hodinu_nemuzete_spat_form: '.$v_jakou_hodinu_nemuzete_spat_form.'<br>';
-    echo 'poznamka_text_form: '.$poznamka_text_form.'<br>';
-    echo 'vraceji_se_nektere_sny_form: '.$vraceji_se_nektere_sny_form.'<br>';
-    echo 'popis_snu_form: '.$popis_snu_form.'<br>';
-    echo 'strachy_v_zivote_form: '.$strachy_v_zivote_form.'<br>';
+    // echo 'celkova_hodnota_form: '.$celkova_hodnota_form.'<br>';
+    // echo 'v_jakych_rodinnych_pomerech_zijete_form: '.$v_jakych_rodinnych_pomerech_zijete_form.'<br>';
+    // echo 'reakce_na_pocasi_form: '.$reakce_na_pocasi_form.'<br>';
+    // echo 'reakce_na_mesicni_cyklus_form: '.$reakce_na_mesicni_cyklus_form.'<br>';
+    // echo 'reakce_na_mesicni_cyklus_text_form: '.$reakce_na_mesicni_cyklus_text_form.'<br>';
+    // echo 'casta_zizen_form: '.$casta_zizen_form.'<br>';
+    // echo 'preference_napoju_form: '.$preference_napoju_form.'<br>';
+    // echo 'druh_napoju_form: '.$druh_napoju_form.'<br>';
+    // echo 'chut_k_jidlu_form: '.$chut_k_jidlu_form.'<br>';
+    // echo 'hlad_v_koli_hodin_form: '.$hlad_v_koli_hodin_form.'<br>';
+    // echo 'oblibene_jidlo_form: '.$oblibene_jidlo_form.'<br>';
+    // echo 'neoblibene_jidlo_form: '.$neoblibene_jidlo_form.'<br>';
+    // echo 'sladke_form: '.$sladke_form.'<br>';
+    // echo 'soleni_form: '.$soleni_form.'<br>';
+    // echo 'koreneni_form: '.$koreneni_form.'<br>';
+    // echo 'problemy_po_oblibenem_jidle_form: '.$problemy_po_oblibenem_jidle_form.'<br>';
+    // echo 'problemy_po_oblibenem_jidle_text_form: '.$problemy_po_oblibenem_jidle_text_form.'<br>';
+    // echo 'problemy_po_jidle_obecne_form: '.$problemy_po_jidle_obecne_form.'<br>';
+    // echo 'problemy_po_jidle_obecne_text_form: '.$problemy_po_jidle_obecne_text_form.'<br>';
+    // echo 'spanek_form: '.$spanek_form.'<br>';
+    // echo 'poloha_ve_spanku_form: '.$poloha_ve_spanku_form.'<br>';
+    // echo 'v_jakou_hodinu_nemuzete_spat_form: '.$v_jakou_hodinu_nemuzete_spat_form.'<br>';
+    // echo 'poznamka_text_form: '.$poznamka_text_form.'<br>';
+    // echo 'vraceji_se_nektere_sny_form: '.$vraceji_se_nektere_sny_form.'<br>';
+    // echo 'popis_snu_form: '.$popis_snu_form.'<br>';
+    // echo 'strachy_v_zivote_form: '.$strachy_v_zivote_form.'<br>';
 
-echo 'bourka_form: '.$bourka_form.'<br>';
-echo 'vyska_form: '.$vyska_form.'<br>';
-echo 'zkouska_form: '.$zkouska_form.'<br>';
-echo 'voda_form: '.$voda_form.'<br>';
-echo 'nemoc_form: '.$nemoc_form.'<br>';
-echo 'zvire_form: '.$zvire_form.'<br>';
-echo 'cestovani_form: '.$cestovani_form.'<br>';
-echo 'dopravni_prostredek_form: '.$dopravni_prostredek_form.'<br>';
-echo 'zlodej_form: '.$zlodej_form.'<br>';
-echo 'smrt_form: '.$smrt_form.'<br>';
-echo 'jine_form: '.$jine_form.'<br>';
-echo 'jine_popis_strachu: '.$popis_strachu_form.'<br>';
-
-
-echo 'lymmfa_p_aktualni: '.$lymmfa_p_aktualni_form.'<br>';
-echo 'lymmfa_p_ocekavana: '.$lymmfa_p_ocekavana_form.'<br>';
-echo 'lymmfa_l_aktualni: '.$lymmfa_l_aktualni_form.'<br>';
-echo 'lymmfa_l_ocekavana: '.$lymmfa_l_ocekavana_form.'<br>';
-
-echo 'plice_p_aktualni: '.$plice_p_aktualni_form.'<br>';
-echo 'plice_p_ocekavana: '.$plice_p_ocekavana_form.'<br>';
-echo 'plice_l_aktualni: '.$plice_l_aktualni_form.'<br>';
-echo 'plice_l_ocekavana: '.$plice_l_ocekavana_form.'<br>';
-
-echo 'tluste_strevo_p_aktualni: '.$tluste_strevo_p_aktualni_form.'<br>';
-echo 'tluste_strevo_p_ocekavana: '.$tluste_strevo_p_ocekavana_form.'<br>';
-echo 'tluste_strevo_l_aktualni: '.$tluste_strevo_l_aktualni_form.'<br>';
-echo 'tluste_strevo_l_ocekavana: '.$tluste_strevo_l_ocekavana_form.'<br>';
-
-echo 'nervova_degenerace_p_aktualni: '.$nervova_degenerace_p_aktualni_form.'<br>';
-echo 'nervova_degenerace_p_ocekavana: '.$nervova_degenerace_p_ocekavana_form.'<br>';
-echo 'nervova_degenerace_l_aktualni: '.$nervova_degenerace_l_aktualni_form.'<br>';
-echo 'nervova_degenerace_l_ocekavana: '.$nervova_degenerace_l_ocekavana_form.'<br>';
-
-echo 'obal_srdce_p_aktualni: '.$obal_srdce_p_aktualni_form.'<br>';
-echo 'obal_srdce_p_ocekavana: '.$obal_srdce_p_ocekavana_form.'<br>';
-echo 'obal_srdce_l_aktualni: '.$obal_srdce_l_aktualni_form.'<br>';
-echo 'obal_srdce_l_ocekavana: '.$obal_srdce_l_ocekavana_form.'<br>';
-
-echo 'alergie_p_aktualni: '.$alergie_p_aktualni_form.'<br>';
-echo 'alergie_p_ocekavana: '.$alergie_p_ocekavana_form.'<br>';
-echo 'alergie_l_aktualni: '.$alergie_l_aktualni_form.'<br>';
-echo 'alergie_l_ocekavana: '.$alergie_l_ocekavana_form.'<br>';
-
-echo 'organova_degenerace_p_aktualni: '.$organova_degenerace_p_aktualni_form.'<br>';
-echo 'organova_degenerace_p_ocekavana: '.$organova_degenerace_p_ocekavana_form.'<br>';
-echo 'organova_degenerace_l_aktualni: '.$organova_degenerace_l_aktualni_form.'<br>';
-echo 'organova_degenerace_l_ocekavana: '.$organova_degenerace_l_ocekavana_form.'<br>';
-
-echo 'tri_ohrivace_p_aktualni: '.$tri_ohrivace_p_aktualni_form.'<br>';
-echo 'tri_ohrivace_p_ocekavana: '.$tri_ohrivace_p_ocekavana_form.'<br>';
-echo 'tri_ohrivace_l_aktualni: '.$tri_ohrivace_l_aktualni_form.'<br>';
-echo 'tri_ohrivace_l_ocekavana: '.$tri_ohrivace_l_ocekavana_form.'<br>';
-
-echo 'srdce_p_aktualni: '.$srdce_p_aktualni_form.'<br>';
-echo 'srdce_p_ocekavana: '.$srdce_p_ocekavana_form.'<br>';
-echo 'srdce_l_aktualni: '.$srdce_l_aktualni_form.'<br>';
-echo 'srdce_l_ocekavana: '.$srdce_l_ocekavana_form.'<br>';
-
-echo 'tenke_strevo_p_aktualni: '.$tenke_strevo_p_aktualni_form.'<br>';
-echo 'tenke_strevo_p_ocekavana: '.$tenke_strevo_p_ocekavana_form.'<br>';
-echo 'tenke_strevo_l_aktualni: '.$tenke_strevo_l_aktualni_form.'<br>';
-echo 'tenke_strevo_l_ocekavana: '.$tenke_strevo_l_ocekavana_form.'<br>';
-
-echo '<br>';
-echo 'slinivka_slezina_p_aktualni: '.$slinivka_slezina_p_aktualni_form.'<br>';
-echo 'slinivka_slezina_p_ocekavana: '.$slinivka_slezina_p_ocekavana_form.'<br>';
-echo 'slinivka_slezina_l_aktualni: '.$slinivka_slezina_l_aktualni_form.'<br>';
-echo 'slinivka_slezina_l_ocekavana: '.$slinivka_slezina_l_ocekavana_form.'<br>';
-
-echo 'jatra_p_aktualni: '.$jatra_p_aktualni_form.'<br>';
-echo 'jatra_p_ocekavana: '.$jatra_p_ocekavana_form.'<br>';
-echo 'jatra_l_aktualni: '.$jatra_l_aktualni_form.'<br>';
-echo 'jatra_l_ocekavana: '.$jatra_l_ocekavana_form.'<br>';
-
-echo 'kloubni_degenerace_p_aktualni: '.$kloubni_degenerace_p_aktualni_form.'<br>';
-echo 'kloubni_degenerace_p_ocekavana: '.$kloubni_degenerace_p_ocekavana_form.'<br>';
-echo 'kloubni_degenerace_l_aktualni: '.$kloubni_degenerace_l_aktualni_form.'<br>';
-echo 'kloubni_degenerace_l_ocekavana: '.$kloubni_degenerace_l_ocekavana_form.'<br>';
-
-echo 'zaludek_p_aktualni: '.$zaludek_p_aktualni_form.'<br>';
-echo 'zaludek_p_ocekavana: '.$zaludek_p_ocekavana_form.'<br>';
-echo 'zaludek_l_aktualni: '.$zaludek_l_aktualni_form.'<br>';
-echo 'zaludek_l_ocekavana: '.$zaludek_l_ocekavana_form.'<br>';
-
-echo 'vazivova_degenerace_p_aktualni: '.$vazivova_degenerace_p_aktualni_form.'<br>';
-echo 'vazivova_degenerace_p_ocekavana: '.$vazivova_degenerace_p_ocekavana_form.'<br>';
-echo 'vazivova_degenerace_l_aktualni: '.$vazivova_degenerace_l_aktualni_form.'<br>';
-echo 'vazivova_degenerace_l_ocekavana: '.$vazivova_degenerace_l_ocekavana_form.'<br>';
-
-echo 'kuze_p_aktualni: '.$kuze_p_aktualni_form.'<br>';
-echo 'kuze_p_ocekavana: '.$kuze_p_ocekavana_form.'<br>';
-echo 'kuze_l_aktualni: '.$kuze_l_aktualni_form.'<br>';
-echo 'kuze_l_ocekavana: '.$kuze_l_ocekavana_form.'<br>';
-
-echo 'tukova_degenerace_p_aktualni: '.$tukova_degenerace_p_aktualni_form.'<br>';
-echo 'tukova_degenerace_p_ocekavana: '.$tukova_degenerace_p_ocekavana_form.'<br>';
-echo 'tukova_degenerace_l_aktualni: '.$tukova_degenerace_l_aktualni_form.'<br>';
-echo 'tukova_degenerace_l_ocekavana: '.$tukova_degenerace_l_ocekavana_form.'<br>';
-
-echo 'zlucnik_p_aktualni: '.$zlucnik_p_aktualni_form.'<br>';
-echo 'zlucnik_p_ocekavana: '.$zlucnik_p_ocekavana_form.'<br>';
-echo 'zlucnik_l_aktualni: '.$zlucnik_l_aktualni_form.'<br>';
-echo 'zlucnik_l_ocekavana: '.$zlucnik_l_ocekavana_form.'<br>';
-
-echo 'ledviny_p_aktualni: '.$ledviny_p_aktualni_form.'<br>';
-echo 'ledviny_p_ocekavana: '.$ledviny_p_ocekavana_form.'<br>';
-echo 'ledviny_l_aktualni: '.$ledviny_l_aktualni_form.'<br>';
-echo 'ledviny_l_ocekavana: '.$ledviny_l_ocekavana_form.'<br>';
+// echo 'bourka_form: '.$bourka_form.'<br>';
+// echo 'vyska_form: '.$vyska_form.'<br>';
+// echo 'zkouska_form: '.$zkouska_form.'<br>';
+// echo 'voda_form: '.$voda_form.'<br>';
+// echo 'nemoc_form: '.$nemoc_form.'<br>';
+// echo 'zvire_form: '.$zvire_form.'<br>';
+// echo 'cestovani_form: '.$cestovani_form.'<br>';
+// echo 'dopravni_prostredek_form: '.$dopravni_prostredek_form.'<br>';
+// echo 'zlodej_form: '.$zlodej_form.'<br>';
+// echo 'smrt_form: '.$smrt_form.'<br>';
+// echo 'jine_form: '.$jine_form.'<br>';
+// echo 'jine_popis_strachu: '.$popis_strachu_form.'<br>';
 
 
-echo 'mocovy_mechyr_p_aktualni: '.$mocovy_mechyr_p_aktualni_form.'<br>';
-echo 'mocovy_mechyr_p_ocekavana: '.$mocovy_mechyr_p_ocekavana_form.'<br>';
-echo 'mocovy_mechyr_l_aktualni: '.$mocovy_mechyr_l_aktualni_form.'<br>';
-echo 'mocovy_mechyr_l_ocekavana: '.$mocovy_mechyr_l_ocekavana_form.'<br><br><br>';
+// echo 'lymmfa_p_aktualni: '.$lymmfa_p_aktualni_form.'<br>';
+// echo 'lymmfa_p_ocekavana: '.$lymmfa_p_ocekavana_form.'<br>';
+// echo 'lymmfa_l_aktualni: '.$lymmfa_l_aktualni_form.'<br>';
+// echo 'lymmfa_l_ocekavana: '.$lymmfa_l_ocekavana_form.'<br>';
+
+// echo 'plice_p_aktualni: '.$plice_p_aktualni_form.'<br>';
+// echo 'plice_p_ocekavana: '.$plice_p_ocekavana_form.'<br>';
+// echo 'plice_l_aktualni: '.$plice_l_aktualni_form.'<br>';
+// echo 'plice_l_ocekavana: '.$plice_l_ocekavana_form.'<br>';
+
+// echo 'tluste_strevo_p_aktualni: '.$tluste_strevo_p_aktualni_form.'<br>';
+// echo 'tluste_strevo_p_ocekavana: '.$tluste_strevo_p_ocekavana_form.'<br>';
+// echo 'tluste_strevo_l_aktualni: '.$tluste_strevo_l_aktualni_form.'<br>';
+// echo 'tluste_strevo_l_ocekavana: '.$tluste_strevo_l_ocekavana_form.'<br>';
+
+// echo 'nervova_degenerace_p_aktualni: '.$nervova_degenerace_p_aktualni_form.'<br>';
+// echo 'nervova_degenerace_p_ocekavana: '.$nervova_degenerace_p_ocekavana_form.'<br>';
+// echo 'nervova_degenerace_l_aktualni: '.$nervova_degenerace_l_aktualni_form.'<br>';
+// echo 'nervova_degenerace_l_ocekavana: '.$nervova_degenerace_l_ocekavana_form.'<br>';
+
+// echo 'obal_srdce_p_aktualni: '.$obal_srdce_p_aktualni_form.'<br>';
+// echo 'obal_srdce_p_ocekavana: '.$obal_srdce_p_ocekavana_form.'<br>';
+// echo 'obal_srdce_l_aktualni: '.$obal_srdce_l_aktualni_form.'<br>';
+// echo 'obal_srdce_l_ocekavana: '.$obal_srdce_l_ocekavana_form.'<br>';
+
+// echo 'alergie_p_aktualni: '.$alergie_p_aktualni_form.'<br>';
+// echo 'alergie_p_ocekavana: '.$alergie_p_ocekavana_form.'<br>';
+// echo 'alergie_l_aktualni: '.$alergie_l_aktualni_form.'<br>';
+// echo 'alergie_l_ocekavana: '.$alergie_l_ocekavana_form.'<br>';
+
+// echo 'organova_degenerace_p_aktualni: '.$organova_degenerace_p_aktualni_form.'<br>';
+// echo 'organova_degenerace_p_ocekavana: '.$organova_degenerace_p_ocekavana_form.'<br>';
+// echo 'organova_degenerace_l_aktualni: '.$organova_degenerace_l_aktualni_form.'<br>';
+// echo 'organova_degenerace_l_ocekavana: '.$organova_degenerace_l_ocekavana_form.'<br>';
+
+// echo 'tri_ohrivace_p_aktualni: '.$tri_ohrivace_p_aktualni_form.'<br>';
+// echo 'tri_ohrivace_p_ocekavana: '.$tri_ohrivace_p_ocekavana_form.'<br>';
+// echo 'tri_ohrivace_l_aktualni: '.$tri_ohrivace_l_aktualni_form.'<br>';
+// echo 'tri_ohrivace_l_ocekavana: '.$tri_ohrivace_l_ocekavana_form.'<br>';
+
+// echo 'srdce_p_aktualni: '.$srdce_p_aktualni_form.'<br>';
+// echo 'srdce_p_ocekavana: '.$srdce_p_ocekavana_form.'<br>';
+// echo 'srdce_l_aktualni: '.$srdce_l_aktualni_form.'<br>';
+// echo 'srdce_l_ocekavana: '.$srdce_l_ocekavana_form.'<br>';
+
+// echo 'tenke_strevo_p_aktualni: '.$tenke_strevo_p_aktualni_form.'<br>';
+// echo 'tenke_strevo_p_ocekavana: '.$tenke_strevo_p_ocekavana_form.'<br>';
+// echo 'tenke_strevo_l_aktualni: '.$tenke_strevo_l_aktualni_form.'<br>';
+// echo 'tenke_strevo_l_ocekavana: '.$tenke_strevo_l_ocekavana_form.'<br>';
+
+// echo '<br>';
+// echo 'slinivka_slezina_p_aktualni: '.$slinivka_slezina_p_aktualni_form.'<br>';
+// echo 'slinivka_slezina_p_ocekavana: '.$slinivka_slezina_p_ocekavana_form.'<br>';
+// echo 'slinivka_slezina_l_aktualni: '.$slinivka_slezina_l_aktualni_form.'<br>';
+// echo 'slinivka_slezina_l_ocekavana: '.$slinivka_slezina_l_ocekavana_form.'<br>';
+
+// echo 'jatra_p_aktualni: '.$jatra_p_aktualni_form.'<br>';
+// echo 'jatra_p_ocekavana: '.$jatra_p_ocekavana_form.'<br>';
+// echo 'jatra_l_aktualni: '.$jatra_l_aktualni_form.'<br>';
+// echo 'jatra_l_ocekavana: '.$jatra_l_ocekavana_form.'<br>';
+
+// echo 'kloubni_degenerace_p_aktualni: '.$kloubni_degenerace_p_aktualni_form.'<br>';
+// echo 'kloubni_degenerace_p_ocekavana: '.$kloubni_degenerace_p_ocekavana_form.'<br>';
+// echo 'kloubni_degenerace_l_aktualni: '.$kloubni_degenerace_l_aktualni_form.'<br>';
+// echo 'kloubni_degenerace_l_ocekavana: '.$kloubni_degenerace_l_ocekavana_form.'<br>';
+
+// echo 'zaludek_p_aktualni: '.$zaludek_p_aktualni_form.'<br>';
+// echo 'zaludek_p_ocekavana: '.$zaludek_p_ocekavana_form.'<br>';
+// echo 'zaludek_l_aktualni: '.$zaludek_l_aktualni_form.'<br>';
+// echo 'zaludek_l_ocekavana: '.$zaludek_l_ocekavana_form.'<br>';
+
+// echo 'vazivova_degenerace_p_aktualni: '.$vazivova_degenerace_p_aktualni_form.'<br>';
+// echo 'vazivova_degenerace_p_ocekavana: '.$vazivova_degenerace_p_ocekavana_form.'<br>';
+// echo 'vazivova_degenerace_l_aktualni: '.$vazivova_degenerace_l_aktualni_form.'<br>';
+// echo 'vazivova_degenerace_l_ocekavana: '.$vazivova_degenerace_l_ocekavana_form.'<br>';
+
+// echo 'kuze_p_aktualni: '.$kuze_p_aktualni_form.'<br>';
+// echo 'kuze_p_ocekavana: '.$kuze_p_ocekavana_form.'<br>';
+// echo 'kuze_l_aktualni: '.$kuze_l_aktualni_form.'<br>';
+// echo 'kuze_l_ocekavana: '.$kuze_l_ocekavana_form.'<br>';
+
+// echo 'tukova_degenerace_p_aktualni: '.$tukova_degenerace_p_aktualni_form.'<br>';
+// echo 'tukova_degenerace_p_ocekavana: '.$tukova_degenerace_p_ocekavana_form.'<br>';
+// echo 'tukova_degenerace_l_aktualni: '.$tukova_degenerace_l_aktualni_form.'<br>';
+// echo 'tukova_degenerace_l_ocekavana: '.$tukova_degenerace_l_ocekavana_form.'<br>';
+
+// echo 'zlucnik_p_aktualni: '.$zlucnik_p_aktualni_form.'<br>';
+// echo 'zlucnik_p_ocekavana: '.$zlucnik_p_ocekavana_form.'<br>';
+// echo 'zlucnik_l_aktualni: '.$zlucnik_l_aktualni_form.'<br>';
+// echo 'zlucnik_l_ocekavana: '.$zlucnik_l_ocekavana_form.'<br>';
+
+// echo 'ledviny_p_aktualni: '.$ledviny_p_aktualni_form.'<br>';
+// echo 'ledviny_p_ocekavana: '.$ledviny_p_ocekavana_form.'<br>';
+// echo 'ledviny_l_aktualni: '.$ledviny_l_aktualni_form.'<br>';
+// echo 'ledviny_l_ocekavana: '.$ledviny_l_ocekavana_form.'<br>';
+
+
+// echo 'mocovy_mechyr_p_aktualni: '.$mocovy_mechyr_p_aktualni_form.'<br>';
+// echo 'mocovy_mechyr_p_ocekavana: '.$mocovy_mechyr_p_ocekavana_form.'<br>';
+// echo 'mocovy_mechyr_l_aktualni: '.$mocovy_mechyr_l_aktualni_form.'<br>';
+// echo 'mocovy_mechyr_l_ocekavana: '.$mocovy_mechyr_l_ocekavana_form.'<br><br><br>';
 
 
 
@@ -573,5 +573,5 @@ VALUES (
 
 if ($conn->query($sql) === TRUE) {    
     } else {
-  echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
+   echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
     }
