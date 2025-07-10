@@ -899,12 +899,64 @@ header("Pragma: no-cache");
 
                         <?
                 require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
-                    $sql_eav_plan = "SELECT * FROM eav_plan WHERE uzivatel_id = $uzivatel_id ORDER BY Datum ASC";
+                    $sql_eav_plan = "SELECT * FROM eav_plan WHERE uzivatel_id = $uzivatel_id ORDER BY eav_plan_id DESC";
                     $result_eav_plan = $conn->query($sql_eav_plan);
 
                      while($radek_eav_plan = $result_eav_plan->fetch_assoc()) {
 
-                echo '<br>ID: '.$radek_eav_plan["eav_plan_id"].'<br>';
+                    //echo '<br>ID: '.$radek_eav_plan["eav_plan_id"];
+                        $celkova_hodnota = $radek_eav_plan["celkova_hodnota"];
+                        $v_jakych_rodinnych_pomerech_zijete = $radek_eav_plan["v_jakych_rodinnych_pomerech_zijete"];
+                        $reakce_na_pocasi =$radek_eav_plan["reakce_na_pocasi"];
+
+
+?>
+                                        <div class="row">
+                                                                <div class="col-sm-12" style="background-color:#DBDBDB;"> 
+                                                                        <div class="col-sm-6">
+                                                                                <br>
+                                                                                <label for="uzivatel">* Celková hodnota:</label>
+                                                                                <input type="text" class="form-control form-control-sm" id="celkova_hodnota" value = "<? echo $celkova_hodnota;?>" name="celkova_hodnota" maxlength="5" placeholder="Celková hodnota" readonly>
+                                                                        </div>                                                                      
+
+                                                                </div>
+
+                                        </div>
+                                        
+                                        <div class="row">
+                        
+                                                        <div class="col-sm-12" style="background-color:#DBDBDB;">  
+                                                                        <div class="col-sm-6">
+                                                                        <br>
+                                                                        <label for="uzivatel">* V jakých rodinných poměrech žijete:</label>
+                                                                        <input type="text" class="form-control form-control-sm" id="v_jakych_rodinnych_pomerech_zijete" value = "<? echo $v_jakych_rodinnych_pomerech_zijete; ?>" name="v_jakych_rodinnych_pomerech_zijete" maxlength="100" placeholder="V jakých rodinných poměrech žijete?" readonly>
+                                                                        </div>  
+
+                                                                        <div class="col-sm-6">
+                                                                        <br>
+                                                                        <label for="uzivatel">* Reakce na počasí:</label>
+                                                                        <input type="text" class="form-control form-control-sm" id="reakce_na_pocasi" value = "<? echo $reakce_na_pocasi; ?>" name="reakce_na_pocasi" maxlength="100" placeholder="chladné, vlhké, horké, suché, mlha, bouřka, změny, sníh, vítr" readonly>
+                                                                        </div>
+                                                        </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+                                        
+
+<br><br>
+
+
+                <?
+
+
                      }
 
 
