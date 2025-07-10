@@ -894,6 +894,12 @@ header("Pragma: no-cache");
 
 
 <br>
+
+<br>------------------- výpis záznamů začátek ------------------- 
+
+
+<br>------------------- výpis záznamů konec -------------------  
+
         <script>
   function loadEav_plan_<?echo $uzivatel_id; ?>() {
     var xhttp = new XMLHttpRequest();

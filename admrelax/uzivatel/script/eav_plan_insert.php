@@ -568,10 +568,12 @@ VALUES (
 '$mocovy_mechyr_l_aktualni_form',
 '$mocovy_mechyr_l_ocekavana_form',
 '$prihlaseny_uzivatel_form'
-
 )";       
 
 if ($conn->query($sql) === TRUE) {    
     } else {
    echo '<br><div class="alert alert-danger" role="alert"><b>Došlo k následující chybě:</b><hr>' . $conn->error . '</div>';
     }
+
+
+
