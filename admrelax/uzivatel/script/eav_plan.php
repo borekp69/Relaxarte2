@@ -915,6 +915,11 @@ header("Pragma: no-cache");
                         $druh_napoju = $radek_eav_plan["druh_napoju"];
                         $chut_k_jidlu = $radek_eav_plan["chut_k_jidlu"]; 
                         $hlad_v_koli_hodin = $radek_eav_plan["hlad_v_koli_hodin"];
+                        $oblibene_jidlo = $radek_eav_plan["oblibene_jidlo"];
+                        $neoblibene_jidlo = $radek_eav_plan["neoblibene_jidlo"];
+                        $sladke = $radek_eav_plan["sladke"];
+                        $soleni = $radek_eav_plan["soleni"];
+                        $koreneni = $radek_eav_plan["koreneni"]; 
 
 ?>
 
@@ -1141,6 +1146,143 @@ header("Pragma: no-cache");
 
                                                         </div>   
                                 </div>
+
+
+
+
+                                <div class="row">
+
+                                                <div class="col-sm-12" style="background-color:#DBDBDB;">  
+                                                        <div class="col-sm-3">
+                                                                <br>
+                                                                <label for="uzivatel">Oblíbené jídlo:</label>
+                                                                <input type="text" class="form-control form-control-sm" id="oblibene_jidlo" value = "<? echo $oblibene_jidlo;?>" name="oblibene_jidlo" maxlength="200" placeholder="Oblíbené jídlo" readonly>        
+                                                        </div>
+                                                        
+                                                        <div class="col-sm-3">
+                                                                <br>
+                                                                <label for="uzivatel">Neoblíbené jídlo:</label>
+                                                                <input type="text" class="form-control form-control-sm" id="neoblibene_jidlo" value = "<? echo $neoblibene_jidlo;?>" name="neoblibene_jidlo" maxlength="200" placeholder="Neoblíbené jídlo" readonly>        
+                                                        </div> 
+
+                                                        <div class="col-sm-2">
+                                                                <br>
+                                                                <label for="uzivatel">Sladké</label>
+                                                                <select class="form-control" id="sladke" name="sladke" disabled>
+                                                                
+                                                                <? if ($sladke == 1){  ?> 
+                                                                <option value="0"> Vyberte možnost</option>
+                                                                <option value="1" selected>Ano</option>
+                                                                <option value="2">Ne</option>
+                                                                <option value="3">Trochu</option>
+
+                                                                <?  }else if ($sladke == 2){ ?>    
+                                                                <option value="0"> Vyberte možnost</option>
+                                                                <option value="1">Ano</option>
+                                                                <option value="2" selected>Ne</option>
+                                                                <option value="3">Trochu</option>
+
+                                                                <?  }else if ($sladke == 3){ ?>    
+                                                                <option value="0"> Vyberte možnost</option>
+                                                                <option value="1">Ano</option>
+                                                                <option value="2">Ne</option>
+                                                                <option value="3" selected>Trochu</option>
+                                                                        
+                                                                <? }else{ ?> 
+                                                                <option value="0" selected> Vyberte možnost</option>
+                                                                <option value="1">Ano</option>
+                                                                <option value="2">Ne</option>
+                                                                <option value="3">Trochu</option>                                                                        
+                                                                        
+                                                                <?
+                                                                 }
+                                                                ?>    
+
+                                                                </select>
+                                                        </div>
+
+                                                        <div class="col-sm-2">
+                                                                <br>
+                                                                <label for="uzivatel">Solení</label>
+                                                                <select class="form-control" id="soleni" name="soleni" disabled>
+
+                                                                <? if ($soleni == 1){  ?>
+                                                                <option value="0"> Vyberte možnost</option>
+                                                                <option value="1" selected>Hodně</option>
+                                                                <option value="2">Málo</option>
+                                                                <option value="3">Vůbec ne</option>
+
+                                                                <?  }else if ($soleni == 2){ ?>                                                                    
+                                                                <option value="0"> Vyberte možnost</option>
+                                                                <option value="1">Hodně</option>
+                                                                <option value="2" selected>Málo</option>
+                                                                <option value="3">Vůbec ne</option> 
+
+                                                                <?  }else if ($soleni == 3){ ?>                                                                    
+                                                                <option value="0"> Vyberte možnost</option>
+                                                                <option value="1">Hodně</option>
+                                                                <option value="2">Málo</option>
+                                                                <option value="3" selected>Vůbec ne</option>     
+
+                                                                <? }else{ ?>                                                         
+                                                                <option value="0" selected> Vyberte možnost</option>
+                                                                <option value="1">Hodně</option>
+                                                                <option value="2">Málo</option>
+                                                                <option value="3">Vůbec ne</option>                                                         
+                                                                <?
+                                                                 }
+                                                                ?>                                                       
+                                                                                                                
+                                                                </select>
+                                                        </div>
+
+                                                        <div class="col-sm-2">
+                                                                <br>
+                                                                <label for="uzivatel">Kořenění</label>
+                                                                <select class="form-control" id="koreneni" name="koreneni" disabled>
+
+                                                                <? if ($koreneni == 1){  ?>
+                                                                <option value="0"> Vyberte možnost</option>
+                                                                <option value="1" selected>Hodně</option>
+                                                                <option value="2">Málo</option>
+                                                                <option value="3">Vůbec ne</option>
+
+                                                                <?  }else if ($koreneni == 2){ ?>                                                                    
+                                                                <option value="0"> Vyberte možnost</option>
+                                                                <option value="1">Hodně</option>
+                                                                <option value="2" selected>Málo</option>
+                                                                <option value="3">Vůbec ne</option> 
+
+                                                                <?  }else if ($koreneni == 3){ ?>                                                                    
+                                                                <option value="0"> Vyberte možnost</option>
+                                                                <option value="1">Hodně</option>
+                                                                <option value="2">Málo</option>
+                                                                <option value="3" selected>Vůbec ne</option>     
+
+                                                                <? }else{ ?>                                                         
+                                                                <option value="0" selected> Vyberte možnost</option>
+                                                                <option value="1">Hodně</option>
+                                                                <option value="2">Málo</option>
+                                                                <option value="3">Vůbec ne</option>                                                         
+                                                                <?
+                                                                 }
+                                                                ?>  
+
+                                                                </select>
+                                                        </div>
+                                                
+                                
+                                                </div>
+
+
+                                </div>
+
+
+
+
+
+
+
 
 
 
