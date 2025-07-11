@@ -113,7 +113,7 @@ header("Pragma: no-cache");
                                                                 <div class="col-sm-3">
                                                                         <br>
                                                                         <label for="uzivatel">* Chuť k jídlu:</label>
-                                                                        <select class="form-control" id="chut_k_jidlu" name="chut_k_jidlu" requiredstra>
+                                                                        <select class="form-control" id="chut_k_jidlu" name="chut_k_jidlu" required>
                                                                         <option value="0"> Vyberte možnost</option>
                                                                         <option value="1">Normální</option>
                                                                         <option value="2">Dobrá</option>
@@ -907,10 +907,17 @@ header("Pragma: no-cache");
                     //echo '<br>ID: '.$radek_eav_plan["eav_plan_id"];
                         $celkova_hodnota = $radek_eav_plan["celkova_hodnota"];
                         $v_jakych_rodinnych_pomerech_zijete = $radek_eav_plan["v_jakych_rodinnych_pomerech_zijete"];
-                        $reakce_na_pocasi =$radek_eav_plan["reakce_na_pocasi"];
-
+                        $reakce_na_pocasi = $radek_eav_plan["reakce_na_pocasi"];
+                        $reakce_na_mesicni_cyklus_text = $radek_eav_plan["reakce_na_mesicni_cyklus_text"];
+                        $reakce_na_mesicni_cyklus = $radek_eav_plan["reakce_na_mesicni_cyklus"];
+                        $casta_zizen = $radek_eav_plan["casta_zizen"];
+                        $preference_napoju = $radek_eav_plan["preference_napoju"];
+                        $druh_napoju = $radek_eav_plan["druh_napoju"];
+                        $chut_k_jidlu = $radek_eav_plan["chut_k_jidlu"]; 
+                        $hlad_v_koli_hodin = $radek_eav_plan["hlad_v_koli_hodin"];
 
 ?>
+
                                         <div class="row">
                                                                 <div class="col-sm-12" style="background-color:#DBDBDB;"> 
                                                                         <div class="col-sm-6">
@@ -942,14 +949,201 @@ header("Pragma: no-cache");
 
 
 
+                                        <div class="row">
+
+                                                <div class="col-sm-12" style="background-color:#DBDBDB;">             
+                                                        <div class="col-sm-3">
+                                                        <br>
+                                                        <label for="uzivatel">* Reakce na měsíční cyklus:</label> 
+                                                        <select class="form-control" id="reakce_na mesicni_cyklus" name="reakce_na_mesicni_cyklus" disabled>
+                                                        
+                                                        <? if ($reakce_na_mesicni_cyklus == 1){  ?>                                                      
+                                                        <option value="0"> Vyberte možnost</option>
+                                                        <option value="1" selected>Ano</option>
+                                                        <option value="2">Ne</option>
+                                                        
+                                                        <?  }else if ($reakce_na_mesicni_cyklus == 2){ ?>
+                                                        <option value="0"> Vyberte možnost</option>
+                                                        <option value="1">Ano</option>
+                                                        <option value="2" selected>Ne</option>
+
+                                                            <? }else{ ?>
+                                                
+                                                        <option value="0" selected> Vyberte možnost</option>
+                                                        <option value="1">Ano</option>
+                                                        <option value="2">Ne</option>
+                                                                <?
+                                                                }
+                                                                ?>
+                                                        </select>
+                                                        </div>   
+                                                
 
 
 
 
+                                                        <div class="col-sm-4">
+                                                        <br>
+                                                        <label for="uzivatel">Doplňte fázi měsíce:</label>
+                                                        <input type="text" class="form-control form-control-sm" id="reakce_na_mesicni_cyklus_text" value = "<? echo $reakce_na_mesicni_cyklus_text ?>" name="reakce_na_mesicni_cyklus_text" maxlength="100" placeholder="nov, přibývání, ubývání" readonly>        
+                                                        </div>    
+
+                                                        <div class="col-sm-3">
+                                                        <br>
+                                                        <label for="uzivatel">* Částá žízeň:</label>
+                                                        <select class="form-control" id="casta_zizen" name="casta_zizen" disabled>
+                                                
+                                                  <? if ($casta_zizen == 1){  ?> 
+                                                        <option value="0"> Vyberte možnost</option>
+                                                        <option value="1" selected>Ano</option>
+                                                        <option value="2">Ne</option>
+                                                        
+                                                 <?  }else if ($casta_zizen == 2){ ?>
+                                                        <option value="0"> Vyberte možnost</option>
+                                                        <option value="1">Ano</option>
+                                                        <option value="2" selected>Ne</option>    
+                                                        
+                                                 <? }else{ ?>        
+                                                        <option value="0" selected> Vyberte možnost</option>
+                                                        <option value="1">Ano</option>
+                                                        <option value="2">Ne</option>                                                 
+                                                                <?
+                                                                }
+                                                                ?>                                                        
+                                                
+                                                        </select>   
+                                                        </div> 
+                                                </div>   
+                                        </div>
 
 
 
-                                        
+                                <div class="row">
+
+                                                        <div class="col-sm-12" style="background-color:#DBDBDB;">    
+                                                        
+                                                                <div class="col-sm-3">
+                                                                        <br>
+                                                                        <label for="uzivatel">* Preference nápojů:</label>
+                                                                        <select class="form-control" id="preference_napoju" name="preference_napoju" disabled>
+                                                                        
+                                                                        <? if ($preference_napoju == 1){  ?> 
+                                                                        <option value="0"> Vyberte možnost</option>
+                                                                        <option value="1" selected>teplé</option>
+                                                                        <option value="2">studené</option>
+                                                 
+                                                                        <?  }else if ($preference_napoju == 2){ ?>
+                                                                        <option value="0"> Vyberte možnost</option>
+                                                                        <option value="1">teplé</option>
+                                                                        <option value="2" selected>studené</option>
+                                                
+                                                                        <? }else{ ?>     
+                                                                        <option value="0" selected> Vyberte možnost</option>
+                                                                        <option value="1">teplé</option>
+                                                                        <option value="2">studené</option>
+
+                                                                                <?
+                                                                                }
+                                                                                ?> 
+
+
+                                                                        </select>
+                                                                </div>
+
+                                                                <div class="col-sm-4">
+                                                                <br>
+                                                                <label for="uzivatel">Druh nápojů:</label>
+                                                                <input type="text" class="form-control form-control-sm" id="druh_napoju" value = "<? echo $druh_napoju; ?>" name="druh_napoju" maxlength="100" placeholder="Druh nápojů" readonly>        
+                                                                </div> 
+                                                                
+                                                                <div class="col-sm-3">
+                                                                        <br>
+                                                                        <label for="uzivatel">* Chuť k jídlu:</label>
+                                                                        <select class="form-control" id="chut_k_jidlu" name="chut_k_jidlu" disabled>
+
+                                                                        <? if ($chut_k_jidlu == 1){  ?> 
+                                                                        <option value="0"> Vyberte možnost</option>
+                                                                        <option value="1" selected>Normální</option>
+                                                                        <option value="2">Dobrá</option>
+                                                                        <option value="3">špatná</option>
+                                                                        <option value="4">Odpor</option>
+                                                                        <option value="5">Vlčí hlad</option>
+
+                                                                        <?  }else if ($chut_k_jidlu == 2){ ?>                                                                     
+                                                                        <option value="0"> Vyberte možnost</option>
+                                                                        <option value="1">Normální</option>
+                                                                        <option value="2" selected>Dobrá</option>
+                                                                        <option value="3">špatná</option>
+                                                                        <option value="4">Odpor</option>
+                                                                        <option value="5">Vlčí hlad</option>
+                                                                        <option value="6">V noci</option>                                                                
+                                                                
+                                                                         <?  }else if ($chut_k_jidlu == 3){ ?>                                                                     
+                                                                        <option value="0"> Vyberte možnost</option>
+                                                                        <option value="1">Normální</option>
+                                                                        <option value="2">Dobrá</option>
+                                                                        <option value="3" selected>špatná</option>
+                                                                        <option value="4">Odpor</option>
+                                                                        <option value="5">Vlčí hlad</option>
+                                                                        <option value="6">V noci</option>                                                                  
+                                                                
+                                                                         <?  }else if ($chut_k_jidlu == 4){ ?>                                                                     
+                                                                        <option value="0"> Vyberte možnost</option>
+                                                                        <option value="1">Normální</option>
+                                                                        <option value="2">Dobrá</option>
+                                                                        <option value="3">špatná</option>
+                                                                        <option value="4" selected>Odpor</option>
+                                                                        <option value="5">Vlčí hlad</option>
+                                                                        <option value="6">V noci</option>      
+                                                                        
+                                                                         <?  }else if ($chut_k_jidlu == 5){ ?>                                                                     
+                                                                        <option value="0"> Vyberte možnost</option>
+                                                                        <option value="1">Normální</option>
+                                                                        <option value="2">Dobrá</option>
+                                                                        <option value="3">špatná</option>
+                                                                        <option value="4">Odpor</option>
+                                                                        <option value="5" selected>Vlčí hlad</option>
+                                                                        <option value="6">V noci</option>
+
+                                                                         <?  }else if ($chut_k_jidlu == 6){ ?>                                                                     
+                                                                        <option value="0"> Vyberte možnost</option>
+                                                                        <option value="1">Normální</option>
+                                                                        <option value="2">Dobrá</option>
+                                                                        <option value="3">špatná</option>
+                                                                        <option value="4">Odpor</option>
+                                                                        <option value="5">Vlčí hlad</option>
+                                                                        <option value="6" selected>V noci</option>
+                                                                        
+                                                                        <? }else{ ?> 
+                                                                        <option value="0" selected> Vyberte možnost</option>
+                                                                        <option value="1">Normální</option>
+                                                                        <option value="2">Dobrá</option>
+                                                                        <option value="3">špatná</option>
+                                                                        <option value="4">Odpor</option>
+                                                                        <option value="5">Vlčí hlad</option>
+                                                                        <option value="6">V noci</option>
+                                                                                <?
+                                                                                }
+                                                                                ?>                                                            
+                                                                        </select>
+                                                                </div>
+                                                                <div class="form-group" id="chutkjidluFieldGroupDiv">
+                                                                        <div class="col-sm-2">
+                                                                        <br>
+                                                                        <label for="uzivatel">V kolik hodin:</label>
+                                                                        <input type="text" class="form-control form-control-sm" id="hladhodiny" value = "<? echo $hlad_v_koli_hodin?>" name="hlad_v_koli_hodin" maxlength="10" placeholder="Čas" readonly>   
+                                                                        </div>
+                                                                </div>
+                                                        
+                                                                <script src="./js/chutkjidlu.js"></script>
+
+
+
+                                                        </div>   
+                                </div>
+
+
+
 
 <br><br>
 
