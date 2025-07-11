@@ -928,7 +928,8 @@ header("Pragma: no-cache");
                         $poloha_ve_spanku = $radek_eav_plan["poloha_ve_spanku"];  
                         $v_jakou_hodinu_nemuzete_spat = $radek_eav_plan["v_jakou_hodinu_nemuzete_spat"]; 
                         $vraceji_se_nektere_sny = $radek_eav_plan["vraceji_se_nektere_sny"]; 
-                        $popis_snu = $radek_eav_plan["popis_snu"]; 
+                        $popis_snu = $radek_eav_plan["popis_snu"];
+                        $strachy_v_zivote = $radek_eav_plan["strachy_v_zivote"]; 
 
 
 
@@ -1327,8 +1328,14 @@ header("Pragma: no-cache");
                                                         <div class="form-group" id="oblibenejidlo">
                                                                         <div class="col-sm-9">
                                                                                 <br>
+                                                                                <? if ($problemy_po_oblibenem_jidle == 1){  ?>
                                                                                 <label for="uzivatel">Popis problémů:</label>
-                                                                                <input type="text" class="form-control form-control-sm" id="problemy_po_oblibenem_jidle_text" value = "<? echo $problemy_po_oblibenem_jidle_text;?>" name="problemy_po_oblibenem_jidle_text" maxlength="200" placeholder="Popis problémů po oblíbeném jídle" readonly >        
+                                                                                <input type="text" class="form-control form-control-sm" id="problemy_po_oblibenem_jidle_text" value = "<? echo $problemy_po_oblibenem_jidle_text;?>" name="problemy_po_oblibenem_jidle_text" maxlength="200" placeholder="Popis problémů po oblíbeném jídle" readonly >  
+                                                                                
+                                                                                 <? }else{ ?>        
+                                                                               <?
+                                                                                 }
+                                                                                ?> 
                                                                         </div>                                              
                                                         </div> 
                                                         <script src="./js/oblibenejidlo.js"></script>
@@ -1528,9 +1535,16 @@ header("Pragma: no-cache");
                                                         <div class="form-group" id="castesny">
                                                                 <div class="col-sm-9">
                                                                                 <br>
+                                                                <? if ($vraceji_se_nektere_sny == 1){  ?>
+
+
                                                                                 <label for="uzivatel">Popis:</label>
                                                                                 <input type="text" class="form-control form-control-sm" id="popis_snu" value = "<? echo $popis_snu;?>" name="popis_snu" maxlength="200" placeholder="Které sny se Vám často vracejí?" readonly>        
-                                                                </div> 
+                                                                <? }else{ ?> 
+                                                                   <?
+                                                                       }
+                                                                    ?>    
+                                                                        </div> 
                                                         </div>
                                                         <script src="./js/castesny.js"></script>
 
@@ -1547,6 +1561,108 @@ header("Pragma: no-cache");
 
 
 
+
+                                <div class="row">
+                                                <div class="col-sm-12" style="background-color:#DBDBDB;">  
+                                                                <div class="col-sm-3">
+                                                                                        <br>
+                                                                                        <label for="uzivatel">* Strachy v životě:</label>
+                                                                                        <select class="form-control" id="strachy_v_zivote" name="strachy_v_zivote" disabled>
+
+                                                                                        <? if ($strachy_v_zivote == 1){  ?>
+                                                                                        <option value="0"> Vyberte možnost</option>
+                                                                                        <option value="1" selected>Ano</option>
+                                                                                        <option value="2">Ne</option> 
+                                                                                        
+                                                                                        <?  }else if ($strachy_v_zivote == 2){ ?>                                                                                        
+                                                                                        <option value="0"> Vyberte možnost</option>
+                                                                                        <option value="1">Ano</option>
+                                                                                        <option value="2" selected>Ne</option>
+                                                                                        
+                                                                                        <? }else{ ?> 
+                                                                                        <option value="0" selected> Vyberte možnost</option>
+                                                                                        <option value="1">Ano</option>
+                                                                                        <option value="2">Ne</option>
+                                                                                        <?
+                                                                                        }
+                                                                                        ?>  
+
+                                                                                        </select>
+                                                                                        <br>
+                                                                </div>  
+                                                        
+                                                        <div class="form-group" id="ZivotniStrachy">
+
+                                                                                                <div class="col-sm-2">
+                                                                                                        <br><br>
+                                                                                                <? if ($strachy_v_zivote == 1){  ?>
+
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="bourka" value="1">bouřka</label>
+                                                                                                        </div>
+
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="vyska" value="1">výška</label>
+                                                                                                        </div>
+                                                                                                
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="zkouska" value="1">zkouška</label>
+                                                                                                        </div>
+
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="voda" value="1">voda</label>
+                                                                                                        </div>  
+                                                                                                        
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="nemoc" value="1">nemoc</label>
+                                                                                                        </div> 
+                                                                                                        
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="zvire" value="1">zvíře</label>
+                                                                                                        </div> 
+                                                                                                        
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="cestovani" value="1">cestování</label>
+                                                                                                        </div>   
+
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="dopravni_prostredek" value="1">dopravní prostředek</label>
+                                                                                                        </div>  
+
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="zlodej" value="1">zloděj</label>
+                                                                                                        </div> 
+
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="smrt" value="1">smrt</label>
+                                                                                                        </div> 
+                                                                                                        
+                                                                                                        <div class="checkbox">
+                                                                                                        <label><input type="checkbox" name="jine" value="1" id="Moje_strachy" onclick="myFunction_strachy()">jiné</label>
+                                                                                                        </div>  
+                                                                                                        
+                                                                                                        
+                                                                                                           <? }else{ ?>       
+                                                                                                                <?
+                                                                                                                   }
+                                                                                                                ?>  
+
+                                                                                                </div>        
+
+
+                                                                                                        <div class="col-sm-7" id="text_strach" style="display:none">
+                                                                                                                                <br>
+                                                                                                                                <label for="uzivatel">Popis:</label>
+                                                                                                                                <input type="text" class="form-control form-control-sm" id="popis_strachu" value = "" name="popis_strachu" maxlength="200" placeholder="Popis strachu" >        
+                                                                                                        </div> 
+                                
+                                                                                                        
+                                                        </div>
+                                                       
+ 
+                                                </div>
+                                           
+                                </div>  
 
 
 
