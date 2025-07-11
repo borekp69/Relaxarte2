@@ -920,6 +920,19 @@ header("Pragma: no-cache");
                         $sladke = $radek_eav_plan["sladke"];
                         $soleni = $radek_eav_plan["soleni"];
                         $koreneni = $radek_eav_plan["koreneni"]; 
+                        $problemy_po_oblibenem_jidle = $radek_eav_plan["problemy_po_oblibenem_jidle"]; 
+                        $problemy_po_oblibenem_jidle_text = $radek_eav_plan["problemy_po_oblibenem_jidle_text"]; 
+                        $problemy_po_jidle_obecne = $radek_eav_plan["problemy_po_jidle_obecne"];
+                        $problemy_po_jidle_obecne_text = $radek_eav_plan["problemy_po_jidle_obecne_text"];
+                        $spanek =  $radek_eav_plan["spanek"];   
+                        $poloha_ve_spanku = $radek_eav_plan["poloha_ve_spanku"];  
+                        $v_jakou_hodinu_nemuzete_spat = $radek_eav_plan["v_jakou_hodinu_nemuzete_spat"]; 
+                        $vraceji_se_nektere_sny = $radek_eav_plan["vraceji_se_nektere_sny"]; 
+                        $popis_snu = $radek_eav_plan["popis_snu"]; 
+
+
+
+                        
 
 ?>
 
@@ -1276,6 +1289,267 @@ header("Pragma: no-cache");
 
 
                                 </div>
+
+
+
+
+
+                                <div class="row">
+
+                                                <div class="col-sm-12" style="background-color:#DBDBDB;">  
+                                                
+                                                        <div class="col-sm-3">
+                                                                <br>
+                                                                <label for="uzivatel">Problémy po oblíbeném jídle:</label>
+                                                                <select class="form-control" id="problemy_po_oblibenem_jidle" name="problemy_po_oblibenem_jidle" disabled>
+
+                                                                <? if ($problemy_po_oblibenem_jidle == 1){  ?>
+                                                                <option value="0"> Vyberte možnost</option>
+                                                                <option value="1" selected>Ano</option>
+                                                                <option value="2">Ne</option>
+                                                                
+                                                                <?  }else if ($problemy_po_oblibenem_jidle == 2){ ?>  
+                                                                <option value="0"> Vyberte možnost</option>
+                                                                <option value="1">Ano</option>
+                                                                <option value="2" selected>Ne</option>
+
+                                                                 <? }else{ ?>    
+                                                                <option value="0" selected> Vyberte možnost</option>
+                                                                <option value="1">Ano</option>
+                                                                <option value="2">Ne</option>                                                                        
+                                                                 <?
+                                                                 }
+                                                                ?>                                                         
+                                                        
+                                                                </select>
+                                                        </div>  
+
+                                                        <div class="form-group" id="oblibenejidlo">
+                                                                        <div class="col-sm-9">
+                                                                                <br>
+                                                                                <label for="uzivatel">Popis problémů:</label>
+                                                                                <input type="text" class="form-control form-control-sm" id="problemy_po_oblibenem_jidle_text" value = "<? echo $problemy_po_oblibenem_jidle_text;?>" name="problemy_po_oblibenem_jidle_text" maxlength="200" placeholder="Popis problémů po oblíbeném jídle" readonly >        
+                                                                        </div>                                              
+                                                        </div> 
+                                                        <script src="./js/oblibenejidlo.js"></script>
+
+
+
+
+
+
+
+
+                                                </div> 
+                                </div>  
+
+
+                                <div class="row">
+                                                <div class="col-sm-12" style="background-color:#DBDBDB;">  
+                                                        <div class="col-sm-3">
+                                                                <br>
+                                                                <label for="uzivatel">Problémy po jídle obecně:</label>
+                                                                <select class="form-control" id="problemy_po_jidle_obecne" name="problemy_po_jidle_obecne" disabled>
+
+
+                                                                <? if ($problemy_po_jidle_obecne == 1){  ?>
+                                                                <option value="0"> Vyberte možnost</option>
+                                                                <option value="1" selected>Ano</option>
+                                                                <option value="2">Ne</option>
+                                                                
+                                                                <?  }else if ($problemy_po_jidle_obecne == 2){ ?>  
+                                                                <option value="0"> Vyberte možnost</option>
+                                                                <option value="1">Ano</option>
+                                                                <option value="2" selected>Ne</option>
+
+                                                                 <? }else{ ?>    
+                                                                <option value="0" selected> Vyberte možnost</option>
+                                                                <option value="1">Ano</option>
+                                                                <option value="2">Ne</option>                                                                        
+                                                                 <?
+                                                                 }
+                                                                ?> 
+
+
+                                                                </select>
+                                                        </div>
+                                                        <div class="form-group" id="obecnejidlo">
+                                                                        <div class="col-sm-9">
+                                                                                <br>
+                                                                                <label for="uzivatel">Popis problémů:</label>
+                                                                                <input type="text" class="form-control form-control-sm" id="problemy_po_jidle_obecne_text" value = "" name="problemy_po_jidle_obecne_text" maxlength="200" placeholder="Popis problémů po jídle obecně" readonly>        
+                                                                        </div>     
+                                                        </div>
+                                                        <script src="./js/obecnejidlo.js"></script>
+
+                                                </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                                <div class="col-sm-12" style="background-color:#DBDBDB;">  
+                                                                <div class="col-sm-3">
+                                                                                <br>
+                                                                                <label for="uzivatel">* Spánek</label>
+                                                                                <select class="form-control" id="spanek" name="spanek" disabled>
+
+                                                                                <? if ($spanek == 1){  ?>
+                                                                                <option value="0"> Vyberte možnost</option>
+                                                                                <option value="1" selected>Dobrý</option>
+                                                                                <option value="2">Špatný</option>
+                                                                                <option value="3">Nemožnost usnout</option>
+                                                                                <option value="4">Mluvení ze spaní</option>
+                                                                                <option value="5">Klidný</option>
+                                                                                <option value="6">Neklidný</option>
+                                                                                <option value="7">Časté buzení</option> 
+                        
+                                                                                <?  }else if ($spanek == 2){ ?>  
+                                                                                <option value="0"> Vyberte možnost</option>
+                                                                                <option value="1">Dobrý</option>
+                                                                                <option value="2" selected>Špatný</option>
+                                                                                <option value="3">Nemožnost usnout</option>
+                                                                                <option value="4">Mluvení ze spaní</option>
+                                                                                <option value="5">Klidný</option>
+                                                                                <option value="6">Neklidný</option>
+                                                                                <option value="7">Časté buzení</option> 
+                                                                                
+                                                                                <?  }else if ($spanek == 3){ ?>  
+                                                                                <option value="0"> Vyberte možnost</option>
+                                                                                <option value="1">Dobrý</option>
+                                                                                <option value="2">Špatný</option>
+                                                                                <option value="3" selected>Nemožnost usnout</option>
+                                                                                <option value="4">Mluvení ze spaní</option>
+                                                                                <option value="5">Klidný</option>
+                                                                                <option value="6">Neklidný</option>
+                                                                                <option value="7">Časté buzení</option> 
+
+                                                                                <?  }else if ($spanek == 4){ ?>  
+                                                                                <option value="0"> Vyberte možnost</option>
+                                                                                <option value="1">Dobrý</option>
+                                                                                <option value="2">Špatný</option>
+                                                                                <option value="3">Nemožnost usnout</option>
+                                                                                <option value="4" selected>Mluvení ze spaní</option>
+                                                                                <option value="5">Klidný</option>
+                                                                                <option value="6">Neklidný</option>
+                                                                                <option value="7">Časté buzení</option>   
+                                                                                
+                                                                                <?  }else if ($spanek == 5){ ?>  
+                                                                                <option value="0"> Vyberte možnost</option>
+                                                                                <option value="1">Dobrý</option>
+                                                                                <option value="2">Špatný</option>
+                                                                                <option value="3">Nemožnost usnout</option>
+                                                                                <option value="4">Mluvení ze spaní</option>
+                                                                                <option value="5" selected>Klidný</option>
+                                                                                <option value="6">Neklidný</option>
+                                                                                <option value="7">Časté buzení</option>                                                                                   
+
+                                                                                <?  }else if ($spanek == 6){ ?>  
+                                                                                <option value="0"> Vyberte možnost</option>
+                                                                                <option value="1">Dobrý</option>
+                                                                                <option value="2">Špatný</option>
+                                                                                <option value="3">Nemožnost usnout</option>
+                                                                                <option value="4">Mluvení ze spaní</option>
+                                                                                <option value="5">Klidný</option>
+                                                                                <option value="6" selected>Neklidný</option>
+                                                                                <option value="7">Časté buzení</option>  
+
+                                                                                <?  }else if ($spanek == 7){ ?>  
+                                                                                <option value="0"> Vyberte možnost</option>
+                                                                                <option value="1">Dobrý</option>
+                                                                                <option value="2">Špatný</option>
+                                                                                <option value="3">Nemožnost usnout</option>
+                                                                                <option value="4">Mluvení ze spaní</option>
+                                                                                <option value="5">Klidný</option>
+                                                                                <option value="6">Neklidný</option>
+                                                                                <option value="7" selected>Časté buzení</option> 
+                                                                                
+                                                                                <? }else{ ?> 
+                                                                                <option value="0" selected> Vyberte možnost</option>
+                                                                                <option value="1">Dobrý</option>
+                                                                                <option value="2">Špatný</option>
+                                                                                <option value="3">Nemožnost usnout</option>
+                                                                                <option value="4">Mluvení ze spaní</option>
+                                                                                <option value="5">Klidný</option>
+                                                                                <option value="6">Neklidný</option>
+                                                                                <option value="7">Časté buzení</option> 
+                                                                                        <?
+                                                                                        }
+                                                                                        ?> 
+
+                                                                                </select>
+                                                                </div>
+                                                
+                                                                <div class="col-sm-3">
+                                                                        <br>
+                                                                        <label for="uzivatel">Poloha ve spánku:</label>
+                                                                        <input type="text" class="form-control form-control-sm" id="poloha_ve_spanku" value = "<? echo $poloha_ve_spanku; ?>" name="poloha_ve_spanku" maxlength="100" placeholder="Poloha ve spánku" readonly>        
+                                                                </div> 
+
+                                                                <div class="col-sm-3">
+                                                                        <br>
+                                                                        <label for="uzivatel">* V jakou hodinu nemůžete spát?</label>
+                                                                        <input type="text" class="form-control form-control-sm" id="v_jakou_hodinu_nemuzete_spat" value = "<? echo $v_jakou_hodinu_nemuzete_spat;?>" name="v_jakou_hodinu_nemuzete_spat" maxlength="200" placeholder="V jakou hodinu nemůžete spát?" readonly>        
+                                                                </div> 
+                                                
+                                        </div>           
+                                </div>
+
+
+
+                                <div class="row">
+                                                <div class="col-sm-12" style="background-color:#DBDBDB;">  
+                                                        <div class="col-sm-3">
+                                                                                <br>
+                                                                                <label for="uzivatel">Vracejí se některé sny:</label>
+                                                                                <select class="form-control" id="vraceji_se_nektere_sny" name="vraceji_se_nektere_sny" disabled>
+
+                                                                                <? if ($vraceji_se_nektere_sny == 1){  ?>
+                                                                                <option value="0"> Vyberte možnost</option>
+                                                                                <option value="1" selected>Ano</option>
+                                                                                <option value="2">Ne</option>
+
+                                                                                <?  }else if ($vraceji_se_nektere_sny == 2){ ?>                                                                                 
+                                                                                <option value="0"> Vyberte možnost</option>
+                                                                                <option value="1">Ano</option>
+                                                                                <option value="2" selected>Ne</option>
+                                                                    
+                                                                                <? }else{ ?> 
+                                                                                <option value="0" selected> Vyberte možnost</option>
+                                                                                <option value="1">Ano</option>
+                                                                                <option value="2">Ne</option>                                                                                                                                                                         
+                                                                                <?
+                                                                                }
+                                                                                ?>                                                                                
+
+                                                                                </select>
+                                                        </div>
+
+                                                        <div class="form-group" id="castesny">
+                                                                <div class="col-sm-9">
+                                                                                <br>
+                                                                                <label for="uzivatel">Popis:</label>
+                                                                                <input type="text" class="form-control form-control-sm" id="popis_snu" value = "<? echo $popis_snu;?>" name="popis_snu" maxlength="200" placeholder="Které sny se Vám často vracejí?" readonly>        
+                                                                </div> 
+                                                        </div>
+                                                        <script src="./js/castesny.js"></script>
+
+
+
+
+                                                </div>
+
+
+
+
+                                </div>
+
+
+
+
+
+
+
 
 
 
