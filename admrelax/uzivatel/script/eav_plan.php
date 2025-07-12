@@ -930,8 +930,19 @@ header("Pragma: no-cache");
                         $vraceji_se_nektere_sny = $radek_eav_plan["vraceji_se_nektere_sny"]; 
                         $popis_snu = $radek_eav_plan["popis_snu"];
                         $strachy_v_zivote = $radek_eav_plan["strachy_v_zivote"]; 
-
-
+                        $bourka = $radek_eav_plan["bourka"]; 
+                        $vyska = $radek_eav_plan["vyska"];
+                        $zkouska = $radek_eav_plan["zkouska"];
+                        $voda = $radek_eav_plan["voda"];
+                        $nemoc = $radek_eav_plan["nemoc"];
+                        $zvire = $radek_eav_plan["zvire"];
+                        $cestovani = $radek_eav_plan["cestovani"];
+                        $dopravni_prostredek = $radek_eav_plan["dopravni_prostredek"];
+                        $zlodej = $radek_eav_plan["zlodej"];
+                        $smrt = $radek_eav_plan["smrt"];
+                        $jine = $radek_eav_plan["jine"];
+                        $popis_strachu = $radek_eav_plan["popis_strachu"];
+                        $poznamka_text =  $radek_eav_plan["poznamka_text"];
 
                         
 
@@ -1343,10 +1354,6 @@ header("Pragma: no-cache");
 
 
 
-
-
-
-
                                                 </div> 
                                 </div>  
 
@@ -1383,8 +1390,14 @@ header("Pragma: no-cache");
                                                         <div class="form-group" id="obecnejidlo">
                                                                         <div class="col-sm-9">
                                                                                 <br>
+                                                                                <? if ($problemy_po_jidle_obecne == 1){  ?>
                                                                                 <label for="uzivatel">Popis problémů:</label>
-                                                                                <input type="text" class="form-control form-control-sm" id="problemy_po_jidle_obecne_text" value = "" name="problemy_po_jidle_obecne_text" maxlength="200" placeholder="Popis problémů po jídle obecně" readonly>        
+                                                                                <input type="text" class="form-control form-control-sm" id="problemy_po_jidle_obecne_text" value = "" name="problemy_po_jidle_obecne_text" maxlength="200" placeholder="Popis problémů po jídle obecně" readonly> 
+                                                                                 <? }else{ ?> 
+                                                                                  <?
+                                                                                         }
+                                                                                        ?>
+                                                                                
                                                                         </div>     
                                                         </div>
                                                         <script src="./js/obecnejidlo.js"></script>
@@ -1597,49 +1610,93 @@ header("Pragma: no-cache");
                                                                                                         <br><br>
                                                                                                 <? if ($strachy_v_zivote == 1){  ?>
 
-                                                                                                        <div class="checkbox">
-                                                                                                        <label><input type="checkbox" name="bourka" value="1">bouřka</label>
-                                                                                                        </div>
+                                                                                                                                        <div class="checkbox">
+                                                                                                                                        <? if ($bourka == 1){?>
+                                                                                                                                        <label><input type="checkbox" name="bourka" checked disabled>bouřka</label>
+                                                                                                                                        <? }else{ ?>
+                                                                                                                                        <label><input type="checkbox" name="bourka"  disabled>bouřka</label>
+                                                                                                                                        <?  } ?>                                                                                                  
+                                                                                                                                        </div>
 
-                                                                                                        <div class="checkbox">
-                                                                                                        <label><input type="checkbox" name="vyska" value="1">výška</label>
-                                                                                                        </div>
-                                                                                                
-                                                                                                        <div class="checkbox">
-                                                                                                        <label><input type="checkbox" name="zkouska" value="1">zkouška</label>
-                                                                                                        </div>
+                                                                                                                                        <div class="checkbox">
+                                                                                                                                        <? if ($vyska == 1){?>
+                                                                                                                                        <label><input type="checkbox" name="vyska" checked disabled>výška</label>
+                                                                                                                                        <? }else{ ?>
+                                                                                                                                        <label><input type="checkbox" name="vyska" disabled>výška</label>                                                                                                                
+                                                                                                                                        <?  } ?>  
+                                                                                                                                        </div>
+                                                                                                                                
+                                                                                                                                        <div class="checkbox">
+                                                                                                                                        <? if ($zkouska == 1){?>                                                                                                               
+                                                                                                                                        <label><input type="checkbox" name="zkouska" checked disabled>zkouška</label>
+                                                                                                                                        <? }else{ ?>
+                                                                                                                                        <label><input type="checkbox" name="zkouska" disabled>zkouška</label>
+                                                                                                                                        <?  } ?>                                                                                                          
+                                                                                                                                        </div>
 
-                                                                                                        <div class="checkbox">
-                                                                                                        <label><input type="checkbox" name="voda" value="1">voda</label>
-                                                                                                        </div>  
-                                                                                                        
-                                                                                                        <div class="checkbox">
-                                                                                                        <label><input type="checkbox" name="nemoc" value="1">nemoc</label>
-                                                                                                        </div> 
-                                                                                                        
-                                                                                                        <div class="checkbox">
-                                                                                                        <label><input type="checkbox" name="zvire" value="1">zvíře</label>
-                                                                                                        </div> 
-                                                                                                        
-                                                                                                        <div class="checkbox">
-                                                                                                        <label><input type="checkbox" name="cestovani" value="1">cestování</label>
-                                                                                                        </div>   
+                                                                                                                                        <div class="checkbox">
+                                                                                                                                        <? if ($voda == 1){?> 
+                                                                                                                                        <label><input type="checkbox" name="voda" checked disabled>voda</label>
+                                                                                                                                        <? }else{ ?>
+                                                                                                                                        <label><input type="checkbox" name="voda" disabled>voda</label>                                                                                                                
+                                                                                                                                        <?  } ?>    
+                                                                                                                                        </div>  
+                                                                                                                                        
+                                                                                                                                        <div class="checkbox">
+                                                                                                                                        <? if ($nemoc == 1){?>
+                                                                                                                                        <label><input type="checkbox" name="nemoc" checked disabled>nemoc</label>
+                                                                                                                                        <? }else{ ?>
+                                                                                                                                        <label><input type="checkbox" name="nemoc" disabled>nemoc</label>
+                                                                                                                                        <?  } ?> 
+                                                                                                                                        </div> 
+                                                                                                                                        
+                                                                                                                                        <div class="checkbox">
+                                                                                                                                        <? if ($zvire == 1){?>
+                                                                                                                                        <label><input type="checkbox" name="zvire" checked disabled>zvíře</label>
+                                                                                                                                        <? }else{ ?>
+                                                                                                                                        <label><input type="checkbox" name="zvire" disabled>zvíře</label>                                                                                                                
+                                                                                                                                        <?  } ?> 
+                                                                                                                                        </div> 
+                                                                                                                                        
+                                                                                                                                        <div class="checkbox">
+                                                                                                                                        <? if ($cestovani == 1){?>                                                                                                                
+                                                                                                                                        <label><input type="checkbox" name="cestovani" checked disabled>cestování</label>
+                                                                                                                                        <? }else{ ?>
+                                                                                                                                        <label><input type="checkbox" name="cestovani" disabled>cestování</label>
+                                                                                                                                        <?  } ?>                                                                                                                                                                                                                                                                                                                                 
+                                                                                                                                        </div>   
 
-                                                                                                        <div class="checkbox">
-                                                                                                        <label><input type="checkbox" name="dopravni_prostredek" value="1">dopravní prostředek</label>
-                                                                                                        </div>  
+                                                                                                                                        <div class="checkbox">
+                                                                                                                                        <? if ($dopravni_prostredek == 1){?> 
+                                                                                                                                        <label><input type="checkbox" name="dopravni_prostredek" checked disabled>dopravní prostředek</label>
+                                                                                                                                        <? }else{ ?>
+                                                                                                                                        <label><input type="checkbox" name="dopravni_prostredek" disabled>dopravní prostředek</label> 
+                                                                                                                                        <?  } ?>                                                                                                                                                                                                                         
+                                                                                                                                        </div>  
 
-                                                                                                        <div class="checkbox">
-                                                                                                        <label><input type="checkbox" name="zlodej" value="1">zloděj</label>
-                                                                                                        </div> 
+                                                                                                                                        <div class="checkbox">
+                                                                                                                                        <? if ($zlodej == 1){?>                                                                                                                 
+                                                                                                                                        <label><input type="checkbox" name="zlodej" checked disabled>zloděj</label>
+                                                                                                                                        <? }else{ ?>
+                                                                                                                                        <label><input type="checkbox" name="zlodej" disabled>zloděj</label>
+                                                                                                                                        <?  } ?>   
+                                                                                                                                        </div> 
 
-                                                                                                        <div class="checkbox">
-                                                                                                        <label><input type="checkbox" name="smrt" value="1">smrt</label>
-                                                                                                        </div> 
-                                                                                                        
-                                                                                                        <div class="checkbox">
-                                                                                                        <label><input type="checkbox" name="jine" value="1" id="Moje_strachy" onclick="myFunction_strachy()">jiné</label>
-                                                                                                        </div>  
+                                                                                                                                        <div class="checkbox">
+                                                                                                                                        <? if ($smrt == 1){?>                                                                                                                  
+                                                                                                                                        <label><input type="checkbox" name="smrt" checked disabled>smrt</label>
+                                                                                                                                        <? }else{ ?>                                                                                                        
+                                                                                                                                        <label><input type="checkbox" name="smrt" disabled>smrt</label>
+                                                                                                                                        <?  } ?>   
+                                                                                                                                        </div> 
+                                                                                                                                        
+                                                                                                                                        <div class="checkbox">
+                                                                                                                                        <? if ($jine == 1){?>                                                                                                                                  
+                                                                                                                                        <label><input type="checkbox" name="jine"  id="Moje_strachy" checked disabled>jiné</label>
+                                                                                                                                        <? }else{ ?>    
+                                                                                                                                        <label><input type="checkbox" name="jine"  id="Moje_strachy" disabled>jiné</label>
+                                                                                                                                        <?  } ?>  
+                                                                                                                                        </div>  
                                                                                                         
                                                                                                         
                                                                                                            <? }else{ ?>       
@@ -1650,10 +1707,14 @@ header("Pragma: no-cache");
                                                                                                 </div>        
 
 
-                                                                                                        <div class="col-sm-7" id="text_strach" style="display:none">
+                                                                                                        <div class="col-sm-7" id="text_strach">
                                                                                                                                 <br>
+                                                                                                                                <? if ($jine == 1){?>  
                                                                                                                                 <label for="uzivatel">Popis:</label>
-                                                                                                                                <input type="text" class="form-control form-control-sm" id="popis_strachu" value = "" name="popis_strachu" maxlength="200" placeholder="Popis strachu" >        
+                                                                                                                                <input type="text" class="form-control form-control-sm" id="popis_strachu" value = "<? echo $popis_strachu; ?>" name="popis_strachu" maxlength="200" placeholder="Popis strachu" readonly> 
+                                                                                                                                <? }else{ ?> 
+                                                                                                                                 &nbsp;                                                                                                                                        
+                                                                                                                                 <?  } ?>          
                                                                                                         </div> 
                                 
                                                                                                         
@@ -1665,7 +1726,14 @@ header("Pragma: no-cache");
                                 </div>  
 
 
-
+                                                        <div class="row">
+                                                                                <div class="col-sm-12" style="background-color:#DBDBDB;">  
+                                                                                                <br>
+                                                                                                <label for="uzivatel">Poznámka:</label>
+                                                                                                <textarea class="form-control" id="poznamka_text" name="poznamka_text" rows="4" maxlength="500" placeholder="Textová poznámka o délce max 500 znaků" readonly><? echo $poznamka_text;?></textarea>
+                                                                                                <br>
+                                                                                </div>
+                                                        </div>
 
 
 
