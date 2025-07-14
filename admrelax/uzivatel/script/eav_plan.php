@@ -967,16 +967,22 @@ header("Pragma: no-cache");
                         $alergie_p_ocekavana = $radek_eav_plan["alergie_p_ocekavana"]; 
                         $alergie_l_aktualni = $radek_eav_plan["alergie_l_aktualni"]; 
                         $alergie_l_ocekavana = $radek_eav_plan["alergie_l_ocekavana"];
-
-$organova_degenerace_p_aktualni = $radek_eav_plan["organova_degenerace_p_aktualni"];
-$organova_degenerace_p_ocekavana = $radek_eav_plan["organova_degenerace_p_ocekavana"];
-$organova_degenerace_l_aktualni = $radek_eav_plan["organova_degenerace_l_aktualni"];
-$organova_degenerace_l_ocekavana = $radek_eav_plan["organova_degenerace_l_ocekavana"];
-$tri_ohrivace_p_aktualni = $radek_eav_plan["tri_ohrivace_p_aktualni"];
-$tri_ohrivace_p_ocekavana = $radek_eav_plan["tri_ohrivace_p_ocekavana"];
-$tri_ohrivace_l_aktualni = $radek_eav_plan["tri_ohrivace_l_aktualni"];
-$tri_ohrivace_l_ocekavana = $radek_eav_plan["tri_ohrivace_l_ocekavana"];
-
+                        $organova_degenerace_p_aktualni = $radek_eav_plan["organova_degenerace_p_aktualni"];
+                        $organova_degenerace_p_ocekavana = $radek_eav_plan["organova_degenerace_p_ocekavana"];
+                        $organova_degenerace_l_aktualni = $radek_eav_plan["organova_degenerace_l_aktualni"];
+                        $organova_degenerace_l_ocekavana = $radek_eav_plan["organova_degenerace_l_ocekavana"];
+                        $tri_ohrivace_p_aktualni = $radek_eav_plan["tri_ohrivace_p_aktualni"];
+                        $tri_ohrivace_p_ocekavana = $radek_eav_plan["tri_ohrivace_p_ocekavana"];
+                        $tri_ohrivace_l_aktualni = $radek_eav_plan["tri_ohrivace_l_aktualni"];
+                        $tri_ohrivace_l_ocekavana = $radek_eav_plan["tri_ohrivace_l_ocekavana"];
+                        $srdce_p_aktualni = $radek_eav_plan["srdce_p_aktualni"];
+                        $srdce_p_ocekavana = $radek_eav_plan["srdce_p_ocekavana"];
+                        $srdce_l_aktualni = $radek_eav_plan["srdce_l_aktualni"];
+                        $srdce_l_ocekavana = $radek_eav_plan["srdce_l_ocekavana"];
+                        $tenke_strevo_p_aktualni = $radek_eav_plan["tenke_strevo_p_aktualni"];
+                        $tenke_strevo_p_ocekavana = $radek_eav_plan["tenke_strevo_p_ocekavana"];
+                        $tenke_strevo_l_aktualni = $radek_eav_plan["tenke_strevo_l_aktualni"];
+                        $tenke_strevo_l_ocekavana = $radek_eav_plan["tenke_strevo_l_ocekavana"];
 
 
 
@@ -1956,7 +1962,51 @@ $tri_ohrivace_l_ocekavana = $radek_eav_plan["tri_ohrivace_l_ocekavana"];
 
 
 
+                <div class="row">                                
+                                                <div class="col-sm-12" style="background-color:#e1f6f2;">
+                                                        <br>  
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Srdce P - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="srdce_p_aktualni" value = "<? echo $srdce_p_aktualni;?>" name="srdce_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Srdce P - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="srdce_p_ocekavana" value = "<? echo $srdce_p_ocekavana;?>" name="srdce_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Srdce L - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="srdce_l_aktualni" value = "<? echo $srdce_l_aktualni;?>" name="srdce_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Srdce L - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="srdce_l_ocekavana" value = "<? echo $srdce_l_ocekavana;?>" name="srdce_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>                             
+                                                </div>
 
+                        </div>                        
+                <div class="row">                                
+                                                <div class="col-sm-12" style="background-color:#e1f6f2;">
+                                                        <br>  
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Tenké střevo P - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="tenke_strevo_p_aktualni" value = "<? echo $tenke_strevo_p_aktualni;?>" name="tenke_strevo_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Tenké střevo P - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="tenke_strevo_p_ocekavana" value = "<? echo $tenke_strevo_p_ocekavana;?>" name="tenke_strevo_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Tenké střevo L - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="tenke_strevo_l_aktualni" value = "<? echo $tenke_strevo_l_aktualni;?>" name="tenke_strevo_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Tenké střevo L - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="tenke_strevo_l_ocekavana" value = "<? echo $tenke_strevo_l_ocekavana;?>" name="tenke_strevo_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        <br>
+                                                        </div> 
+                                                                                
+                                                </div>
+                        </div>
 
 
 
