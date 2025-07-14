@@ -943,8 +943,33 @@ header("Pragma: no-cache");
                         $jine = $radek_eav_plan["jine"];
                         $popis_strachu = $radek_eav_plan["popis_strachu"];
                         $poznamka_text =  $radek_eav_plan["poznamka_text"];
+                        $lymmfa_p_aktualni = $radek_eav_plan["lymmfa_p_aktualni"];
+                        $lymmfa_p_ocekavana = $radek_eav_plan["lymmfa_p_ocekavana"];
+                        $lymmfa_l_aktualni = $radek_eav_plan["lymmfa_l_aktualni"];
+                        $lymmfa_l_ocekavana = $radek_eav_plan["lymmfa_l_ocekavana"];
+                        $plice_p_aktualni = $radek_eav_plan["plice_p_aktualni"];
+                        $plice_p_ocekavana = $radek_eav_plan["plice_p_ocekavana"];
+                        $plice_l_aktualni = $radek_eav_plan["plice_l_aktualni"];
+                        $plice_l_ocekavana = $radek_eav_plan["plice_l_ocekavana"];
+                        $tluste_strevo_p_aktualni = $radek_eav_plan["tluste_strevo_p_aktualni"];
+                        $tluste_strevo_p_ocekavana = $radek_eav_plan["tluste_strevo_p_ocekavana"];
+                        $tluste_strevo_l_aktualni = $radek_eav_plan["tluste_strevo_l_aktualni"];
+                        $tluste_strevo_l_ocekavana = $radek_eav_plan["tluste_strevo_l_ocekavana"];
+                        $nervova_degenerace_p_aktualni = $radek_eav_plan["nervova_degenerace_p_aktualni"];
+                        $nervova_degenerace_p_ocekavana = $radek_eav_plan["nervova_degenerace_p_ocekavana"];
+                        $nervova_degenerace_l_aktualni = $radek_eav_plan["nervova_degenerace_l_aktualni"];
+                        $nervova_degenerace_l_ocekavana = $radek_eav_plan["nervova_degenerace_l_ocekavana"];
+$obal_srdce_p_aktualni = $radek_eav_plan["obal_srdce_p_aktualni"];
+$obal_srdce_p_ocekavana = $radek_eav_plan["obal_srdce_p_ocekavana"]; 
+$obal_srdce_l_aktualni = $radek_eav_plan["obal_srdce_l_aktualni"];
+$obal_srdce_l_ocekavana = $radek_eav_plan["obal_srdce_l_ocekavana"]; 
+$alergie_p_aktualni = $radek_eav_plan["alergie_p_aktualni"]; 
+$alergie_p_ocekavana = $radek_eav_plan["alergie_p_ocekavana"]; 
+$alergie_l_aktualni = $radek_eav_plan["alergie_l_aktualni"]; 
+$alergie_l_ocekavana = $radek_eav_plan["alergie_l_ocekavana"];
 
-                        
+
+
 
 ?>
 
@@ -1738,11 +1763,141 @@ header("Pragma: no-cache");
 
 
 
+                <h4 align="center">Ruce</h4>
+                        <div class="row">
+                        
+                                                <div class="col-sm-12" style="background-color:#e1f6f2;"> 
+                                                        <br>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Lymfa P - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="lymmfa_p_aktualni" value = "<? echo $lymmfa_p_aktualni;?>" name="lymmfa_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Lymfa P - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="lymmfa_p_ocekavana" value = "<? echo $lymmfa_p_ocekavana;?>" name="lymmfa_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Lymfa L - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="lymmfa_l_aktualni" value = "<? echo $lymmfa_l_aktualni;?>" name="lymmfa_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Lymfa L - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="lymmfa_l_ocekavana" value = "<? echo $lymmfa_l_ocekavana;?>" name="lymmfa_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>                             
+                                                </div>
+                        </div>                        
+                <div class="row">
+                                                <div class="col-sm-12" style="background-color:#e1f6f2;">
+                                                        <br>  
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Plíce P - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="plice_p_aktualni" value = "<? echo $plice_p_aktualni;?>" name="plice_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Plíce P - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="plice_p_ocekavana" value = "<? echo $plice_p_ocekavana;?>" name="plice_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Plíce L - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="plice_l_aktualni" value = "<? echo $plice_l_aktualni;?>" name="plice_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Plíce L - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="plice_l_ocekavana" value = "<? echo $plice_l_ocekavana;?>" name="plice_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>                             
+                                                </div>
+                        </div>
 
 
+                <div class="row">
+                                                <div class="col-sm-12" style="background-color:#e1f6f2;">
+                                                        <br>  
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Tlusté střevo P - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="tluste_strevo_p_aktualni" value = "<? echo $tluste_strevo_p_aktualni;?>" name="tluste_strevo_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Tlusté střevo P - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="tluste_strevo_p_ocekavana" value = "<? echo $tluste_strevo_p_ocekavana;?>" name="tluste_strevo_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Tlusté střevo L - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="tluste_strevo_l_aktualni" value = "<? echo $tluste_strevo_l_aktualni;?>" name="tluste_strevo_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Tlusté střevo L - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="tluste_strevo_l_ocekavana" value = "<? echo $tluste_strevo_l_ocekavana;?>" name="tluste_strevo_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>                             
+                                                </div>
+
+                        </div>                        
+                <div class="row">                                
+                                                <div class="col-sm-12" style="background-color:#e1f6f2;">
+                                                        <br>  
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Nervová degenerace P - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="nervova_degenerace_p_aktualni" value = "<? echo $nervova_degenerace_p_aktualni;?>" name="nervova_degenerace_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Nervová degenerace P - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="nervova_degenerace_p_ocekavana" value = "<? echo $nervova_degenerace_p_ocekavana;?>" name="nervova_degenerace_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Nervová degenerace L - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="nervova_degenerace_l_aktualni" value = "<? echo $nervova_degenerace_l_aktualni;?>" name="nervova_degenerace_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Nervová degenerace L - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="nervova_degenerace_l_ocekavana" value = "<? echo $nervova_degenerace_l_ocekavana;?>" name="nervova_degenerace_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>                             
+                                                </div> 
+
+                        </div> 
 
 
+                <div class="row">                                
+                                                <div class="col-sm-12" style="background-color:#e1f6f2;">
+                                                        <br>  
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Obal srdce P - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="obal_srdce_p_aktualni" value = "<? echo $obal_srdce_p_aktualni;?>" name="obal_srdce_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Obal srdce P - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="obal_srdce_p_ocekavana" value = "<? echo $obal_srdce_p_ocekavana;?>" name="obal_srdce_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Obal srdce L - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="obal_srdce_l_aktualni" value = "<? echo $obal_srdce_l_aktualni;?>" name="obal_srdce_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Obal srdce L - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="obal_srdce_l_ocekavana" value = "<? echo $obal_srdce_l_ocekavana;?>" name="obal_srdce_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>                             
+                                                </div> 
 
+                        </div>                        
+                <div class="row">                                
+                                                <div class="col-sm-12" style="background-color:#e1f6f2;">
+                                                        <br>  
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Alergie P - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="alergie_p_aktualni" value = "<? echo $alergie_p_aktualni;?>" name="alergie_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Alergie P - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="alergie_p_ocekavana" value = "<? echo $alergie_p_ocekavana;?>" name="alergie_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Alergie L - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="alergie_l_aktualni" value = "<? echo $alergie_l_aktualni;?>" name="alergie_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Alergie L - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="alergie_l_ocekavana" value = "<? echo $alergie_l_ocekavana;?>" name="alergie_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>                             
+                                                </div> 
+                </div>
 
 
 <br><br>
