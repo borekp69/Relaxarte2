@@ -991,10 +991,38 @@ header("Pragma: no-cache");
                         $jatra_p_ocekavana = $radek_eav_plan["jatra_p_ocekavana"];
                         $jatra_l_aktualni = $radek_eav_plan["jatra_l_aktualni"];
                         $jatra_l_ocekavana = $radek_eav_plan["jatra_l_ocekavana"];
-
-
-
-
+                        $kloubni_degenerace_p_aktualni = $radek_eav_plan["kloubni_degenerace_p_aktualni"];
+                        $kloubni_degenerace_p_ocekavana = $radek_eav_plan["kloubni_degenerace_p_ocekavana"];
+                        $kloubni_degenerace_l_aktualni = $radek_eav_plan["kloubni_degenerace_l_aktualni"];
+                        $kloubni_degenerace_l_ocekavana = $radek_eav_plan["kloubni_degenerace_l_ocekavana"];
+                        $zaludek_p_aktualni = $radek_eav_plan["zaludek_p_aktualni"];
+                        $zaludek_p_ocekavana = $radek_eav_plan["zaludek_p_ocekavana"];
+                        $zaludek_l_aktualni = $radek_eav_plan["zaludek_l_aktualni"];
+                        $zaludek_l_ocekavana = $radek_eav_plan["zaludek_l_ocekavana"];
+                        $vazivova_degenerace_p_aktualni = $radek_eav_plan["vazivova_degenerace_p_aktualni"];
+                        $vazivova_degenerace_p_ocekavana = $radek_eav_plan["vazivova_degenerace_p_ocekavana"];
+                        $vazivova_degenerace_l_aktualni = $radek_eav_plan["vazivova_degenerace_l_aktualni"];
+                        $vazivova_degenerace_l_ocekavana = $radek_eav_plan["vazivova_degenerace_l_ocekavana"];
+                        $kuze_p_aktualni = $radek_eav_plan["kuze_p_aktualni"];
+                        $kuze_p_ocekavana = $radek_eav_plan["kuze_p_ocekavana"];
+                        $kuze_l_aktualni = $radek_eav_plan["kuze_l_aktualni"];
+                        $kuze_l_ocekavana = $radek_eav_plan["kuze_l_ocekavana"];
+                        $tukova_degenerace_p_aktualni = $radek_eav_plan["tukova_degenerace_p_aktualni"];
+                        $tukova_degenerace_p_ocekavana = $radek_eav_plan["tukova_degenerace_p_ocekavana"];
+                        $tukova_degenerace_l_aktualni = $radek_eav_plan["tukova_degenerace_l_aktualni"];
+                        $tukova_degenerace_l_ocekavana = $radek_eav_plan["tukova_degenerace_l_ocekavana"];
+                        $zlucnik_p_aktualni = $radek_eav_plan["zlucnik_p_aktualni"];
+                        $zlucnik_p_ocekavana = $radek_eav_plan["zlucnik_p_ocekavana"];
+                        $zlucnik_l_aktualni = $radek_eav_plan["zlucnik_l_aktualni"];
+                        $zlucnik_l_ocekavana = $radek_eav_plan["zlucnik_l_ocekavana"];
+                        $ledviny_p_aktualni = $radek_eav_plan["ledviny_p_aktualni"];
+                        $ledviny_p_ocekavana = $radek_eav_plan["ledviny_p_ocekavana"];
+                        $ledviny_l_aktualni = $radek_eav_plan["ledviny_l_aktualni"];
+                        $ledviny_l_ocekavana = $radek_eav_plan["ledviny_l_ocekavana"];
+                        $mocovy_mechyr_p_aktualni = $radek_eav_plan["mocovy_mechyr_p_aktualni"];
+                        $mocovy_mechyr_p_ocekavana = $radek_eav_plan["mocovy_mechyr_p_ocekavana"];
+                        $mocovy_mechyr_l_aktualni = $radek_eav_plan["mocovy_mechyr_l_aktualni"];
+                        $mocovy_mechyr_l_ocekavana = $radek_eav_plan["mocovy_mechyr_l_ocekavana"];
 
 
 ?>
@@ -2068,13 +2096,189 @@ header("Pragma: no-cache");
 
 
 
+                        <div class="row">
+                                                        <div class="col-sm-12" style="background-color:#e1eef6;">
+                                                                <br>  
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Kloubní degenerace P - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="kloubni_degenerace_p_aktualni" value = "<? echo $kloubni_degenerace_p_aktualni;?>" name="kloubni_degenerace_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Kloubní degenerace P - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="kloubni_degenerace_p_ocekavana" value = "<? echo $kloubni_degenerace_p_ocekavana;?>" name="kloubni_degenerace_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Kloubní degenerace L - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="kloubni_degenerace_l_aktualni" value = "<? echo $kloubni_degenerace_l_aktualni;?>" name="kloubni_degenerace_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Kloubní degenerace L - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="kloubni_degenerace_l_ocekavana" value = "<? echo $kloubni_degenerace_l_ocekavana;?>" name="kloubni_degenerace_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>                                                                         
+                                                        </div>
+                        </div>
+
+
+                        <div class="row">
+                                                        <div class="col-sm-12" style="background-color:#e1eef6;">
+                                                                <br>  
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Žaludek P - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="zaludek_p_aktualni" value = "<? echo $zaludek_p_aktualni;?>" name="zaludek_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Žaludek P - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="zaludek_p_ocekavana" value = "<? echo $zaludek_p_ocekavana;?>" name="zaludek_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Žaludek L - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="zaludek_l_aktualni" value = "<? echo $zaludek_l_aktualni;?>" name="zaludek_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Žaludek L - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="zaludek_l_ocekavana" value = "<? echo $zaludek_l_ocekavana;?>" name="zaludek_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>                                                                         
+                                                        </div>
+                        </div>
 
 
 
+                        <div class="row">
+                                                        <div class="col-sm-12" style="background-color:#e1eef6;">
+                                                                <br>  
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Vazivová degenerace P - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="vazivova_degenerace_p_aktualni" value = "<? echo $vazivova_degenerace_p_aktualni;?>" name="vazivova_degenerace_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Vazivová degenerace P - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="vazivova_degenerace_p_ocekavana" value = "<? echo $vazivova_degenerace_p_ocekavana;?>" name="vazivova_degenerace_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Vazivová degenerace L - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="vazivova_degenerace_l_aktualni" value = "<? echo $vazivova_degenerace_l_aktualni;?>" name="vazivova_degenerace_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Vazivová degenerace L - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="vazivova_degenerace_l_ocekavana" value = "<? echo $vazivova_degenerace_l_ocekavana;?>" name="vazivova_degenerace_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>                                                                         
+                                                        </div>
+                        </div>
+
+
+                        <div class="row">
+                                                        <div class="col-sm-12" style="background-color:#e1eef6;">
+                                                                <br>  
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Kůže P - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="kuze_p_aktualni" value = "<? echo $kuze_p_aktualni;?>" name="kuze_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Kůže P - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="kuze_p_ocekavana" value = "<? echo $kuze_p_ocekavana;?>" name="kuze_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Kůže L - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="kuze_l_aktualni" value = "<? echo $kuze_l_aktualni;?>" name="kuze_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Kůže L - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="kuze_l_ocekavana" value = "<? echo $kuze_l_ocekavana;?>" name="kuze_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>                                                                         
+                                                        </div>
+                        </div>
 
 
 
+                        <div class="row">
+                                                        <div class="col-sm-12" style="background-color:#e1eef6;">
+                                                                <br>  
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Tuková degenerace P - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="tukova_degenerace_p_aktualni" value = "<? echo $tukova_degenerace_p_aktualni;?>" name="tukova_degenerace_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Tuková degenerace P - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="tukova_degenerace_p_ocekavana" value = "<? echo $tukova_degenerace_p_ocekavana;?>" name="tukova_degenerace_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Tuková degenerace L - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="tukova_degenerace_l_aktualni" value = "<? echo $tukova_degenerace_l_aktualni;?>" name="tukova_degenerace_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Tuková degenerace L - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="tukova_degenerace_l_ocekavana" value = "<? echo $tukova_degenerace_l_ocekavana;?>" name="tukova_degenerace_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>                                                                         
+                                                        </div>
+                        </div>
 
+
+                        <div class="row">
+                                                        <div class="col-sm-12" style="background-color:#e1eef6;">
+                                                                <br>  
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Žlučník P - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="zlucnik_p_aktualni" value = "<? echo $zlucnik_p_aktualni;?>" name="zlucnik_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Žlučník P - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="zlucnik_p_ocekavana" value = "<? echo $zlucnik_p_ocekavana;?>" name="zlucnik_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Žlučník L - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="zlucnik_l_aktualni" value = "<? echo $zlucnik_l_aktualni;?>" name="zlucnik_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Žlučník L - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="zlucnik_l_ocekavana" value = "<? echo $zlucnik_l_ocekavana;?>" name="zlucnik_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>                                                                         
+                                                        </div>
+                        </div>
+
+                        <div class="row">
+                                                        <div class="col-sm-12" style="background-color:#e1eef6;">
+                                                                <br>  
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Ledviny P - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="ledviny_p_aktualni" value = "<? echo $ledviny_p_aktualni;?>" name="ledviny_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Ledviny P - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="ledviny_p_ocekavana" value = "<? echo $ledviny_p_ocekavana;?>" name="ledviny_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Ledviny L - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="ledviny_l_aktualni" value = "<? echo $ledviny_l_aktualni;?>" name="ledviny_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Ledviny L - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="ledviny_l_ocekavana" value = "<? echo $ledviny_l_ocekavana;?>" name="ledviny_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>                                                                         
+                                                        </div>
+                        </div>
+
+                        <div class="row">
+                                                        <div class="col-sm-12" style="background-color:#e1eef6;">
+                                                                <br>  
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Močový měchýř P - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="mocovy_mechyr_p_aktualni" value = "<? echo $mocovy_mechyr_p_aktualni;?>" name="mocovy_mechyr_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Močový měchýř P - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="mocovy_mechyr_p_ocekavana" value = "<? echo $mocovy_mechyr_p_ocekavana;?>" name="mocovy_mechyr_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Močový měchýř L - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="mocovy_mechyr_l_aktualni" value = "<? echo $mocovy_mechyr_l_aktualni;?>" name="mocovy_mechyr_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Močový měchýř L - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="mocovy_mechyr_l_ocekavana" value = "<? echo $mocovy_mechyr_l_ocekavana;?>" name="mocovy_mechyr_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                <br>        
+                                                                </div>                                                                         
+                                                        </div>
+                        </div>
 
 
 
