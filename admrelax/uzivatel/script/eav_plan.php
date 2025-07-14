@@ -968,11 +968,16 @@ header("Pragma: no-cache");
                         $alergie_l_aktualni = $radek_eav_plan["alergie_l_aktualni"]; 
                         $alergie_l_ocekavana = $radek_eav_plan["alergie_l_ocekavana"];
 
+$organova_degenerace_p_aktualni = $radek_eav_plan["organova_degenerace_p_aktualni"];
+$organova_degenerace_p_ocekavana = $radek_eav_plan["organova_degenerace_p_ocekavana"];
+$organova_degenerace_l_aktualni = $radek_eav_plan["organova_degenerace_l_aktualni"];
+$organova_degenerace_l_ocekavana = $radek_eav_plan["organova_degenerace_l_ocekavana"];
+$tri_ohrivace_p_aktualni = $radek_eav_plan["tri_ohrivace_p_aktualni"];
+$tri_ohrivace_p_ocekavana = $radek_eav_plan["tri_ohrivace_p_ocekavana"];
+$tri_ohrivace_l_aktualni = $radek_eav_plan["tri_ohrivace_l_aktualni"];
+$tri_ohrivace_l_ocekavana = $radek_eav_plan["tri_ohrivace_l_ocekavana"];
 
 
-
-
-                        
 
 
 ?>
@@ -1902,6 +1907,73 @@ header("Pragma: no-cache");
                                                         </div>                             
                                                 </div> 
                 </div>
+
+
+                <div class="row">                                
+                                                <div class="col-sm-12" style="background-color:#e1f6f2;">
+                                                        <br>  
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Orgánová degenerace P - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="organova_degenerace_p_aktualni" value = "<? echo $organova_degenerace_p_aktualni;?>" name="organova_degenerace_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Orgánová degenerace P - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="organova_degenerace_p_ocekavana" value = "<? echo $organova_degenerace_p_ocekavana;?>" name="organova_degenerace_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Orgánová degenerace L - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="organova_degenerace_l_aktualni" value = "<? echo $organova_degenerace_l_aktualni;?>" name="organova_degenerace_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Orgánová degenerace L - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="organova_degenerace_l_ocekavana" value = "<? echo $organova_degenerace_l_ocekavana;?>" name="organova_degenerace_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>                             
+                                                </div> 
+
+                        </div>                        
+                <div class="row">                                
+                                                <div class="col-sm-12" style="background-color:#e1f6f2;">
+                                                        <br>  
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Tři ohřívače P - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="tri_ohrivace_p_aktualni" value = "<? echo $tri_ohrivace_p_aktualni;?>" name="tri_ohrivace_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Tři ohřívače P - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="tri_ohrivace_p_ocekavana" value = "<? echo $tri_ohrivace_p_ocekavana;?>" name="tri_ohrivace_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Tři ohřívače L - aktuální</label>
+                                                        <input type="text" class="form-control form-control-sm" id="tri_ohrivace_l_aktualni" value = "<? echo $tri_ohrivace_l_aktualni;?>" name="tri_ohrivace_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                        <label for="uzivatel">Tři ohřívače L - očekávaná</label>
+                                                        <input type="text" class="form-control form-control-sm" id="tri_ohrivace_l_ocekavana" value = "<? echo $tri_ohrivace_l_ocekavana;?>" name="tri_ohrivace_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                        </div>                             
+                                                </div> 
+
+                        </div>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <br><br>
