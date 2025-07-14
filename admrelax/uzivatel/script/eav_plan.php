@@ -983,6 +983,17 @@ header("Pragma: no-cache");
                         $tenke_strevo_p_ocekavana = $radek_eav_plan["tenke_strevo_p_ocekavana"];
                         $tenke_strevo_l_aktualni = $radek_eav_plan["tenke_strevo_l_aktualni"];
                         $tenke_strevo_l_ocekavana = $radek_eav_plan["tenke_strevo_l_ocekavana"];
+                        $slinivka_slezina_p_aktualni = $radek_eav_plan["slinivka_slezina_p_aktualni"];
+                        $slinivka_slezina_p_ocekavana = $radek_eav_plan["slinivka_slezina_p_ocekavana"];
+                        $slinivka_slezina_l_aktualni = $radek_eav_plan["slinivka_slezina_l_aktualni"];
+                        $slinivka_slezina_l_ocekavana = $radek_eav_plan["slinivka_slezina_l_ocekavana"];
+                        $jatra_p_aktualni = $radek_eav_plan["jatra_p_aktualni"];
+                        $jatra_p_ocekavana = $radek_eav_plan["jatra_p_ocekavana"];
+                        $jatra_l_aktualni = $radek_eav_plan["jatra_l_aktualni"];
+                        $jatra_l_ocekavana = $radek_eav_plan["jatra_l_ocekavana"];
+
+
+
 
 
 
@@ -2009,7 +2020,51 @@ header("Pragma: no-cache");
                         </div>
 
 
+                <h4 align="center">Nohy</h4>
+                        <div class="row">
+                                                        <div class="col-sm-12" style="background-color:#e1eef6;">
+                                                                <br>  
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Slinivka/slezina P - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="slinivka_slezina_p_aktualni" value = "<? echo $slinivka_slezina_p_aktualni;?>" name="slinivka_slezina_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Slinivka/slezina P - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="slinivka_slezina_p_ocekavana" value = "<? echo $slinivka_slezina_p_ocekavana;?>" name="slinivka_slezina_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Slinivka/slezina L - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="slinivka_slezina_l_aktualni" value = "<? echo $slinivka_slezina_l_aktualni;?>" name="slinivka_slezina_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Slinivka/slezina L - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="slinivka_slezina_l_ocekavana" value = "<? echo $slinivka_slezina_l_ocekavana;?>" name="slinivka_slezina_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div> 
+                                                                                        
+                                                        </div>
+                        </div>
 
+                        <div class="row">
+                                                        <div class="col-sm-12" style="background-color:#e1eef6;">
+                                                                <br>  
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Játra P - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="jatra_p_aktualni" value = "<? echo $jatra_p_aktualni;?>" name="jatra_p_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Játra P - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="jatra_p_ocekavana" value = "<? echo $jatra_p_ocekavana;?>" name="jatra_p_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Játra L - aktuální</label>
+                                                                <input type="text" class="form-control form-control-sm" id="jatra_l_aktualni" value = "<? echo $jatra_l_aktualni;?>" name="jatra_l_aktualni" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>
+                                                                <div class="col-sm-3">
+                                                                <label for="uzivatel">Játra L - očekávaná</label>
+                                                                <input type="text" class="form-control form-control-sm" id="jatra_l_ocekavana" value = "<? echo $jatra_l_ocekavana;?>" name="jatra_l_ocekavana" maxlength="7" placeholder="50/50" readonly>
+                                                                </div>                                                                         
+                                                        </div>
+                        </div>
 
 
 
