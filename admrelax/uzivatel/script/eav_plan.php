@@ -959,16 +959,20 @@ header("Pragma: no-cache");
                         $nervova_degenerace_p_ocekavana = $radek_eav_plan["nervova_degenerace_p_ocekavana"];
                         $nervova_degenerace_l_aktualni = $radek_eav_plan["nervova_degenerace_l_aktualni"];
                         $nervova_degenerace_l_ocekavana = $radek_eav_plan["nervova_degenerace_l_ocekavana"];
-$obal_srdce_p_aktualni = $radek_eav_plan["obal_srdce_p_aktualni"];
-$obal_srdce_p_ocekavana = $radek_eav_plan["obal_srdce_p_ocekavana"]; 
-$obal_srdce_l_aktualni = $radek_eav_plan["obal_srdce_l_aktualni"];
-$obal_srdce_l_ocekavana = $radek_eav_plan["obal_srdce_l_ocekavana"]; 
-$alergie_p_aktualni = $radek_eav_plan["alergie_p_aktualni"]; 
-$alergie_p_ocekavana = $radek_eav_plan["alergie_p_ocekavana"]; 
-$alergie_l_aktualni = $radek_eav_plan["alergie_l_aktualni"]; 
-$alergie_l_ocekavana = $radek_eav_plan["alergie_l_ocekavana"];
+                        $obal_srdce_p_aktualni = $radek_eav_plan["obal_srdce_p_aktualni"];
+                        $obal_srdce_p_ocekavana = $radek_eav_plan["obal_srdce_p_ocekavana"]; 
+                        $obal_srdce_l_aktualni = $radek_eav_plan["obal_srdce_l_aktualni"];
+                        $obal_srdce_l_ocekavana = $radek_eav_plan["obal_srdce_l_ocekavana"]; 
+                        $alergie_p_aktualni = $radek_eav_plan["alergie_p_aktualni"]; 
+                        $alergie_p_ocekavana = $radek_eav_plan["alergie_p_ocekavana"]; 
+                        $alergie_l_aktualni = $radek_eav_plan["alergie_l_aktualni"]; 
+                        $alergie_l_ocekavana = $radek_eav_plan["alergie_l_ocekavana"];
 
 
+
+
+
+                        
 
 
 ?>
