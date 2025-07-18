@@ -18,49 +18,46 @@ header("Pragma: no-cache");
 
 
 
- <div class="row" style="border-style: double;">
-                <div class="row">
-                                                        <div class="col-sm-12">  
-                                                                                                <br>   
+        <div class="row" style="border-style: double;">
+                        <div class="row">
+                                                                <div class="col-sm-12">  
+                                                                                                        <br>   
 
 
-
-                                                                                                <div class="col-sm-10"> 
-                                                                                                <b>Diagnostika EAV - nový formulář</b> 
-                                                                                                </div>                    
-
-
+                                                                                                        <div class="col-sm-9"> 
+                                                                                                        <b>Diagnostika EAV - nový formulář</b> 
+                                                                                                        </div>                    
+                                                                               
 
 
+                                                                                <script type="text/javascript" language="JavaScript">
+                                                                                function HideContent(d) {
+                                                                                document.getElementById(d).style.display = "none";
+                                                                                }
+                                                                                function ShowContent(d) {
+                                                                                document.getElementById(d).style.display = "block";
+                                                                                }
+                                                                                function ReverseDisplay(d) {
+                                                                                if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
+                                                                                else { document.getElementById(d).style.display = "none"; }
+                                                                                }
+                                                                                </script>
 
-                                                                        
-
-
-                                                                        <script type="text/javascript" language="JavaScript">
-                                                                        function HideContent(d) {
-                                                                        document.getElementById(d).style.display = "none";
-                                                                        }
-                                                                        function ShowContent(d) {
-                                                                        document.getElementById(d).style.display = "block";
-                                                                        }
-                                                                        function ReverseDisplay(d) {
-                                                                        if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
-                                                                        else { document.getElementById(d).style.display = "none"; }
-                                                                        }
-                                                                        </script>
-
-                                                        
-                                                                        <div class="col-sm-2"> 
-                                                                                        <a href="javascript:ReverseDisplay('uniquename_EAV')">
-                                                                                        <button type="button" class="btn btn-default btn-sm" >
-                                                                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Podrobnosti</button>
-                                                                                        </a><br><br>
+                                                                
+                                                                                        <div class="col-sm-3"> 
+                                                                                                        <a href="javascript:ReverseDisplay('uniquename_EAV')">
+                                                                                                        <button type="button" class="btn btn-default btn-sm" >
+                                                                                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Vyplnění nového formuláře</button>
+                                                                                                        </a><br><br>
+                                                                                        </div>
                                                                         </div>
-                    </div>
-                                                        </div>
+                        </div>
 
-</div>
+        </div>
 
+
+ <div id="uniquename_EAV" style="display:none;">
+        
                 <div id="diagnostika_eav_<?echo $uzivatel_id; ?>">
 
                         <form id="diagnostika_eav_<?echo $uzivatel_id; ?>"  name="diagnostika_eav_<?echo $uzivatel_id; ?>" method="post"> 
@@ -931,8 +928,14 @@ header("Pragma: no-cache");
 
 
         <br>
+</div>
+        
 
-        <br>------------------- výpis záznamů začátek ------------------- 
+
+
+
+
+<br>------------------- výpis záznamů začátek ------------------- 
 
                         <?
                 require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
@@ -942,6 +945,7 @@ header("Pragma: no-cache");
                      while($radek_eav_plan = $result_eav_plan->fetch_assoc()) {
 
                     //echo '<br>ID: '.$radek_eav_plan["eav_plan_id"];
+                       $eav_plan_id  = $radek_eav_plan["eav_plan_id"];
                         $celkova_hodnota = $radek_eav_plan["celkova_hodnota"];
                         $v_jakych_rodinnych_pomerech_zijete = $radek_eav_plan["v_jakych_rodinnych_pomerech_zijete"];
                         $reakce_na_pocasi = $radek_eav_plan["reakce_na_pocasi"];
