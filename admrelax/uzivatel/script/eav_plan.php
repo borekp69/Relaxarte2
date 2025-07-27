@@ -18,49 +18,23 @@ header("Pragma: no-cache");
 
 
 
-        <div class="row" style="border-style: double;">
-                        <div class="row">
-                                                                <div class="col-sm-12">  
-                                                                                                        <br>   
+
+    
 
 
-                                                                                                        <div class="col-sm-9"> 
-                                                                                                        <b>Diagnostika EAV - nový formulář</b> 
-                                                                                                        </div>                    
-                                                                               
 
 
-                                                                                <script type="text/javascript" language="JavaScript">
-                                                                                function HideContent(d) {
-                                                                                document.getElementById(d).style.display = "none";
-                                                                                }
-                                                                                function ShowContent(d) {
-                                                                                document.getElementById(d).style.display = "block";
-                                                                                }
-                                                                                function ReverseDisplay(d) {
-                                                                                if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
-                                                                                else { document.getElementById(d).style.display = "none"; }
-                                                                                }
-                                                                                </script>
-
-                                                                
-                                                                                        <div class="col-sm-3"> 
-                                                                                                        <a href="javascript:ReverseDisplay('uniquename_EAV')">
-                                                                                                        <button type="button" class="btn btn-default btn-sm" >
-                                                                                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Vyplnění nového formuláře</button>
-                                                                                                        </a><br><br>
-                                                                                        </div>
-                                                                        </div>
-                        </div>
-
-        </div>
 
 
- <div id="uniquename_EAV" style="display:none;">
-        
+
+
+
+
+
                 <div id="diagnostika_eav_<?echo $uzivatel_id; ?>">
 
-                        <form id="diagnostika_eav_<?echo $uzivatel_id; ?>"  name="diagnostika_eav_<?echo $uzivatel_id; ?>" method="post"> 
+  
+                                <form id="diagnostika_eav_<?echo $uzivatel_id; ?>"  name="diagnostika_eav_<?echo $uzivatel_id; ?>" method="post"> 
 
 
 
@@ -928,145 +902,194 @@ header("Pragma: no-cache");
 
 
         <br>
-</div>
+
         
 
 
 
 
 
-<br>------------------- výpis záznamů začátek ------------------- 
+                                <br>------------------- výpis záznamů začátek ------------------- 
 
-                        <?
-                require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
-                    $sql_eav_plan = "SELECT * FROM eav_plan WHERE uzivatel_id = $uzivatel_id ORDER BY eav_plan_id DESC";
-                    $result_eav_plan = $conn->query($sql_eav_plan);
+                                                        <?
+                                                require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
+                                                $sql_eav_plan = "SELECT * FROM eav_plan WHERE uzivatel_id = $uzivatel_id ORDER BY eav_plan_id DESC";
+                                                $result_eav_plan = $conn->query($sql_eav_plan);
 
-                     while($radek_eav_plan = $result_eav_plan->fetch_assoc()) {
+                                                while($radek_eav_plan = $result_eav_plan->fetch_assoc()) {
 
-                    //echo '<br>ID: '.$radek_eav_plan["eav_plan_id"];
-                       $eav_plan_id  = $radek_eav_plan["eav_plan_id"];
-                        $celkova_hodnota = $radek_eav_plan["celkova_hodnota"];
-                        $v_jakych_rodinnych_pomerech_zijete = $radek_eav_plan["v_jakych_rodinnych_pomerech_zijete"];
-                        $reakce_na_pocasi = $radek_eav_plan["reakce_na_pocasi"];
-                        $reakce_na_mesicni_cyklus_text = $radek_eav_plan["reakce_na_mesicni_cyklus_text"];
-                        $reakce_na_mesicni_cyklus = $radek_eav_plan["reakce_na_mesicni_cyklus"];
-                        $casta_zizen = $radek_eav_plan["casta_zizen"];
-                        $preference_napoju = $radek_eav_plan["preference_napoju"];
-                        $druh_napoju = $radek_eav_plan["druh_napoju"];
-                        $chut_k_jidlu = $radek_eav_plan["chut_k_jidlu"]; 
-                        $hlad_v_koli_hodin = $radek_eav_plan["hlad_v_koli_hodin"];
-                        $oblibene_jidlo = $radek_eav_plan["oblibene_jidlo"];
-                        $neoblibene_jidlo = $radek_eav_plan["neoblibene_jidlo"];
-                        $sladke = $radek_eav_plan["sladke"];
-                        $soleni = $radek_eav_plan["soleni"];
-                        $koreneni = $radek_eav_plan["koreneni"]; 
-                        $problemy_po_oblibenem_jidle = $radek_eav_plan["problemy_po_oblibenem_jidle"]; 
-                        $problemy_po_oblibenem_jidle_text = $radek_eav_plan["problemy_po_oblibenem_jidle_text"]; 
-                        $problemy_po_jidle_obecne = $radek_eav_plan["problemy_po_jidle_obecne"];
-                        $problemy_po_jidle_obecne_text = $radek_eav_plan["problemy_po_jidle_obecne_text"];
-                        $spanek =  $radek_eav_plan["spanek"];   
-                        $poloha_ve_spanku = $radek_eav_plan["poloha_ve_spanku"];  
-                        $v_jakou_hodinu_nemuzete_spat = $radek_eav_plan["v_jakou_hodinu_nemuzete_spat"]; 
-                        $vraceji_se_nektere_sny = $radek_eav_plan["vraceji_se_nektere_sny"]; 
-                        $popis_snu = $radek_eav_plan["popis_snu"];
-                        $strachy_v_zivote = $radek_eav_plan["strachy_v_zivote"]; 
-                        $bourka = $radek_eav_plan["bourka"]; 
-                        $vyska = $radek_eav_plan["vyska"];
-                        $zkouska = $radek_eav_plan["zkouska"];
-                        $voda = $radek_eav_plan["voda"];
-                        $nemoc = $radek_eav_plan["nemoc"];
-                        $zvire = $radek_eav_plan["zvire"];
-                        $cestovani = $radek_eav_plan["cestovani"];
-                        $dopravni_prostredek = $radek_eav_plan["dopravni_prostredek"];
-                        $zlodej = $radek_eav_plan["zlodej"];
-                        $smrt = $radek_eav_plan["smrt"];
-                        $jine = $radek_eav_plan["jine"];
-                        $popis_strachu = $radek_eav_plan["popis_strachu"];
-                        $poznamka_text =  $radek_eav_plan["poznamka_text"];
-                        $lymmfa_p_aktualni = $radek_eav_plan["lymmfa_p_aktualni"];
-                        $lymmfa_p_ocekavana = $radek_eav_plan["lymmfa_p_ocekavana"];
-                        $lymmfa_l_aktualni = $radek_eav_plan["lymmfa_l_aktualni"];
-                        $lymmfa_l_ocekavana = $radek_eav_plan["lymmfa_l_ocekavana"];
-                        $plice_p_aktualni = $radek_eav_plan["plice_p_aktualni"];
-                        $plice_p_ocekavana = $radek_eav_plan["plice_p_ocekavana"];
-                        $plice_l_aktualni = $radek_eav_plan["plice_l_aktualni"];
-                        $plice_l_ocekavana = $radek_eav_plan["plice_l_ocekavana"];
-                        $tluste_strevo_p_aktualni = $radek_eav_plan["tluste_strevo_p_aktualni"];
-                        $tluste_strevo_p_ocekavana = $radek_eav_plan["tluste_strevo_p_ocekavana"];
-                        $tluste_strevo_l_aktualni = $radek_eav_plan["tluste_strevo_l_aktualni"];
-                        $tluste_strevo_l_ocekavana = $radek_eav_plan["tluste_strevo_l_ocekavana"];
-                        $nervova_degenerace_p_aktualni = $radek_eav_plan["nervova_degenerace_p_aktualni"];
-                        $nervova_degenerace_p_ocekavana = $radek_eav_plan["nervova_degenerace_p_ocekavana"];
-                        $nervova_degenerace_l_aktualni = $radek_eav_plan["nervova_degenerace_l_aktualni"];
-                        $nervova_degenerace_l_ocekavana = $radek_eav_plan["nervova_degenerace_l_ocekavana"];
-                        $obal_srdce_p_aktualni = $radek_eav_plan["obal_srdce_p_aktualni"];
-                        $obal_srdce_p_ocekavana = $radek_eav_plan["obal_srdce_p_ocekavana"]; 
-                        $obal_srdce_l_aktualni = $radek_eav_plan["obal_srdce_l_aktualni"];
-                        $obal_srdce_l_ocekavana = $radek_eav_plan["obal_srdce_l_ocekavana"]; 
-                        $alergie_p_aktualni = $radek_eav_plan["alergie_p_aktualni"]; 
-                        $alergie_p_ocekavana = $radek_eav_plan["alergie_p_ocekavana"]; 
-                        $alergie_l_aktualni = $radek_eav_plan["alergie_l_aktualni"]; 
-                        $alergie_l_ocekavana = $radek_eav_plan["alergie_l_ocekavana"];
-                        $organova_degenerace_p_aktualni = $radek_eav_plan["organova_degenerace_p_aktualni"];
-                        $organova_degenerace_p_ocekavana = $radek_eav_plan["organova_degenerace_p_ocekavana"];
-                        $organova_degenerace_l_aktualni = $radek_eav_plan["organova_degenerace_l_aktualni"];
-                        $organova_degenerace_l_ocekavana = $radek_eav_plan["organova_degenerace_l_ocekavana"];
-                        $tri_ohrivace_p_aktualni = $radek_eav_plan["tri_ohrivace_p_aktualni"];
-                        $tri_ohrivace_p_ocekavana = $radek_eav_plan["tri_ohrivace_p_ocekavana"];
-                        $tri_ohrivace_l_aktualni = $radek_eav_plan["tri_ohrivace_l_aktualni"];
-                        $tri_ohrivace_l_ocekavana = $radek_eav_plan["tri_ohrivace_l_ocekavana"];
-                        $srdce_p_aktualni = $radek_eav_plan["srdce_p_aktualni"];
-                        $srdce_p_ocekavana = $radek_eav_plan["srdce_p_ocekavana"];
-                        $srdce_l_aktualni = $radek_eav_plan["srdce_l_aktualni"];
-                        $srdce_l_ocekavana = $radek_eav_plan["srdce_l_ocekavana"];
-                        $tenke_strevo_p_aktualni = $radek_eav_plan["tenke_strevo_p_aktualni"];
-                        $tenke_strevo_p_ocekavana = $radek_eav_plan["tenke_strevo_p_ocekavana"];
-                        $tenke_strevo_l_aktualni = $radek_eav_plan["tenke_strevo_l_aktualni"];
-                        $tenke_strevo_l_ocekavana = $radek_eav_plan["tenke_strevo_l_ocekavana"];
-                        $slinivka_slezina_p_aktualni = $radek_eav_plan["slinivka_slezina_p_aktualni"];
-                        $slinivka_slezina_p_ocekavana = $radek_eav_plan["slinivka_slezina_p_ocekavana"];
-                        $slinivka_slezina_l_aktualni = $radek_eav_plan["slinivka_slezina_l_aktualni"];
-                        $slinivka_slezina_l_ocekavana = $radek_eav_plan["slinivka_slezina_l_ocekavana"];
-                        $jatra_p_aktualni = $radek_eav_plan["jatra_p_aktualni"];
-                        $jatra_p_ocekavana = $radek_eav_plan["jatra_p_ocekavana"];
-                        $jatra_l_aktualni = $radek_eav_plan["jatra_l_aktualni"];
-                        $jatra_l_ocekavana = $radek_eav_plan["jatra_l_ocekavana"];
-                        $kloubni_degenerace_p_aktualni = $radek_eav_plan["kloubni_degenerace_p_aktualni"];
-                        $kloubni_degenerace_p_ocekavana = $radek_eav_plan["kloubni_degenerace_p_ocekavana"];
-                        $kloubni_degenerace_l_aktualni = $radek_eav_plan["kloubni_degenerace_l_aktualni"];
-                        $kloubni_degenerace_l_ocekavana = $radek_eav_plan["kloubni_degenerace_l_ocekavana"];
-                        $zaludek_p_aktualni = $radek_eav_plan["zaludek_p_aktualni"];
-                        $zaludek_p_ocekavana = $radek_eav_plan["zaludek_p_ocekavana"];
-                        $zaludek_l_aktualni = $radek_eav_plan["zaludek_l_aktualni"];
-                        $zaludek_l_ocekavana = $radek_eav_plan["zaludek_l_ocekavana"];
-                        $vazivova_degenerace_p_aktualni = $radek_eav_plan["vazivova_degenerace_p_aktualni"];
-                        $vazivova_degenerace_p_ocekavana = $radek_eav_plan["vazivova_degenerace_p_ocekavana"];
-                        $vazivova_degenerace_l_aktualni = $radek_eav_plan["vazivova_degenerace_l_aktualni"];
-                        $vazivova_degenerace_l_ocekavana = $radek_eav_plan["vazivova_degenerace_l_ocekavana"];
-                        $kuze_p_aktualni = $radek_eav_plan["kuze_p_aktualni"];
-                        $kuze_p_ocekavana = $radek_eav_plan["kuze_p_ocekavana"];
-                        $kuze_l_aktualni = $radek_eav_plan["kuze_l_aktualni"];
-                        $kuze_l_ocekavana = $radek_eav_plan["kuze_l_ocekavana"];
-                        $tukova_degenerace_p_aktualni = $radek_eav_plan["tukova_degenerace_p_aktualni"];
-                        $tukova_degenerace_p_ocekavana = $radek_eav_plan["tukova_degenerace_p_ocekavana"];
-                        $tukova_degenerace_l_aktualni = $radek_eav_plan["tukova_degenerace_l_aktualni"];
-                        $tukova_degenerace_l_ocekavana = $radek_eav_plan["tukova_degenerace_l_ocekavana"];
-                        $zlucnik_p_aktualni = $radek_eav_plan["zlucnik_p_aktualni"];
-                        $zlucnik_p_ocekavana = $radek_eav_plan["zlucnik_p_ocekavana"];
-                        $zlucnik_l_aktualni = $radek_eav_plan["zlucnik_l_aktualni"];
-                        $zlucnik_l_ocekavana = $radek_eav_plan["zlucnik_l_ocekavana"];
-                        $ledviny_p_aktualni = $radek_eav_plan["ledviny_p_aktualni"];
-                        $ledviny_p_ocekavana = $radek_eav_plan["ledviny_p_ocekavana"];
-                        $ledviny_l_aktualni = $radek_eav_plan["ledviny_l_aktualni"];
-                        $ledviny_l_ocekavana = $radek_eav_plan["ledviny_l_ocekavana"];
-                        $mocovy_mechyr_p_aktualni = $radek_eav_plan["mocovy_mechyr_p_aktualni"];
-                        $mocovy_mechyr_p_ocekavana = $radek_eav_plan["mocovy_mechyr_p_ocekavana"];
-                        $mocovy_mechyr_l_aktualni = $radek_eav_plan["mocovy_mechyr_l_aktualni"];
-                        $mocovy_mechyr_l_ocekavana = $radek_eav_plan["mocovy_mechyr_l_ocekavana"];
+                                                //echo '<br>ID: '.$radek_eav_plan["eav_plan_id"];
+                                                       $eav_plan_id  = $radek_eav_plan["eav_plan_id"];
+                                                        $celkova_hodnota = $radek_eav_plan["celkova_hodnota"];
+                                                        $v_jakych_rodinnych_pomerech_zijete = $radek_eav_plan["v_jakych_rodinnych_pomerech_zijete"];
+                                                        $reakce_na_pocasi = $radek_eav_plan["reakce_na_pocasi"];
+                                                        $reakce_na_mesicni_cyklus_text = $radek_eav_plan["reakce_na_mesicni_cyklus_text"];
+                                                        $reakce_na_mesicni_cyklus = $radek_eav_plan["reakce_na_mesicni_cyklus"];
+                                                        $casta_zizen = $radek_eav_plan["casta_zizen"];
+                                                        $preference_napoju = $radek_eav_plan["preference_napoju"];
+                                                        $druh_napoju = $radek_eav_plan["druh_napoju"];
+                                                        $chut_k_jidlu = $radek_eav_plan["chut_k_jidlu"]; 
+                                                        $hlad_v_koli_hodin = $radek_eav_plan["hlad_v_koli_hodin"];
+                                                        $oblibene_jidlo = $radek_eav_plan["oblibene_jidlo"];
+                                                        $neoblibene_jidlo = $radek_eav_plan["neoblibene_jidlo"];
+                                                        $sladke = $radek_eav_plan["sladke"];
+                                                        $soleni = $radek_eav_plan["soleni"];
+                                                        $koreneni = $radek_eav_plan["koreneni"]; 
+                                                        $problemy_po_oblibenem_jidle = $radek_eav_plan["problemy_po_oblibenem_jidle"]; 
+                                                        $problemy_po_oblibenem_jidle_text = $radek_eav_plan["problemy_po_oblibenem_jidle_text"]; 
+                                                        $problemy_po_jidle_obecne = $radek_eav_plan["problemy_po_jidle_obecne"];
+                                                        $problemy_po_jidle_obecne_text = $radek_eav_plan["problemy_po_jidle_obecne_text"];
+                                                        $spanek =  $radek_eav_plan["spanek"];   
+                                                        $poloha_ve_spanku = $radek_eav_plan["poloha_ve_spanku"];  
+                                                        $v_jakou_hodinu_nemuzete_spat = $radek_eav_plan["v_jakou_hodinu_nemuzete_spat"]; 
+                                                        $vraceji_se_nektere_sny = $radek_eav_plan["vraceji_se_nektere_sny"]; 
+                                                        $popis_snu = $radek_eav_plan["popis_snu"];
+                                                        $strachy_v_zivote = $radek_eav_plan["strachy_v_zivote"]; 
+                                                        $bourka = $radek_eav_plan["bourka"]; 
+                                                        $vyska = $radek_eav_plan["vyska"];
+                                                        $zkouska = $radek_eav_plan["zkouska"];
+                                                        $voda = $radek_eav_plan["voda"];
+                                                        $nemoc = $radek_eav_plan["nemoc"];
+                                                        $zvire = $radek_eav_plan["zvire"];
+                                                        $cestovani = $radek_eav_plan["cestovani"];
+                                                        $dopravni_prostredek = $radek_eav_plan["dopravni_prostredek"];
+                                                        $zlodej = $radek_eav_plan["zlodej"];
+                                                        $smrt = $radek_eav_plan["smrt"];
+                                                        $jine = $radek_eav_plan["jine"];
+                                                        $popis_strachu = $radek_eav_plan["popis_strachu"];
+                                                        $poznamka_text =  $radek_eav_plan["poznamka_text"];
+                                                        $lymmfa_p_aktualni = $radek_eav_plan["lymmfa_p_aktualni"];
+                                                        $lymmfa_p_ocekavana = $radek_eav_plan["lymmfa_p_ocekavana"];
+                                                        $lymmfa_l_aktualni = $radek_eav_plan["lymmfa_l_aktualni"];
+                                                        $lymmfa_l_ocekavana = $radek_eav_plan["lymmfa_l_ocekavana"];
+                                                        $plice_p_aktualni = $radek_eav_plan["plice_p_aktualni"];
+                                                        $plice_p_ocekavana = $radek_eav_plan["plice_p_ocekavana"];
+                                                        $plice_l_aktualni = $radek_eav_plan["plice_l_aktualni"];
+                                                        $plice_l_ocekavana = $radek_eav_plan["plice_l_ocekavana"];
+                                                        $tluste_strevo_p_aktualni = $radek_eav_plan["tluste_strevo_p_aktualni"];
+                                                        $tluste_strevo_p_ocekavana = $radek_eav_plan["tluste_strevo_p_ocekavana"];
+                                                        $tluste_strevo_l_aktualni = $radek_eav_plan["tluste_strevo_l_aktualni"];
+                                                        $tluste_strevo_l_ocekavana = $radek_eav_plan["tluste_strevo_l_ocekavana"];
+                                                        $nervova_degenerace_p_aktualni = $radek_eav_plan["nervova_degenerace_p_aktualni"];
+                                                        $nervova_degenerace_p_ocekavana = $radek_eav_plan["nervova_degenerace_p_ocekavana"];
+                                                        $nervova_degenerace_l_aktualni = $radek_eav_plan["nervova_degenerace_l_aktualni"];
+                                                        $nervova_degenerace_l_ocekavana = $radek_eav_plan["nervova_degenerace_l_ocekavana"];
+                                                        $obal_srdce_p_aktualni = $radek_eav_plan["obal_srdce_p_aktualni"];
+                                                        $obal_srdce_p_ocekavana = $radek_eav_plan["obal_srdce_p_ocekavana"]; 
+                                                        $obal_srdce_l_aktualni = $radek_eav_plan["obal_srdce_l_aktualni"];
+                                                        $obal_srdce_l_ocekavana = $radek_eav_plan["obal_srdce_l_ocekavana"]; 
+                                                        $alergie_p_aktualni = $radek_eav_plan["alergie_p_aktualni"]; 
+                                                        $alergie_p_ocekavana = $radek_eav_plan["alergie_p_ocekavana"]; 
+                                                        $alergie_l_aktualni = $radek_eav_plan["alergie_l_aktualni"]; 
+                                                        $alergie_l_ocekavana = $radek_eav_plan["alergie_l_ocekavana"];
+                                                        $organova_degenerace_p_aktualni = $radek_eav_plan["organova_degenerace_p_aktualni"];
+                                                        $organova_degenerace_p_ocekavana = $radek_eav_plan["organova_degenerace_p_ocekavana"];
+                                                        $organova_degenerace_l_aktualni = $radek_eav_plan["organova_degenerace_l_aktualni"];
+                                                        $organova_degenerace_l_ocekavana = $radek_eav_plan["organova_degenerace_l_ocekavana"];
+                                                        $tri_ohrivace_p_aktualni = $radek_eav_plan["tri_ohrivace_p_aktualni"];
+                                                        $tri_ohrivace_p_ocekavana = $radek_eav_plan["tri_ohrivace_p_ocekavana"];
+                                                        $tri_ohrivace_l_aktualni = $radek_eav_plan["tri_ohrivace_l_aktualni"];
+                                                        $tri_ohrivace_l_ocekavana = $radek_eav_plan["tri_ohrivace_l_ocekavana"];
+                                                        $srdce_p_aktualni = $radek_eav_plan["srdce_p_aktualni"];
+                                                        $srdce_p_ocekavana = $radek_eav_plan["srdce_p_ocekavana"];
+                                                        $srdce_l_aktualni = $radek_eav_plan["srdce_l_aktualni"];
+                                                        $srdce_l_ocekavana = $radek_eav_plan["srdce_l_ocekavana"];
+                                                        $tenke_strevo_p_aktualni = $radek_eav_plan["tenke_strevo_p_aktualni"];
+                                                        $tenke_strevo_p_ocekavana = $radek_eav_plan["tenke_strevo_p_ocekavana"];
+                                                        $tenke_strevo_l_aktualni = $radek_eav_plan["tenke_strevo_l_aktualni"];
+                                                        $tenke_strevo_l_ocekavana = $radek_eav_plan["tenke_strevo_l_ocekavana"];
+                                                        $slinivka_slezina_p_aktualni = $radek_eav_plan["slinivka_slezina_p_aktualni"];
+                                                        $slinivka_slezina_p_ocekavana = $radek_eav_plan["slinivka_slezina_p_ocekavana"];
+                                                        $slinivka_slezina_l_aktualni = $radek_eav_plan["slinivka_slezina_l_aktualni"];
+                                                        $slinivka_slezina_l_ocekavana = $radek_eav_plan["slinivka_slezina_l_ocekavana"];
+                                                        $jatra_p_aktualni = $radek_eav_plan["jatra_p_aktualni"];
+                                                        $jatra_p_ocekavana = $radek_eav_plan["jatra_p_ocekavana"];
+                                                        $jatra_l_aktualni = $radek_eav_plan["jatra_l_aktualni"];
+                                                        $jatra_l_ocekavana = $radek_eav_plan["jatra_l_ocekavana"];
+                                                        $kloubni_degenerace_p_aktualni = $radek_eav_plan["kloubni_degenerace_p_aktualni"];
+                                                        $kloubni_degenerace_p_ocekavana = $radek_eav_plan["kloubni_degenerace_p_ocekavana"];
+                                                        $kloubni_degenerace_l_aktualni = $radek_eav_plan["kloubni_degenerace_l_aktualni"];
+                                                        $kloubni_degenerace_l_ocekavana = $radek_eav_plan["kloubni_degenerace_l_ocekavana"];
+                                                        $zaludek_p_aktualni = $radek_eav_plan["zaludek_p_aktualni"];
+                                                        $zaludek_p_ocekavana = $radek_eav_plan["zaludek_p_ocekavana"];
+                                                        $zaludek_l_aktualni = $radek_eav_plan["zaludek_l_aktualni"];
+                                                        $zaludek_l_ocekavana = $radek_eav_plan["zaludek_l_ocekavana"];
+                                                        $vazivova_degenerace_p_aktualni = $radek_eav_plan["vazivova_degenerace_p_aktualni"];
+                                                        $vazivova_degenerace_p_ocekavana = $radek_eav_plan["vazivova_degenerace_p_ocekavana"];
+                                                        $vazivova_degenerace_l_aktualni = $radek_eav_plan["vazivova_degenerace_l_aktualni"];
+                                                        $vazivova_degenerace_l_ocekavana = $radek_eav_plan["vazivova_degenerace_l_ocekavana"];
+                                                        $kuze_p_aktualni = $radek_eav_plan["kuze_p_aktualni"];
+                                                        $kuze_p_ocekavana = $radek_eav_plan["kuze_p_ocekavana"];
+                                                        $kuze_l_aktualni = $radek_eav_plan["kuze_l_aktualni"];
+                                                        $kuze_l_ocekavana = $radek_eav_plan["kuze_l_ocekavana"];
+                                                        $tukova_degenerace_p_aktualni = $radek_eav_plan["tukova_degenerace_p_aktualni"];
+                                                        $tukova_degenerace_p_ocekavana = $radek_eav_plan["tukova_degenerace_p_ocekavana"];
+                                                        $tukova_degenerace_l_aktualni = $radek_eav_plan["tukova_degenerace_l_aktualni"];
+                                                        $tukova_degenerace_l_ocekavana = $radek_eav_plan["tukova_degenerace_l_ocekavana"];
+                                                        $zlucnik_p_aktualni = $radek_eav_plan["zlucnik_p_aktualni"];
+                                                        $zlucnik_p_ocekavana = $radek_eav_plan["zlucnik_p_ocekavana"];
+                                                        $zlucnik_l_aktualni = $radek_eav_plan["zlucnik_l_aktualni"];
+                                                        $zlucnik_l_ocekavana = $radek_eav_plan["zlucnik_l_ocekavana"];
+                                                        $ledviny_p_aktualni = $radek_eav_plan["ledviny_p_aktualni"];
+                                                        $ledviny_p_ocekavana = $radek_eav_plan["ledviny_p_ocekavana"];
+                                                        $ledviny_l_aktualni = $radek_eav_plan["ledviny_l_aktualni"];
+                                                        $ledviny_l_ocekavana = $radek_eav_plan["ledviny_l_ocekavana"];
+                                                        $mocovy_mechyr_p_aktualni = $radek_eav_plan["mocovy_mechyr_p_aktualni"];
+                                                        $mocovy_mechyr_p_ocekavana = $radek_eav_plan["mocovy_mechyr_p_ocekavana"];
+                                                        $mocovy_mechyr_l_aktualni = $radek_eav_plan["mocovy_mechyr_l_aktualni"];
+                                                        $mocovy_mechyr_l_ocekavana = $radek_eav_plan["mocovy_mechyr_l_ocekavana"];
+                                                        $prihlaseny_uzivatel = $radek_eav_plan["prihlaseny_uzivatel"];
+                                                        $datum = $radek_eav_plan["datum"];
 
 
-?>
+                                        ?>
+
+
+        <div class="row" style="border-style: double;">
+                        <div class="row">
+                                                                <div class="col-sm-12">  
+                                                                                                        <br>   
+
+
+                                                                                                        <div class="col-sm-3"> 
+                                                                                                        <b>Datum: <?echo $datum;?></b> 
+                                                                                                        </div>                    
+                                                                                                        <div class="col-sm-3"> 
+                                                                                                        <b>Celková hodnota: <?echo $celkova_hodnota;?></b> 
+                                                                                                        </div>                                                                                 
+                                                                                                        <div class="col-sm-3"> 
+                                                                                                        <b>Uživatel: <?echo $prihlaseny_uzivatel;?></b> 
+                                                                                                        </div>
+
+                                                                                <script type="text/javascript" language="JavaScript">
+                                                                                function HideContent(d) {
+                                                                                document.getElementById(d).style.display = "none";
+                                                                                }
+                                                                                function ShowContent(d) {
+                                                                                document.getElementById(d).style.display = "block";
+                                                                                }
+                                                                                function ReverseDisplay(d) {
+                                                                                if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
+                                                                                else { document.getElementById(d).style.display = "none"; }
+                                                                                }
+                                                                                </script>
+
+                                                                
+                                                                                        <div class="col-sm-3"> 
+                                                                                                        <a href="javascript:ReverseDisplay('uniquename_EAV<? echo $eav_plan_id ;?>')">
+                                                                                                        <button type="button" class="btn btn-default btn-sm" >
+                                                                                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Podrobnosti</button>
+                                                                                                        </a><br><br>
+                                                                                        </div>
+                                                                        </div>
+                        </div>
+
+        </div>
+
+
+
+
+<div id="uniquename_EAV<? echo $eav_plan_id ; ?>" style="display:none;">
 
                                         <div class="row">
                                                                 <div class="col-sm-12" style="background-color:#DBDBDB;"> 
@@ -2321,6 +2344,7 @@ header("Pragma: no-cache");
                                                         </div>
                         </div>
 
+</div>
 
 
 
@@ -2328,8 +2352,7 @@ header("Pragma: no-cache");
 
 
 
-
-<br><br>
+        <br><br>
 
 
                 <?
