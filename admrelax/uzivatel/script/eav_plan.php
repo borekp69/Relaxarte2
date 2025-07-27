@@ -32,6 +32,7 @@ header("Pragma: no-cache");
 
 
         <div id="diagnostika_eav_<?echo $uzivatel_id; ?>">
+
                                 <script>
                                 function myFunction() {
                                 var x = document.getElementById("myFORM");
@@ -49,10 +50,10 @@ header("Pragma: no-cache");
                                 }
                                 </style>
  <div class="row">
-        <div class="col-sm-6"> 
- <button type="submit" class="btn btn-success btn-sm"  onclick="myFunction()()">&nbsp;&nbsp;Zobrazit/skrýt nový formulář EAV&nbsp;&nbsp;</button>
+                        <div class="col-sm-6"> 
+                                <button type="submit" class="btn btn-success btn-sm"  onclick="myFunction()()">&nbsp;&nbsp;Zobrazit nebo skrýt nový formulář EAV&nbsp;&nbsp;</button>
                         </div>
-                        </div>
+</div>
  
 <div id="myFORM">
  <br>
@@ -923,7 +924,7 @@ header("Pragma: no-cache");
                                                 <button type="submit" class="btn btn-success btn-sm"  onclick="loadEav_plan_<?echo $uzivatel_id; ?>()">&nbsp;&nbsp;Uložit diagnostiku EAV&nbsp;&nbsp;</button>
 
 </div>
-                <br>
+             
 
         
 
@@ -2373,7 +2374,7 @@ header("Pragma: no-cache");
 
 
 
-        <br><br>
+        <br>
 
 
                 <?

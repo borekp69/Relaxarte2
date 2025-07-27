@@ -599,7 +599,7 @@ if ($conn->query($sql) === TRUE) {
                                 </style>
  <div class="row">
                         <div class="col-sm-6"> 
-                                <button type="submit" class="btn btn-success btn-sm"  onclick="myFunction()()">&nbsp;&nbsp;Zobrazit/skrýt nový formulář EAV&nbsp;&nbsp;</button>
+                                <button type="submit" class="btn btn-success btn-sm"  onclick="myFunction()()">&nbsp;&nbsp;Zobrazit nebo skrýt nový formulář EAV&nbsp;&nbsp;</button>
                         </div>
 </div>
 <div id="myFORM">
@@ -994,6 +994,10 @@ if ($conn->query($sql) === TRUE) {
 
 
                                 <script src="./js/strachy.js"></script>
+
+
+
+                                
 
                                 <script>
                                 function myFunction_strachy() {
