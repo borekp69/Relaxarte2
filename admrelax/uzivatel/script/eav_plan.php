@@ -31,9 +31,31 @@ header("Pragma: no-cache");
 
 
 
-                <div id="diagnostika_eav_<?echo $uzivatel_id; ?>">
-
-  
+        <div id="diagnostika_eav_<?echo $uzivatel_id; ?>">
+                                <script>
+                                function myFunction() {
+                                var x = document.getElementById("myFORM");
+                                var style = window.getComputedStyle(x);
+                                if (style.display === "none") {
+                                x.style.display = "block";
+                                } else {
+                                x.style.display = "none";
+                                }
+                                }
+                                </script>
+                                <style>
+                                #myFORM {
+                                display: none; /* Skrytí divu na začátku */
+                                }
+                                </style>
+ <div class="row">
+        <div class="col-sm-6"> 
+ <button type="submit" class="btn btn-success btn-sm"  onclick="myFunction()()">&nbsp;&nbsp;Zobrazit/skrýt nový formulář EAV&nbsp;&nbsp;</button>
+                        </div>
+                        </div>
+ 
+<div id="myFORM">
+ <br>
                                 <form id="diagnostika_eav_<?echo $uzivatel_id; ?>"  name="diagnostika_eav_<?echo $uzivatel_id; ?>" method="post"> 
 
 
@@ -900,17 +922,16 @@ header("Pragma: no-cache");
                                                 <br>
                                                 <button type="submit" class="btn btn-success btn-sm"  onclick="loadEav_plan_<?echo $uzivatel_id; ?>()">&nbsp;&nbsp;Uložit diagnostiku EAV&nbsp;&nbsp;</button>
 
-
-        <br>
+</div>
+                <br>
 
         
 
 
 
 
-
-                                <br>------------------- výpis záznamů začátek ------------------- 
-
+<br>
+                              
                                                         <?
                                                 require $_SERVER['DOCUMENT_ROOT']."/admrelax/db/pripojeni_databaze.php";
                                                 $sql_eav_plan = "SELECT * FROM eav_plan WHERE uzivatel_id = $uzivatel_id ORDER BY eav_plan_id DESC";
@@ -1045,7 +1066,7 @@ header("Pragma: no-cache");
                                         ?>
 
 
-        <div class="row" style="border-style: double;">
+         <div class="row" style="border-style: double;">
                         <div class="row">
                                                                 <div class="col-sm-12">  
                                                                                                         <br>   
@@ -2367,7 +2388,7 @@ header("Pragma: no-cache");
 
 
 
-        <br>------------------- výpis záznamů konec -------------------  
+    
 
                                 <script>
                         function loadEav_plan_<?echo $uzivatel_id; ?>() {
@@ -2732,7 +2753,6 @@ header("Pragma: no-cache");
 
 
 
-                <br><br><br>XXXXXXXXXXXXXXX<br>
 </div>
 
 
