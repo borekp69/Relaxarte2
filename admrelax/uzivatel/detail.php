@@ -190,6 +190,7 @@ $uzamceny_ucet_vystraha = '<div class="alert alert-danger alert-dismissible" rol
 
 <li><a data-toggle="tab" href="#tcm">TČM</a></li>
 <li><a data-toggle="tab" href="#eav">EAV</a></li>
+<li><a data-toggle="tab" href="#eav_procedury">EAV - Procedury</a></li>
 <li><a data-toggle="tab" href="#psychika">Psychika</a></li>
 <li><a data-toggle="tab" href="#alternativni3">MasážFyzio</a></li>
 <li><a data-toggle="tab" href="#alternativni4">Výživa</a></li>
