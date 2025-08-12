@@ -217,6 +217,11 @@ $uzamceny_ucet_vystraha = '<div class="alert alert-danger alert-dismissible" rol
 <? require "./script/eav_plan.php"; ?>
 </div>
 
+<div id="eav_procedury" class="tab-pane fade">
+<? require "./script/eav_procedury.php"; ?>    
+</div>
+
+
 
 <div id="psychika" class="tab-pane fade">
 <? require "./script/modul_psychika.php"; ?>
